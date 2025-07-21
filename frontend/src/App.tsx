@@ -40,8 +40,8 @@ function App() {
   const [healthStatus, setHealthStatus] = useState<string>('');
   const [currentView, setCurrentView] = useState<'home' | 'venues' | 'login'>('home');
 
-  // API base URL
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
+  // API base URL - defaults to production, can be overridden with REACT_APP_API_URL
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://band-review-website.onrender.com/api';
 
   /**
    * Check API health status
