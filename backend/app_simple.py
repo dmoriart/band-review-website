@@ -62,8 +62,8 @@ def create_app(config_name=None):
     migrate = Migrate(app, db)
     jwt = JWTManager(app)
     
-    # Configure CORS
-    CORS(app, origins=app.config.get('CORS_ORIGINS', ['*']))
+    # Configure CORS - temporarily allow all origins for debugging
+    CORS(app, origins='*', supports_credentials=False)
     
     # Configure logging for production
     if config_name == 'production':
@@ -110,7 +110,9 @@ def setup_api_routes(app):
                 "status": "healthy",
                 "version": "1.0.0",
                 "database": app.config['SQLALCHEMY_DATABASE_URI'].split('://')[0],
-                "venues": venue_count
+                "venues": venue_count,
+                "cors_enabled": True,
+                "timestamp": datetime.now().isoformat()
             })
         except Exception as e:
             return jsonify({
@@ -118,6 +120,21 @@ def setup_api_routes(app):
                 "status": "unhealthy",
                 "error": str(e)
             }), 500
+    
+    @app.route('/api/debug')
+    def debug():
+        """Debug endpoint to help troubleshoot frontend issues"""
+        return jsonify({
+            "message": "API is working correctly",
+            "cors": "enabled",
+            "endpoints": [
+                "/api/health",
+                "/api/venues", 
+                "/api/genres",
+                "/api/venues/<id>"
+            ],
+            "frontend_should_use": "https://band-review-website.onrender.com/api"
+        })
     
     @app.route('/api/venues')
     def get_venues():
