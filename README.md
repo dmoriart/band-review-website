@@ -1,5 +1,11 @@
 # 🎸 Yelp for Bands
 
+[![GitHub repo](https://img.shields.io/badge/GitHub-dmoriart%2Fband--review--website-blue?logo=github)](https://github.com/dmoriart/band-review-website)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react)](https://reactjs.org/)
+[![Flask](https://img.shields.io/badge/Flask-3+-000000?logo=flask)](https://flask.palletsprojects.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+
 A full-stack web application for reviewing and rating bands, built with React (TypeScript) frontend and Flask (Python) backend.
 
 ## 🏗️ Project Structure
@@ -31,7 +37,7 @@ band-review-website/
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/dmoriart/band-review-website.git
 cd band-review-website
 ```
 
