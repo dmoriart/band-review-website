@@ -3,6 +3,7 @@ Yelp for Bands - Flask Backend API
 A simple Flask server with CORS support for the band review application.
 """
 
+import os
 from flask import Flask, jsonify
 from flask_cors import CORS
 
@@ -12,6 +13,10 @@ app = Flask(__name__)
 # Enable CORS for all routes to allow frontend requests
 # In production, you should specify allowed origins instead of using *
 CORS(app)
+
+# Configuration
+app.config['DEBUG'] = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
+app.config['ENV'] = os.environ.get('FLASK_ENV', 'development')
 
 # Sample data - in a real app, this would come from a database
 SAMPLE_BANDS = [
@@ -91,13 +96,17 @@ def internal_error(error):
 
 if __name__ == '__main__':
     # Run the Flask development server
-    # Debug mode enabled for development - disable in production
+    # This is only used for local development
+    # In production, gunicorn will serve the app
     print("🎸 Starting Yelp for Bands API server...")
     print("📍 Server running at: http://localhost:5000")
     print("🔗 Test endpoint: http://localhost:5000/api/hello")
     
+    # Get port from environment variable for flexibility
+    port = int(os.environ.get('PORT', 5000))
+    
     app.run(
         host='0.0.0.0',  # Allow external connections
-        port=5000,       # Standard Flask port
-        debug=True       # Enable debug mode for development
+        port=port,       # Use environment PORT or default to 5000
+        debug=app.config['DEBUG']  # Use config-based debug setting
     )

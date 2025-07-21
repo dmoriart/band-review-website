@@ -105,6 +105,33 @@ The frontend will be running at: **http://localhost:3000**
 
 ## 📦 Deployment
 
+### Backend (Render.com)
+
+This project is configured for easy deployment to Render.com with Gunicorn as the WSGI server.
+
+#### Option 1: Using render.yaml (Recommended)
+1. Connect your GitHub repository to Render.com
+2. The `render.yaml` file will automatically configure the deployment
+3. Environment variables are pre-configured for production
+
+#### Option 2: Manual Setup
+1. Create a new Web Service on Render.com
+2. Connect your GitHub repository
+3. Configure the service:
+   - **Environment:** Python 3
+   - **Build Command:** `cd backend && pip install -r requirements.txt`
+   - **Start Command:** `cd backend && gunicorn -c gunicorn.conf.py app:app`
+   - **Environment Variables:**
+     - `FLASK_ENV=production`
+     - `FLASK_DEBUG=false`
+
+#### Environment Variables for Production
+```bash
+FLASK_ENV=production
+FLASK_DEBUG=false
+# Add any other environment variables as needed
+```
+
 ### Frontend (Netlify)
 
 1. Build the React app:
@@ -113,13 +140,16 @@ The frontend will be running at: **http://localhost:3000**
    npm run build
    ```
 
-2. Deploy the `build/` folder to Netlify
+2. Deploy options:
+   - **Drag & Drop:** Upload the `build/` folder to Netlify
+   - **Git Integration:** Connect your repository and set build settings:
+     - **Build Command:** `cd frontend && npm run build`
+     - **Publish Directory:** `frontend/build`
 
-### Backend (Render.com)
-
-1. Create a `render.yaml` or use the Render dashboard
-2. Set environment variables if needed
-3. Deploy from Git repository
+3. Configure environment variables in Netlify:
+   ```bash
+   REACT_APP_API_URL=https://your-api-service.onrender.com/api
+   ```
 
 ## 🔧 Environment Variables
 

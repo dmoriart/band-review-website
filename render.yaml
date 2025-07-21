@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: yelp-for-bands-api
+    env: python
+    region: oregon
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && gunicorn -c gunicorn.conf.py app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: false
+    healthCheckPath: /api/health
