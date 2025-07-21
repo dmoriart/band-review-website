@@ -30,6 +30,8 @@ interface HealthResponse {
   status: string;
   service: string;
   version: string;
+  venues?: number;
+  database?: string;
 }
 
 function App() {
@@ -48,14 +50,19 @@ function App() {
    */
   const checkHealth = useCallback(async () => {
     try {
+      console.log('🔍 Checking API health at:', `${API_BASE_URL}/health`);
       const response = await fetch(`${API_BASE_URL}/health`);
+      console.log('📡 API response status:', response.status);
+      
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data: HealthResponse = await response.json();
-      setHealthStatus(`✅ ${data.service} ${data.version}`);
+      console.log('✅ API response data:', data);
+      setHealthStatus(`✅ ${data.service} ${data.version} (${data.venues} venues)`);
     } catch (err) {
-      console.error('Health check failed:', err);
+      console.error('❌ Health check failed:', err);
+      console.log('🔍 API URL being used:', API_BASE_URL);
       setHealthStatus('❌ API connection failed');
       setError('Failed to connect to backend API');
     }
