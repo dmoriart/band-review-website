@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Custom styles for Yelp for Bands */
+.api-status {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+
+.success-message {
+  color: #51cf66;
+}
+
+.bands-section {
+  max-width: 800px;
+  margin: 20px 0;
+}
+
+.bands-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #61dafb;
+}
+
+.bands-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.band-card {
+  background-color: #3a3f47;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.band-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.band-card h3 {
+  margin: 0 0 10px 0;
+  color: #61dafb;
+  font-size: 18px;
+}
+
+.band-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.dev-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #1e2129;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.dev-info p {
+  margin: 5px 0;
+}
+
+.dev-info code {
+  background-color: #3a3f47;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
