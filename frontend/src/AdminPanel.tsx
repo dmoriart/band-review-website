@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface AdminStats {
   total_venues: number;
@@ -69,7 +69,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
   const [users, setUsers] = useState<User[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
 
-  const fetchWithAuth = (url: string, options: RequestInit = {}) => {
+  const fetchWithAuth = useCallback((url: string, options: RequestInit = {}) => {
     return fetch(url, {
       ...options,
       headers: {
@@ -78,9 +78,9 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
         ...options.headers,
       },
     });
-  };
+  }, [adminToken]);
 
-  const loadStats = async () => {
+  const loadStats = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetchWithAuth(`${apiBaseUrl}/admin/stats`);
@@ -99,9 +99,9 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
     } finally {
       setLoading(false);
     }
-  };
+  }, [fetchWithAuth, apiBaseUrl]);
 
-  const loadVenues = async () => {
+  const loadVenues = useCallback(async () => {
     try {
       const response = await fetchWithAuth(`${apiBaseUrl}/admin/venues?per_page=100`);
       if (!response.ok) throw new Error('Failed to load venues');
@@ -111,9 +111,9 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load venues');
     }
-  };
+  }, [fetchWithAuth, apiBaseUrl]);
 
-  const loadUsers = async () => {
+  const loadUsers = useCallback(async () => {
     try {
       const response = await fetchWithAuth(`${apiBaseUrl}/admin/users?per_page=100`);
       if (!response.ok) throw new Error('Failed to load users');
@@ -123,9 +123,9 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load users');
     }
-  };
+  }, [fetchWithAuth, apiBaseUrl]);
 
-  const loadReviews = async () => {
+  const loadReviews = useCallback(async () => {
     try {
       const response = await fetchWithAuth(`${apiBaseUrl}/admin/reviews?per_page=100`);
       if (!response.ok) throw new Error('Failed to load reviews');
@@ -135,7 +135,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load reviews');
     }
-  };
+  }, [fetchWithAuth, apiBaseUrl]);
 
   const updateVenue = async (venueId: string, updates: Partial<Venue>) => {
     try {
@@ -207,7 +207,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
     if (adminToken) {
       loadStats();
     }
-  }, [adminToken]);
+  }, [adminToken, loadStats]);
 
   useEffect(() => {
     if (activeTab === 'venues' && adminToken) {
@@ -217,7 +217,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ apiBaseUrl, adminToken, onLogou
     } else if (activeTab === 'reviews' && adminToken) {
       loadReviews();
     }
-  }, [activeTab, adminToken]);
+  }, [activeTab, adminToken, loadVenues, loadUsers, loadReviews]);
 
   if (loading) {
     return <div className="admin-loading">Loading admin panel...</div>;
