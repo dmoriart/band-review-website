@@ -1,29 +1,62 @@
-# 🎸 Yelp for Bands
+# � BandVenueReview.ie
 
 [![GitHub repo](https://img.shields.io/badge/GitHub-dmoriart%2Fband--review--website-blue?logo=github)](https://github.com/dmoriart/band-review-website)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react)](https://reactjs.org/)
 [![Flask](https://img.shields.io/badge/Flask-3+-000000?logo=flask)](https://flask.palletsprojects.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791?logo=postgresql)](https://www.postgresql.org/)
 
-A full-stack web application for reviewing and rating bands, built with React (TypeScript) frontend and Flask (Python) backend.
+**Ireland's premier platform for bands to review live music venues**
+
+A comprehensive web application where Irish bands and artists can share their experiences performing at venues across the country. From grassroots pubs to major arenas, get the inside story from the musicians who've played there.
 
 ## 🏗️ Project Structure
 
 ```
-band-review-website/
-├── backend/                 # Flask API server
-│   ├── venv/               # Python virtual environment (ignored by git)
-│   ├── app.py              # Main Flask application
-│   └── requirements.txt    # Python dependencies
-├── frontend/               # React TypeScript application
-│   ├── src/                # React source code
-│   ├── public/             # Static assets
-│   ├── package.json        # Node.js dependencies
-│   └── node_modules/       # Node.js packages (ignored by git)
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
+band-review-website/                    # BandVenueReview.ie Monorepo
+├── backend/                           # Flask API server
+│   ├── models.py                      # SQLAlchemy database models
+│   ├── app.py                         # Main Flask application
+│   ├── config.py                      # Configuration management
+│   ├── auth.py                        # Authentication utilities
+│   ├── init_db.py                     # Database initialization script
+│   ├── requirements.txt               # Python dependencies
+│   ├── .env                          # Environment variables
+│   └── venv/                         # Python virtual environment
+├── frontend/                          # React TypeScript application
+│   ├── src/                          # React source code
+│   │   ├── App.tsx                   # Main application component
+│   │   └── App.css                   # Application styles
+│   ├── public/                       # Static assets
+│   └── package.json                  # Node.js dependencies
+├── database_schema.sql                # Supabase PostgreSQL schema
+├── render.yaml                        # Render.com deployment config
+├── .gitignore                         # Git ignore rules
+└── README.md                          # This file
 ```
+
+## ✨ Features
+
+### 🎸 For Bands & Artists
+- **Create detailed reviews** of venues after performances
+- **Rate multiple aspects**: sound quality, hospitality, payment, crowd engagement, facilities
+- **Share experiences** with fellow musicians
+- **Find great venues** for future gigs
+- **Build your profile** and showcase your performances
+
+### 🏛️ For Venue Owners
+- **Claim your venue** and manage your profile
+- **Showcase your facilities** and capacity
+- **Connect with touring acts** looking for venues
+- **Build reputation** through band reviews
+- **Highlight your strengths** in the Irish music scene
+
+### 🇮🇪 Irish Focus
+- **Comprehensive coverage** of venues across all 32 counties
+- **Local insights** from the Irish music community
+- **Support for traditional** and contemporary music venues
+- **Focus on the unique** Irish live music landscape
 
 ## 🚀 Quick Start
 
