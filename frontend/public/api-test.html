@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BandVenueReview.ie API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .test { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .success { background: #d4edda; border-color: #c3e6cb; }
+        .error { background: #f8d7da; border-color: #f5c6cb; }
+        button { padding: 10px 20px; margin: 5px; }
+        pre { background: #f8f9fa; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>🧪 BandVenueReview.ie API Connection Test</h1>
+    
+    <div class="test">
+        <h3>Frontend Information</h3>
+        <p><strong>Current URL:</strong> <span id="currentUrl"></span></p>
+        <p><strong>Expected API URL:</strong> https://band-review-website.onrender.com/api</p>
+    </div>
+
+    <div class="test">
+        <h3>API Tests</h3>
+        <button onclick="testHealth()">Test Health Endpoint</button>
+        <button onclick="testVenues()">Test Venues Endpoint</button>
+        <button onclick="testDebug()">Test Debug Endpoint</button>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'https://band-review-website.onrender.com/api';
+        
+        document.getElementById('currentUrl').textContent = window.location.href;
+
+        async function testEndpoint(endpoint, name) {
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                resultsDiv.innerHTML += `<p>Testing ${name}...</p>`;
+                
+                const response = await fetch(`${API_BASE}${endpoint}`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    resultsDiv.innerHTML += `
+                        <div class="test success">
+                            <h4>✅ ${name} - SUCCESS</h4>
+                            <pre>${JSON.stringify(data, null, 2)}</pre>
+                        </div>
+                    `;
+                } else {
+                    resultsDiv.innerHTML += `
+                        <div class="test error">
+                            <h4>❌ ${name} - FAILED</h4>
+                            <p>Status: ${response.status}</p>
+                            <pre>${JSON.stringify(data, null, 2)}</pre>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultsDiv.innerHTML += `
+                    <div class="test error">
+                        <h4>❌ ${name} - ERROR</h4>
+                        <p>Error: ${error.message}</p>
+                        <p>This usually means CORS is blocked or the API is unreachable.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function testHealth() {
+            testEndpoint('/health', 'Health Check');
+        }
+
+        function testVenues() {
+            testEndpoint('/venues', 'Venues List');
+        }
+
+        function testDebug() {
+            testEndpoint('/debug', 'Debug Info');
+        }
+
+        // Auto-test on page load
+        window.onload = function() {
+            testHealth();
+        };
+    </script>
+</body>
+</html>
