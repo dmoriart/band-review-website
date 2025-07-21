@@ -84,6 +84,36 @@ def get_current_band():
         return Band.query.filter_by(user_id=user.id).first()
     return None
 
+def admin_required(f):
+    """Decorator to require admin user access"""
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        try:
+            # Get authorization header
+            auth_header = request.headers.get('Authorization')
+            if not auth_header or not auth_header.startswith('Bearer '):
+                return jsonify({
+                    'error': 'Admin access required',
+                    'message': 'Authorization token required'
+                }), 401
+            
+            token = auth_header.replace('Bearer ', '')
+            
+            # Simple token validation (in production, use proper JWT validation)
+            if not token.startswith('admin-token-'):
+                return jsonify({
+                    'error': 'Admin access required',
+                    'message': 'Invalid admin token'
+                }), 403
+                
+            return f(*args, **kwargs)
+        except Exception as e:
+            return jsonify({
+                'error': 'Authentication failed',
+                'message': str(e)
+            }), 401
+    return decorated
+
 def validate_user_data(data, required_fields):
     """Validate user registration/update data"""
     errors = []

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
+import AdminPanel from './AdminPanel';
 
 // Define interfaces for type safety
 interface Venue {
@@ -40,7 +41,9 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'login'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'login' | 'admin'>('home');
+  const [adminToken, setAdminToken] = useState<string>('');
+  const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
   // API base URL - force correct URL to override wrong environment variable
   const API_BASE_URL = 'https://band-review-website.onrender.com/api';
@@ -258,6 +261,117 @@ function App() {
     </div>
   );
 
+  /**
+   * Handle admin login
+   */
+  const handleAdminLogin = async (email: string, password: string) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid admin credentials');
+      }
+
+      const data = await response.json();
+      
+      // Check if user is admin (email starts with admin@)
+      if (data.user && data.user.email.startsWith('admin@')) {
+        setAdminToken(data.access_token);
+        setIsAdmin(true);
+        setCurrentView('admin');
+        setError('');
+      } else {
+        throw new Error('Admin access required');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Admin login failed');
+    }
+  };
+
+  // Admin login state
+  const [adminEmail, setAdminEmail] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
+
+  /**
+   * Render admin login
+   */
+  const renderAdminLogin = () => {
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      handleAdminLogin(adminEmail, adminPassword);
+    };
+
+    return (
+      <div className="login-section">
+        <h2>🛠️ Admin Access</h2>
+        <p>Administrative access to manage venues and moderate content</p>
+        
+        <form onSubmit={handleSubmit} className="admin-login-form">
+          <div className="form-group">
+            <label htmlFor="admin-email">Admin Email:</label>
+            <input
+              id="admin-email"
+              type="email"
+              value={adminEmail}
+              onChange={(e) => setAdminEmail(e.target.value)}
+              placeholder="admin@bandvenuereview.ie"
+              required
+            />
+          </div>
+          
+          <div className="form-group">
+            <label htmlFor="admin-password">Password:</label>
+            <input
+              id="admin-password"
+              type="password"
+              value={adminPassword}
+              onChange={(e) => setAdminPassword(e.target.value)}
+              placeholder="Enter admin password"
+              required
+            />
+          </div>
+          
+          <button type="submit" className="btn btn-primary">
+            🔓 Admin Login
+          </button>
+        </form>
+        
+        <div className="demo-note">
+          <p><strong>Demo Admin Access:</strong></p>
+          <p>Email: admin@bandvenuereview.ie</p>
+          <p>Password: [Contact administrator]</p>
+        </div>
+        
+        <button 
+          onClick={() => setCurrentView('home')} 
+          className="btn btn-secondary back-to-home"
+        >
+          ← Back to Home
+        </button>
+      </div>
+    );
+  };
+
+  if (isAdmin && adminToken) {
+    return (
+      <AdminPanel
+        apiBaseUrl={API_BASE_URL}
+        adminToken={adminToken}
+        onLogout={() => {
+          setIsAdmin(false);
+          setAdminToken('');
+          setCurrentView('home');
+        }}
+      />
+    );
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -284,6 +398,26 @@ function App() {
             >
               Login
             </button>
+            {!isAdmin && (
+              <button 
+                className="nav-link admin-link"
+                onClick={() => setCurrentView('admin')}
+              >
+                🛠️ Admin
+              </button>
+            )}
+            {isAdmin && (
+              <button 
+                className="nav-link admin-active"
+                onClick={() => {
+                  setIsAdmin(false);
+                  setAdminToken('');
+                  setCurrentView('home');
+                }}
+              >
+                Logout Admin
+              </button>
+            )}
           </div>
         </nav>
 
@@ -304,6 +438,7 @@ function App() {
           {currentView === 'home' && renderHome()}
           {currentView === 'venues' && renderVenues()}
           {currentView === 'login' && renderLogin()}
+          {currentView === 'admin' && renderAdminLogin()}
         </main>
 
         {/* Footer */}
