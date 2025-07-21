@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 
 // Define interfaces for type safety
@@ -46,7 +46,7 @@ function App() {
   /**
    * Check API health status
    */
-  const checkHealth = async () => {
+  const checkHealth = useCallback(async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/health`);
       if (!response.ok) {
@@ -59,12 +59,12 @@ function App() {
       setHealthStatus('❌ API connection failed');
       setError('Failed to connect to backend API');
     }
-  };
+  }, [API_BASE_URL]);
 
   /**
    * Fetch venues from the API
    */
-  const fetchVenues = async () => {
+  const fetchVenues = useCallback(async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/venues?per_page=6`);
       if (!response.ok) {
@@ -78,13 +78,13 @@ function App() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [API_BASE_URL]);
 
   // Fetch data when component mounts
   useEffect(() => {
     checkHealth();
     fetchVenues();
-  }, []);
+  }, [checkHealth, fetchVenues]);
 
   /**
    * Render star rating
