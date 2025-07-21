@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build script for Render.com deployment
 
-echo "🎸 Building Yelp for Bands Backend..."
+echo "🎸 Building BandVenueReview.ie Backend..."
 
 # Install Python dependencies
 echo "📦 Installing Python dependencies..."

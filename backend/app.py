@@ -464,5 +464,5 @@ if __name__ == '__main__':
     app.run(
         host='0.0.0.0',  # Allow external connections
         port=port,       # Use environment PORT or default to 5000
-        debug=app.config['DEBUG']  # Use config-based debug setting
+        debug=False if os.environ.get('FLASK_ENV') == 'production' else app.config['DEBUG']
     )

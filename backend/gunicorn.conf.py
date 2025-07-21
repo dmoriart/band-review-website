@@ -1,4 +1,4 @@
-# Gunicorn configuration for Yelp for Bands API
+# Gunicorn configuration for BandVenueReview.ie API
 # This file provides production-ready settings for the Flask app
 
 import multiprocessing
@@ -26,7 +26,7 @@ errorlog = "-"   # Log to stderr
 access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 
 # Process naming
-proc_name = "yelp-for-bands-api"
+proc_name = "bandvenuereview-api"
 
 # Server mechanics
 preload_app = True
