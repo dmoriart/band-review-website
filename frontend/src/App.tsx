@@ -42,8 +42,8 @@ function App() {
   const [healthStatus, setHealthStatus] = useState<string>('');
   const [currentView, setCurrentView] = useState<'home' | 'venues' | 'login'>('home');
 
-  // API base URL - defaults to production, can be overridden with REACT_APP_API_URL
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://band-review-website.onrender.com/api';
+  // API base URL - force correct URL to override wrong environment variable
+  const API_BASE_URL = 'https://band-review-website.onrender.com/api';
 
   /**
    * Check API health status
