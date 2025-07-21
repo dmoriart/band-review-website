@@ -1,0 +1,22 @@
+# Render.com Web Service Configuration
+# Use this instead of render.yaml to avoid payment requirements
+
+## Service Settings:
+- Type: Web Service
+- Name: bandvenuereview-api  
+- Environment: Python 3
+- Region: Oregon
+- Branch: main
+- Root Directory: backend
+
+## Build Settings:
+Build Command: pip install -r requirements.txt
+Start Command: python init_db.py && gunicorn -c gunicorn.conf.py app:app
+
+## Environment Variables:
+FLASK_ENV=production
+FLASK_DEBUG=false
+SECRET_KEY=BandVenueReview2025SuperSecretKey123!
+JWT_SECRET_KEY=JWTSecretForBandVenueReview2025xyz
+DATABASE_URL=postgresql://postgres:fewzuj-ninsyw-suRza5@thoghjwipjpkxcfkkcbx.supabase.co:5432/postgres
+CORS_ORIGINS=https://bandvenuereview.netlify.app
