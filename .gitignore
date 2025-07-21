@@ -4,6 +4,8 @@ backend/__pycache__/
 backend/*.pyc
 backend/.env
 backend/instance/
+backend/*.db
+backend/*.sqlite3
 
 # Frontend
 frontend/node_modules/
@@ -30,3 +32,11 @@ yarn-error.log*
 # Production
 *.pid
 gunicorn.pid
+
+# Database
+*.db
+*.sqlite3
+bandvenuereview*.db
+
+# Deployment
+.netlify/
