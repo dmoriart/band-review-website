@@ -1,12 +1,12 @@
 [build]
-  # Build command
-  command = "cd frontend && npm ci && npm run build"
+  # Base directory for the build (where package.json is located)
+  base = "frontend"
   
-  # Directory to publish (relative to root of the repo)
-  publish = "frontend/build"
+  # Build command (runs in the base directory)
+  command = "npm ci && npm run build"
   
-  # Base directory for the build (optional, but helps with monorepos)
-  base = "/"
+  # Directory to publish (relative to base directory)
+  publish = "build"
 
 [build.environment]
   # Node.js version
