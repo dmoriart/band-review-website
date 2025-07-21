@@ -6,6 +6,7 @@ SQLAlchemy models for the Irish live music venue review platform
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
+from sqlalchemy.dialects.postgresql import UUID
 import uuid
 
 db = SQLAlchemy()
@@ -14,7 +15,7 @@ class User(db.Model):
     """Base user model for both bands and venue owners"""
     __tablename__ = 'users'
     
-    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     email = db.Column(db.String(120), unique=True, nullable=False, index=True)
     password_hash = db.Column(db.String(255), nullable=False)
     user_type = db.Column(db.String(20), nullable=False)  # 'band' or 'venue'
@@ -24,8 +25,8 @@ class User(db.Model):
     bio = db.Column(db.Text, nullable=True)
     profile_image = db.Column(db.String(500), nullable=True)
     verified = db.Column(db.Boolean, default=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = db.Column(db.DateTime(timezone=True), default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=datetime.utcnow, onupdate=datetime.utcnow)
 
     def set_password(self, password):
         """Hash and set password"""
@@ -54,8 +55,8 @@ class Band(db.Model):
     """Band/Artist specific information"""
     __tablename__ = 'bands'
     
-    id = db.Column(db.String(36), primary_key=True)
-    user_id = db.Column(db.String(36), db.ForeignKey('users.id'), nullable=False)
+    id = db.Column(UUID(as_uuid=True), primary_key=True)
+    user_id = db.Column(UUID(as_uuid=True), db.ForeignKey('users.id'), nullable=False)
     genre = db.Column(db.String(100), nullable=True)
     member_count = db.Column(db.Integer, nullable=True)
     formation_year = db.Column(db.Integer, nullable=True)
@@ -83,8 +84,8 @@ class Venue(db.Model):
     """Live music venues in Ireland"""
     __tablename__ = 'venues'
     
-    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    user_id = db.Column(db.String(36), db.ForeignKey('users.id'), nullable=True)  # Optional - for claimed venues
+    id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = db.Column(UUID(as_uuid=True), db.ForeignKey('users.id'), nullable=True)  # Optional - for claimed venues
     name = db.Column(db.String(200), nullable=False)
     address = db.Column(db.String(500), nullable=False)
     city = db.Column(db.String(100), nullable=False)
@@ -101,10 +102,10 @@ class Venue(db.Model):
     images = db.Column(db.JSON, nullable=True)  # Array of image URLs
     claimed = db.Column(db.Boolean, default=False)
     verified = db.Column(db.Boolean, default=False)
-    average_rating = db.Column(db.Float, default=0.0)
+    average_rating = db.Column(db.Numeric(3,1), default=0.0)
     review_count = db.Column(db.Integer, default=0)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = db.Column(db.DateTime(timezone=True), default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=datetime.utcnow, onupdate=datetime.utcnow)
     
     # Relationships
     user = db.relationship('User', backref='venue_profile')
@@ -148,9 +149,9 @@ class Review(db.Model):
     """Reviews left by bands about venues"""
     __tablename__ = 'reviews'
     
-    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    band_id = db.Column(db.String(36), db.ForeignKey('bands.id'), nullable=False)
-    venue_id = db.Column(db.String(36), db.ForeignKey('venues.id'), nullable=False)
+    id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    band_id = db.Column(UUID(as_uuid=True), db.ForeignKey('bands.id'), nullable=False)
+    venue_id = db.Column(UUID(as_uuid=True), db.ForeignKey('venues.id'), nullable=False)
     
     # Performance details
     performance_date = db.Column(db.Date, nullable=False)
@@ -178,8 +179,8 @@ class Review(db.Model):
     # Metadata
     verified_performance = db.Column(db.Boolean, default=False)  # Admin verified
     helpful_votes = db.Column(db.Integer, default=0)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = db.Column(db.DateTime(timezone=True), default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=datetime.utcnow, onupdate=datetime.utcnow)
 
     def to_dict(self):
         return {
@@ -209,15 +210,15 @@ class Review(db.Model):
 
 # Association table for many-to-many relationship between venues and genres
 venue_genres = db.Table('venue_genres',
-    db.Column('venue_id', db.String(36), db.ForeignKey('venues.id'), primary_key=True),
-    db.Column('genre_id', db.String(36), db.ForeignKey('genres.id'), primary_key=True)
+    db.Column('venue_id', UUID(as_uuid=True), db.ForeignKey('venues.id'), primary_key=True),
+    db.Column('genre_id', UUID(as_uuid=True), db.ForeignKey('genres.id'), primary_key=True)
 )
 
 class Genre(db.Model):
     """Music genres for categorizing venues and bands"""
     __tablename__ = 'genres'
     
-    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name = db.Column(db.String(50), unique=True, nullable=False)
     description = db.Column(db.Text, nullable=True)
     
