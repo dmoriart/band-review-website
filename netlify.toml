@@ -2,8 +2,8 @@
   # Base directory for the build (where package.json is located)
   base = "frontend"
   
-  # Build command (runs in the base directory) - CI=false to prevent treating warnings as errors
-  command = "export CI=false && npm ci && npm run build"
+  # Build command (runs in the base directory)
+  command = "npm ci && npm run build:netlify"
   
   # Directory to publish (relative to base directory)
   publish = "build"
@@ -11,6 +11,9 @@
 [build.environment]
   # Node.js version
   NODE_VERSION = "18"
+  
+  # Disable treating warnings as errors
+  CI = "false"
   
   # React environment variables
   REACT_APP_API_URL = "https://band-review-api.onrender.com/api"

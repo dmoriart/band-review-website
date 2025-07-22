@@ -13,6 +13,9 @@ const firebaseConfigExists = !!(
   process.env.REACT_APP_FIREBASE_APP_ID
 );
 
+// Detect if we're in a build environment
+const isBuildTime = process.env.NODE_ENV === 'production' && process.env.CI !== undefined;
+
 // Firebase configuration - these should be set in environment variables
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY || 'demo-api-key',
@@ -28,13 +31,18 @@ let app: FirebaseApp | null = null;
 let firebaseAuth: Auth | null = null;
 let firebaseDb: Firestore | null = null;
 
-try {
-  app = initializeApp(firebaseConfig);
-  firebaseAuth = getAuth(app);
-  firebaseDb = getFirestore(app);
-} catch (error) {
-  console.warn('Firebase initialization failed:', error);
-  // Firebase will not work, but build should succeed
+// Only initialize Firebase if we have config and we're not in build time
+if (firebaseConfigExists && !isBuildTime) {
+  try {
+    app = initializeApp(firebaseConfig);
+    firebaseAuth = getAuth(app);
+    firebaseDb = getFirestore(app);
+  } catch (error) {
+    console.warn('Firebase initialization failed:', error);
+    // Firebase will not work, but build should succeed
+  }
+} else {
+  console.log('Firebase initialization skipped:', { firebaseConfigExists, isBuildTime });
 }
 
 // Export Firebase instances
