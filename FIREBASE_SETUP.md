@@ -95,6 +95,17 @@ REACT_APP_FIREBASE_APP_ID=your_app_id_here
    - The build is configured to set `CI=false` to prevent treating warnings as errors
    - If you still see issues, check the netlify.toml file has: `command = "export CI=false && npm ci && npm run build"`
 
+6. **Netlify build failing with "exit code 2"**
+   - This typically indicates a compilation or dependency issue
+   - The Firebase integration is designed to handle missing environment variables gracefully
+   - Build should succeed even without Firebase environment variables configured
+   - If build still fails, check for TypeScript compilation errors in the logs
+
+7. **Deprecation warnings during build**
+   - npm warn deprecated messages are normal and don't prevent successful builds
+   - These are from react-scripts dependencies and are cosmetic
+   - Running `npm audit fix --force` may break the build, so avoid unless necessary
+
 ## Features Implemented
 
 ✅ **Email/Password Authentication**
