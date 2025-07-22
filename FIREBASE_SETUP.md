@@ -91,6 +91,10 @@ REACT_APP_FIREBASE_APP_ID=your_app_id_here
    - Restart development server after changing .env files
    - For Netlify, redeploy after adding environment variables
 
+5. **Netlify build failing due to warnings**
+   - The build is configured to set `CI=false` to prevent treating warnings as errors
+   - If you still see issues, check the netlify.toml file has: `command = "export CI=false && npm ci && npm run build"`
+
 ## Features Implemented
 
 ✅ **Email/Password Authentication**
