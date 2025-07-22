@@ -58,6 +58,24 @@ def init_dev_database():
                 'primary_genres': ["rock", "indie", "folk"],
                 'facilities': ["professional_sound", "lighting", "bar", "green_room", "merchandise_area"],
                 'description': "Dublin's premier live music venue since 1989. Known for discovering new talent and hosting intimate gigs.",
+                'tech_specs': {
+                    'pa_system': 'L-Acoustics system with 32-channel digital mixer',
+                    'mics_available': 8,
+                    'lighting_rig': 'Full LED lighting system with haze machine',
+                    'stage_size': '6m x 4m',
+                    'backline': ['drum_kit', 'bass_amp', 'guitar_amp'],
+                    'power_outlets': 6,
+                    'monitor_system': '4-way monitor system',
+                    'accessibility': ['ramp_access', 'accessible_toilet']
+                },
+                'contact_info': {
+                    'booking_email': 'bookings@whelans.com',
+                    'booking_phone': '+353 1 478 0766',
+                    'manager_name': 'Dave Allen',
+                    'preferred_contact': 'email'
+                },
+                'latitude': 53.3359,
+                'longitude': -6.2589,
                 'verified': True
             },
             {
@@ -72,6 +90,22 @@ def init_dev_database():
                 'primary_genres': ["electronic", "indie", "rock"],
                 'facilities': ["professional_sound", "lighting", "bar", "late_license"],
                 'description': 'Intimate venue in the heart of Temple Bar, perfect for both emerging and established acts.',
+                'tech_specs': {
+                    'pa_system': 'Pioneer CDJ setup with full range speakers',
+                    'mics_available': 4,
+                    'lighting_rig': 'Club-style lighting with strobes and smoke machine',
+                    'stage_size': '5m x 3m',
+                    'backline': ['dj_setup', 'keyboard'],
+                    'power_outlets': 8,
+                    'monitor_system': 'DJ booth monitors'
+                },
+                'contact_info': {
+                    'booking_email': 'info@buttonfactory.ie',
+                    'booking_phone': '+353 1 670 9202',
+                    'preferred_contact': 'email'
+                },
+                'latitude': 53.3448,
+                'longitude': -6.2634,
                 'verified': True
             },
             {
@@ -86,6 +120,23 @@ def init_dev_database():
                 'primary_genres': ["indie", "folk", "rock"],
                 'facilities': ["sound_system", "bar", "parking"],
                 'description': "Cork's beloved independent music venue supporting local and touring artists.",
+                'tech_specs': {
+                    'pa_system': 'Yamaha digital system with 16-channel mixer',
+                    'mics_available': 6,
+                    'lighting_rig': 'Basic stage lighting with spots',
+                    'stage_size': '4m x 3m',
+                    'backline': ['drum_kit'],
+                    'power_outlets': 4,
+                    'monitor_system': '2-way floor monitors'
+                },
+                'contact_info': {
+                    'booking_email': 'bookings@cyprusavenue.ie',
+                    'booking_phone': '+353 21 427 6165',
+                    'manager_name': 'Siobhan Murphy',
+                    'preferred_contact': 'phone'
+                },
+                'latitude': 51.8985,
+                'longitude': -8.4756,
                 'verified': True
             },
             {
@@ -99,6 +150,21 @@ def init_dev_database():
                 'primary_genres': ["traditional", "folk", "rock"],
                 'facilities': ["sound_system", "bar", "traditional_session_space"],
                 'description': 'Historic Galway pub hosting traditional sessions and contemporary acts.',
+                'tech_specs': {
+                    'pa_system': 'Basic PA suitable for acoustic acts',
+                    'mics_available': 3,
+                    'lighting_rig': 'Ambient pub lighting',
+                    'stage_size': '3m x 2m corner stage',
+                    'power_outlets': 2,
+                    'monitor_system': 'Single floor monitor'
+                },
+                'contact_info': {
+                    'booking_email': 'music@monroestavern.ie',
+                    'booking_phone': '+353 91 583 397',
+                    'preferred_contact': 'phone'
+                },
+                'latitude': 53.2743,
+                'longitude': -9.0568,
                 'verified': True
             },
             {
@@ -114,6 +180,24 @@ def init_dev_database():
                 'primary_genres': ["indie", "electronic", "alternative"],
                 'facilities': ["professional_sound", "lighting", "bar", "late_license", "roof_terrace"],
                 'description': 'Multi-level venue with different spaces for intimate gigs and club nights.',
+                'tech_specs': {
+                    'pa_system': 'Multi-room sound system with separate DJ booth',
+                    'mics_available': 5,
+                    'lighting_rig': 'Full club lighting with lasers',
+                    'stage_size': '4m x 3m main room',
+                    'backline': ['keyboard', 'dj_setup'],
+                    'power_outlets': 6,
+                    'monitor_system': 'In-ear monitoring available',
+                    'accessibility': ['elevator_access']
+                },
+                'contact_info': {
+                    'booking_email': 'bookings@theworkmansclub.com',
+                    'booking_phone': '+353 1 670 6692',
+                    'manager_name': 'Paul Hogan',
+                    'preferred_contact': 'email'
+                },
+                'latitude': 53.3463,
+                'longitude': -6.2589,
                 'verified': True
             }
         ]

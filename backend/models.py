@@ -100,6 +100,10 @@ class Venue(db.Model):
     facilities = db.Column(db.JSON, nullable=True)  # ["sound_system", "lighting", "parking"]
     description = db.Column(db.Text, nullable=True)
     images = db.Column(db.JSON, nullable=True)  # Array of image URLs
+    tech_specs = db.Column(db.JSON, nullable=True)  # Technical specifications
+    contact_info = db.Column(db.JSON, nullable=True)  # Booking contact information
+    latitude = db.Column(db.Numeric(10, 8), nullable=True)  # GPS coordinates
+    longitude = db.Column(db.Numeric(11, 8), nullable=True)  # GPS coordinates
     claimed = db.Column(db.Boolean, default=False)
     verified = db.Column(db.Boolean, default=False)
     average_rating = db.Column(db.Numeric(3,1), default=0.0)
@@ -138,9 +142,13 @@ class Venue(db.Model):
             'facilities': self.facilities,
             'description': self.description,
             'images': self.images,
+            'tech_specs': self.tech_specs,
+            'contact_info': self.contact_info,
+            'latitude': float(self.latitude) if self.latitude else None,
+            'longitude': float(self.longitude) if self.longitude else None,
             'claimed': self.claimed,
             'verified': self.verified,
-            'average_rating': self.average_rating,
+            'average_rating': float(self.average_rating) if self.average_rating else 0.0,
             'review_count': self.review_count,
             'created_at': self.created_at.isoformat() if self.created_at else None
         }

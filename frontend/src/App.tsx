@@ -3,17 +3,44 @@ import './App.css';
 import AdminPanel from './AdminPanel';
 
 // Define interfaces for type safety
+interface TechSpecs {
+  pa_system?: string;
+  mics_available?: number;
+  lighting_rig?: string;
+  stage_size?: string;
+  backline?: string[];
+  power_outlets?: number;
+  monitor_system?: string;
+  accessibility?: string[];
+}
+
+interface ContactInfo {
+  booking_email?: string;
+  booking_phone?: string;
+  manager_name?: string;
+  preferred_contact?: string;
+}
+
 interface Venue {
   id: string;
   name: string;
   address: string;
   city: string;
   county: string;
+  eircode?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
   capacity?: number;
   venue_type?: string;
   primary_genres?: string[];
   facilities?: string[];
   description?: string;
+  images?: string[];
+  tech_specs?: TechSpecs;
+  contact_info?: ContactInfo;
+  latitude?: number;
+  longitude?: number;
   average_rating: number;
   review_count: number;
   claimed: boolean;
@@ -38,12 +65,22 @@ interface HealthResponse {
 function App() {
   // State management
   const [venues, setVenues] = useState<Venue[]>([]);
+  const [filteredVenues, setFilteredVenues] = useState<Venue[]>([]);
+  const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'login' | 'admin'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'login' | 'admin'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
+  // Search and filter state
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedCity, setSelectedCity] = useState<string>('');
+  const [selectedCapacity, setSelectedCapacity] = useState<string>('');
+  const [selectedRating, setSelectedRating] = useState<string>('');
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
 
   // API base URL - force correct URL to override wrong environment variable
   const API_BASE_URL = 'https://band-review-website.onrender.com/api';
@@ -95,6 +132,75 @@ function App() {
     checkHealth();
     fetchVenues();
   }, [checkHealth, fetchVenues]);
+
+  // Filter venues based on search and filter criteria
+  useEffect(() => {
+    let filtered = venues;
+
+    // Search by name or city
+    if (searchQuery) {
+      filtered = filtered.filter(venue => 
+        venue.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        venue.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        venue.address.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    // Filter by city
+    if (selectedCity) {
+      filtered = filtered.filter(venue => venue.city === selectedCity);
+    }
+
+    // Filter by capacity
+    if (selectedCapacity) {
+      filtered = filtered.filter(venue => {
+        if (!venue.capacity) return false;
+        switch (selectedCapacity) {
+          case 'small': return venue.capacity <= 200;
+          case 'medium': return venue.capacity > 200 && venue.capacity <= 1000;
+          case 'large': return venue.capacity > 1000;
+          default: return true;
+        }
+      });
+    }
+
+    // Filter by rating
+    if (selectedRating) {
+      const minRating = parseFloat(selectedRating);
+      filtered = filtered.filter(venue => venue.average_rating >= minRating);
+    }
+
+    // Filter by features
+    if (selectedFeatures.length > 0) {
+      filtered = filtered.filter(venue => 
+        selectedFeatures.every(feature => 
+          venue.facilities?.includes(feature) || 
+          venue.tech_specs?.backline?.includes(feature)
+        )
+      );
+    }
+
+    setFilteredVenues(filtered);
+  }, [venues, searchQuery, selectedCity, selectedCapacity, selectedRating, selectedFeatures]);
+
+  /**
+   * Get unique cities for filter dropdown
+   */
+  const getUniqueCities = () => {
+    const cities = venues.map(venue => venue.city);
+    return Array.from(new Set(cities)).sort();
+  };
+
+  /**
+   * Toggle feature filter
+   */
+  const toggleFeature = (feature: string) => {
+    setSelectedFeatures(prev => 
+      prev.includes(feature) 
+        ? prev.filter(f => f !== feature)
+        : [...prev, feature]
+    );
+  };
 
   /**
    * Render star rating
@@ -162,7 +268,7 @@ function App() {
   );
 
   /**
-   * Render venues list
+   * Render venues list with search and filters
    */
   const renderVenues = () => (
     <div className="venues-section">
@@ -171,12 +277,96 @@ function App() {
         <p>Discover where to play your next gig</p>
       </div>
 
+      {/* Search and Filter Controls */}
+      <div className="search-filters">
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search venues by name, city, or address..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input"
+          />
+        </div>
+
+        <div className="filters">
+          <select 
+            value={selectedCity} 
+            onChange={(e) => setSelectedCity(e.target.value)}
+            className="filter-select"
+            aria-label="Filter by city"
+          >
+            <option value="">All Cities</option>
+            {getUniqueCities().map(city => (
+              <option key={city} value={city}>{city}</option>
+            ))}
+          </select>
+
+          <select 
+            value={selectedCapacity} 
+            onChange={(e) => setSelectedCapacity(e.target.value)}
+            className="filter-select"
+            aria-label="Filter by capacity"
+          >
+            <option value="">All Capacities</option>
+            <option value="small">Small (≤200)</option>
+            <option value="medium">Medium (201-1000)</option>
+            <option value="large">Large (1000+)</option>
+          </select>
+
+          <select 
+            value={selectedRating} 
+            onChange={(e) => setSelectedRating(e.target.value)}
+            className="filter-select"
+            aria-label="Filter by rating"
+          >
+            <option value="">All Ratings</option>
+            <option value="4">4+ Stars</option>
+            <option value="3">3+ Stars</option>
+            <option value="2">2+ Stars</option>
+          </select>
+        </div>
+
+        <div className="feature-filters">
+          <h4>Features:</h4>
+          <div className="feature-tags">
+            {['sound_system', 'lighting', 'parking', 'green_room', 'drum_kit', 'ramp_access'].map(feature => (
+              <button
+                key={feature}
+                className={`feature-tag ${selectedFeatures.includes(feature) ? 'active' : ''}`}
+                onClick={() => toggleFeature(feature)}
+              >
+                {feature.replace('_', ' ')}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {(searchQuery || selectedCity || selectedCapacity || selectedRating || selectedFeatures.length > 0) && (
+          <button 
+            className="clear-filters"
+            onClick={() => {
+              setSearchQuery('');
+              setSelectedCity('');
+              setSelectedCapacity('');
+              setSelectedRating('');
+              setSelectedFeatures([]);
+            }}
+          >
+            Clear Filters
+          </button>
+        )}
+      </div>
+
       {loading ? (
         <div className="loading">Loading venues...</div>
-      ) : venues.length > 0 ? (
+      ) : filteredVenues.length > 0 ? (
         <div className="venues-grid">
-          {venues.map((venue) => (
-            <div key={venue.id} className="venue-card">
+          {filteredVenues.map((venue) => (
+            <div key={venue.id} className="venue-card" onClick={() => {
+              setSelectedVenue(venue);
+              setCurrentView('venue-detail');
+            }}>
               <div className="venue-header">
                 <h3>{venue.name}</h3>
                 <div className="venue-badges">
@@ -227,10 +417,248 @@ function App() {
           ))}
         </div>
       ) : (
-        <div className="no-venues">No venues found</div>
+        <div className="no-venues">
+          {searchQuery || selectedCity || selectedCapacity || selectedRating || selectedFeatures.length > 0 
+            ? `No venues found matching your criteria`
+            : `No venues found`
+          }
+        </div>
       )}
     </div>
   );
+
+  /**
+   * Render venue detail page
+   */
+  const renderVenueDetail = () => {
+    if (!selectedVenue) return <div>Venue not found</div>;
+
+    return (
+      <div className="venue-detail">
+        <button 
+          className="back-button"
+          onClick={() => setCurrentView('venues')}
+        >
+          ← Back to Venues
+        </button>
+
+        <div className="venue-detail-header">
+          <div className="venue-title-section">
+            <h1>{selectedVenue.name}</h1>
+            <div className="venue-badges">
+              {selectedVenue.verified && <span className="badge verified">✓ Verified</span>}
+              {selectedVenue.claimed && <span className="badge claimed">Claimed by Owner</span>}
+            </div>
+          </div>
+          
+          <div className="venue-rating-large">
+            {renderStars(selectedVenue.average_rating)}
+            {selectedVenue.review_count > 0 && (
+              <span className="review-count">({selectedVenue.review_count} reviews)</span>
+            )}
+          </div>
+        </div>
+
+        <div className="venue-detail-content">
+          <div className="venue-main-info">
+            {/* Basic Info Section */}
+            <div className="info-section">
+              <h3>📍 Location & Contact</h3>
+              <div className="info-grid">
+                <div className="info-item">
+                  <strong>Address:</strong>
+                  <p>{selectedVenue.address}, {selectedVenue.city}, {selectedVenue.county}</p>
+                  {selectedVenue.eircode && <p>Eircode: {selectedVenue.eircode}</p>}
+                </div>
+                
+                {/* Google Maps Integration */}
+                <div className="map-container">
+                  <iframe
+                    title={`Map of ${selectedVenue.name}`}
+                    width="100%"
+                    height="200"
+                    frameBorder="0"
+                    src={`https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`}
+                    allowFullScreen
+                  />
+                  <p className="map-note">📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`} target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Venue Specs */}
+            <div className="info-section">
+              <h3>🏛️ Venue Specifications</h3>
+              <div className="specs-grid">
+                {selectedVenue.capacity && (
+                  <div className="spec-item">
+                    <strong>👥 Capacity:</strong> {selectedVenue.capacity}
+                  </div>
+                )}
+                {selectedVenue.venue_type && (
+                  <div className="spec-item">
+                    <strong>🏛️ Type:</strong> {selectedVenue.venue_type.replace('_', ' ')}
+                  </div>
+                )}
+                {selectedVenue.tech_specs?.stage_size && (
+                  <div className="spec-item">
+                    <strong>🎭 Stage Size:</strong> {selectedVenue.tech_specs.stage_size}
+                  </div>
+                )}
+                {selectedVenue.primary_genres && selectedVenue.primary_genres.length > 0 && (
+                  <div className="spec-item">
+                    <strong>🎵 Primary Genres:</strong> {selectedVenue.primary_genres.join(', ')}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Contact Info - Requires Login */}
+            <div className="info-section">
+              <h3>📞 Booking Information</h3>
+              {isLoggedIn ? (
+                <div className="contact-info">
+                  {selectedVenue.contact_info?.booking_email && (
+                    <div className="contact-item">
+                      <strong>📧 Booking Email:</strong> 
+                      <a href={`mailto:${selectedVenue.contact_info.booking_email}`}>
+                        {selectedVenue.contact_info.booking_email}
+                      </a>
+                    </div>
+                  )}
+                  {selectedVenue.contact_info?.booking_phone && (
+                    <div className="contact-item">
+                      <strong>📱 Booking Phone:</strong> 
+                      <a href={`tel:${selectedVenue.contact_info.booking_phone}`}>
+                        {selectedVenue.contact_info.booking_phone}
+                      </a>
+                    </div>
+                  )}
+                  {selectedVenue.contact_info?.manager_name && (
+                    <div className="contact-item">
+                      <strong>👤 Manager:</strong> {selectedVenue.contact_info.manager_name}
+                    </div>
+                  )}
+                  {selectedVenue.website && (
+                    <div className="contact-item">
+                      <strong>🌐 Website:</strong> 
+                      <a href={selectedVenue.website} target="_blank" rel="noopener noreferrer">
+                        {selectedVenue.website}
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="login-required">
+                  <p>🔒 Sign in to view booking contact information</p>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => setCurrentView('login')}
+                  >
+                    Sign In
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Photo Gallery */}
+            <div className="info-section">
+              <h3>📸 Photo Gallery</h3>
+              {selectedVenue.images && selectedVenue.images.length > 0 ? (
+                <div className="photo-gallery">
+                  {selectedVenue.images.map((image, index) => (
+                    <div key={index} className="photo-item">
+                      <img src={image} alt={`${selectedVenue.name} - Photo ${index + 1}`} />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="no-photos">
+                  <p>No photos available yet.</p>
+                  <p>Be the first to share photos of this venue!</p>
+                </div>
+              )}
+            </div>
+
+            {/* Tech Specs */}
+            <div className="info-section">
+              <h3>🎛️ Technical Specifications</h3>
+              {selectedVenue.tech_specs ? (
+                <div className="tech-specs">
+                  {selectedVenue.tech_specs.pa_system && (
+                    <div className="tech-item">
+                      <strong>🔊 PA System:</strong> {selectedVenue.tech_specs.pa_system}
+                    </div>
+                  )}
+                  {selectedVenue.tech_specs.mics_available && (
+                    <div className="tech-item">
+                      <strong>🎤 Microphones:</strong> {selectedVenue.tech_specs.mics_available} available
+                    </div>
+                  )}
+                  {selectedVenue.tech_specs.lighting_rig && (
+                    <div className="tech-item">
+                      <strong>💡 Lighting:</strong> {selectedVenue.tech_specs.lighting_rig}
+                    </div>
+                  )}
+                  {selectedVenue.tech_specs.monitor_system && (
+                    <div className="tech-item">
+                      <strong>📢 Monitors:</strong> {selectedVenue.tech_specs.monitor_system}
+                    </div>
+                  )}
+                  {selectedVenue.tech_specs.backline && selectedVenue.tech_specs.backline.length > 0 && (
+                    <div className="tech-item">
+                      <strong>🥁 Backline:</strong> {selectedVenue.tech_specs.backline.join(', ')}
+                    </div>
+                  )}
+                  {selectedVenue.tech_specs.power_outlets && (
+                    <div className="tech-item">
+                      <strong>🔌 Power Outlets:</strong> {selectedVenue.tech_specs.power_outlets} available
+                    </div>
+                  )}
+                  {selectedVenue.tech_specs.accessibility && selectedVenue.tech_specs.accessibility.length > 0 && (
+                    <div className="tech-item">
+                      <strong>♿ Accessibility:</strong> {selectedVenue.tech_specs.accessibility.join(', ')}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="no-tech-specs">
+                  <p>Technical specifications not yet available.</p>
+                  {selectedVenue.claimed ? (
+                    <p>Contact the venue owner to request this information.</p>
+                  ) : (
+                    <p>Is this your venue? Claim it to add technical details!</p>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Facilities */}
+            {selectedVenue.facilities && selectedVenue.facilities.length > 0 && (
+              <div className="info-section">
+                <h3>🏢 Facilities & Amenities</h3>
+                <div className="facilities-list">
+                  {selectedVenue.facilities.map(facility => (
+                    <span key={facility} className="facility-tag">
+                      {facility.replace('_', ' ')}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Description */}
+            {selectedVenue.description && (
+              <div className="info-section">
+                <h3>📝 About This Venue</h3>
+                <p className="venue-description-full">{selectedVenue.description}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   /**
    * Render login section
@@ -437,8 +865,18 @@ function App() {
         <main className="main-content">
           {currentView === 'home' && renderHome()}
           {currentView === 'venues' && renderVenues()}
+          {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'login' && renderLogin()}
           {currentView === 'admin' && renderAdminLogin()}
+          {isAdmin && <AdminPanel 
+            adminToken={adminToken} 
+            apiBaseUrl={API_BASE_URL}
+            onLogout={() => {
+              setIsAdmin(false);
+              setAdminToken('');
+              setCurrentView('home');
+            }} 
+          />}
         </main>
 
         {/* Footer */}
