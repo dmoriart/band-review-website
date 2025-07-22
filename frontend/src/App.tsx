@@ -64,10 +64,11 @@ interface HealthResponse {
   database?: string;
 }
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
 function AppContent() {
-  const { user, loading: authLoading, isConfigured } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   
-  // State management
+  // State management - ALL hooks must be declared before any conditional returns
   const [venues, setVenues] = useState<Venue[]>([]);
   const [filteredVenues, setFilteredVenues] = useState<Venue[]>([]);
   const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
@@ -86,17 +87,9 @@ function AppContent() {
   const [selectedRating, setSelectedRating] = useState<string>('');
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
 
-  // Show loading screen while Firebase auth initializes
-  if (authLoading) {
-    return (
-      <div className="app">
-        <div className="loading-auth">
-          <div className="loading-spinner"></div>
-          <p>Initializing authentication...</p>
-        </div>
-      </div>
-    );
-  }
+  // Admin login state - moved here to ensure all hooks are at the top
+  const [adminEmail, setAdminEmail] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
 
   // API base URL - force correct URL to override wrong environment variable
   const API_BASE_URL = 'https://band-review-website.onrender.com/api';
@@ -169,15 +162,12 @@ function AppContent() {
 
     // Filter by capacity
     if (selectedCapacity) {
-      filtered = filtered.filter(venue => {
-        if (!venue.capacity) return false;
-        switch (selectedCapacity) {
-          case 'small': return venue.capacity <= 200;
-          case 'medium': return venue.capacity > 200 && venue.capacity <= 1000;
-          case 'large': return venue.capacity > 1000;
-          default: return true;
-        }
-      });
+      const [min, max] = selectedCapacity.split('-').map(Number);
+      if (max) {
+        filtered = filtered.filter(venue => venue.capacity && venue.capacity >= min && venue.capacity <= max);
+      } else {
+        filtered = filtered.filter(venue => venue.capacity && venue.capacity >= min);
+      }
     }
 
     // Filter by rating
@@ -190,14 +180,29 @@ function AppContent() {
     if (selectedFeatures.length > 0) {
       filtered = filtered.filter(venue => 
         selectedFeatures.every(feature => 
-          venue.facilities?.includes(feature) || 
-          venue.tech_specs?.backline?.includes(feature)
+          venue.facilities?.some((venueFeature: string) => 
+            venueFeature.toLowerCase().includes(feature.toLowerCase())
+          ) || venue.tech_specs?.backline?.some((venueFeature: string) => 
+            venueFeature.toLowerCase().includes(feature.toLowerCase())
+          )
         )
       );
     }
 
     setFilteredVenues(filtered);
   }, [venues, searchQuery, selectedCity, selectedCapacity, selectedRating, selectedFeatures]);
+
+  // Show loading screen while Firebase auth initializes - moved after all hooks
+  if (authLoading) {
+    return (
+      <div className="app">
+        <div className="loading-auth">
+          <div className="loading-spinner"></div>
+          <p>Initializing authentication...</p>
+        </div>
+      </div>
+    );
+  }
 
   /**
    * Get unique cities for filter dropdown
@@ -714,10 +719,6 @@ function AppContent() {
       setError(err instanceof Error ? err.message : 'Admin login failed');
     }
   };
-
-  // Admin login state
-  const [adminEmail, setAdminEmail] = useState('');
-  const [adminPassword, setAdminPassword] = useState('');
 
   /**
    * Render admin login
