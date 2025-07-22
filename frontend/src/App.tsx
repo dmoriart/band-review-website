@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import AdminPanel from './AdminPanel';
+import { AuthProvider, useAuth } from './AuthContext';
+import AuthComponent from './AuthComponent';
 
 // Define interfaces for type safety
 interface TechSpecs {
@@ -62,7 +64,9 @@ interface HealthResponse {
   database?: string;
 }
 
-function App() {
+function AppContent() {
+  const { user, loading: authLoading } = useAuth();
+  
   // State management
   const [venues, setVenues] = useState<Venue[]>([]);
   const [filteredVenues, setFilteredVenues] = useState<Venue[]>([]);
@@ -70,10 +74,10 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'login' | 'admin'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'admin'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
 
   // Search and filter state
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -243,9 +247,9 @@ function App() {
           </button>
           <button 
             className="btn btn-secondary"
-            onClick={() => setCurrentView('login')}
+            onClick={() => setShowAuthModal(true)}
           >
-            Band Login
+            {user ? `Welcome, ${user.displayName || user.email}` : 'Sign In'}
           </button>
         </div>
       </div>
@@ -522,7 +526,7 @@ function App() {
             {/* Contact Info - Requires Login */}
             <div className="info-section">
               <h3>📞 Booking Information</h3>
-              {isLoggedIn ? (
+              {user ? (
                 <div className="contact-info">
                   {selectedVenue.contact_info?.booking_email && (
                     <div className="contact-item">
@@ -559,12 +563,9 @@ function App() {
                   <p>🔒 Sign in to view booking contact information</p>
                   <button 
                     className="btn btn-primary"
-                    onClick={() => {
-                      setIsLoggedIn(true);
-                      // In a real app, this would handle actual authentication
-                    }}
+                    onClick={() => setShowAuthModal(true)}
                   >
-                    Sign In (Demo)
+                    Sign In
                   </button>
                 </div>
               )}
@@ -668,35 +669,6 @@ function App() {
       </div>
     );
   };
-
-  /**
-   * Render login section
-   */
-  const renderLogin = () => (
-    <div className="login-section">
-      <h2>Band Login</h2>
-      <p>Sign in to review venues and manage your band profile</p>
-      
-      <div className="login-options">
-        <div className="login-card">
-          <h3>🎸 Band/Artist</h3>
-          <p>Review venues where you've performed</p>
-          <button className="btn btn-primary">Band Login</button>
-        </div>
-        
-        <div className="login-card">
-          <h3>🏛️ Venue Owner</h3>
-          <p>Claim and manage your venue profile</p>
-          <button className="btn btn-secondary">Venue Login</button>
-        </div>
-      </div>
-      
-      <div className="demo-note">
-        <p><strong>Demo Mode:</strong> Login functionality coming soon!</p>
-        <p>Currently showing sample data from Irish venues.</p>
-      </div>
-    </div>
-  );
 
   /**
    * Handle admin login
@@ -830,10 +802,10 @@ function App() {
               Venues
             </button>
             <button 
-              className={`nav-link ${currentView === 'login' ? 'active' : ''}`}
-              onClick={() => setCurrentView('login')}
+              className="nav-link"
+              onClick={() => setShowAuthModal(true)}
             >
-              Login
+              {user ? '👤 Account' : '🔑 Sign In'}
             </button>
             {!isAdmin && (
               <button 
@@ -875,7 +847,6 @@ function App() {
           {currentView === 'home' && renderHome()}
           {currentView === 'venues' && renderVenues()}
           {currentView === 'venue-detail' && renderVenueDetail()}
-          {currentView === 'login' && renderLogin()}
           {currentView === 'admin' && renderAdminLogin()}
           {isAdmin && <AdminPanel 
             adminToken={adminToken} 
@@ -884,9 +855,14 @@ function App() {
               setIsAdmin(false);
               setAdminToken('');
               setCurrentView('home');
-            }} 
+            }}
           />}
         </main>
+
+        {/* Authentication Modal */}
+        {showAuthModal && (
+          <AuthComponent onClose={() => setShowAuthModal(false)} />
+        )}
 
         {/* Footer */}
         <footer className="footer">
@@ -895,6 +871,15 @@ function App() {
         </footer>
       </header>
     </div>
+  );
+}
+
+// Main App component with Firebase Auth Provider
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
 
