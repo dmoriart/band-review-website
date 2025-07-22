@@ -553,9 +553,12 @@ function App() {
                   <p>🔒 Sign in to view booking contact information</p>
                   <button 
                     className="btn btn-primary"
-                    onClick={() => setCurrentView('login')}
+                    onClick={() => {
+                      setIsLoggedIn(true);
+                      // In a real app, this would handle actual authentication
+                    }}
                   >
-                    Sign In
+                    Sign In (Demo)
                   </button>
                 </div>
               )}
@@ -568,7 +571,7 @@ function App() {
                 <div className="photo-gallery">
                   {selectedVenue.images.map((image, index) => (
                     <div key={index} className="photo-item">
-                      <img src={image} alt={`${selectedVenue.name} - Photo ${index + 1}`} />
+                      <img src={image} alt={`${selectedVenue.name} - View ${index + 1}`} />
                     </div>
                   ))}
                 </div>
