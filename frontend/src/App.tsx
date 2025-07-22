@@ -473,14 +473,20 @@ function App() {
                 
                 {/* Google Maps Integration */}
                 <div className="map-container">
-                  <iframe
-                    title={`Map of ${selectedVenue.name}`}
-                    width="100%"
-                    height="200"
-                    frameBorder="0"
-                    src={`https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`}
-                    allowFullScreen
-                  />
+                  {process.env.REACT_APP_GOOGLE_MAPS_API_KEY ? (
+                    <iframe
+                      title={`Map of ${selectedVenue.name}`}
+                      width="100%"
+                      height="200"
+                      frameBorder="0"
+                      src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`}
+                      allowFullScreen
+                    />
+                  ) : (
+                    <div className="map-placeholder">
+                      <p>🗺️ Map view requires Google Maps API key configuration</p>
+                    </div>
+                  )}
                   <p className="map-note">📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`} target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
                 </div>
               </div>
