@@ -1,45 +1,93 @@
 // Firebase configuration and initialization
-import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, User } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp, FirebaseApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, User, Auth } from 'firebase/auth';
+import { getFirestore, Firestore } from 'firebase/firestore';
+
+// Check if Firebase environment variables are available
+const firebaseConfigExists = !!(
+  process.env.REACT_APP_FIREBASE_API_KEY &&
+  process.env.REACT_APP_FIREBASE_AUTH_DOMAIN &&
+  process.env.REACT_APP_FIREBASE_PROJECT_ID &&
+  process.env.REACT_APP_FIREBASE_STORAGE_BUCKET &&
+  process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID &&
+  process.env.REACT_APP_FIREBASE_APP_ID
+);
 
 // Firebase configuration - these should be set in environment variables
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || 'demo-api-key',
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || 'demo-project.firebaseapp.com',
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || 'demo-project',
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || 'demo-project.appspot.com',
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || '123456789',
+  appId: process.env.REACT_APP_FIREBASE_APP_ID || 'demo-app-id'
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+let app: FirebaseApp | null = null;
+let firebaseAuth: Auth | null = null;
+let firebaseDb: Firestore | null = null;
 
-// Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
+try {
+  app = initializeApp(firebaseConfig);
+  firebaseAuth = getAuth(app);
+  firebaseDb = getFirestore(app);
+} catch (error) {
+  console.warn('Firebase initialization failed:', error);
+  // Firebase will not work, but build should succeed
+}
 
-// Initialize Firestore (for future use)
-export const db = getFirestore(app);
+// Export Firebase instances
+export const auth = firebaseAuth;
+export const db = firebaseDb;
 
-// Configure Google Auth Provider
-const googleProvider = new GoogleAuthProvider();
-googleProvider.setCustomParameters({
-  prompt: 'select_account'
-});
+// Configure Google Auth Provider (only if auth is available)
+const googleProvider = firebaseAuth ? new GoogleAuthProvider() : null;
+if (googleProvider) {
+  googleProvider.setCustomParameters({
+    prompt: 'select_account'
+  });
+}
 
-// Authentication functions
-export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
+// Authentication functions with error handling
+export const signInWithGoogle = async () => {
+  if (!firebaseAuth || !googleProvider) {
+    throw new Error('Firebase authentication not configured');
+  }
+  return signInWithPopup(firebaseAuth, googleProvider);
+};
 
-export const signInWithEmail = (email: string, password: string) =>
-  signInWithEmailAndPassword(auth, email, password);
+export const signInWithEmail = async (email: string, password: string) => {
+  if (!firebaseAuth) {
+    throw new Error('Firebase authentication not configured');
+  }
+  return signInWithEmailAndPassword(firebaseAuth, email, password);
+};
 
-export const createUserWithEmail = (email: string, password: string) =>
-  createUserWithEmailAndPassword(auth, email, password);
+export const createUserWithEmail = async (email: string, password: string) => {
+  if (!firebaseAuth) {
+    throw new Error('Firebase authentication not configured');
+  }
+  return createUserWithEmailAndPassword(firebaseAuth, email, password);
+};
 
-export const signOutUser = () => signOut(auth);
+export const signOutUser = async () => {
+  if (!firebaseAuth) {
+    throw new Error('Firebase authentication not configured');
+  }
+  return signOut(firebaseAuth);
+};
 
-export const onAuthStateChange = (callback: (user: User | null) => void) =>
-  onAuthStateChanged(auth, callback);
+export const onAuthStateChange = (callback: (user: User | null) => void) => {
+  if (!firebaseAuth) {
+    // If Firebase is not configured, call callback with null user
+    callback(null);
+    return () => {}; // Return empty unsubscribe function
+  }
+  return onAuthStateChanged(firebaseAuth, callback);
+};
+
+// Export Firebase config status for components to check
+export const isFirebaseConfigured = firebaseConfigExists;
 
 export default app;

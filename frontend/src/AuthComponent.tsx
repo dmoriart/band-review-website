@@ -8,13 +8,33 @@ interface AuthComponentProps {
 }
 
 const AuthComponent: React.FC<AuthComponentProps> = ({ onClose }) => {
-  const { user } = useAuth();
+  const { user, isConfigured } = useAuth();
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // If Firebase is not configured, show configuration message
+  if (!isConfigured) {
+    return (
+      <div className="auth-container">
+        <div className="auth-modal">
+          <button className="auth-close" onClick={onClose}>×</button>
+          <h2>Authentication Setup Required</h2>
+          <div className="auth-error">
+            <p>Firebase authentication is not configured.</p>
+            <p>Please set up Firebase environment variables to enable login functionality.</p>
+            <p>See the Firebase Setup Guide for instructions.</p>
+          </div>
+          <button className="auth-button secondary" onClick={onClose}>
+            Close
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const handleGoogleSignIn = async () => {
     try {

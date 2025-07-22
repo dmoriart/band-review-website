@@ -65,7 +65,7 @@ interface HealthResponse {
 }
 
 function AppContent() {
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, isConfigured } = useAuth();
   
   // State management
   const [venues, setVenues] = useState<Venue[]>([]);

@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { User } from 'firebase/auth';
-import { onAuthStateChange } from './firebase';
+import { onAuthStateChange, isFirebaseConfigured } from './firebase';
 
 interface AuthContextType {
   user: User | null;
   loading: boolean;
+  isConfigured: boolean;
 }
 
 interface AuthProviderProps {
@@ -26,6 +27,13 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!isFirebaseConfigured) {
+      // If Firebase is not configured, set loading to false and user to null
+      setLoading(false);
+      setUser(null);
+      return;
+    }
+
     const unsubscribe = onAuthStateChange((user) => {
       setUser(user);
       setLoading(false);
@@ -36,7 +44,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const value = {
     user,
-    loading
+    loading,
+    isConfigured: isFirebaseConfigured
   };
 
   return (
