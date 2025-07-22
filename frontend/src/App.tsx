@@ -86,6 +86,18 @@ function AppContent() {
   const [selectedRating, setSelectedRating] = useState<string>('');
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
 
+  // Show loading screen while Firebase auth initializes
+  if (authLoading) {
+    return (
+      <div className="app">
+        <div className="loading-auth">
+          <div className="loading-spinner"></div>
+          <p>Initializing authentication...</p>
+        </div>
+      </div>
+    );
+  }
+
   // API base URL - force correct URL to override wrong environment variable
   const API_BASE_URL = 'https://band-review-website.onrender.com/api';
 
