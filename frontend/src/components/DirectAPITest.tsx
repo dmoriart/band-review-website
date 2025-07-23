@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './DirectAPITest.css';
 
 const DirectAPITest: React.FC = () => {
   const [result, setResult] = useState<string>('');
@@ -63,29 +64,31 @@ const DirectAPITest: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'monospace' }}>
+    <div className="direct-api-test-container">
       <h2>Direct API Connection Test</h2>
       
-      <div style={{ marginBottom: '20px' }}>
-        <button onClick={testDirectFetch} disabled={loading} style={{ marginRight: '10px' }}>
+      <div className="direct-api-test-buttons">
+        <button onClick={testDirectFetch} disabled={loading} className="direct-api-test-button">
           Test Direct Fetch
         </button>
-        <button onClick={testSanityClient} disabled={loading}>
+        <button onClick={testSanityClient} disabled={loading} className="direct-api-test-button">
           Test Sanity Client
         </button>
       </div>
       
-      <div style={{ 
-        padding: '15px', 
-        backgroundColor: result.includes('✅') ? '#d4edda' : result.includes('❌') ? '#f8d7da' : '#e2e3e5',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        minHeight: '50px'
-      }}>
+      <div
+        className={`direct-api-test-result ${
+          result.includes('✅')
+            ? 'success'
+            : result.includes('❌')
+            ? 'error'
+            : 'neutral'
+        }`}
+      >
         {loading ? 'Loading...' : result || 'Click a button to test the connection'}
       </div>
       
-      <div style={{ marginTop: '20px', fontSize: '12px', color: '#666' }}>
+      <div className="direct-api-test-footer">
         <p>Open browser developer console (F12) to see detailed logs</p>
       </div>
     </div>

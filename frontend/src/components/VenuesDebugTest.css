@@ -1,0 +1,118 @@
+.venues-debug-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.venues-debug-container h2 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.venues-debug-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.venues-debug-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.venues-debug-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+}
+
+.venues-debug-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.venues-debug-results {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.venues-debug-result {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.venues-debug-result.success {
+  background: #f0fff4;
+  color: #22543d;
+  border-left: 4px solid #38a169;
+}
+
+.venues-debug-result.error {
+  background: #fed7d7;
+  color: #742a2a;
+  border-left: 4px solid #e53e3e;
+}
+
+.venues-debug-result.info {
+  background: #ebf8ff;
+  color: #2a4365;
+  border-left: 4px solid #3182ce;
+}
+
+.venues-debug-placeholder {
+  color: #718096;
+  text-align: center;
+  font-style: italic;
+  margin: 80px 0;
+}
+
+.venues-debug-info {
+  background: #edf2f7;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.venues-debug-info strong {
+  color: #2d3748;
+}
+
+.venues-debug-info ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.venues-debug-info li {
+  margin-bottom: 4px;
+}
+
+.venues-debug-info em {
+  color: #718096;
+}

@@ -3,6 +3,7 @@ import './BandsPage.css';
 import SanityBandsGrid from './components/SanityBandsGrid';
 import BandClaimModal from './components/BandClaimModal';
 import BandEditForm from './components/BandEditForm';
+import FirebaseConnectionTest from './components/FirebaseConnectionTest';
 import { useAuth } from './AuthContext';
 import { bandUserService } from './services/bandUserService';
 
@@ -68,7 +69,7 @@ const BandsPage: React.FC = () => {
   const [filteredBands, setFilteredBands] = useState<Band[]>([]);
   const [selectedBand, setSelectedBand] = useState<Band | null>(null);
   const [selectedSanityBand, setSelectedSanityBand] = useState<any>(null);
-  const [currentView, setCurrentView] = useState<'list' | 'detail'>('list');
+  const [currentView, setCurrentView] = useState<'list' | 'detail' | 'diagnostics'>('list');
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   
@@ -638,11 +639,33 @@ const BandsPage: React.FC = () => {
 
   return (
     <div className="bands-page">
-      {currentView === 'list' ? (
+      {currentView === 'diagnostics' ? (
+        <>
+          <div className="bands-header">
+            <h1>Firebase Connection Diagnostics</h1>
+            <p>Test Firebase connectivity and performance</p>
+            <button 
+              onClick={() => setCurrentView('list')} 
+              className="back-button"
+              style={{ marginTop: '10px', padding: '8px 16px', background: '#667eea', color: 'white', border: 'none', borderRadius: '6px' }}
+            >
+              ← Back to Bands
+            </button>
+          </div>
+          <FirebaseConnectionTest />
+        </>
+      ) : currentView === 'list' ? (
         <>
           <div className="bands-header">
             <h1>Discover Bands</h1>
             <p>Find amazing artists and discover new music from venues across the region</p>
+            <button 
+              onClick={() => setCurrentView('diagnostics')} 
+              className="diagnostic-button"
+              style={{ marginTop: '10px', padding: '8px 16px', background: '#e53e3e', color: 'white', border: 'none', borderRadius: '6px', fontSize: '0.9rem' }}
+            >
+              🔧 Test Firebase Connection
+            </button>
           </div>
 
           {/* Search and Filters */}

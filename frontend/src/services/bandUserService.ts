@@ -176,10 +176,16 @@ class BandUserService {
         where('bandId', '==', claimData.bandId)
       );
       
-      // Add timeout to the query
+      // Add timeout to the query - consistent with document creation timeout
+      const QUERY_TIMEOUT = 20000; // 20 seconds
+      console.log(`⏱️ [bandUserService] Starting existing claim check with ${QUERY_TIMEOUT}ms timeout...`);
+      
       const queryPromise = getDocs(existingQuery);
       const queryTimeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('Database query timed out')), 15000);
+        setTimeout(() => {
+          console.error('⏰ [bandUserService] Existing claim query timeout reached');
+          reject(new Error('Database query timed out'));
+        }, QUERY_TIMEOUT);
       });
       
       const existingDocs = await Promise.race([queryPromise, queryTimeoutPromise]);
@@ -232,30 +238,48 @@ class BandUserService {
 
       console.log('💾 [bandUserService] Saving to Firestore...', { collection: this.collectionName });
       
-      // Add timeout to document creation
+      // Enhanced timeout with multiple strategies
+      const OPERATION_TIMEOUT = 25000; // 25 seconds - longer timeout for slow connections
+      
+      console.log(`⏱️ [bandUserService] Starting document creation with ${OPERATION_TIMEOUT}ms timeout...`);
+      const startTime = Date.now();
+      
       const addDocPromise = addDoc(collection(db, this.collectionName), relationshipData);
-      const addDocTimeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('Document creation timed out')), 15000);
+      
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => {
+          console.error('⏰ [bandUserService] Document creation timeout reached after', OPERATION_TIMEOUT, 'ms');
+          reject(new Error('Database query timed out'));
+        }, OPERATION_TIMEOUT);
       });
       
-      const docRef = await Promise.race([addDocPromise, addDocTimeoutPromise]);
-      console.log('✅ [bandUserService] Document created with ID:', (docRef as any).id);
+      const docRef = await Promise.race([addDocPromise, timeoutPromise]);
+      const endTime = Date.now();
+      
+      console.log(`✅ [bandUserService] Document created successfully in ${endTime - startTime}ms`);
+      console.log('✅ [bandUserService] Document ID:', (docRef as any).id);
       return (docRef as any).id;
     } catch (error) {
       console.error('❌ [bandUserService] Error submitting band claim:', error);
       console.error('❌ [bandUserService] Error details:', {
         message: error instanceof Error ? error.message : 'Unknown error',
         code: (error as any)?.code,
-        details: (error as any)?.details
+        details: (error as any)?.details,
+        stack: (error as any)?.stack?.substring(0, 200)
       });
       
-      // Handle specific Firebase errors
+      // Handle specific Firebase errors with more detailed messaging
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      
       if ((error as any)?.code === 'unavailable') {
         throw new Error('Database is temporarily unavailable. Please try again in a few moments.');
       } else if ((error as any)?.code === 'permission-denied') {
         throw new Error('You do not have permission to perform this action. Please ensure you are logged in.');
-      } else if ((error as any)?.message?.includes('timeout')) {
-        throw new Error('Request timed out. Please check your internet connection and try again.');
+      } else if (errorMessage.includes('Database query timed out') || errorMessage.includes('timeout')) {
+        console.error('⏰ [bandUserService] Timeout error detected - network or database performance issue');
+        throw new Error('The request is taking too long to complete. This may be due to a slow internet connection or high database load. Please try again in a few moments.');
+      } else if (errorMessage.includes('network') || errorMessage.includes('fetch')) {
+        throw new Error('Network connection error. Please check your internet connection and try again.');
       } else if ((error as any)?.message?.includes('400')) {
         throw new Error('Network error occurred. Please refresh the page and try again.');
       }

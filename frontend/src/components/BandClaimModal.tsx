@@ -109,21 +109,43 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
 
       console.log('🔄 Submitting to bandUserService...');
       
-      // Add timeout to prevent hanging
-      const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('Request timed out after 30 seconds')), 30000);
-      });
+      // Simple retry mechanism for timeout errors
+      const MAX_RETRIES = 2;
+      let lastError: Error | null = null;
       
-      const submitPromise = bandUserService.submitBandClaim(user.uid, user.email || '', claimData);
+      for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        try {
+          console.log(`🔄 Attempt ${attempt}/${MAX_RETRIES} to submit band claim...`);
+          
+          const result = await bandUserService.submitBandClaim(user.uid, user.email || '', claimData);
+          
+          console.log('✅ Band claim submitted successfully');
+          setSuccess(true);
+          setTimeout(() => {
+            onClaimSubmitted();
+            onClose();
+          }, 2000);
+          return; // Success, exit retry loop
+          
+        } catch (err: any) {
+          lastError = err;
+          console.error(`❌ Attempt ${attempt}/${MAX_RETRIES} failed:`, err.message);
+          
+          // Only retry for timeout errors
+          const isTimeoutError = err.message?.includes('timed out') || err.message?.includes('timeout');
+          
+          if (!isTimeoutError || attempt === MAX_RETRIES) {
+            // Not a timeout error, or we've exhausted retries
+            throw err;
+          }
+          
+          console.log(`⏳ Waiting before retry attempt ${attempt + 1}...`);
+          await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry
+        }
+      }
       
-      await Promise.race([submitPromise, timeoutPromise]);
-      
-      console.log('✅ Band claim submitted successfully');
-      setSuccess(true);
-      setTimeout(() => {
-        onClaimSubmitted();
-        onClose();
-      }, 2000);
+      // If we get here, all retries failed
+      throw lastError;
 
     } catch (err: any) {
       console.error('❌ Band claim submission error:', err);

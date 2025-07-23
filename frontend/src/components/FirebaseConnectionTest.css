@@ -1,0 +1,128 @@
+.firebase-test-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.firebase-test-container h3 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.firebase-test-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.firebase-test-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.firebase-test-button.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.firebase-test-button.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.firebase-test-button.secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.firebase-test-button.secondary:hover:not(:disabled) {
+  background: #cbd5e0;
+}
+
+.firebase-test-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.firebase-test-results {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.firebase-test-placeholder {
+  color: #718096;
+  text-align: center;
+  font-style: italic;
+  margin: 80px 0;
+}
+
+.firebase-test-result {
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.firebase-test-result.success {
+  background: #f0fff4;
+  color: #22543d;
+  border-left: 4px solid #38a169;
+}
+
+.firebase-test-result.error {
+  background: #fed7d7;
+  color: #742a2a;
+  border-left: 4px solid #e53e3e;
+}
+
+.firebase-test-result.info {
+  background: #ebf8ff;
+  color: #2a4365;
+  border-left: 4px solid #3182ce;
+}
+
+.firebase-test-info {
+  background: #edf2f7;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.firebase-test-info strong {
+  color: #2d3748;
+}
+
+.firebase-test-info ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.firebase-test-info li {
+  margin-bottom: 4px;
+}
+
+.firebase-test-info em {
+  color: #718096;
+}

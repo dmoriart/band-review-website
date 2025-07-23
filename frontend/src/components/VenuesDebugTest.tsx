@@ -1,5 +1,6 @@
 import React from 'react';
 import { client } from '../sanity';
+import './VenuesDebugTest.css';
 
 const VenuesDebugTest: React.FC = () => {
   const [result, setResult] = React.useState<string>('');
@@ -97,32 +98,34 @@ const VenuesDebugTest: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'monospace', backgroundColor: '#f5f5f5', margin: '20px', borderRadius: '5px' }}>
+    <div className="venues-debug-container">
       <h3>Venues Debug Test</h3>
       
-      <div style={{ marginBottom: '20px' }}>
-        <button onClick={testVenuesQuery} disabled={loading} style={{ marginRight: '10px' }}>
+      <div className="venues-debug-buttons">
+        <button onClick={testVenuesQuery} disabled={loading} className="venues-debug-button">
           Test Venues Query
         </button>
-        <button onClick={testBandsQuery} disabled={loading} style={{ marginRight: '10px' }}>
+        <button onClick={testBandsQuery} disabled={loading} className="venues-debug-button">
           Test Bands Query
         </button>
-        <button onClick={testDirectFetch} disabled={loading}>
+        <button onClick={testDirectFetch} disabled={loading} className="venues-debug-button">
           Test Direct Fetch
         </button>
       </div>
       
-      <div style={{ 
-        padding: '15px', 
-        backgroundColor: result.includes('✅') ? '#d4edda' : result.includes('❌') ? '#f8d7da' : '#e2e3e5',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        minHeight: '50px'
-      }}>
+      <div
+        className={`venues-debug-result ${
+          result.includes('✅')
+            ? 'venues-debug-success'
+            : result.includes('❌')
+            ? 'venues-debug-error'
+            : 'venues-debug-neutral'
+        }`}
+      >
         {loading ? 'Loading...' : result || 'Click a button to test venues connectivity'}
       </div>
       
-      <div style={{ marginTop: '15px', fontSize: '12px', color: '#666' }}>
+      <div className="venues-debug-info">
         <p>This test isolates venues queries to identify the specific issue.</p>
         <p>Check browser console (F12) for detailed logs.</p>
       </div>
