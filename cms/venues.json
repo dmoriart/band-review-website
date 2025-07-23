@@ -1,0 +1,254 @@
+[
+  {
+    "venueName": "The Academy",
+    "slug": "the-academy",
+    "description": "Dublin's premier mid-sized venue featuring a diverse range of live music acts from indie to electronic, with excellent acoustics and intimate atmosphere.",
+    "address": "57 Middle Abbey Street, Dublin 1, Ireland",
+    "capacity": 850,
+    "venueType": "concert-hall",
+    "primaryGenres": ["rock", "indie-rock", "electronic", "pop"],
+    "location": {
+      "lat": 53.3498,
+      "lng": -6.2603
+    },
+    "contact": {
+      "phone": "+353 1 877 9999",
+      "email": "info@theacademydublin.com",
+      "website": "https://www.theacademydublin.com/"
+    },
+    "facilities": ["bar", "merchandise-stand", "coat-check", "accessibility"],
+    "verified": true,
+    "featured": true
+  },
+  {
+    "venueName": "Vicar Street",
+    "slug": "vicar-street",
+    "description": "Iconic Dublin venue known for hosting both emerging and established artists in an intimate setting with excellent sightlines and sound quality.",
+    "address": "58-59 Thomas Street, Dublin 8, Ireland",
+    "capacity": 1050,
+    "venueType": "concert-hall",
+    "primaryGenres": ["folk", "rock", "indie-rock", "singer-songwriter"],
+    "location": {
+      "lat": 53.3436,
+      "lng": -6.2756
+    },
+    "contact": {
+      "phone": "+353 1 454 5533",
+      "email": "info@vicarstreet.ie",
+      "website": "https://www.vicarstreet.ie/"
+    },
+    "facilities": ["bar", "restaurant", "merchandise-stand", "accessibility", "vip-area"],
+    "verified": true,
+    "featured": true
+  },
+  {
+    "venueName": "Whelan's",
+    "slug": "whelans",
+    "description": "Historic Dublin pub and venue that has been a cornerstone of the Irish music scene, showcasing both local and international acts.",
+    "address": "25 Wexford Street, Dublin 2, Ireland",
+    "capacity": 300,
+    "venueType": "pub-venue",
+    "primaryGenres": ["rock", "indie-rock", "folk", "punk"],
+    "location": {
+      "lat": 53.3356,
+      "lng": -6.2591
+    },
+    "contact": {
+      "phone": "+353 1 478 0766",
+      "email": "info@whelans.com",
+      "website": "https://www.whelans.com/"
+    },
+    "facilities": ["bar", "restaurant", "merchandise-stand", "beer-garden"],
+    "verified": true,
+    "featured": true
+  },
+  {
+    "venueName": "The Button Factory",
+    "slug": "the-button-factory",
+    "description": "Contemporary Dublin venue in Temple Bar known for electronic music, club nights, and intimate live performances.",
+    "address": "Curved Street, Temple Bar, Dublin 2, Ireland",
+    "capacity": 400,
+    "venueType": "club-venue",
+    "primaryGenres": ["electronic", "house", "techno", "experimental"],
+    "location": {
+      "lat": 53.3456,
+      "lng": -6.2672
+    },
+    "contact": {
+      "phone": "+353 1 670 9202",
+      "email": "info@buttonfactory.ie",
+      "website": "https://www.buttonfactory.ie/"
+    },
+    "facilities": ["bar", "dj-booth", "dance-floor", "lighting-system"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "The Workman's Club",
+    "slug": "the-workmans-club",
+    "description": "Multi-level venue combining a traditional pub atmosphere with modern live music spaces, popular with Dublin's indie scene.",
+    "address": "10 Wellington Quay, Dublin 2, Ireland",
+    "capacity": 200,
+    "venueType": "pub-venue",
+    "primaryGenres": ["indie-rock", "folk", "punk", "experimental"],
+    "location": {
+      "lat": 53.3467,
+      "lng": -6.2633
+    },
+    "contact": {
+      "phone": "+353 1 670 6692",
+      "email": "info@theworkmansclub.com",
+      "website": "https://www.theworkmansclub.com/"
+    },
+    "facilities": ["bar", "restaurant", "multiple-floors", "outdoor-area"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "The Grand Social",
+    "slug": "the-grand-social",
+    "description": "Trendy Dublin venue with multiple rooms and rooftop terrace, hosting everything from intimate acoustic sets to club nights.",
+    "address": "35 Liffey Street Lower, Dublin 1, Ireland",
+    "capacity": 350,
+    "venueType": "multi-room-venue",
+    "primaryGenres": ["indie-rock", "electronic", "pop", "hip-hop"],
+    "location": {
+      "lat": 53.3478,
+      "lng": -6.2588
+    },
+    "contact": {
+      "phone": "+353 1 874 0710",
+      "email": "info@thegrandsocial.ie",
+      "website": "https://www.thegrandsocial.ie/"
+    },
+    "facilities": ["bar", "rooftop-terrace", "multiple-rooms", "dj-booth"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "Cyprus Avenue",
+    "slug": "cyprus-avenue",
+    "description": "Cork's premier live music venue, showcasing the best of local and international talent in an intimate setting.",
+    "address": "Caroline Street, Cork, Ireland",
+    "capacity": 250,
+    "venueType": "concert-hall",
+    "primaryGenres": ["rock", "indie-rock", "folk", "alternative-rock"],
+    "location": {
+      "lat": 51.8985,
+      "lng": -8.4756
+    },
+    "contact": {
+      "phone": "+353 21 427 6165",
+      "email": "info@cyprusavenue.ie",
+      "website": "https://www.cyprusavenue.ie/"
+    },
+    "facilities": ["bar", "merchandise-stand", "accessibility"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "Dolan's Warehouse",
+    "slug": "dolans-warehouse",
+    "description": "Limerick's iconic music venue and pub, known for supporting Irish music and hosting both traditional and contemporary acts.",
+    "address": "3-4 Dock Road, Limerick, Ireland",
+    "capacity": 300,
+    "venueType": "pub-venue",
+    "primaryGenres": ["traditional-irish", "folk", "rock", "punk"],
+    "location": {
+      "lat": 52.6638,
+      "lng": -8.6267
+    },
+    "contact": {
+      "phone": "+353 61 314 483",
+      "email": "info@dolans.ie",
+      "website": "https://www.dolans.ie/"
+    },
+    "facilities": ["bar", "restaurant", "beer-garden", "traditional-music-sessions"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "The Limelight",
+    "slug": "the-limelight",
+    "description": "Belfast's leading live music venue, hosting everything from intimate gigs to major touring acts in the heart of the city.",
+    "address": "17 Ormeau Avenue, Belfast BT2 8HD, Northern Ireland",
+    "capacity": 600,
+    "venueType": "concert-hall",
+    "primaryGenres": ["rock", "indie-rock", "punk", "metal"],
+    "location": {
+      "lat": 54.5895,
+      "lng": -5.9205
+    },
+    "contact": {
+      "phone": "+44 28 9032 5968",
+      "email": "info@limelightbelfast.com",
+      "website": "https://www.limelightbelfast.com/"
+    },
+    "facilities": ["bar", "merchandise-stand", "accessibility", "coat-check"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "The Spirit Store",
+    "slug": "the-spirit-store",
+    "description": "Dundalk's cultural hub combining a venue, bar, and arts space, supporting local and touring musicians.",
+    "address": "George's Quay, Dundalk, Co. Louth, Ireland",
+    "capacity": 150,
+    "venueType": "pub-venue",
+    "primaryGenres": ["folk", "indie-rock", "traditional-irish", "experimental"],
+    "location": {
+      "lat": 54.0014,
+      "lng": -6.4053
+    },
+    "contact": {
+      "phone": "+353 42 935 2697",
+      "email": "info@spiritstore.ie",
+      "website": "https://www.spiritstore.ie/"
+    },
+    "facilities": ["bar", "art-gallery", "outdoor-seating", "community-space"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "Set Theatre",
+    "slug": "set-theatre",
+    "description": "Kilkenny's premier arts venue, featuring a diverse program of live music, theatre, and cultural events.",
+    "address": "Langton Place, Kilkenny, Ireland",
+    "capacity": 260,
+    "venueType": "theatre-venue",
+    "primaryGenres": ["folk", "classical", "traditional-irish", "singer-songwriter"],
+    "location": {
+      "lat": 52.6541,
+      "lng": -7.2448
+    },
+    "contact": {
+      "phone": "+353 56 775 2400",
+      "email": "info@settheatre.com",
+      "website": "https://www.settheatre.com/"
+    },
+    "facilities": ["bar", "accessibility", "theatre-seating", "box-office"],
+    "verified": true,
+    "featured": false
+  },
+  {
+    "venueName": "Monroe's Live",
+    "slug": "monroes-live",
+    "description": "Galway's legendary traditional music pub, featuring nightly trad sessions and live performances from Irish and international artists.",
+    "address": "Upper Dominick Street, Galway, Ireland",
+    "capacity": 180,
+    "venueType": "pub-venue",
+    "primaryGenres": ["traditional-irish", "folk", "ceili", "acoustic"],
+    "location": {
+      "lat": 53.2744,
+      "lng": -9.0568
+    },
+    "contact": {
+      "phone": "+353 91 583 397",
+      "email": "info@monroeslive.com",
+      "website": "https://www.monroeslive.com/"
+    },
+    "facilities": ["bar", "traditional-music-sessions", "beer-garden", "live-streaming"],
+    "verified": true,
+    "featured": false
+  }
+]
