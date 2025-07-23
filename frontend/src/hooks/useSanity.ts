@@ -12,8 +12,8 @@ export function useSanityData<T>(query: string) {
       try {
         setLoading(true)
         setError(null)
-        // Use the client.fetch method properly - it only accepts query string
-        const result = await client.fetch(query)
+        // Type assertion to work around TypeScript definition issues
+        const result = await (client as any).fetch(query)
         setData(result)
       } catch (err) {
         console.error('Sanity fetch error:', err)

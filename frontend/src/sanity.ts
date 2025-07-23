@@ -1,8 +1,8 @@
 // Sanity client configuration for frontend integration
-import { createClient, type SanityClient } from '@sanity/client'
+import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 
-export const client: SanityClient = createClient({
+export const client = createClient({
   projectId: process.env.REACT_APP_SANITY_PROJECT_ID || 'sy7ko2cx',
   dataset: process.env.REACT_APP_SANITY_DATASET || 'production',
   useCdn: process.env.REACT_APP_SANITY_USE_CDN === 'true' || true, // Enable for faster, cached responses
