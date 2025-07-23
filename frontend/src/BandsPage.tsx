@@ -4,6 +4,7 @@ import SanityBandsGrid from './components/SanityBandsGrid';
 import BandClaimModal from './components/BandClaimModal';
 import BandEditForm from './components/BandEditForm';
 import FirebaseConnectionTest from './components/FirebaseConnectionTest';
+import FirestoreRulesTest from './components/FirestoreRulesTest';
 import { useAuth } from './AuthContext';
 import { bandUserService } from './services/bandUserService';
 
@@ -653,6 +654,9 @@ const BandsPage: React.FC = () => {
             </button>
           </div>
           <FirebaseConnectionTest />
+          <div style={{ marginTop: '20px' }}>
+            <FirestoreRulesTest />
+          </div>
         </>
       ) : currentView === 'list' ? (
         <>
