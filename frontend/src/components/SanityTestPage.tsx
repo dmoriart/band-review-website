@@ -6,6 +6,9 @@ const SanityTestPage: React.FC = () => {
   const { data: bands, loading: bandsLoading, error: bandsError } = useBands();
   const { data: venues, loading: venuesLoading, error: venuesError } = useVenues();
 
+  // Ensure venues is always an array for type safety
+  const venuesArray = Array.isArray(venues) ? venues : [];
+
   return (
     <div className="sanity-test-page">
       <h1>Sanity CMS Integration Test</h1>
@@ -33,14 +36,11 @@ const SanityTestPage: React.FC = () => {
 
       {/* Venues Section */}
       <div className="sanity-test-section">
-        <h2>Venues from Sanity CMS</h2>
-        {venuesLoading && <p>Loading venues...</p>}
-        {venuesError && <p className="error-text">Error loading venues: {venuesError}</p>}
-        {venues && venues.length > 0 ? (
+        {venuesArray.length > 0 ? (
           <div>
-            <p className="success-text">✅ Successfully loaded {venues.length} venues from Sanity CMS</p>
+            <p className="success-text">✅ Successfully loaded {venuesArray.length} venues from Sanity CMS</p>
             <ul>
-              {venues.slice(0, 3).map((venue) => (
+              {venuesArray.slice(0, 3).map((venue) => (
                 <li key={venue._id} className="test-list-item">
                   <strong>{venue.name}</strong> - {venue.address?.city} (Capacity: {venue.capacity || 'N/A'})
                 </li>

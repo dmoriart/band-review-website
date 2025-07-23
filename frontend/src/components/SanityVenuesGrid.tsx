@@ -15,7 +15,8 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
   selectedCity = '',
   selectedCapacity = '',
 }) => {
-  const { data: venues, loading, error } = useVenues()
+  const { data, loading, error } = useVenues()
+  const venues: any[] = Array.isArray(data) ? data : []
 
   if (loading) {
     return (

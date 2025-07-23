@@ -19,6 +19,13 @@ async function testConnection() {
     const venues = await client.fetch('*[_type == "venue" && !(_id in path("drafts.**"))] { _id, name }');
     console.log('Venues:', JSON.stringify(venues, null, 2));
     
+    // Test genres
+    const genreCount = await client.fetch('count(*[_type == "genre"])');
+    console.log(`\n📊 Total genres imported: ${genreCount}`);
+    
+    const sampleGenres = await client.fetch('*[_type == "genre"] | order(name asc) [0...5] { name, slug, color, "parent": parentGenre->name }');
+    console.log('Sample genres:', JSON.stringify(sampleGenres, null, 2));
+    
     console.log('✅ Sanity connection successful!');
   } catch (error) {
     console.error('❌ Sanity connection failed:', error);
