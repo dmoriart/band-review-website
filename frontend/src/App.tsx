@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from './AuthContext';
 import AuthComponent from './AuthComponent';
 import SanityVenuesGrid from './components/SanityVenuesGrid';
 import SanityTestPage from './components/SanityTestPage';
+import { useBands, useVenues } from './hooks/useSanity';
 
 // Define interfaces for type safety
 interface TechSpecs {
@@ -70,6 +71,10 @@ interface HealthResponse {
 // eslint-disable-next-line react-hooks/rules-of-hooks
 function AppContent() {
   const { user, loading: authLoading } = useAuth();
+  
+  // Sanity CMS data hooks
+  const { data: bandsFromCMS } = useBands();
+  const { data: venuesFromCMS } = useVenues();
   
   // State management - ALL hooks must be declared before any conditional returns
   const [venues, setVenues] = useState<Venue[]>([]);
@@ -297,11 +302,11 @@ function AppContent() {
 
       <div className="quick-stats">
         <div className="stat">
-          <div className="stat-number">{venues.length}</div>
+          <div className="stat-number">{(venuesFromCMS as any[])?.length || 0}</div>
           <div className="stat-label">Venues Listed</div>
         </div>
         <div className="stat">
-          <div className="stat-number">500+</div>
+          <div className="stat-number">{bandsFromCMS?.length || 0}</div>
           <div className="stat-label">Bands Featured</div>
         </div>
         <div className="stat">
