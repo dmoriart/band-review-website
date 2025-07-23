@@ -37,6 +37,21 @@ if (firebaseConfigExists && !isBuildTime) {
     app = initializeApp(firebaseConfig);
     firebaseAuth = getAuth(app);
     firebaseDb = getFirestore(app);
+    
+    // Configure Firestore settings for better offline handling
+    if (firebaseDb) {
+      console.log('🔥 Firebase initialized successfully');
+      
+      // Enable offline persistence (this helps with "client is offline" issues)
+      import('firebase/firestore').then(({ enableNetwork, connectFirestoreEmulator }) => {
+        if (firebaseDb) {
+          // Force enable network on initialization
+          enableNetwork(firebaseDb).catch((error) => {
+            console.warn('Could not enable Firestore network:', error);
+          });
+        }
+      });
+    }
   } catch (error) {
     console.warn('Firebase initialization failed:', error);
     // Firebase will not work, but build should succeed

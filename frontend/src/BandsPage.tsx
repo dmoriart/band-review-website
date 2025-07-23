@@ -5,6 +5,7 @@ import BandClaimModal from './components/BandClaimModal';
 import BandEditForm from './components/BandEditForm';
 import FirebaseConnectionTest from './components/FirebaseConnectionTest';
 import FirestoreRulesTest from './components/FirestoreRulesTest';
+import FirebaseNetworkTest from './components/FirebaseNetworkTest';
 import { useAuth } from './AuthContext';
 import { bandUserService } from './services/bandUserService';
 
@@ -656,6 +657,9 @@ const BandsPage: React.FC = () => {
           <FirebaseConnectionTest />
           <div style={{ marginTop: '20px' }}>
             <FirestoreRulesTest />
+          </div>
+          <div style={{ marginTop: '20px' }}>
+            <FirebaseNetworkTest />
           </div>
         </>
       ) : currentView === 'list' ? (
