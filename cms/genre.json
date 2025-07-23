@@ -1,0 +1,331 @@
+[
+  {
+    "name": "Rock",
+    "slug": "rock",
+    "description": "Classic and modern rock music",
+    "color": "#b22222",
+    "parentGenre": null
+  },
+  {
+    "name": "Indie Rock",
+    "slug": "indie-rock",
+    "description": "Independent and alternative rock music",
+    "color": "#4682b4",
+    "parentGenre": "Rock"
+  },
+  {
+    "name": "Alternative Rock",
+    "slug": "alternative-rock",
+    "description": "Rock music with alternative influences",
+    "color": "#4b0082",
+    "parentGenre": "Rock"
+  },
+  {
+    "name": "Pop",
+    "slug": "pop",
+    "description": "Popular mainstream music",
+    "color": "#ff69b4",
+    "parentGenre": null
+  },
+  {
+    "name": "Synth Pop",
+    "slug": "synth-pop",
+    "description": "Pop music with synth and electronic elements",
+    "color": "#ffb6c1",
+    "parentGenre": "Pop"
+  },
+  {
+    "name": "Classic Pop",
+    "slug": "classic-pop",
+    "description": "Pop hits from past decades",
+    "color": "#f08080",
+    "parentGenre": "Pop"
+  },
+  {
+    "name": "Jazz",
+    "slug": "jazz",
+    "description": "Improvised and smooth jazz music",
+    "color": "#6b8e23",
+    "parentGenre": null
+  },
+  {
+    "name": "Swing",
+    "slug": "swing",
+    "description": "Jazz with a strong rhythm for dancing",
+    "color": "#bdb76b",
+    "parentGenre": "Jazz"
+  },
+  {
+    "name": "Blues",
+    "slug": "blues",
+    "description": "Traditional and modern blues music",
+    "color": "#1e90ff",
+    "parentGenre": null
+  },
+  {
+    "name": "Rhythm & Blues",
+    "slug": "rhythm-blues",
+    "description": "Blues with soul and groove",
+    "color": "#6495ed",
+    "parentGenre": "Blues"
+  },
+  {
+    "name": "Soul",
+    "slug": "soul",
+    "description": "Emotional vocal-driven music",
+    "color": "#800080",
+    "parentGenre": null
+  },
+  {
+    "name": "Funk",
+    "slug": "funk",
+    "description": "Groovy, rhythmic dance music",
+    "color": "#dda0dd",
+    "parentGenre": "Soul"
+  },
+  {
+    "name": "Hip Hop",
+    "slug": "hip-hop",
+    "description": "Urban beats and lyrical flow",
+    "color": "#333333",
+    "parentGenre": null
+  },
+  {
+    "name": "Rap",
+    "slug": "rap",
+    "description": "Lyrical vocal performance with beats",
+    "color": "#111111",
+    "parentGenre": "Hip Hop"
+  },
+  {
+    "name": "Electronic",
+    "slug": "electronic",
+    "description": "Synthesised and computer-based music",
+    "color": "#008080",
+    "parentGenre": null
+  },
+  {
+    "name": "House",
+    "slug": "house",
+    "description": "Electronic dance music with steady beat",
+    "color": "#40e0d0",
+    "parentGenre": "Electronic"
+  },
+  {
+    "name": "Techno",
+    "slug": "techno",
+    "description": "Fast-paced electronic dance music",
+    "color": "#00ced1",
+    "parentGenre": "Electronic"
+  },
+  {
+    "name": "Drum & Bass",
+    "slug": "drum-bass",
+    "description": "Fast breakbeats and basslines",
+    "color": "#20b2aa",
+    "parentGenre": "Electronic"
+  },
+  {
+    "name": "EDM",
+    "slug": "edm",
+    "description": "Electronic Dance Music, club oriented",
+    "color": "#00fa9a",
+    "parentGenre": "Electronic"
+  },
+  {
+    "name": "Folk",
+    "slug": "folk",
+    "description": "Traditional and acoustic music",
+    "color": "#deb887",
+    "parentGenre": null
+  },
+  {
+    "name": "Folk Rock",
+    "slug": "folk-rock",
+    "description": "Rock music with folk influences",
+    "color": "#cd853f",
+    "parentGenre": "Folk"
+  },
+  {
+    "name": "Country",
+    "slug": "country",
+    "description": "Country and western music",
+    "color": "#daa520",
+    "parentGenre": null
+  },
+  {
+    "name": "Bluegrass",
+    "slug": "bluegrass",
+    "description": "Upbeat acoustic country music",
+    "color": "#b8860b",
+    "parentGenre": "Country"
+  },
+  {
+    "name": "Singer-Songwriter",
+    "slug": "singer-songwriter",
+    "description": "Personal lyrical acoustic music",
+    "color": "#8b4513",
+    "parentGenre": "Folk"
+  },
+  {
+    "name": "Metal",
+    "slug": "metal",
+    "description": "Heavy and powerful rock music",
+    "color": "#696969",
+    "parentGenre": null
+  },
+  {
+    "name": "Heavy Metal",
+    "slug": "heavy-metal",
+    "description": "Classic and modern heavy metal",
+    "color": "#a9a9a9",
+    "parentGenre": "Metal"
+  },
+  {
+    "name": "Punk",
+    "slug": "punk",
+    "description": "Fast, raw and rebellious rock",
+    "color": "#ff4500",
+    "parentGenre": "Rock"
+  },
+  {
+    "name": "Hardcore Punk",
+    "slug": "hardcore-punk",
+    "description": "Intense and fast punk rock",
+    "color": "#dc143c",
+    "parentGenre": "Punk"
+  },
+  {
+    "name": "Reggae",
+    "slug": "reggae",
+    "description": "Jamaican roots and rhythm",
+    "color": "#228b22",
+    "parentGenre": null
+  },
+  {
+    "name": "Ska",
+    "slug": "ska",
+    "description": "Jamaican music with upbeat tempo",
+    "color": "#32cd32",
+    "parentGenre": "Reggae"
+  },
+  {
+    "name": "Latin",
+    "slug": "latin",
+    "description": "Music from Latin America",
+    "color": "#ff6347",
+    "parentGenre": null
+  },
+  {
+    "name": "Salsa",
+    "slug": "salsa",
+    "description": "Upbeat Cuban dance music",
+    "color": "#ff7f50",
+    "parentGenre": "Latin"
+  },
+  {
+    "name": "Jazz Fusion",
+    "slug": "jazz-fusion",
+    "description": "Blend of jazz and rock/electronic",
+    "color": "#bc8f8f",
+    "parentGenre": "Jazz"
+  },
+  {
+    "name": "World",
+    "slug": "world",
+    "description": "Music from various global traditions",
+    "color": "#ee82ee",
+    "parentGenre": null
+  },
+  {
+    "name": "Classical",
+    "slug": "classical",
+    "description": "Orchestral and chamber music",
+    "color": "#4682b4",
+    "parentGenre": null
+  },
+  {
+    "name": "Opera",
+    "slug": "opera",
+    "description": "Classical vocal performance with drama",
+    "color": "#5f9ea0",
+    "parentGenre": "Classical"
+  },
+  {
+    "name": "Gospel",
+    "slug": "gospel",
+    "description": "Religious and spiritual music",
+    "color": "#ffdab9",
+    "parentGenre": null
+  },
+  {
+    "name": "A Cappella",
+    "slug": "a-cappella",
+    "description": "Music with only vocal harmony",
+    "color": "#ffe4e1",
+    "parentGenre": null
+  },
+  {
+    "name": "Cover Band",
+    "slug": "cover-band",
+    "description": "Bands that play well-known songs",
+    "color": "#87ceeb",
+    "parentGenre": null
+  },
+  {
+    "name": "Tribute Band",
+    "slug": "tribute-band",
+    "description": "Bands that imitate famous artists",
+    "color": "#add8e6",
+    "parentGenre": "Cover Band"
+  },
+  {
+    "name": "DJ Set",
+    "slug": "dj-set",
+    "description": "Live DJ music performance",
+    "color": "#0000cd",
+    "parentGenre": "Electronic"
+  },
+  {
+    "name": "Traditional Irish",
+    "slug": "traditional-irish",
+    "description": "Irish folk and trad music",
+    "color": "#228b22",
+    "parentGenre": "World"
+  },
+  {
+    "name": "Ceilí",
+    "slug": "ceili",
+    "description": "Irish dance music",
+    "color": "#3cb371",
+    "parentGenre": "Traditional Irish"
+  },
+  {
+    "name": "Blues Rock",
+    "slug": "blues-rock",
+    "description": "Rock music with blues influences",
+    "color": "#5f9ea0",
+    "parentGenre": "Blues"
+  },
+  {
+    "name": "Acoustic",
+    "slug": "acoustic",
+    "description": "Music performed without amplification",
+    "color": "#f5deb3",
+    "parentGenre": null
+  },
+  {
+    "name": "Experimental",
+    "slug": "experimental",
+    "description": "Unconventional or avant-garde music",
+    "color": "#708090",
+    "parentGenre": null
+  },
+  {
+    "name": "Other",
+    "slug": "other",
+    "description": "Any genre not listed",
+    "color": "#d3d3d3",
+    "parentGenre": null
+  }
+]

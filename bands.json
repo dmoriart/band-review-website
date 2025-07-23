@@ -1,0 +1,142 @@
+[
+  {
+    "bandName": "Stick n Poke",
+    "slug": "stick-n-poke",
+    "biography": "Dublin-based acoustic punk duo known for heartfelt lyrics and DIY ethos, playing energetic and emotionally raw sets.",
+    "genres": ["punk", "alt-rock", "acoustic"],
+    "location": "Dublin, Ireland",
+    "yearFormed": 2022,
+    "socialMediaLinks": {
+      "website": "https://sticknpoke.bandcamp.com/",
+      "facebook": "https://www.facebook.com/sticknpokeband/",
+      "instagram": "https://www.instagram.com/sticknpoke_band/",
+      "youtube": ""
+    }
+  },
+  {
+    "bandName": "The Scratch",
+    "slug": "the-scratch",
+    "biography": "Acoustic trad/rock band from Dublin, renowned for infectious rhythms, wild live shows, and blending Irish folk with rock energy.",
+    "genres": ["folk", "rock", "traditional-irish"],
+    "location": "Dublin, Ireland",
+    "yearFormed": 2016,
+    "socialMediaLinks": {
+      "website": "https://thescratch.ie/",
+      "facebook": "https://www.facebook.com/thescratchmusic/",
+      "instagram": "https://www.instagram.com/thescratchmusic/",
+      "youtube": "https://www.youtube.com/c/TheScratchBand"
+    }
+  },
+  {
+    "bandName": "Saint Sister",
+    "slug": "saint-sister",
+    "biography": "Atmosfolk duo merging harp, synth, and ethereal harmonies, creating a distinctive soundscape that’s both modern and rooted in tradition.",
+    "genres": ["folk", "pop", "electronic"],
+    "location": "Belfast/Dublin, Ireland",
+    "yearFormed": 2014,
+    "socialMediaLinks": {
+      "website": "https://saintsisterband.com/",
+      "facebook": "https://www.facebook.com/saintsisterband/",
+      "instagram": "https://www.instagram.com/saintsisterband/",
+      "youtube": "https://www.youtube.com/user/SaintSisterBand"
+    }
+  },
+  {
+    "bandName": "Fontaines D.C.",
+    "slug": "fontaines-dc",
+    "biography": "Poetic post-punk band from Dublin celebrated for gritty lyrics, anthemic sound, and acclaimed international releases.",
+    "genres": ["rock", "indie-rock", "punk"],
+    "location": "Dublin, Ireland",
+    "yearFormed": 2017,
+    "socialMediaLinks": {
+      "website": "https://fontainesdc.com/",
+      "facebook": "https://www.facebook.com/fontainesband/",
+      "instagram": "https://www.instagram.com/fontainesband/",
+      "youtube": "https://www.youtube.com/c/FontainesDC"
+    }
+  },
+  {
+    "bandName": "Lankum",
+    "slug": "lankum",
+    "biography": "Critically acclaimed Dublin folk group known for dark, powerful arrangements and haunting vocal harmonies.",
+    "genres": ["folk", "traditional-irish"],
+    "location": "Dublin, Ireland",
+    "yearFormed": 2001,
+    "socialMediaLinks": {
+      "website": "https://lankumdublin.com/",
+      "facebook": "https://www.facebook.com/lankumdublin/",
+      "instagram": "https://www.instagram.com/lankumdublin/",
+      "youtube": "https://www.youtube.com/c/LankumDublin"
+    }
+  },
+  {
+    "bandName": "Silverbacks",
+    "slug": "silverbacks",
+    "biography": "Alternative rockers combining post-punk energy and sharp songwriting, gaining a loyal following on the Irish indie scene.",
+    "genres": ["rock", "indie-rock", "alternative-rock"],
+    "location": "Dublin, Ireland",
+    "yearFormed": 2015,
+    "socialMediaLinks": {
+      "website": "https://silverbacks.bandcamp.com/",
+      "facebook": "https://www.facebook.com/silverbacksband/",
+      "instagram": "https://www.instagram.com/silverbacksband/",
+      "youtube": "https://www.youtube.com/channel/UChwqt2kQQyR36PZaD8IuL1w"
+    }
+  },
+  {
+    "bandName": "Pillow Queens",
+    "slug": "pillow-queens",
+    "biography": "Indie rock quartet with emotive songwriting and catchy hooks, widely praised for their energetic live shows.",
+    "genres": ["rock", "indie-rock"],
+    "location": "Dublin, Ireland",
+    "yearFormed": 2016,
+    "socialMediaLinks": {
+      "website": "https://pillowqueens.com/",
+      "facebook": "https://www.facebook.com/pillowqueens/",
+      "instagram": "https://www.instagram.com/pillowqueensband/",
+      "youtube": "https://www.youtube.com/c/PillowQueens"
+    }
+  },
+  {
+    "bandName": "Just Mustard",
+    "slug": "just-mustard",
+    "biography": "Atmospheric alternative band from Dundalk, blending dark soundscapes with experimental rock influences.",
+    "genres": ["rock", "alternative-rock", "experimental"],
+    "location": "Dundalk, Ireland",
+    "yearFormed": 2016,
+    "socialMediaLinks": {
+      "website": "https://justmustard.bandcamp.com/",
+      "facebook": "https://www.facebook.com/justmustardmusic/",
+      "instagram": "https://www.instagram.com/justmustard/",
+      "youtube": "https://www.youtube.com/c/JustMustard"
+    }
+  },
+  {
+    "bandName": "The Mary Wallopers",
+    "slug": "the-mary-wallopers",
+    "biography": "Modern folk ballad group from Dundalk, bringing wit and energy to traditional Irish songs.",
+    "genres": ["folk", "traditional-irish"],
+    "location": "Dundalk, Ireland",
+    "yearFormed": 2016,
+    "socialMediaLinks": {
+      "website": "https://themarywallopers.com/",
+      "facebook": "https://www.facebook.com/themarywallopers/",
+      "instagram": "https://www.instagram.com/themarywallopers/",
+      "youtube": "https://www.youtube.com/c/TheMaryWallopers"
+    }
+  },
+  {
+    "bandName": "Kneecap",
+    "slug": "kneecap",
+    "biography": "Belfast-based hip hop trio rapping in Irish and English, known for sharp lyrics and energetic performances.",
+    "genres": ["hip-hop", "rap"],
+    "location": "Belfast, Ireland",
+    "yearFormed": 2017,
+    "socialMediaLinks": {
+      "website": "https://kneecap.ie/",
+      "facebook": "https://www.facebook.com/KNEECAPCEOL/",
+      "instagram": "https://www.instagram.com/kneecap32/",
+      "youtube": "https://www.youtube.com/c/KneecapOfficial"
+    }
+  }
+]
