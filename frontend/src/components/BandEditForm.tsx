@@ -52,7 +52,8 @@ const BandEditForm: React.FC<BandEditFormProps> = ({
   useEffect(() => {
     const fetchGenres = async () => {
       try {
-        const genres = await client.fetch(`
+        // Type assertion to work around TypeScript definition issues
+        const genres = await (client as any).fetch(`
           *[_type == "genre" && !(_id in path("drafts.**"))] | order(name asc) {
             _id,
             name,
@@ -148,7 +149,7 @@ const BandEditForm: React.FC<BandEditFormProps> = ({
       }
 
       // Update the band document in Sanity
-      await client
+      await (client as any)
         .patch(band._id)
         .set(updateData)
         .commit();
