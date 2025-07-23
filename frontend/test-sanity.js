@@ -4,7 +4,7 @@ const { createClient } = require('@sanity/client');
 const client = createClient({
   projectId: 'sy7ko2cx',
   dataset: 'production',
-  useCdn: false,
+  useCdn: false, // Match the React app setting
   apiVersion: '2022-06-01',
 });
 

@@ -10,14 +10,24 @@ export function useSanityData<T>(query: string) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true)
-        setError(null)
+        console.log('Fetching from Sanity with query:', query)
+        console.log('Client config:', {
+          projectId: process.env.REACT_APP_SANITY_PROJECT_ID || 'sy7ko2cx',
+          dataset: process.env.REACT_APP_SANITY_DATASET || 'production',
+          useCdn: false,
+          apiVersion: '2022-06-01'
+        })
+        
         // Type assertion to work around TypeScript definition issues
         const result = await (client as any).fetch(query)
         setData(result)
-        console.log('Sanity fetch successful:', result)
+        console.log('Sanity fetch successful:', result?.length || 'unknown', 'items')
       } catch (err) {
-        console.error('Sanity fetch error:', err)
+        console.error('Sanity fetch error details:', {
+          error: err,
+          message: err instanceof Error ? err.message : 'Unknown error',
+          query: query
+        })
         const errorMessage = err instanceof Error ? err.message : 'Failed to fetch data from Sanity CMS'
         setError(`${errorMessage}. Falling back to local data...`)
       } finally {
