@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import AdminPanel from './AdminPanel';
+import BandsPage from './BandsPage';
 import { AuthProvider, useAuth } from './AuthContext';
 import AuthComponent from './AuthComponent';
 
@@ -75,7 +76,7 @@ function AppContent() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'admin'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'admin'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -264,6 +265,12 @@ function AppContent() {
           </button>
           <button 
             className="btn btn-secondary"
+            onClick={() => setCurrentView('bands')}
+          >
+            Discover Bands
+          </button>
+          <button 
+            className="btn btn-secondary"
             onClick={() => setShowAuthModal(true)}
           >
             {user ? `Welcome, ${user.displayName || user.email}` : 'Sign In'}
@@ -274,7 +281,7 @@ function AppContent() {
       <div className="features">
         <div className="feature">
           <h3>🎸 For Bands</h3>
-          <p>Share your venue experiences - rate sound quality, hospitality, payment, and more</p>
+          <p>Share your venue experiences - rate sound quality, hospitality, payment, and more. Create your profile and connect with venues and fans.</p>
         </div>
         <div className="feature">
           <h3>🏛️ For Venues</h3>
@@ -283,6 +290,21 @@ function AppContent() {
         <div className="feature">
           <h3>🇮🇪 All Ireland</h3>
           <p>From Dublin to Cork, Belfast to Galway - covering venues across the island</p>
+        </div>
+      </div>
+
+      <div className="quick-stats">
+        <div className="stat">
+          <div className="stat-number">{venues.length}</div>
+          <div className="stat-label">Venues Listed</div>
+        </div>
+        <div className="stat">
+          <div className="stat-number">500+</div>
+          <div className="stat-label">Bands Featured</div>
+        </div>
+        <div className="stat">
+          <div className="stat-number">32</div>
+          <div className="stat-label">Counties Covered</div>
         </div>
       </div>
     </div>
@@ -815,6 +837,12 @@ function AppContent() {
               Venues
             </button>
             <button 
+              className={`nav-link ${currentView === 'bands' ? 'active' : ''}`}
+              onClick={() => setCurrentView('bands')}
+            >
+              Bands
+            </button>
+            <button 
               className="nav-link"
               onClick={() => setShowAuthModal(true)}
             >
@@ -859,6 +887,7 @@ function AppContent() {
         <main className="main-content">
           {currentView === 'home' && renderHome()}
           {currentView === 'venues' && renderVenues()}
+          {currentView === 'bands' && <BandsPage />}
           {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'admin' && renderAdminLogin()}
           {isAdmin && <AdminPanel 
