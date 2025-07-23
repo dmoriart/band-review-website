@@ -1,11 +1,5 @@
-services      - key: FLASK_ENV
-        value: production
-      - key: FLASK_DEBUG
-        value: false
-      - key: PORT
-        value: 8000
-      - key: SECRET_KEY
-        generateValue: truetype: web
+services:
+  - type: web
     name: bandvenuereview-api
     env: python
     region: oregon
@@ -16,6 +10,8 @@ services      - key: FLASK_ENV
         value: production
       - key: FLASK_DEBUG
         value: false
+      - key: PORT
+        value: 8000
       - key: SECRET_KEY
         generateValue: true
       - key: JWT_SECRET_KEY
