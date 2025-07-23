@@ -4,6 +4,7 @@ import DirectAPITest from './DirectAPITest';
 import MainAppTest from './MainAppTest';
 import VenuesDebugTest from './VenuesDebugTest';
 import NetworkDiagnostics from './NetworkDiagnostics';
+import CMSRefreshUtility from './CMSRefreshUtility';
 import './SanityTestPage.css';
 
 const SanityTestPage: React.FC = () => {
@@ -20,6 +21,11 @@ const SanityTestPage: React.FC = () => {
       {/* Network Diagnostics - New comprehensive testing */}
       <div className="sanity-test-section">
         <NetworkDiagnostics />
+      </div>
+      
+      {/* CMS Refresh Utility - For persistent issues */}
+      <div className="sanity-test-section">
+        <CMSRefreshUtility />
       </div>
       
       {/* Direct API Test - New debugging component */}
