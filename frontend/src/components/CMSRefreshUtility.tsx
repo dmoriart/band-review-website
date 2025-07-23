@@ -68,6 +68,7 @@ const CMSRefreshUtility: React.FC = () => {
     }
   };
 
+  return (
     <div className="cms-refresh-utility">
       <h3>🛠️ CMS Refresh Utility</h3>
       <p><strong>Use when:</strong> Persistent network errors despite retry attempts</p>

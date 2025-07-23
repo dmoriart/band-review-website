@@ -1,0 +1,96 @@
+.cms-refresh-utility {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.cms-refresh-utility h3 {
+  margin: 0 0 15px 0;
+  color: #495057;
+  font-size: 18px;
+}
+
+.cms-refresh-utility p {
+  margin: 10px 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.cms-refresh-buttons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.cms-refresh-test-btn,
+.cms-refresh-full-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cms-refresh-test-btn {
+  background: #007bff;
+  color: white;
+}
+
+.cms-refresh-test-btn:hover:not(:disabled) {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.cms-refresh-full-btn {
+  background: #28a745;
+  color: white;
+}
+
+.cms-refresh-full-btn:hover:not(:disabled) {
+  background: #1e7e34;
+  transform: translateY(-1px);
+}
+
+.cms-refresh-test-btn:disabled,
+.cms-refresh-full-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cms-refresh-info {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.cms-refresh-info p {
+  margin: 10px 0;
+}
+
+.cms-refresh-info ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.cms-refresh-info li {
+  margin: 5px 0;
+  color: #495057;
+  font-size: 13px;
+}
+
+.cms-refresh-info em {
+  color: #6c757d;
+  font-size: 12px;
+}
