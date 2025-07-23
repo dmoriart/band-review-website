@@ -7,6 +7,9 @@ export const client = createClient({
   dataset: process.env.REACT_APP_SANITY_DATASET || 'production',
   useCdn: false, // Disable CDN to ensure fresh data and avoid caching issues
   apiVersion: '2022-06-01', // Use stable API version
+  withCredentials: false, // Explicitly disable credentials to avoid CORS issues
+  timeout: 30000, // 30 second timeout for slower connections
+  requestTagPrefix: 'bandvenuereview-', // Add request tag prefix for debugging
 })
 
 // Helper for generating image URLs

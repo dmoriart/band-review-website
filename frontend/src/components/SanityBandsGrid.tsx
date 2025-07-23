@@ -121,11 +121,9 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
                   {band.genres.map((genre) => (
                     <span 
                       key={genre.slug.current} 
-                      className="genre-tag"
-                      style={{ 
-                        backgroundColor: genre.color?.hex || '#61dafb',
-                        color: genre.color?.hex ? '#ffffff' : '#1e3c72'
-                      }}
+                      className={`genre-tag${genre.color?.hex ? ' custom-color' : ''}`}
+                      data-bgcolor={genre.color?.hex || '#61dafb'}
+                      data-textcolor={genre.color?.hex ? '#ffffff' : '#1e3c72'}
                     >
                       {genre.name}
                     </span>

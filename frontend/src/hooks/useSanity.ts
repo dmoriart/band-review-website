@@ -8,30 +8,44 @@ export function useSanityData<T>(query: string) {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (retryCount = 0) => {
       try {
-        console.log('Fetching from Sanity with query:', query)
+        console.log(`Fetching from Sanity with query (attempt ${retryCount + 1}):`, query)
         console.log('Client config:', {
           projectId: process.env.REACT_APP_SANITY_PROJECT_ID || 'sy7ko2cx',
           dataset: process.env.REACT_APP_SANITY_DATASET || 'production',
           useCdn: false,
-          apiVersion: '2022-06-01'
+          apiVersion: '2022-06-01',
+          timeout: 30000
         })
         
         // Type assertion to work around TypeScript definition issues
         const result = await (client as any).fetch(query)
         setData(result)
+        setError(null) // Clear any previous errors on success
         console.log('Sanity fetch successful:', result?.length || 'unknown', 'items')
       } catch (err) {
         console.error('Sanity fetch error details:', {
           error: err,
           message: err instanceof Error ? err.message : 'Unknown error',
-          query: query
+          query: query,
+          attempt: retryCount + 1
         })
+        
+        // Retry logic for network errors (max 2 retries)
+        if (retryCount < 2 && err instanceof Error && 
+            (err.message.includes('Request error') || err.message.includes('fetch'))) {
+          console.log(`Retrying request in ${(retryCount + 1) * 1000}ms...`)
+          setTimeout(() => fetchData(retryCount + 1), (retryCount + 1) * 1000)
+          return
+        }
+        
         const errorMessage = err instanceof Error ? err.message : 'Failed to fetch data from Sanity CMS'
         setError(`${errorMessage}. Falling back to local data...`)
       } finally {
-        setLoading(false)
+        if (retryCount === 0) { // Only set loading false on the initial attempt
+          setLoading(false)
+        }
       }
     }
 

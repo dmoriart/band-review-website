@@ -2,6 +2,7 @@ import React from 'react';
 import { useBands, useVenues } from '../hooks/useSanity';
 import DirectAPITest from './DirectAPITest';
 import MainAppTest from './MainAppTest';
+import VenuesDebugTest from './VenuesDebugTest';
 import './SanityTestPage.css';
 
 const SanityTestPage: React.FC = () => {
@@ -23,6 +24,11 @@ const SanityTestPage: React.FC = () => {
       {/* Main App Hooks Test - Additional validation */}
       <div className="sanity-test-section">
         <MainAppTest />
+      </div>
+      
+      {/* Venues Debug Test - Specific venues issue debugging */}
+      <div className="sanity-test-section">
+        <VenuesDebugTest />
       </div>
       
       {/* Bands Section */}
