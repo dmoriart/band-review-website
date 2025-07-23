@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from './AuthContext';
 import AuthComponent from './AuthComponent';
 import SanityVenuesGrid from './components/SanityVenuesGrid';
 import SanityTestPage from './components/SanityTestPage';
+import ApiTestComponent from './components/ApiTestComponent';
 import { useBands, useVenues } from './hooks/useSanity';
 
 // Define interfaces for type safety
@@ -83,7 +84,7 @@ function AppContent() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'admin' | 'sanity-test'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'admin' | 'sanity-test' | 'api-test'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -864,6 +865,12 @@ function AppContent() {
               🧪 CMS Test
             </button>
             <button 
+              className={`nav-link ${currentView === 'api-test' ? 'active' : ''}`}
+              onClick={() => setCurrentView('api-test')}
+            >
+              🚀 API Test
+            </button>
+            <button 
               className="nav-link"
               onClick={() => setShowAuthModal(true)}
             >
@@ -912,6 +919,7 @@ function AppContent() {
           {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'admin' && renderAdminLogin()}
           {currentView === 'sanity-test' && <SanityTestPage />}
+          {currentView === 'api-test' && <ApiTestComponent />}
           {isAdmin && <AdminPanel 
             adminToken={adminToken} 
             apiBaseUrl={API_BASE_URL}

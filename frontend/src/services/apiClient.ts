@@ -67,6 +67,54 @@ export class ApiClient {
   // ===== BAND ENDPOINTS =====
 
   /**
+   * Get all bands with pagination
+   */
+  static async getBands(page = 1, limit = 20, filters: any = {}) {
+    const params = new URLSearchParams({
+      page: page.toString(),
+      limit: limit.toString(),
+      ...filters
+    });
+    return apiRequest(`/bands?${params}`);
+  }
+
+  /**
+   * Get a specific band by slug
+   */
+  static async getBand(slug: string) {
+    return apiRequest(`/bands/${slug}`);
+  }
+
+  /**
+   * Create a new band (requires authentication)
+   */
+  static async createBand(bandData: {
+    name: string;
+    slug?: string;
+    bio?: string;
+    genres?: string[];
+    hometown?: string;
+    county?: string;
+    website?: string;
+    contact_email?: string;
+  }) {
+    return apiRequest('/bands', {
+      method: 'POST',
+      body: JSON.stringify(bandData),
+    });
+  }
+
+  /**
+   * Update a band (requires ownership)
+   */
+  static async updateBand(slug: string, bandData: any) {
+    return apiRequest(`/bands/${slug}`, {
+      method: 'PUT',
+      body: JSON.stringify(bandData),
+    });
+  }
+
+  /**
    * Submit a band ownership claim
    */
   static async submitBandClaim(bandId: string, claimData: {

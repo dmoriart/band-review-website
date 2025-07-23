@@ -7,7 +7,7 @@ import firebase_admin
 from firebase_admin import credentials, auth
 from functools import wraps
 from flask import request, jsonify, current_app
-from models_bands import db, User
+from models_bands_sqlite import db, User
 import os
 
 # Initialize Firebase Admin SDK
@@ -161,7 +161,7 @@ def band_access_required(band_id_param='band_id'):
                 return jsonify({'error': 'Band ID required'}), 400
             
             # Check if user is a member of this band
-            from models_bands import BandMember
+            from models_bands_sqlite import BandMember
             membership = BandMember.query.filter_by(
                 band_id=band_id,
                 user_id=user.id,

@@ -12,7 +12,7 @@ from werkzeug.exceptions import BadRequest
 
 # Import our enhanced modules
 from config import config
-from models_bands import db
+from models_bands_sqlite import db
 from auth_firebase import initialize_firebase
 from bands_api import bands_bp
 
