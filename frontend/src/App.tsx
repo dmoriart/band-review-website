@@ -4,6 +4,8 @@ import AdminPanel from './AdminPanel';
 import BandsPage from './BandsPage';
 import { AuthProvider, useAuth } from './AuthContext';
 import AuthComponent from './AuthComponent';
+import SanityVenuesGrid from './components/SanityVenuesGrid';
+import SanityTestPage from './components/SanityTestPage';
 
 // Define interfaces for type safety
 interface TechSpecs {
@@ -76,7 +78,7 @@ function AppContent() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'admin'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'admin' | 'sanity-test'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -400,6 +402,9 @@ function AppContent() {
           </button>
         )}
       </div>
+
+      {/* Sanity CMS Venues */}
+      <SanityVenuesGrid />
 
       {loading ? (
         <div className="loading">Loading venues...</div>
@@ -843,6 +848,12 @@ function AppContent() {
               Bands
             </button>
             <button 
+              className={`nav-link ${currentView === 'sanity-test' ? 'active' : ''}`}
+              onClick={() => setCurrentView('sanity-test')}
+            >
+              🧪 CMS Test
+            </button>
+            <button 
               className="nav-link"
               onClick={() => setShowAuthModal(true)}
             >
@@ -890,6 +901,7 @@ function AppContent() {
           {currentView === 'bands' && <BandsPage />}
           {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'admin' && renderAdminLogin()}
+          {currentView === 'sanity-test' && <SanityTestPage />}
           {isAdmin && <AdminPanel 
             adminToken={adminToken} 
             apiBaseUrl={API_BASE_URL}

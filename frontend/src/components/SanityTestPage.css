@@ -1,0 +1,42 @@
+.sanity-test-page {
+  padding: 2rem;
+  color: #fff;
+  background: #1a1a1a;
+  min-height: 100vh;
+}
+
+.sanity-test-section {
+  margin-bottom: 2rem;
+}
+
+.error-text {
+  color: #ff6b6b;
+}
+
+.success-text {
+  color: #61dafb;
+}
+
+.warning-text {
+  color: #ffa500;
+}
+
+.test-list-item {
+  margin-bottom: 0.5rem;
+}
+
+.integration-status {
+  background: rgba(97, 218, 251, 0.1);
+  border: 1px solid rgba(97, 218, 251, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.integration-status a {
+  color: #61dafb;
+}
+
+.next-steps {
+  margin-top: 1rem;
+}

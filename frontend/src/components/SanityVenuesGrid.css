@@ -1,0 +1,189 @@
+/* Sanity Venues Grid Styles */
+.sanity-venues-grid {
+  margin-bottom: 2rem;
+}
+
+.sanity-venues-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(97, 218, 251, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(97, 218, 251, 0.3);
+}
+
+.sanity-venues-header h3 {
+  color: #61dafb;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.sanity-venues-header p {
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.sanity-venues-loading {
+  text-align: center;
+  padding: 3rem;
+  color: #e0e0e0;
+}
+
+.sanity-venues-loading .loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #61dafb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.sanity-venues-error {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 0.5rem;
+  color: #ff6b6b;
+  margin-bottom: 2rem;
+}
+
+.sanity-venues-empty {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  color: #b0b0b0;
+}
+
+.sanity-venues-empty p:first-child {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Venue Card Enhancements for CMS data */
+.venue-card .venue-placeholder-image {
+  width: 100%;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #61dafb;
+}
+
+.venue-card .venue-card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.venue-card .venue-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.venue-card:hover .venue-card-image img {
+  transform: scale(1.05);
+}
+
+.claimed-badge {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  background: #9c27b0;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.venue-capacity,
+.venue-type {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.venue-description {
+  color: #d0d0d0;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.venue-contact {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.venue-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: #61dafb;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.venue-contact a:hover {
+  background: rgba(97, 218, 251, 0.2);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Grid layout for venues */
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Animation keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .venues-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .sanity-venues-header {
+    padding: 0.75rem;
+  }
+  
+  .sanity-venues-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .venue-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .venue-contact a {
+    justify-content: center;
+  }
+}

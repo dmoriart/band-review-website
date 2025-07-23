@@ -1,0 +1,163 @@
+import React from 'react'
+import { useVenues } from '../hooks/useSanity'
+import { urlFor } from '../sanity'
+import './SanityVenuesGrid.css'
+
+interface SanityVenuesGridProps {
+  searchQuery?: string
+  selectedCity?: string
+  selectedCapacity?: string
+  selectedRating?: string
+}
+
+const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
+  searchQuery = '',
+  selectedCity = '',
+  selectedCapacity = '',
+}) => {
+  const { data: venues, loading, error } = useVenues()
+
+  if (loading) {
+    return (
+      <div className="sanity-venues-loading">
+        <div className="loading-spinner"></div>
+        <p>Loading venues from CMS...</p>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="sanity-venues-error">
+        <p>Error loading venues: {error}</p>
+        <p>Falling back to local data...</p>
+      </div>
+    )
+  }
+
+  if (!venues || venues.length === 0) {
+    return (
+      <div className="sanity-venues-empty">
+        <p>No venues found in CMS.</p>
+        <p>Add some venues to your Sanity Studio to see them here.</p>
+      </div>
+    )
+  }
+
+  // Filter venues based on props
+  const filteredVenues = venues.filter(venue => {
+    // Search filter
+    if (searchQuery && !venue.name.toLowerCase().includes(searchQuery.toLowerCase()) && 
+        !venue.description?.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !venue.address?.city?.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false
+    }
+
+    // City filter
+    if (selectedCity && venue.address?.city !== selectedCity) {
+      return false
+    }
+
+    // Capacity filter
+    if (selectedCapacity && venue.capacity) {
+      const [min, max] = selectedCapacity.split('-').map(Number)
+      if (max && (venue.capacity < min || venue.capacity > max)) {
+        return false
+      } else if (!max && venue.capacity < min) {
+        return false
+      }
+    }
+
+    return true
+  })
+
+  return (
+    <div className="sanity-venues-grid">
+      <div className="sanity-venues-header">
+        <h3>Venues from CMS ({filteredVenues.length})</h3>
+        <p>Live data from Sanity Studio</p>
+      </div>
+      
+      <div className="venues-grid">
+        {filteredVenues.map((venue) => (
+          <div key={venue._id} className="venue-card">
+            <div className="venue-card-image">
+              {venue.heroImage ? (
+                <img 
+                  src={urlFor(venue.heroImage).width(400).height(250).url()} 
+                  alt={venue.name}
+                />
+              ) : (
+                <div className="venue-placeholder-image">
+                  <span>🏛️</span>
+                </div>
+              )}
+              {venue.verified && (
+                <div className="verified-badge">✓</div>
+              )}
+              {venue.claimed && (
+                <div className="claimed-badge">👑</div>
+              )}
+              {venue.featured && (
+                <div className="featured-badge">⭐</div>
+              )}
+            </div>
+            
+            <div className="venue-card-content">
+              <h3>{venue.name}</h3>
+              
+              {venue.address && (
+                <div className="venue-location">
+                  📍 {venue.address.street && `${venue.address.street}, `}
+                  {venue.address.city}
+                  {venue.address.county && `, ${venue.address.county}`}
+                </div>
+              )}
+              
+              {venue.capacity && (
+                <div className="venue-capacity">
+                  👥 Capacity: {venue.capacity.toLocaleString()}
+                </div>
+              )}
+              
+              {venue.venueType && (
+                <div className="venue-type">
+                  🏛️ {venue.venueType.replace('_', ' ').toUpperCase()}
+                </div>
+              )}
+              
+              {venue.description && (
+                <p className="venue-description">
+                  {venue.description.length > 120 
+                    ? `${venue.description.substring(0, 120)}...` 
+                    : venue.description
+                  }
+                </p>
+              )}
+              
+              <div className="venue-contact">
+                {venue.contact?.website && (
+                  <a href={venue.contact.website} target="_blank" rel="noopener noreferrer">
+                    🌐 Website
+                  </a>
+                )}
+                {venue.contact?.phone && (
+                  <a href={`tel:${venue.contact.phone}`}>
+                    📞 {venue.contact.phone}
+                  </a>
+                )}
+                {venue.contact?.email && (
+                  <a href={`mailto:${venue.contact.email}`}>
+                    📧 Email
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default SanityVenuesGrid

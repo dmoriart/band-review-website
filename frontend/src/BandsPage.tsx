@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './BandsPage.css';
+import SanityBandsGrid from './components/SanityBandsGrid';
 
 // Define interfaces for band data
 interface SocialLinks {
@@ -470,6 +471,9 @@ const BandsPage: React.FC = () => {
           <p>Showing sample data for demonstration</p>
         </div>
       )}
+
+      {/* Sanity CMS Bands */}
+      <SanityBandsGrid />
 
       {/* Bands grid */}
       <div className="bands-grid">

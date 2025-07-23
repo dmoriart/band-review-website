@@ -1,0 +1,183 @@
+/* Sanity Bands Grid Styles */
+.sanity-bands-grid {
+  margin-bottom: 2rem;
+}
+
+.sanity-bands-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(97, 218, 251, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(97, 218, 251, 0.3);
+}
+
+.sanity-bands-header h3 {
+  color: #61dafb;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.sanity-bands-header p {
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.sanity-bands-loading {
+  text-align: center;
+  padding: 3rem;
+  color: #e0e0e0;
+}
+
+.sanity-bands-loading .loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #61dafb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.sanity-bands-error {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 0.5rem;
+  color: #ff6b6b;
+  margin-bottom: 2rem;
+}
+
+.sanity-bands-empty {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  color: #b0b0b0;
+}
+
+.sanity-bands-empty p:first-child {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Band Card Enhancements for CMS data */
+.band-card .band-placeholder-image {
+  width: 100%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #61dafb;
+}
+
+.verified-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff9800;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.band-formed {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.band-social-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.band-social-links a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.band-social-links a:hover {
+  background: #61dafb;
+  color: #1e3c72;
+  transform: translateY(-2px);
+}
+
+/* Genre tags with dynamic colors */
+.genre-tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* Animation keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sanity-bands-header {
+    padding: 0.75rem;
+  }
+  
+  .sanity-bands-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .band-social-links {
+    justify-content: flex-start;
+  }
+  
+  .band-social-links a {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+  }
+}
