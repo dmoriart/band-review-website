@@ -34,6 +34,20 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
     e.preventDefault();
     if (!user) return;
 
+    // Validate required fields based on claim method
+    if (claimMethod === 'email' && !email.trim()) {
+      setError('Please enter your band email address');
+      return;
+    }
+    if (claimMethod === 'social' && (!socialPlatform || !socialPostUrl.trim())) {
+      setError('Please select a platform and provide the post URL');
+      return;
+    }
+    if (claimMethod === 'manual' && !description.trim()) {
+      setError('Please provide a description of your connection to the band');
+      return;
+    }
+
     setLoading(true);
     setError('');
 
@@ -45,17 +59,21 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
       };
 
       if (claimMethod === 'email') {
-        claimData.email = email;
+        claimData.email = email.trim();
       } else if (claimMethod === 'social') {
-        claimData.socialProof = {
-          platform: socialPlatform,
-          postUrl: socialPostUrl,
-          verificationCode
-        };
+        // Only add socialProof if we have valid data
+        if (socialPlatform && socialPostUrl.trim()) {
+          claimData.socialProof = {
+            platform: socialPlatform,
+            postUrl: socialPostUrl.trim(),
+            verificationCode
+          };
+        }
       } else if (claimMethod === 'manual') {
+        const filteredLinks = supportingLinks.filter(link => link.trim() !== '');
         claimData.manualData = {
-          description,
-          supportingLinks: supportingLinks.filter(link => link.trim() !== '')
+          description: description.trim(),
+          supportingLinks: filteredLinks
         };
       }
 

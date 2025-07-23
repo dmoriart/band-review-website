@@ -133,15 +133,27 @@ class BandUserService {
         role: 'owner', // Default to owner for new claims
         status: 'pending',
         claimMethod: claimData.claimMethod,
-        verificationData: {
-          email: claimData.email,
-          socialProof: claimData.socialProof,
-          manualData: claimData.manualData
-        },
         requestedAt: serverTimestamp(),
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       };
+
+      // Only add verification data that exists to avoid undefined values in Firestore
+      const verificationData: any = {};
+      if (claimData.email) {
+        verificationData.email = claimData.email;
+      }
+      if (claimData.socialProof) {
+        verificationData.socialProof = claimData.socialProof;
+      }
+      if (claimData.manualData) {
+        verificationData.manualData = claimData.manualData;
+      }
+
+      // Only add verificationData if it has content
+      if (Object.keys(verificationData).length > 0) {
+        relationshipData.verificationData = verificationData;
+      }
 
       const docRef = await addDoc(collection(db, this.collectionName), relationshipData);
       return docRef.id;
