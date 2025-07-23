@@ -1,10 +1,16 @@
-services:
-  - type: web
+services      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: false
+      - key: PORT
+        value: 8000
+      - key: SECRET_KEY
+        generateValue: truetype: web
     name: bandvenuereview-api
     env: python
     region: oregon
     buildCommand: cd backend && pip install -r requirements.txt
-    startCommand: cd backend && python init_db.py && gunicorn -c gunicorn.conf.py app:app
+    startCommand: cd backend && python init_bands_db.py && python app_bands.py
     envVars:
       - key: FLASK_ENV
         value: production
