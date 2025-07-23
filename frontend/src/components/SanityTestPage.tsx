@@ -44,24 +44,10 @@ const SanityTestPage: React.FC = () => {
       </div>
       
       {/* Bands Section */}
-      <div className="sanity-test-section">
-        <h2>Bands from Sanity CMS</h2>
-        {bandsLoading && <p>Loading bands...</p>}
-        {bandsError && <p className="error-text">Error loading bands: {bandsError}</p>}
-        {bands && bands.length > 0 ? (
-          <div>
-            <p className="success-text">✅ Successfully loaded {bands.length} bands from Sanity CMS</p>
-            <ul>
-              {bands.slice(0, 3).map((band) => (
-                <li key={band._id} className="test-list-item">
-                  <strong>{band.name}</strong> - {band.locationText} ({band.genres?.map(g => g.name).join(', ')})
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : (
-          <p className="warning-text">No bands found in CMS. Please add some bands in Sanity Studio.</p>
-        )}
+            <div className="test-header">
+        <h2>🧪 Sanity CMS Integration Test</h2>
+        <p>This page tests the connection to your Sanity CMS and displays live data.</p>
+        <p className="debug-timestamp">Last updated: {new Date().toISOString()}</p>
       </div>
 
       {/* Venues Section */}
