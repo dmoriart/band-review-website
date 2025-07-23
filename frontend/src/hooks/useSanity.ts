@@ -33,12 +33,12 @@ export function useSanityData<T>(query: string) {
 
 // Specific hooks for common queries
 export function useBands() {
-  const query = `*[_type == "band"] | order(name asc) {
+  const query = `*[_type == "band" && !(_id in path("drafts.**"))] | order(name asc) {
     _id,
     name,
     slug,
     bio,
-    genres[]->{name, slug, color},
+    "genres": genres[]->{ name, slug, color },
     locationText,
     formedYear,
     profileImage,
@@ -63,45 +63,22 @@ export function useBands() {
 }
 
 export function useVenues() {
-  const query = `*[_type == "venue"] | order(name asc) {
+  const query = `*[_type == "venue" && !(_id in path("drafts.**"))] | order(name asc) {
     _id,
     name,
     slug,
     description,
     address,
-    contact,
+    location,
     capacity,
-    venueType,
-    heroImage,
+    type,
+    profileImage,
+    contactInfo,
     verified,
-    claimed,
     featured
   }`
   
-  return useSanityData<Array<{
-    _id: string
-    name: string
-    slug: { current: string }
-    description?: string
-    address?: {
-      street?: string
-      city?: string
-      county?: string
-      eircode?: string
-      country?: string
-    }
-    contact?: {
-      phone?: string
-      email?: string
-      website?: string
-    }
-    capacity?: number
-    venueType?: string
-    heroImage?: any
-    verified: boolean
-    claimed: boolean
-    featured: boolean
-  }>>(query)
+  return useSanityData(query)
 }
 
 export function useBandBySlug(slug: string) {
