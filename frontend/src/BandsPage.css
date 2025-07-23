@@ -4,33 +4,36 @@
   margin: 0 auto;
   padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  text-align: left;
 }
 
 .bands-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 
 .bands-header h1 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  color: #61dafb;
+  margin-bottom: 0.5rem;
 }
 
 .bands-header p {
   font-size: 1.1rem;
-  color: #666;
+  color: #e0e0e0;
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* Search and Filters */
 .bands-filters {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-bar {
@@ -40,17 +43,24 @@
 .search-bar input {
   width: 100%;
   padding: 12px 20px;
-  border: 2px solid #e1e5e9;
-  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
   font-size: 16px;
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
   transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.search-bar input::placeholder {
+  color: #b0b0b0;
 }
 
 .search-bar input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  border-color: #61dafb;
+  box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.1);
 }
 
 .filter-controls {
@@ -62,18 +72,26 @@
 
 .filter-controls select {
   padding: 10px 15px;
-  border: 2px solid #e1e5e9;
-  border-radius: 8px;
-  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
   font-size: 14px;
   min-width: 150px;
   cursor: pointer;
   transition: border-color 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.filter-controls select option {
+  background: #2a5298;
+  color: white;
 }
 
 .filter-controls select:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #61dafb;
 }
 
 .checkbox-label {
@@ -81,7 +99,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #555;
+  color: #e0e0e0;
   cursor: pointer;
 }
 
@@ -94,42 +112,43 @@
 /* Results Info */
 .results-info {
   margin-bottom: 20px;
-  color: #666;
+  color: #b0b0b0;
   font-size: 14px;
 }
 
 /* Error Message */
 .error-message {
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  color: #856404;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
 }
 
 /* Bands Grid */
 .bands-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   margin-bottom: 40px;
 }
 
 /* Band Card */
 .band-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   overflow: hidden;
-  border: 1px solid #e1e5e9;
 }
 
 .band-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .band-card-image {
@@ -153,7 +172,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #28a745;
+  background: #4caf50;
   color: white;
   border-radius: 50%;
   width: 30px;
@@ -166,17 +185,17 @@
 }
 
 .band-card-content {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .band-card-content h3 {
   margin: 0 0 8px 0;
   font-size: 1.3rem;
-  color: #333;
+  color: #61dafb;
 }
 
 .band-location {
-  color: #666;
+  color: #e0e0e0;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -189,8 +208,8 @@
 }
 
 .genre-tag {
-  background: #007bff;
-  color: white;
+  background: #61dafb;
+  color: #1e3c72;
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 12px;
@@ -198,7 +217,7 @@
 }
 
 .band-bio {
-  color: #555;
+  color: #d0d0d0;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 15px;
@@ -208,7 +227,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color: #888;
+  color: #b0b0b0;
 }
 
 /* Modal Styles */
@@ -218,7 +237,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,8 +246,11 @@
 }
 
 .modal-content {
-  background: white;
-  border-radius: 12px;
+  background: rgba(30, 60, 114, 0.95);
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 800px;
   width: 100%;
   max-height: 90vh;
@@ -245,7 +267,7 @@
   border: none;
   font-size: 30px;
   cursor: pointer;
-  color: #666;
+  color: #e0e0e0;
   z-index: 1001;
   width: 40px;
   height: 40px;
@@ -257,8 +279,8 @@
 }
 
 .modal-close:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #333;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 /* Band Detail */
@@ -295,7 +317,7 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #e1e5e9;
+  border: 4px solid rgba(255, 255, 255, 0.3);
 }
 
 .band-profile-image .verified-badge {
@@ -310,11 +332,11 @@
 .band-info h1 {
   margin: 0 0 10px 0;
   font-size: 2rem;
-  color: #333;
+  color: #61dafb;
 }
 
 .formed-year {
-  color: #666;
+  color: #e0e0e0;
   font-size: 14px;
   margin-bottom: 15px;
 }
@@ -325,14 +347,14 @@
 
 .band-section h3 {
   font-size: 1.3rem;
-  color: #333;
+  color: #61dafb;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #e1e5e9;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .band-section p {
-  color: #555;
+  color: #d0d0d0;
   line-height: 1.6;
   font-size: 15px;
 }
@@ -410,9 +432,12 @@
   display: flex;
   gap: 15px;
   padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
   align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .gig-date {
@@ -422,12 +447,12 @@
 
 .gig-date .date {
   font-weight: 600;
-  color: #333;
+  color: #61dafb;
   font-size: 14px;
 }
 
 .gig-date .time {
-  color: #666;
+  color: #b0b0b0;
   font-size: 12px;
 }
 
@@ -437,11 +462,11 @@
 
 .gig-details h4 {
   margin: 0 0 5px 0;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .price {
-  background: #28a745;
+  background: #4caf50;
   color: white;
   padding: 2px 8px;
   border-radius: 4px;
@@ -450,8 +475,8 @@
 }
 
 .ticket-link {
-  background: #007bff;
-  color: white;
+  background: #61dafb;
+  color: #1e3c72;
   padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
@@ -461,7 +486,7 @@
 }
 
 .ticket-link:hover {
-  background: #0056b3;
+  background: #21d4fd;
 }
 
 /* Reviews List */
@@ -473,9 +498,12 @@
 
 .review-item {
   padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  border-left: 4px solid #61dafb;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .review-header {
@@ -487,7 +515,7 @@
 
 .review-header h4 {
   margin: 0;
-  color: #333;
+  color: #61dafb;
 }
 
 .rating {
@@ -496,13 +524,13 @@
 }
 
 .review-date {
-  color: #666;
+  color: #b0b0b0;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
 .review-text {
-  color: #555;
+  color: #d0d0d0;
   line-height: 1.5;
   margin: 0;
 }
@@ -531,23 +559,47 @@
 .no-results {
   text-align: center;
   padding: 60px 20px;
-  color: #666;
+  color: #b0b0b0;
 }
 
 .no-results h3 {
   margin-bottom: 10px;
-  color: #333;
+  color: #e0e0e0;
 }
 
 /* Loading Spinner */
 .loading-spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #007bff;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #61dafb;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   animation: spin 1s linear infinite;
   margin: 0 auto 20px;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: #e0e0e0;
+}
+
+/* Clear Filters Button */
+.clear-filters {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.clear-filters:hover {
+  background: #c82333;
 }
 
 @keyframes spin {
