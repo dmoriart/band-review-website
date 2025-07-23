@@ -152,13 +152,15 @@ const NetworkDiagnostics: React.FC = () => {
         </button>
       </div>
       
-      <div style={{ 
-        padding: '15px', 
-        backgroundColor: result.includes('✅') ? '#d4edda' : result.includes('❌') ? '#f8d7da' : '#e2e3e5',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        minHeight: '50px'
-      }}>
+      <div
+        className={`network-diagnostics-result ${
+          result.includes('✅')
+            ? 'network-diagnostics-success'
+            : result.includes('❌')
+            ? 'network-diagnostics-error'
+            : 'network-diagnostics-neutral'
+        }`}
+      >
         {loading ? 'Testing...' : result || 'Click a button to run network diagnostics'}
       </div>
       <div className="network-diagnostics-troubleshooting">

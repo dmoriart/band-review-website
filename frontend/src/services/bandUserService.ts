@@ -62,6 +62,31 @@ export interface BandClaimRequest {
 class BandUserService {
   private collectionName = 'bandUserRelationships';
 
+  // Test database connection
+  async testConnection(): Promise<boolean> {
+    if (!db) {
+      console.error('❌ [bandUserService] Database not initialized');
+      return false;
+    }
+    
+    try {
+      console.log('🔗 [bandUserService] Testing database connection...');
+      // Try a simple query to test connection
+      const testQuery = query(collection(db, this.collectionName));
+      const testPromise = getDocs(testQuery);
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Connection test timed out')), 5000);
+      });
+      
+      await Promise.race([testPromise, timeoutPromise]);
+      console.log('✅ [bandUserService] Database connection successful');
+      return true;
+    } catch (error) {
+      console.error('❌ [bandUserService] Database connection failed:', error);
+      return false;
+    }
+  }
+
   // Check if current user can edit a specific band
   async canUserEditBand(userId: string, bandId: string): Promise<boolean> {
     if (!db) return false;
@@ -113,23 +138,29 @@ class BandUserService {
     
     if (!db) {
       console.error('❌ [bandUserService] Database not available');
-      throw new Error('Database not available');
+      throw new Error('Database not available - please check your internet connection');
     }
     
     try {
       console.log('🔍 [bandUserService] Checking for existing claim...');
       
-      // Check if user already has a relationship with this band
+      // Use a more robust query with timeout
       const existingQuery = query(
         collection(db, this.collectionName),
         where('userId', '==', userId),
         where('bandId', '==', claimData.bandId)
       );
       
-      const existingDocs = await getDocs(existingQuery);
-      console.log(`📊 [bandUserService] Found ${existingDocs.size} existing claims`);
+      // Add timeout to the query
+      const queryPromise = getDocs(existingQuery);
+      const queryTimeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Database query timed out')), 15000);
+      });
       
-      if (!existingDocs.empty) {
+      const existingDocs = await Promise.race([queryPromise, queryTimeoutPromise]);
+      console.log(`📊 [bandUserService] Found ${(existingDocs as any).size} existing claims`);
+      
+      if (!(existingDocs as any).empty) {
         console.log('⚠️ [bandUserService] User already has a claim for this band');
         throw new Error('You have already submitted a claim for this band');
       }
@@ -175,9 +206,16 @@ class BandUserService {
       }
 
       console.log('💾 [bandUserService] Saving to Firestore...', { collection: this.collectionName });
-      const docRef = await addDoc(collection(db, this.collectionName), relationshipData);
-      console.log('✅ [bandUserService] Document created with ID:', docRef.id);
-      return docRef.id;
+      
+      // Add timeout to document creation
+      const addDocPromise = addDoc(collection(db, this.collectionName), relationshipData);
+      const addDocTimeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Document creation timed out')), 15000);
+      });
+      
+      const docRef = await Promise.race([addDocPromise, addDocTimeoutPromise]);
+      console.log('✅ [bandUserService] Document created with ID:', (docRef as any).id);
+      return (docRef as any).id;
     } catch (error) {
       console.error('❌ [bandUserService] Error submitting band claim:', error);
       console.error('❌ [bandUserService] Error details:', {
@@ -185,6 +223,18 @@ class BandUserService {
         code: (error as any)?.code,
         details: (error as any)?.details
       });
+      
+      // Handle specific Firebase errors
+      if ((error as any)?.code === 'unavailable') {
+        throw new Error('Database is temporarily unavailable. Please try again in a few moments.');
+      } else if ((error as any)?.code === 'permission-denied') {
+        throw new Error('You do not have permission to perform this action. Please ensure you are logged in.');
+      } else if ((error as any)?.message?.includes('timeout')) {
+        throw new Error('Request timed out. Please check your internet connection and try again.');
+      } else if ((error as any)?.message?.includes('400')) {
+        throw new Error('Network error occurred. Please refresh the page and try again.');
+      }
+      
       throw error;
     }
   }

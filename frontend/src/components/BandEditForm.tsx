@@ -218,6 +218,7 @@ const BandEditForm: React.FC<BandEditFormProps> = ({
                     type="text"
                     value={formData.locationText}
                     onChange={(e) => handleInputChange('locationText', e.target.value)}
+                    title="Enter the band's location"
                     placeholder="e.g., Dublin, Ireland"
                   />
                 </div>

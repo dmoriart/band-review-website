@@ -58,6 +58,13 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
       if (!user.email) {
         throw new Error('User email is required for band claims');
       }
+
+      // Test database connection first
+      console.log('🔗 Testing database connection...');
+      const connectionTest = await bandUserService.testConnection();
+      if (!connectionTest) {
+        throw new Error('Unable to connect to database. Please check your internet connection and try again.');
+      }
       
       const claimData: BandClaimRequest = {
         bandId: band._id,
