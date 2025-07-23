@@ -655,7 +655,7 @@ const BandsPage: React.FC = () => {
             </button>
           </div>
           <FirebaseConnectionTest />
-          <div style={{ marginTop: '20px' }}>
+          <div className="margin-top-20">
             <FirestoreRulesTest />
           </div>
           <div style={{ marginTop: '20px' }}>
@@ -669,8 +669,7 @@ const BandsPage: React.FC = () => {
             <p>Find amazing artists and discover new music from venues across the region</p>
             <button 
               onClick={() => setCurrentView('diagnostics')} 
-              className="diagnostic-button"
-              style={{ marginTop: '10px', padding: '8px 16px', background: '#e53e3e', color: 'white', border: 'none', borderRadius: '6px', fontSize: '0.9rem' }}
+              className="diagnostic-button bands-diagnostic-btn"
             >
               🔧 Test Firebase Connection
             </button>

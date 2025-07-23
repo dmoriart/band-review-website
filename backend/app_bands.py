@@ -15,6 +15,7 @@ from config import config
 from models_bands_production import db
 from auth_firebase import initialize_firebase
 from bands_api import bands_bp
+from venues_api import venues_bp
 
 def create_app(config_name=None):
     """Application factory pattern"""
@@ -33,10 +34,16 @@ def create_app(config_name=None):
         initialize_firebase()
     
     # Enable CORS for frontend requests
-    CORS(app, origins=app.config.get('CORS_ORIGINS', ['http://localhost:3000']))
+    cors_origins = app.config.get('CORS_ORIGINS', ['http://localhost:3000', 'https://bandvenuereview.netlify.app'])
+    CORS(app, 
+         origins=cors_origins,
+         allow_headers=['Content-Type', 'Authorization'],
+         methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+         supports_credentials=True)
     
     # Register blueprints
     app.register_blueprint(bands_bp)
+    app.register_blueprint(venues_bp)
     
     # Global error handlers
     @app.errorhandler(400)

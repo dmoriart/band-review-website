@@ -22,7 +22,7 @@ class Config:
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
     
     # CORS configuration
-    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '*').split(',')
+    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:3000,https://bandvenuereview.netlify.app').split(',')
     
     # File upload configuration
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max file size

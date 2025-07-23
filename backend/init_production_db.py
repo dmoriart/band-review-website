@@ -73,9 +73,60 @@ def init_database():
             else:
                 print(f"Test band already exists: {test_band.name} (ID: {test_band.id})")
                 
-            # Verify database connection by counting bands
-            band_count = Band.query.count()
-            print(f"Total bands in database: {band_count}")
+            # Add some test venues to verify everything works
+            test_venues = [
+                {
+                    'name': 'The Button Factory',
+                    'slug': 'button-factory-dublin',
+                    'address': 'Curved Street, Temple Bar, Dublin 2',
+                    'city': 'Dublin',
+                    'county': 'Dublin',
+                    'capacity': 450,
+                    'venue_type': 'live_music_venue'
+                },
+                {
+                    'name': 'Whelans',
+                    'slug': 'whelans-dublin',
+                    'address': '25 Wexford Street, Dublin 2',
+                    'city': 'Dublin',
+                    'county': 'Dublin',
+                    'capacity': 300,
+                    'venue_type': 'live_music_venue'
+                },
+                {
+                    'name': 'Cyprus Avenue',
+                    'slug': 'cyprus-avenue-cork',
+                    'address': 'Caroline Street, Cork',
+                    'city': 'Cork',
+                    'county': 'Cork',
+                    'capacity': 250,
+                    'venue_type': 'live_music_venue'
+                }
+            ]
+            
+            for venue_data in test_venues:
+                existing_venue = Venue.query.filter_by(slug=venue_data['slug']).first()
+                if not existing_venue:
+                    venue = Venue(
+                        name=venue_data['name'],
+                        slug=venue_data['slug'],
+                        address=venue_data['address'],
+                        city=venue_data['city'],
+                        county=venue_data['county'],
+                        country='Ireland',
+                        capacity=venue_data['capacity'],
+                        venue_type=venue_data['venue_type'],
+                        is_active=True,
+                        created_at=datetime.utcnow()
+                    )
+                    venue.set_primary_genres(['Rock', 'Pop', 'Alternative'])
+                    db.session.add(venue)
+            
+            db.session.commit()
+            
+            # Verify database connection by counting venues
+            venue_count = Venue.query.count()
+            print(f"Total venues in database: {venue_count}")
             
             return True
             
