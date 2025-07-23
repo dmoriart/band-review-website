@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './BandsPage.css';
 import SanityBandsGrid from './components/SanityBandsGrid';
+import BandClaimModal from './components/BandClaimModal';
+import BandEditForm from './components/BandEditForm';
+import { useAuth } from './AuthContext';
+import { bandUserService } from './services/bandUserService';
 
 // Define interfaces for band data
 interface SocialLinks {
@@ -73,6 +77,14 @@ const BandsPage: React.FC = () => {
   const [selectedGenre, setSelectedGenre] = useState<string>('');
   const [selectedLocation, setSelectedLocation] = useState<string>('');
   const [showVerifiedOnly, setShowVerifiedOnly] = useState<boolean>(false);
+
+  // Band claim and edit state
+  const [showClaimModal, setShowClaimModal] = useState<boolean>(false);
+  const [showEditForm, setShowEditForm] = useState<boolean>(false);
+  const [canEditBand, setCanEditBand] = useState<boolean>(false);
+  const [isBandClaimed, setIsBandClaimed] = useState<boolean>(false);
+  
+  const { user } = useAuth();
 
   // API base URL
   const API_BASE_URL = 'https://band-review-website.onrender.com/api';
@@ -273,10 +285,27 @@ const BandsPage: React.FC = () => {
   /**
    * Handle clicking on a Sanity band
    */
-  const handleSanityBandClick = (band: any) => {
+  const handleSanityBandClick = async (band: any) => {
     console.log('🎸 Band clicked:', band.name);
     setSelectedSanityBand(band);
     setCurrentView('detail');
+    
+    // Check permissions if user is logged in
+    if (user && band._id) {
+      try {
+        const canEdit = await bandUserService.canUserEditBand(user.uid, band._id);
+        const claimed = await bandUserService.isBandClaimed(band._id);
+        setCanEditBand(canEdit);
+        setIsBandClaimed(claimed);
+      } catch (error) {
+        console.error('Error checking band permissions:', error);
+        setCanEditBand(false);
+        setIsBandClaimed(false);
+      }
+    } else {
+      setCanEditBand(false);
+      setIsBandClaimed(false);
+    }
   };
 
   /**
@@ -302,6 +331,37 @@ const BandsPage: React.FC = () => {
               {selectedSanityBand.featured && <span className="badge featured">⭐ Featured</span>}
             </div>
           </div>
+
+          {/* Band Action Buttons */}
+          {user ? (
+            <div className="band-actions">
+              {canEditBand ? (
+                <button 
+                  className="edit-band-btn"
+                  onClick={() => setShowEditForm(true)}
+                >
+                  ✏️ Edit Band Profile
+                </button>
+              ) : !isBandClaimed ? (
+                <button 
+                  className="claim-band-btn"
+                  onClick={() => setShowClaimModal(true)}
+                >
+                  🎸 Claim this Band
+                </button>
+              ) : (
+                <div className="band-claimed-notice">
+                  <span>🔒 This band is already claimed</span>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="band-actions">
+              <div className="login-prompt">
+                <span>Sign in to claim or edit this band</span>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="band-detail-content">
@@ -348,10 +408,7 @@ const BandsPage: React.FC = () => {
                     <span 
                       key={genre.slug.current} 
                       className="genre-tag-large"
-                      style={{
-                        '--genre-bg': genre.color?.hex || '#61dafb',
-                        '--genre-text': genre.color?.hex ? '#ffffff' : '#1e3c72'
-                      } as React.CSSProperties}
+                      data-genre-color={genre.color?.hex}
                     >
                       {genre.name}
                     </span>
@@ -410,6 +467,32 @@ const BandsPage: React.FC = () => {
             )}
           </div>
         </div>
+
+        {/* Band Claim Modal */}
+        <BandClaimModal
+          isOpen={showClaimModal}
+          onClose={() => setShowClaimModal(false)}
+          band={selectedSanityBand}
+          onClaimSubmitted={() => {
+            setShowClaimModal(false);
+            // Refresh permissions after claim is submitted
+            if (user && selectedSanityBand._id) {
+              handleSanityBandClick(selectedSanityBand);
+            }
+          }}
+        />
+
+        {/* Band Edit Form */}
+        <BandEditForm
+          isOpen={showEditForm}
+          onClose={() => setShowEditForm(false)}
+          band={selectedSanityBand}
+          onSaved={() => {
+            setShowEditForm(false);
+            // Optionally refresh the band data here
+            console.log('Band profile updated!');
+          }}
+        />
       </div>
     );
   };

@@ -725,6 +725,74 @@
   margin: 0 0 1rem 0;
 }
 
+/* Band Action Buttons */
+.band-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+.edit-band-btn,
+.claim-band-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.edit-band-btn {
+  background: linear-gradient(135deg, #61dafb, #21c8f6);
+  color: #000;
+}
+
+.edit-band-btn:hover {
+  background: linear-gradient(135deg, #21c8f6, #61dafb);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(97, 218, 251, 0.3);
+}
+
+.claim-band-btn {
+  background: linear-gradient(135deg, var(--gold), #f4d03f);
+  color: #000;
+}
+
+.claim-band-btn:hover {
+  background: linear-gradient(135deg, #f4d03f, var(--gold));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.band-claimed-notice,
+.login-prompt {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.band-claimed-notice span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.login-prompt {
+  font-style: italic;
+}
+
 .band-detail-content {
   display: flex;
   flex-direction: column;
@@ -752,13 +820,18 @@
 }
 
 .genre-tag-large {
-  background: var(--genre-bg, #61dafb);
-  color: var(--genre-text, #1e3c72);
+  background: #61dafb;
+  color: #1e3c72;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
   display: inline-block;
+}
+
+.genre-tag-large[data-genre-color] {
+  background: attr(data-genre-color color, #61dafb);
+  color: #ffffff;
 }
 
 .band-bio-full {
@@ -801,6 +874,17 @@
   
   .band-title-section h1 {
     font-size: 2rem;
+  }
+  
+  .band-actions {
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .edit-band-btn,
+  .claim-band-btn {
+    width: 100%;
+    min-width: auto;
   }
   
   .band-profile-image-large {
