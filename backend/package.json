@@ -1,0 +1,42 @@
+{
+  "name": "band-review-backend",
+  "version": "1.0.0",
+  "description": "Backend API for band review website with Firebase Auth + Database permissions",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "build": "echo 'No build step needed for Node.js'",
+    "test": "jest",
+    "db:migrate": "node src/database/migrate.js",
+    "db:seed": "node src/database/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "dotenv": "^16.3.1",
+    "firebase-admin": "^11.10.1",
+    "pg": "^8.11.3",
+    "express-rate-limit": "^6.8.1",
+    "express-validator": "^7.0.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "band",
+    "review",
+    "firebase",
+    "api",
+    "music"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
