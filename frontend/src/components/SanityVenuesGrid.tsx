@@ -8,12 +8,14 @@ interface SanityVenuesGridProps {
   selectedCity?: string
   selectedCapacity?: string
   selectedRating?: string
+  onVenueClick?: (venue: any) => void
 }
 
 const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
   searchQuery = '',
   selectedCity = '',
   selectedCapacity = '',
+  onVenueClick
 }) => {
   const { data, loading, error, refetch } = useVenues()
   const venues: any[] = Array.isArray(data) ? data : []
@@ -100,7 +102,11 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
       
       <div className="venues-grid">
         {filteredVenues.map((venue) => (
-          <div key={venue._id} className="venue-card">
+          <div 
+            key={venue._id} 
+            className={`venue-card ${onVenueClick ? 'clickable' : ''}`}
+            onClick={() => onVenueClick?.(venue)}
+          >
             <div className="venue-card-image">
               {venue.heroImage ? (
                 <img 

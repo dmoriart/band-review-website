@@ -409,7 +409,12 @@ function AppContent() {
       </div>
 
       {/* Sanity CMS Venues */}
-      <SanityVenuesGrid />
+      <SanityVenuesGrid 
+        onVenueClick={(venue) => {
+          setSelectedVenue(venue);
+          setCurrentView('venue-detail');
+        }}
+      />
 
       {loading ? (
         <div className="loading">Loading venues...</div>

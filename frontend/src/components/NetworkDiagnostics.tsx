@@ -1,5 +1,6 @@
 import React from 'react';
 import { client } from '../sanity';
+import './NetworkDiagnostics.css';
 
 const NetworkDiagnostics: React.FC = () => {
   const [result, setResult] = React.useState<string>('');
@@ -160,8 +161,7 @@ const NetworkDiagnostics: React.FC = () => {
       }}>
         {loading ? 'Testing...' : result || 'Click a button to run network diagnostics'}
       </div>
-      
-      <div style={{ marginTop: '15px', fontSize: '12px', color: '#666' }}>
+      <div className="network-diagnostics-troubleshooting">
         <p><strong>Troubleshooting Steps:</strong></p>
         <ol>
           <li>Test basic connectivity to see if we can reach Sanity at all</li>
@@ -170,7 +170,7 @@ const NetworkDiagnostics: React.FC = () => {
           <li>Check CORS headers to identify browser security blocks</li>
         </ol>
       </div>
-    </div>
+      </div>
   );
 };
 

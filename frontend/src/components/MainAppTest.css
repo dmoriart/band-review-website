@@ -1,0 +1,44 @@
+/* Main App Test Component Styles */
+.main-app-test {
+  padding: 20px;
+  font-family: monospace;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.main-app-test h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+.main-app-test button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-app-test button:hover {
+  background-color: #218838;
+}
+
+.main-app-test button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.main-app-test pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useBands, useVenues } from '../hooks/useSanity';
+import './MainAppTest.css';
 
 const MainAppTest: React.FC = () => {
   const { data: bands, loading: bandsLoading, error: bandsError } = useBands();
@@ -9,17 +10,17 @@ const MainAppTest: React.FC = () => {
   const venuesArray = Array.isArray(venues) ? venues : [];
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div className="main-app-test-container">
       <h2>Main App CMS Integration Test</h2>
       
-      <div style={{ marginBottom: '30px' }}>
+      <div className="main-app-test-section">
         <h3>Bands Status</h3>
         {bandsLoading ? (
           <p>Loading bands...</p>
         ) : bandsError ? (
-          <div style={{ color: 'red' }}>❌ Error: {bandsError}</div>
+          <div className="main-app-test-error">❌ Error: {bandsError}</div>
         ) : (
-          <div style={{ color: 'green' }}>
+          <div className="main-app-test-success">
             ✅ Successfully loaded {bands?.length || 0} bands
             {bands && bands.length > 0 && (
               <ul>
@@ -38,14 +39,14 @@ const MainAppTest: React.FC = () => {
         )}
       </div>
 
-      <div style={{ marginBottom: '30px' }}>
+      <div className="main-app-test-section">
         <h3>Venues Status</h3>
         {venuesLoading ? (
           <p>Loading venues...</p>
         ) : venuesError ? (
-          <div style={{ color: 'red' }}>❌ Error: {venuesError}</div>
+          <div className="main-app-test-error">❌ Error: {venuesError}</div>
         ) : (
-          <div style={{ color: 'green' }}>
+          <div className="main-app-test-success">
             ✅ Successfully loaded {venuesArray.length || 0} venues
             {venuesArray && venuesArray.length > 0 && (
               <ul>
@@ -62,21 +63,15 @@ const MainAppTest: React.FC = () => {
         )}
       </div>
 
-      <div style={{ 
-        padding: '15px', 
-        backgroundColor: '#f8f9fa', 
-        border: '1px solid #dee2e6',
-        borderRadius: '4px',
-        fontSize: '14px'
-      }}>
+      <div className="main-app-test-status">
         <strong>Integration Status:</strong>
         <br />
         {(!bandsLoading && !venuesLoading) && (
           <>
             {!bandsError && !venuesError ? (
-              <span style={{ color: 'green' }}>✅ All CMS connections working perfectly!</span>
+              <span className="main-app-test-status-success">✅ All CMS connections working perfectly!</span>
             ) : (
-              <span style={{ color: 'orange' }}>⚠️ Some issues detected with CMS integration</span>
+              <span className="main-app-test-status-warning">⚠️ Some issues detected with CMS integration</span>
             )}
           </>
         )}

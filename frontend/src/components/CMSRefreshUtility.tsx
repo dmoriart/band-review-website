@@ -1,4 +1,5 @@
 import React from 'react';
+import './CMSRefreshUtility.css';
 
 const CMSRefreshUtility: React.FC = () => {
   const [refreshing, setRefreshing] = React.useState(false);
@@ -67,51 +68,28 @@ const CMSRefreshUtility: React.FC = () => {
     }
   };
 
-  return (
-    <div style={{ 
-      padding: '20px', 
-      fontFamily: 'monospace', 
-      backgroundColor: '#fff3cd', 
-      border: '2px solid #ffc107',
-      margin: '20px', 
-      borderRadius: '8px' 
-    }}>
+    <div className="cms-refresh-utility">
       <h3>🛠️ CMS Refresh Utility</h3>
       <p><strong>Use when:</strong> Persistent network errors despite retry attempts</p>
       
-      <div style={{ marginBottom: '20px' }}>
+      <div className="cms-refresh-buttons">
         <button 
           onClick={handleTestDirectAPI}
           disabled={refreshing}
-          style={{ 
-            marginRight: '10px',
-            padding: '10px 16px',
-            backgroundColor: '#17a2b8',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}
+          className="cms-refresh-test-btn"
         >
           🔍 Test Direct API
         </button>
         <button 
           onClick={handleFullRefresh}
           disabled={refreshing}
-          style={{ 
-            padding: '10px 16px',
-            backgroundColor: '#dc3545',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}
+          className="cms-refresh-full-btn"
         >
           {refreshing ? '🔄 Refreshing...' : '🔄 Full CMS Refresh'}
         </button>
       </div>
       
-      <div style={{ fontSize: '12px', color: '#856404' }}>
+      <div className="cms-refresh-info">
         <p><strong>What this does:</strong></p>
         <ul>
           <li>Tests direct API connectivity without Sanity client</li>
