@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { client } from '../sanity'
 
 // Generic hook for fetching Sanity data
-export function useSanityData<T>(query: string, params?: Record<string, any>) {
+export function useSanityData<T>(query: string) {
   const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -12,8 +12,8 @@ export function useSanityData<T>(query: string, params?: Record<string, any>) {
       try {
         setLoading(true)
         setError(null)
-        // For Sanity client v7, fetch method accepts query and optional params
-        const result = await client.fetch(query, params)
+        // Use the client.fetch method properly - it only accepts query string
+        const result = await client.fetch(query)
         setData(result)
       } catch (err) {
         console.error('Sanity fetch error:', err)
@@ -24,7 +24,7 @@ export function useSanityData<T>(query: string, params?: Record<string, any>) {
     }
 
     fetchData()
-  }, [query, params ? JSON.stringify(params) : ''])
+  }, [query])
 
   return { data, loading, error, refetch: () => setLoading(true) }
 }
@@ -103,7 +103,7 @@ export function useVenues() {
 }
 
 export function useBandBySlug(slug: string) {
-  const query = `*[_type == "band" && slug.current == $slug][0] {
+  const query = `*[_type == "band" && slug.current == "${slug}"][0] {
     _id,
     name,
     slug,
@@ -120,11 +120,11 @@ export function useBandBySlug(slug: string) {
     featured
   }`
   
-  return useSanityData(query, { slug })
+  return useSanityData(query)
 }
 
 export function useVenueBySlug(slug: string) {
-  const query = `*[_type == "venue" && slug.current == $slug][0] {
+  const query = `*[_type == "venue" && slug.current == "${slug}"][0] {
     _id,
     name,
     slug,
@@ -144,11 +144,11 @@ export function useVenueBySlug(slug: string) {
     featured
   }`
   
-  return useSanityData(query, { slug })
+  return useSanityData(query)
 }
 
 export function useReviewsByVenue(venueId: string) {
-  const query = `*[_type == "review" && venue._ref == $venueId && published == true] | order(_createdAt desc) {
+  const query = `*[_type == "review" && venue._ref == "${venueId}" && published == true] | order(_createdAt desc) {
     _id,
     title,
     reviewer->{name, slug, profileImage},
@@ -164,7 +164,7 @@ export function useReviewsByVenue(venueId: string) {
     _createdAt
   }`
   
-  return useSanityData(query, { venueId })
+  return useSanityData(query)
 }
 
 export function useUpcomingGigs() {
