@@ -6,6 +6,14 @@ export function useSanityData<T>(query: string) {
   const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [refetchTrigger, setRefetchTrigger] = useState(0)
+
+  const refetch = () => {
+    console.log('🔄 Manual refetch triggered')
+    setLoading(true)
+    setError(null)
+    setRefetchTrigger(prev => prev + 1)
+  }
 
   useEffect(() => {
     const fetchData = async (retryCount = 0) => {
@@ -34,10 +42,34 @@ export function useSanityData<T>(query: string) {
         
         // Retry logic for network errors (max 2 retries)
         if (retryCount < 2 && err instanceof Error && 
-            (err.message.includes('Request error') || err.message.includes('fetch'))) {
-          console.log(`Retrying request in ${(retryCount + 1) * 1000}ms...`)
+            (err.message.includes('Request error') || 
+             err.message.includes('fetch') || 
+             err.message.includes('attempting to reach') ||
+             err.message.includes('network') ||
+             err.message.toLowerCase().includes('failed'))) {
+          console.log(`🔄 Retrying request in ${(retryCount + 1) * 1000}ms... (attempt ${retryCount + 2}/3)`)
           setTimeout(() => fetchData(retryCount + 1), (retryCount + 1) * 1000)
           return
+        }
+        
+        // Try direct fetch as fallback if Sanity client fails
+        if (retryCount < 3) {
+          console.log('🔄 Trying direct fetch as fallback...')
+          try {
+            const encodedQuery = encodeURIComponent(query)
+            const url = `https://sy7ko2cx.api.sanity.io/v2022-06-01/data/query/production?query=${encodedQuery}`
+            const response = await fetch(url)
+            
+            if (response.ok) {
+              const data = await response.json()
+              setData(data.result)
+              setError(null)
+              console.log('✅ Direct fetch fallback successful:', data.result?.length || 'unknown', 'items')
+              return
+            }
+          } catch (fallbackErr) {
+            console.error('❌ Direct fetch fallback also failed:', fallbackErr)
+          }
         }
         
         const errorMessage = err instanceof Error ? err.message : 'Failed to fetch data from Sanity CMS'
@@ -50,9 +82,9 @@ export function useSanityData<T>(query: string) {
     }
 
     fetchData()
-  }, [query])
+  }, [query, refetchTrigger])
 
-  return { data, loading, error, refetch: () => setLoading(true) }
+  return { data, loading, error, refetch }
 }
 
 // Specific hooks for common queries

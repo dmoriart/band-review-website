@@ -16,7 +16,17 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
   selectedLocation = '',
   showVerifiedOnly = false
 }) => {
-  const { data: bands, loading, error } = useBands()
+  const { data: bands, loading, error, refetch } = useBands()
+  
+  const handleRetry = () => {
+    console.log('🔄 Manual retry triggered for bands data')
+    if (refetch) {
+      refetch()
+    } else {
+      // Force page refresh as fallback
+      window.location.reload()
+    }
+  }
 
   if (loading) {
     return (
@@ -31,7 +41,24 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
     return (
       <div className="sanity-bands-error">
         <p>Error loading bands: {error}</p>
-        <p>Falling back to local data...</p>
+        <p>This may be a temporary network issue.</p>
+        <button 
+          onClick={handleRetry}
+          style={{ 
+            marginTop: '10px', 
+            padding: '8px 16px', 
+            backgroundColor: '#007bff', 
+            color: 'white', 
+            border: 'none', 
+            borderRadius: '4px', 
+            cursor: 'pointer' 
+          }}
+        >
+          🔄 Retry Loading Bands
+        </button>
+        <p style={{ marginTop: '10px', fontSize: '12px', color: '#666' }}>
+          The retry mechanism will automatically attempt to reload the data.
+        </p>
       </div>
     )
   }

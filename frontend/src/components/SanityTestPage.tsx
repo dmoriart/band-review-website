@@ -3,6 +3,7 @@ import { useBands, useVenues } from '../hooks/useSanity';
 import DirectAPITest from './DirectAPITest';
 import MainAppTest from './MainAppTest';
 import VenuesDebugTest from './VenuesDebugTest';
+import NetworkDiagnostics from './NetworkDiagnostics';
 import './SanityTestPage.css';
 
 const SanityTestPage: React.FC = () => {
@@ -15,6 +16,11 @@ const SanityTestPage: React.FC = () => {
   return (
     <div className="sanity-test-page">
       <h1>Sanity CMS Integration Test</h1>
+      
+      {/* Network Diagnostics - New comprehensive testing */}
+      <div className="sanity-test-section">
+        <NetworkDiagnostics />
+      </div>
       
       {/* Direct API Test - New debugging component */}
       <div className="sanity-test-section">
