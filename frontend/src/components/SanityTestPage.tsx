@@ -1,5 +1,6 @@
 import React from 'react';
 import { useBands, useVenues } from '../hooks/useSanity';
+import DirectAPITest from './DirectAPITest';
 import './SanityTestPage.css';
 
 const SanityTestPage: React.FC = () => {
@@ -12,6 +13,11 @@ const SanityTestPage: React.FC = () => {
   return (
     <div className="sanity-test-page">
       <h1>Sanity CMS Integration Test</h1>
+      
+      {/* Direct API Test - New debugging component */}
+      <div className="sanity-test-section">
+        <DirectAPITest />
+      </div>
       
       {/* Bands Section */}
       <div className="sanity-test-section">
