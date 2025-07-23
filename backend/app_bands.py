@@ -12,7 +12,7 @@ from werkzeug.exceptions import BadRequest
 
 # Import our enhanced modules
 from config import config
-from models_bands_sqlite import db
+from models_bands_production import db
 from auth_firebase import initialize_firebase
 from bands_api import bands_bp
 
@@ -60,6 +60,21 @@ def create_app(config_name=None):
         db.session.rollback()
         return jsonify({'error': 'Internal server error', 'message': 'Something went wrong'}), 500
     
+    # Root endpoint
+    @app.route('/')
+    def root():
+        """Root endpoint"""
+        return jsonify({
+            'message': 'BandVenueReview.ie API',
+            'version': '2.0.0',
+            'status': 'running',
+            'endpoints': {
+                'health': '/health',
+                'api_info': '/api/info',
+                'bands': '/api/bands'
+            }
+        }), 200
+
     # Health check endpoint
     @app.route('/health')
     def health_check():

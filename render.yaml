@@ -1,28 +1,19 @@
 services:
   - type: web
-    name: bandvenuereview-api
+    name: band-review-website-backend
     env: python
     region: oregon
     buildCommand: cd backend && pip install -r requirements.txt
-    startCommand: cd backend && python init_bands_db.py && python app_bands.py
+    startCommand: cd backend && python init_production_db.py && gunicorn wsgi:app
     envVars:
       - key: FLASK_ENV
         value: production
-      - key: FLASK_DEBUG
-        value: false
-      - key: PORT
-        value: 8000
-      - key: SECRET_KEY
-        generateValue: true
-      - key: JWT_SECRET_KEY
-        generateValue: true
+      - key: PYTHONPATH
+        value: /opt/render/project/src/backend
       - key: DATABASE_URL
         fromDatabase:
-          name: bandvenuereview-db
+          name: band-review-db
           property: connectionString
-      - key: CORS_ORIGINS
-        value: https://bandvenuereview.netlify.app,https://*.netlify.app
-    healthCheckPath: /api/health
 
 databases:
   - name: bandvenuereview-db

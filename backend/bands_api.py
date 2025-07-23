@@ -7,7 +7,7 @@ from flask import Blueprint, request, jsonify, current_app
 from sqlalchemy import and_, or_, desc, asc, func
 from sqlalchemy.orm import joinedload
 from datetime import datetime, date, timedelta
-from models_bands_sqlite import (
+from models_bands_production import (
     db, User, Band, Venue, Gig, BandMember, BandReview, 
     VenueReviewByBand, BandFollower, Setlist, GigSupportingBand, ReviewVote
 )
