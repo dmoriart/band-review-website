@@ -109,9 +109,16 @@ class BandUserService {
 
   // Submit a band claim request
   async submitBandClaim(userId: string, userEmail: string, claimData: BandClaimRequest): Promise<string> {
-    if (!db) throw new Error('Database not available');
+    console.log('🔥 [bandUserService] Starting submitBandClaim', { userId, userEmail, bandId: claimData.bandId });
+    
+    if (!db) {
+      console.error('❌ [bandUserService] Database not available');
+      throw new Error('Database not available');
+    }
     
     try {
+      console.log('🔍 [bandUserService] Checking for existing claim...');
+      
       // Check if user already has a relationship with this band
       const existingQuery = query(
         collection(db, this.collectionName),
@@ -120,10 +127,15 @@ class BandUserService {
       );
       
       const existingDocs = await getDocs(existingQuery);
+      console.log(`📊 [bandUserService] Found ${existingDocs.size} existing claims`);
+      
       if (!existingDocs.empty) {
+        console.log('⚠️ [bandUserService] User already has a claim for this band');
         throw new Error('You have already submitted a claim for this band');
       }
 
+      console.log('📝 [bandUserService] Preparing relationship data...');
+      
       // Create new relationship record
       const relationshipData: Omit<BandUserRelationship, 'id'> = {
         userId,
@@ -139,26 +151,40 @@ class BandUserService {
       };
 
       // Only add verification data that exists to avoid undefined values in Firestore
+      console.log('🔒 [bandUserService] Processing verification data...');
       const verificationData: any = {};
       if (claimData.email) {
         verificationData.email = claimData.email;
+        console.log('📧 [bandUserService] Added email verification');
       }
       if (claimData.socialProof) {
         verificationData.socialProof = claimData.socialProof;
+        console.log('📱 [bandUserService] Added social proof verification');
       }
       if (claimData.manualData) {
         verificationData.manualData = claimData.manualData;
+        console.log('📝 [bandUserService] Added manual verification');
       }
 
       // Only add verificationData if it has content
       if (Object.keys(verificationData).length > 0) {
         relationshipData.verificationData = verificationData;
+        console.log('✅ [bandUserService] Verification data added to relationship');
+      } else {
+        console.log('⚠️ [bandUserService] No verification data to add');
       }
 
+      console.log('💾 [bandUserService] Saving to Firestore...', { collection: this.collectionName });
       const docRef = await addDoc(collection(db, this.collectionName), relationshipData);
+      console.log('✅ [bandUserService] Document created with ID:', docRef.id);
       return docRef.id;
     } catch (error) {
-      console.error('Error submitting band claim:', error);
+      console.error('❌ [bandUserService] Error submitting band claim:', error);
+      console.error('❌ [bandUserService] Error details:', {
+        message: error instanceof Error ? error.message : 'Unknown error',
+        code: (error as any)?.code,
+        details: (error as any)?.details
+      });
       throw error;
     }
   }

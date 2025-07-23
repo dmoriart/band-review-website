@@ -52,6 +52,13 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
     setError('');
 
     try {
+      console.log('🎸 Starting band claim submission...', { bandId: band._id, claimMethod, userId: user.uid });
+      
+      // Check if user has valid email
+      if (!user.email) {
+        throw new Error('User email is required for band claims');
+      }
+      
       const claimData: BandClaimRequest = {
         bandId: band._id,
         bandName: band.name,
@@ -60,6 +67,7 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
 
       if (claimMethod === 'email') {
         claimData.email = email.trim();
+        console.log('📧 Email claim data prepared');
       } else if (claimMethod === 'social') {
         // Only add socialProof if we have valid data
         if (socialPlatform && socialPostUrl.trim()) {
@@ -68,6 +76,7 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
             postUrl: socialPostUrl.trim(),
             verificationCode
           };
+          console.log('📱 Social proof claim data prepared');
         }
       } else if (claimMethod === 'manual') {
         const filteredLinks = supportingLinks.filter(link => link.trim() !== '');
@@ -75,9 +84,21 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
           description: description.trim(),
           supportingLinks: filteredLinks
         };
+        console.log('📝 Manual claim data prepared');
       }
 
-      await bandUserService.submitBandClaim(user.uid, user.email || '', claimData);
+      console.log('🔄 Submitting to bandUserService...');
+      
+      // Add timeout to prevent hanging
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Request timed out after 30 seconds')), 30000);
+      });
+      
+      const submitPromise = bandUserService.submitBandClaim(user.uid, user.email || '', claimData);
+      
+      await Promise.race([submitPromise, timeoutPromise]);
+      
+      console.log('✅ Band claim submitted successfully');
       setSuccess(true);
       setTimeout(() => {
         onClaimSubmitted();
@@ -85,8 +106,10 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
       }, 2000);
 
     } catch (err: any) {
+      console.error('❌ Band claim submission error:', err);
       setError(err.message || 'Failed to submit claim');
     } finally {
+      console.log('🔄 Resetting loading state');
       setLoading(false);
     }
   };
