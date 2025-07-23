@@ -16,7 +16,7 @@
   CI = "false"
   
   # React environment variables
-  REACT_APP_API_URL = "https://band-review-api.onrender.com/api"
+  REACT_APP_API_URL = "https://band-review-website.onrender.com/api"
 
 # Redirect rules for single-page application
 [[redirects]]
