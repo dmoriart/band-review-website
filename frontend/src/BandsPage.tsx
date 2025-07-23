@@ -459,34 +459,8 @@ const BandsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Results count */}
-      <div className="results-info">
-        <p>Showing {filteredBands.length} of {bands.length} bands</p>
-      </div>
-
-      {/* Error message */}
-      {error && (
-        <div className="error-message">
-          <p>{error}</p>
-          <p>Showing sample data for demonstration</p>
-        </div>
-      )}
-
       {/* Sanity CMS Bands */}
       <SanityBandsGrid />
-
-      {/* Bands grid */}
-      <div className="bands-grid">
-        {filteredBands.map(renderBandCard)}
-      </div>
-
-      {/* No results */}
-      {filteredBands.length === 0 && !loading && (
-        <div className="no-results">
-          <h3>No bands found</h3>
-          <p>Try adjusting your search criteria or filters</p>
-        </div>
-      )}
 
       {/* Band detail modal */}
       {renderBandDetail()}
