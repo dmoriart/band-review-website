@@ -6,7 +6,7 @@ export const client = createClient({
   projectId: process.env.REACT_APP_SANITY_PROJECT_ID || 'sy7ko2cx',
   dataset: process.env.REACT_APP_SANITY_DATASET || 'production',
   useCdn: process.env.REACT_APP_SANITY_USE_CDN === 'true' || true, // Enable for faster, cached responses
-  apiVersion: '2023-05-03', // Use current API version
+  apiVersion: '2022-06-01', // Use stable API version
 })
 
 // Helper for generating image URLs

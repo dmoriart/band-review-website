@@ -15,9 +15,11 @@ export function useSanityData<T>(query: string) {
         // Type assertion to work around TypeScript definition issues
         const result = await (client as any).fetch(query)
         setData(result)
+        console.log('Sanity fetch successful:', result)
       } catch (err) {
         console.error('Sanity fetch error:', err)
-        setError(err instanceof Error ? err.message : 'Failed to fetch data')
+        const errorMessage = err instanceof Error ? err.message : 'Failed to fetch data from Sanity CMS'
+        setError(`${errorMessage}. Falling back to local data...`)
       } finally {
         setLoading(false)
       }
