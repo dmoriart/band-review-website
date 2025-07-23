@@ -50,6 +50,32 @@
   margin-bottom: 2rem;
 }
 
+.sanity-venues-retry-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.sanity-venues-retry-button:hover {
+  background-color: #0056b3;
+}
+
+.sanity-venues-retry-button:active {
+  background-color: #004494;
+}
+
+.sanity-venues-retry-info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
 .sanity-venues-empty {
   text-align: center;
   padding: 3rem;

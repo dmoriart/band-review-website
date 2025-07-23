@@ -15,8 +15,18 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
   selectedCity = '',
   selectedCapacity = '',
 }) => {
-  const { data, loading, error } = useVenues()
+  const { data, loading, error, refetch } = useVenues()
   const venues: any[] = Array.isArray(data) ? data : []
+
+  const handleRetry = () => {
+    console.log('🔄 Manual retry triggered for venues data')
+    if (refetch) {
+      refetch()
+    } else {
+      // Force page refresh as fallback
+      window.location.reload()
+    }
+  }
 
   if (loading) {
     return (
@@ -31,7 +41,16 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
     return (
       <div className="sanity-venues-error">
         <p>Error loading venues: {error}</p>
-        <p>Falling back to local data...</p>
+        <p>This may be a temporary network issue.</p>
+        <button 
+          onClick={handleRetry}
+          className="sanity-venues-retry-button"
+        >
+          🔄 Retry Loading Venues
+        </button>
+        <p className="sanity-venues-retry-info">
+          The retry mechanism will automatically attempt to reload the data.
+        </p>
       </div>
     )
   }
