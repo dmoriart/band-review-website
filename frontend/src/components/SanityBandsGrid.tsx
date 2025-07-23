@@ -8,13 +8,15 @@ interface SanityBandsGridProps {
   selectedGenre?: string
   selectedLocation?: string
   showVerifiedOnly?: boolean
+  onBandClick?: (band: any) => void
 }
 
 const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
   searchQuery = '',
   selectedGenre = '',
   selectedLocation = '',
-  showVerifiedOnly = false
+  showVerifiedOnly = false,
+  onBandClick
 }) => {
   const { data: bands, loading, error, refetch } = useBands()
   
@@ -100,7 +102,11 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
       
       <div className="bands-grid">
         {filteredBands.map((band) => (
-          <div key={band._id} className="band-card">
+          <div 
+            key={band._id} 
+            className={`band-card${onBandClick ? ' clickable' : ''}`}
+            onClick={() => onBandClick && onBandClick(band)}
+          >
             <div className="band-card-image">
               {band.profileImage ? (
                 <img 

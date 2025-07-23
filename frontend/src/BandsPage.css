@@ -208,8 +208,8 @@
 }
 
 .genre-tag {
-  background: #61dafb;
-  color: #1e3c72;
+  background: var(--genre-bg, #61dafb);
+  color: var(--genre-text, #1e3c72);
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 12px;

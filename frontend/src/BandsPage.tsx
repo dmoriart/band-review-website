@@ -63,6 +63,7 @@ const BandsPage: React.FC = () => {
   const [bands, setBands] = useState<Band[]>([]);
   const [filteredBands, setFilteredBands] = useState<Band[]>([]);
   const [selectedBand, setSelectedBand] = useState<Band | null>(null);
+  const [selectedSanityBand, setSelectedSanityBand] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   
@@ -269,6 +270,127 @@ const BandsPage: React.FC = () => {
   );
 
   /**
+   * Handle clicking on a Sanity band
+   */
+  const handleSanityBandClick = (band: any) => {
+    console.log('🎸 Band clicked:', band.name);
+    setSelectedSanityBand(band);
+  };
+
+  /**
+   * Render Sanity band detail modal
+   */
+  const renderSanityBandDetail = () => {
+    if (!selectedSanityBand) return null;
+
+    return (
+      <div className="modal-overlay" onClick={() => setSelectedSanityBand(null)}>
+        <div className="modal-content band-detail" onClick={e => e.stopPropagation()}>
+          <button className="modal-close" onClick={() => setSelectedSanityBand(null)}>×</button>
+          
+          {/* Profile Image */}
+          {selectedSanityBand.profileImage && (
+            <div className="band-banner">
+              <img 
+                src={`https://cdn.sanity.io/images/sy7ko2cx/production/${selectedSanityBand.profileImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg').replace('-png', '.png')}`} 
+                alt={`${selectedSanityBand.name} profile`} 
+              />
+            </div>
+          )}
+
+          <div className="band-detail-content">
+            <div className="band-header">
+              <h2>{selectedSanityBand.name}</h2>
+              <div className="band-badges">
+                {selectedSanityBand.verified && <span className="verified-badge">✓ Verified</span>}
+                {selectedSanityBand.featured && <span className="featured-badge">⭐ Featured</span>}
+              </div>
+            </div>
+
+            {/* Location and Formed Year */}
+            <div className="band-meta">
+              {selectedSanityBand.locationText && (
+                <div className="band-location">📍 {selectedSanityBand.locationText}</div>
+              )}
+              {selectedSanityBand.formedYear && (
+                <div className="band-formed">🗓️ Formed {selectedSanityBand.formedYear}</div>
+              )}
+            </div>
+
+            {/* Genres */}
+            {selectedSanityBand.genres && selectedSanityBand.genres.length > 0 && (
+              <div className="band-genres-detail">
+                <h4>Genres</h4>
+                <div className="genre-tags">
+                  {selectedSanityBand.genres.map((genre: any) => (
+                    <span 
+                      key={genre.slug.current} 
+                      className="genre-tag"
+                      style={{
+                        '--genre-bg': genre.color?.hex || '#61dafb',
+                        '--genre-text': genre.color?.hex ? '#ffffff' : '#1e3c72'
+                      } as React.CSSProperties}
+                    >
+                      {genre.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Bio */}
+            {selectedSanityBand.bio && (
+              <div className="band-bio-detail">
+                <h4>About</h4>
+                <p>{selectedSanityBand.bio}</p>
+              </div>
+            )}
+
+            {/* Social Links */}
+            {selectedSanityBand.socialLinks && Object.keys(selectedSanityBand.socialLinks).length > 0 && (
+              <div className="band-social-detail">
+                <h4>Social Links</h4>
+                <div className="social-links">
+                  {selectedSanityBand.socialLinks.website && (
+                    <a href={selectedSanityBand.socialLinks.website} target="_blank" rel="noopener noreferrer" className="social-link">
+                      🌐 Website
+                    </a>
+                  )}
+                  {selectedSanityBand.socialLinks.spotify && (
+                    <a href={selectedSanityBand.socialLinks.spotify} target="_blank" rel="noopener noreferrer" className="social-link">
+                      🎵 Spotify
+                    </a>
+                  )}
+                  {selectedSanityBand.socialLinks.instagram && (
+                    <a href={selectedSanityBand.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="social-link">
+                      📷 Instagram
+                    </a>
+                  )}
+                  {selectedSanityBand.socialLinks.facebook && (
+                    <a href={selectedSanityBand.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="social-link">
+                      👍 Facebook
+                    </a>
+                  )}
+                  {selectedSanityBand.socialLinks.youtube && (
+                    <a href={selectedSanityBand.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="social-link">
+                      📺 YouTube
+                    </a>
+                  )}
+                  {selectedSanityBand.socialLinks.bandcamp && (
+                    <a href={selectedSanityBand.socialLinks.bandcamp} target="_blank" rel="noopener noreferrer" className="social-link">
+                      🎶 Bandcamp
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  /**
    * Render band detail modal
    */
   const renderBandDetail = () => {
@@ -460,9 +582,10 @@ const BandsPage: React.FC = () => {
       </div>
 
       {/* Sanity CMS Bands */}
-      <SanityBandsGrid />
+      <SanityBandsGrid onBandClick={handleSanityBandClick} />
 
-      {/* Band detail modal */}
+      {/* Band detail modals */}
+      {renderSanityBandDetail()}
       {renderBandDetail()}
     </div>
   );
