@@ -44,19 +44,11 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
         <p>This may be a temporary network issue.</p>
         <button 
           onClick={handleRetry}
-          style={{ 
-            marginTop: '10px', 
-            padding: '8px 16px', 
-            backgroundColor: '#007bff', 
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '4px', 
-            cursor: 'pointer' 
-          }}
+          className="sanity-bands-retry-button"
         >
           🔄 Retry Loading Bands
         </button>
-        <p style={{ marginTop: '10px', fontSize: '12px', color: '#666' }}>
+        <p className="sanity-bands-retry-info">
           The retry mechanism will automatically attempt to reload the data.
         </p>
       </div>
