@@ -1,6 +1,7 @@
 import React from 'react';
 import { useBands, useVenues } from '../hooks/useSanity';
 import DirectAPITest from './DirectAPITest';
+import MainAppTest from './MainAppTest';
 import './SanityTestPage.css';
 
 const SanityTestPage: React.FC = () => {
@@ -17,6 +18,11 @@ const SanityTestPage: React.FC = () => {
       {/* Direct API Test - New debugging component */}
       <div className="sanity-test-section">
         <DirectAPITest />
+      </div>
+      
+      {/* Main App Hooks Test - Additional validation */}
+      <div className="sanity-test-section">
+        <MainAppTest />
       </div>
       
       {/* Bands Section */}
