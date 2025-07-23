@@ -6,6 +6,7 @@ import BandEditForm from './components/BandEditForm';
 import FirebaseConnectionTest from './components/FirebaseConnectionTest';
 import FirestoreRulesTest from './components/FirestoreRulesTest';
 import FirebaseNetworkTest from './components/FirebaseNetworkTest';
+import DirectAPITest from './components/DirectAPITest';
 import { useAuth } from './AuthContext';
 import { bandUserService } from './services/bandUserService';
 
@@ -644,21 +645,23 @@ const BandsPage: React.FC = () => {
       {currentView === 'diagnostics' ? (
         <>
           <div className="bands-header">
-            <h1>Firebase Connection Diagnostics</h1>
-            <p>Test Firebase connectivity and performance</p>
+            <h1>Connection Diagnostics</h1>
+            <p>Test backend API connectivity and Firebase performance</p>
             <button 
               onClick={() => setCurrentView('list')} 
-              className="back-button"
-              style={{ marginTop: '10px', padding: '8px 16px', background: '#667eea', color: 'white', border: 'none', borderRadius: '6px' }}
+              className="back-button bands-back-btn"
             >
               ← Back to Bands
             </button>
           </div>
-          <FirebaseConnectionTest />
+          <DirectAPITest />
+          <div className="margin-top-20">
+            <FirebaseConnectionTest />
+          </div>
           <div className="margin-top-20">
             <FirestoreRulesTest />
           </div>
-          <div style={{ marginTop: '20px' }}>
+          <div className="margin-top-20">
             <FirebaseNetworkTest />
           </div>
         </>

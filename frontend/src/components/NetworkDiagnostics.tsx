@@ -126,28 +126,21 @@ const NetworkDiagnostics: React.FC = () => {
   };
 
   return (
-    <div style={{ 
-      padding: '20px', 
-      fontFamily: 'monospace', 
-      backgroundColor: '#fff3cd', 
-      border: '1px solid #ffeeba',
-      margin: '20px', 
-      borderRadius: '5px' 
-    }}>
+    <div className="network-diagnostics-container">
       <h3>🔧 Network Diagnostics</h3>
       <p><strong>Issue:</strong> Both bands and venues queries failing with "Request error"</p>
       
-      <div style={{ marginBottom: '20px' }}>
-        <button onClick={testBasicConnectivity} disabled={loading} style={{ marginRight: '10px' }}>
+      <div className="network-diagnostics-button-group">
+        <button onClick={testBasicConnectivity} disabled={loading} className="network-diagnostics-button">
           Test Basic Connectivity
         </button>
-        <button onClick={testSimpleQuery} disabled={loading} style={{ marginRight: '10px' }}>
+        <button onClick={testSimpleQuery} disabled={loading} className="network-diagnostics-button">
           Test Simple Query
         </button>
-        <button onClick={testWithDifferentClient} disabled={loading} style={{ marginRight: '10px' }}>
+        <button onClick={testWithDifferentClient} disabled={loading} className="network-diagnostics-button">
           Test Fresh Client
         </button>
-        <button onClick={testCorsHeaders} disabled={loading}>
+        <button onClick={testCorsHeaders} disabled={loading} className="network-diagnostics-button">
           Test CORS Headers
         </button>
       </div>

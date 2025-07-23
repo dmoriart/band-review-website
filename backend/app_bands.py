@@ -19,13 +19,16 @@ from venues_api import venues_bp
 
 def create_app(config_name=None):
     """Application factory pattern"""
+    print(f"🚀 Creating Flask app with config: {config_name}")
     app = Flask(__name__)
     
     # Load configuration
     config_name = config_name or os.environ.get('FLASK_CONFIG', 'development')
+    print(f"📝 Using config: {config_name}")
     app.config.from_object(config[config_name])
     
     # Initialize extensions
+    print("🔌 Initializing database...")
     db.init_app(app)
     migrate = Migrate(app, db)
     
@@ -42,8 +45,12 @@ def create_app(config_name=None):
          supports_credentials=True)
     
     # Register blueprints
+    print("📋 Registering blueprints...")
+    print(f"Bands blueprint: {bands_bp}")
+    print(f"Venues blueprint: {venues_bp}")
     app.register_blueprint(bands_bp)
     app.register_blueprint(venues_bp)
+    print("✅ Blueprints registered")
     
     # Global error handlers
     @app.errorhandler(400)

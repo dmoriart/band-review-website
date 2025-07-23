@@ -1,95 +1,171 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './DirectAPITest.css';
 
-const DirectAPITest: React.FC = () => {
-  const [result, setResult] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+interface TestResult {
+  name: string;
+  status: 'loading' | 'success' | 'error';
+  message: string;
+  details?: any;
+  duration?: number;
+}
 
-  const testDirectFetch = async () => {
-    setLoading(true);
-    setResult('Testing...');
+const DirectAPITest: React.FC = () => {
+  const [results, setResults] = useState<TestResult[]>([]);
+  const [isRunning, setIsRunning] = useState(false);
+
+  const updateResult = (name: string, status: TestResult['status'], message: string, details?: any, duration?: number) => {
+    setResults(prev => {
+      const existing = prev.find(r => r.name === name);
+      const newResult = { name, status, message, details, duration };
+      
+      if (existing) {
+        return prev.map(r => r.name === name ? newResult : r);
+      } else {
+        return [...prev, newResult];
+      }
+    });
+  };
+
+  const testWithTimeout = async (testFn: () => Promise<any>, timeoutMs: number = 10000) => {
+    const startTime = Date.now();
     
     try {
-      console.log('🔍 Testing direct fetch to Sanity API...');
-      
-      const url = 'https://sy7ko2cx.api.sanity.io/v2022-06-01/data/query/production?query=*%5B_type%20%3D%3D%20%22band%22%5D%20%5B0...3%5D%20%7B%20_id%2C%20name%20%7D';
-      
-      const response = await fetch(url);
-      console.log('Response status:', response.status, response.statusText);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      
-      const data = await response.json();
-      console.log('Response data:', data);
-      
-      setResult(`✅ Success! Found ${data.result?.length || 0} bands: ${data.result?.map((b: any) => b.name).join(', ')}`);
-      
-    } catch (error: any) {
-      console.error('❌ Direct fetch error:', error);
-      setResult(`❌ Error: ${error.message}`);
-    } finally {
-      setLoading(false);
+      const result = await Promise.race([
+        testFn(),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error(`Timeout after ${timeoutMs}ms`)), timeoutMs)
+        )
+      ]);
+      return { result, duration: Date.now() - startTime };
+    } catch (error) {
+      return { error, duration: Date.now() - startTime };
     }
   };
 
-  const testSanityClient = async () => {
-    setLoading(true);
-    setResult('Testing Sanity client...');
+  const testBackendEndpoint = async (name: string, url: string) => {
+    updateResult(name, 'loading', 'Testing...');
     
-    try {
-      // Import Sanity client dynamically to avoid build issues
-      const { createClient } = await import('@sanity/client');
-      
-      const client = createClient({
-        projectId: 'sy7ko2cx',
-        dataset: 'production',
-        useCdn: false,
-        apiVersion: '2022-06-01',
+    const { result, error, duration } = await testWithTimeout(async () => {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
       });
       
-      console.log('🔍 Testing Sanity client...');
-      const data = await (client as any).fetch('*[_type == "band"] [0...3] { _id, name }');
-      console.log('Sanity client data:', data);
+      const text = await response.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        data = text.substring(0, 200) + (text.length > 200 ? '...' : '');
+      }
       
-      setResult(`✅ Sanity Client Success! Found ${data?.length || 0} bands: ${data?.map((b: any) => b.name).join(', ')}`);
-      
-    } catch (error: any) {
-      console.error('❌ Sanity client error:', error);
-      setResult(`❌ Sanity Client Error: ${error.message}`);
-    } finally {
-      setLoading(false);
+      return { status: response.status, data, headers: Object.fromEntries(response.headers.entries()) };
+    });
+    
+    if (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      updateResult(name, 'error', `❌ ${errorMessage}`, { error: errorMessage }, duration);
+    } else if (result) {
+      const isSuccess = result.status >= 200 && result.status < 300;
+      updateResult(
+        name, 
+        isSuccess ? 'success' : 'error',
+        isSuccess 
+          ? `✅ Status ${result.status} (${duration}ms)` 
+          : `❌ Status ${result.status} (${duration}ms)`,
+        { 
+          status: result.status,
+          data: result.data,
+          headers: result.headers,
+          duration 
+        },
+        duration
+      );
+    }
+  };
+
+  const runAllTests = async () => {
+    setIsRunning(true);
+    setResults([]);
+    
+    // Test various backend endpoints
+    const endpoints = [
+      { name: 'Backend Root', url: 'https://band-review-website.onrender.com/' },
+      { name: 'Health Check', url: 'https://band-review-website.onrender.com/health' },
+      { name: 'API Info', url: 'https://band-review-website.onrender.com/api/info' },
+      { name: 'Bands API', url: 'https://band-review-website.onrender.com/api/bands' },
+      { name: 'Venues API', url: 'https://band-review-website.onrender.com/api/venues' },
+    ];
+    
+    // Run backend tests
+    for (const endpoint of endpoints) {
+      await testBackendEndpoint(endpoint.name, endpoint.url);
+      await new Promise(resolve => setTimeout(resolve, 500)); // Small delay between tests
+    }
+    
+    setIsRunning(false);
+  };
+
+  const getStatusColor = (status: TestResult['status']) => {
+    switch (status) {
+      case 'loading': return '#fbbf24';
+      case 'success': return '#10b981';
+      case 'error': return '#ef4444';
+      default: return '#6b7280';
     }
   };
 
   return (
     <div className="direct-api-test-container">
-      <h2>Direct API Connection Test</h2>
+      <h2>🔧 Backend API Connection Tests</h2>
+      <p>Testing backend connectivity and API endpoints to diagnose the hanging issue</p>
       
       <div className="direct-api-test-buttons">
-        <button onClick={testDirectFetch} disabled={loading} className="direct-api-test-button">
-          Test Direct Fetch
-        </button>
-        <button onClick={testSanityClient} disabled={loading} className="direct-api-test-button">
-          Test Sanity Client
+        <button 
+          onClick={runAllTests} 
+          disabled={isRunning} 
+          className="direct-api-test-button"
+        >
+          {isRunning ? '🔄 Running Tests...' : '🚀 Run All Tests'}
         </button>
       </div>
-      
-      <div
-        className={`direct-api-test-result ${
-          result.includes('✅')
-            ? 'success'
-            : result.includes('❌')
-            ? 'error'
-            : 'neutral'
-        }`}
-      >
-        {loading ? 'Loading...' : result || 'Click a button to test the connection'}
-      </div>
+
+      {results.length > 0 && (
+        <div className="test-results-grid">
+          {results.map((result) => (
+            <div key={result.name} className="test-result-card">
+              <div className="test-result-header">
+                <span 
+                  className="status-indicator" 
+                  style={{ backgroundColor: getStatusColor(result.status) }}
+                />
+                <strong>{result.name}</strong>
+                {result.duration && <span className="duration-badge">{result.duration}ms</span>}
+              </div>
+              
+              <div className={`test-result-message ${result.status}`}>
+                {result.message}
+              </div>
+              
+              {result.details && (
+                <details className="test-result-details">
+                  <summary>View Details</summary>
+                  <pre>{JSON.stringify(result.details, null, 2)}</pre>
+                </details>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
       
       <div className="direct-api-test-footer">
-        <p>Open browser developer console (F12) to see detailed logs</p>
+        <p><strong>Current Issue:</strong> Backend appears to be running but routes are not registered (404 errors)</p>
+        <p><strong>Backend URL:</strong> https://band-review-website.onrender.com</p>
+        <p><strong>Frontend URL:</strong> https://bandvenuereview.netlify.app</p>
+        <p>Check the Network tab in DevTools for detailed error information</p>
       </div>
     </div>
   );
