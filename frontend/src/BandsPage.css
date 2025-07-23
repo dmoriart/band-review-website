@@ -307,6 +307,12 @@
   align-items: flex-start;
 }
 
+.band-header h2 {
+  margin: 0 0 5px 0;
+  color: #61dafb;
+  font-size: 1.8rem;
+}
+
 .band-profile-image {
   position: relative;
   flex-shrink: 0;
@@ -663,4 +669,33 @@
   .photos-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
+}
+
+/* Modal-specific badge styles to avoid conflict with close button */
+.band-detail .band-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.band-detail .band-badges .verified-badge,
+.band-detail .band-badges .featured-badge {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.band-detail .band-badges .verified-badge {
+  background: #4caf50;
+  color: white;
+}
+
+.band-detail .band-badges .featured-badge {
+  background: #ffc107;
+  color: #1a1a1a;
 }

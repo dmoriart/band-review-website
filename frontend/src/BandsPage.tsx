@@ -300,10 +300,12 @@ const BandsPage: React.FC = () => {
 
           <div className="band-detail-content">
             <div className="band-header">
-              <h2>{selectedSanityBand.name}</h2>
-              <div className="band-badges">
-                {selectedSanityBand.verified && <span className="verified-badge">✓ Verified</span>}
-                {selectedSanityBand.featured && <span className="featured-badge">⭐ Featured</span>}
+              <div>
+                <h2>{selectedSanityBand.name}</h2>
+                <div className="band-badges">
+                  {selectedSanityBand.verified && <span className="verified-badge">✓ Verified</span>}
+                  {selectedSanityBand.featured && <span className="featured-badge">⭐ Featured</span>}
+                </div>
               </div>
             </div>
 
