@@ -201,25 +201,36 @@ Create a new venue review (requires authentication and ownership).
 
 ## Database Schema
 
-### bands table
-```sql
-CREATE TABLE bands (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name VARCHAR(255) NOT NULL,
-  bio TEXT,
-  genre TEXT[] DEFAULT '{}',
-  location VARCHAR(255),
-  formed_year INTEGER,
-  social_links JSONB DEFAULT '{}',
-  profile_image TEXT,
-  banner_image TEXT,
-  photos TEXT[] DEFAULT '{}',
-  verified BOOLEAN DEFAULT false,
-  user_id UUID REFERENCES auth.users(id),
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
+## Database Schema
+
+The comprehensive PostgreSQL database schema is now implemented in `/database/schema.sql`. Key tables include:
+
+### Core Tables
+- **users** - User accounts synced with Firebase Auth
+- **venues** - Venue information (from existing venue review system)  
+- **bands** - Band profiles and information
+- **band_members** - Many-to-many relationship between users and bands
+- **gigs** - Concert/performance events
+- **venue_reviews_by_bands** - Reviews of venues written by bands
+- **band_reviews** - Reviews of bands written by fans
+- **band_followers** - Fans following bands for notifications
+
+### Database Setup
+To set up the complete database schema:
+
+```bash
+# Make setup script executable
+chmod +x database/setup.sh
+
+# Run the automated setup (includes sample data option)
+./database/setup.sh --sample-data
+
+# Or manually run the SQL files
+psql -U your_username -d band_venue_review -f database/schema.sql
+psql -U your_username -d band_venue_review -f database/sample_data.sql
 ```
+
+See `/database/README.md` for detailed setup instructions, performance optimization, and security considerations.
 
 ### band_gigs table
 ```sql
