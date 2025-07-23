@@ -64,6 +64,7 @@ const BandsPage: React.FC = () => {
   const [filteredBands, setFilteredBands] = useState<Band[]>([]);
   const [selectedBand, setSelectedBand] = useState<Band | null>(null);
   const [selectedSanityBand, setSelectedSanityBand] = useState<any>(null);
+  const [currentView, setCurrentView] = useState<'list' | 'detail'>('list');
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   
@@ -275,59 +276,78 @@ const BandsPage: React.FC = () => {
   const handleSanityBandClick = (band: any) => {
     console.log('🎸 Band clicked:', band.name);
     setSelectedSanityBand(band);
+    setCurrentView('detail');
   };
 
   /**
-   * Render Sanity band detail modal
+   * Render Sanity band detail page
    */
   const renderSanityBandDetail = () => {
-    if (!selectedSanityBand) return null;
+    if (!selectedSanityBand) return <div>Band not found</div>;
 
     return (
-      <div className="modal-overlay" onClick={() => setSelectedSanityBand(null)}>
-        <div className="modal-content band-detail" onClick={e => e.stopPropagation()}>
-          <button className="modal-close" onClick={() => setSelectedSanityBand(null)}>×</button>
-          
-          {/* Profile Image */}
-          {selectedSanityBand.profileImage && (
-            <div className="band-banner">
-              <img 
-                src={`https://cdn.sanity.io/images/sy7ko2cx/production/${selectedSanityBand.profileImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg').replace('-png', '.png')}`} 
-                alt={`${selectedSanityBand.name} profile`} 
-              />
-            </div>
-          )}
+      <div className="band-detail">
+        <button 
+          className="back-button"
+          onClick={() => setCurrentView('list')}
+        >
+          ← Back to Bands
+        </button>
 
-          <div className="band-detail-content">
-            <div className="band-header">
-              <div>
-                <h2>{selectedSanityBand.name}</h2>
-                <div className="band-badges">
-                  {selectedSanityBand.verified && <span className="verified-badge">✓ Verified</span>}
-                  {selectedSanityBand.featured && <span className="featured-badge">⭐ Featured</span>}
+        <div className="band-detail-header">
+          <div className="band-title-section">
+            <h1>{selectedSanityBand.name}</h1>
+            <div className="band-badges">
+              {selectedSanityBand.verified && <span className="badge verified">✓ Verified</span>}
+              {selectedSanityBand.featured && <span className="badge featured">⭐ Featured</span>}
+            </div>
+          </div>
+        </div>
+
+        <div className="band-detail-content">
+          <div className="band-main-info">
+            {/* Profile Image Section */}
+            {selectedSanityBand.profileImage && (
+              <div className="info-section">
+                <div className="band-profile-container">
+                  <img 
+                    src={`https://cdn.sanity.io/images/sy7ko2cx/production/${selectedSanityBand.profileImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg').replace('-png', '.png')}`} 
+                    alt={`${selectedSanityBand.name} profile`}
+                    className="band-profile-image-large"
+                  />
                 </div>
+              </div>
+            )}
+
+            {/* Basic Info Section */}
+            <div className="info-section">
+              <h3>🎸 Band Information</h3>
+              <div className="info-grid">
+                {selectedSanityBand.locationText && (
+                  <div className="info-item">
+                    <strong>📍 Location:</strong>
+                    <p>{selectedSanityBand.locationText}</p>
+                  </div>
+                )}
+                
+                {selectedSanityBand.formedYear && (
+                  <div className="info-item">
+                    <strong>🗓️ Formed:</strong>
+                    <p>{selectedSanityBand.formedYear}</p>
+                  </div>
+                )}
               </div>
             </div>
 
-            {/* Location and Formed Year */}
-            <div className="band-meta">
-              {selectedSanityBand.locationText && (
-                <div className="band-location">📍 {selectedSanityBand.locationText}</div>
-              )}
-              {selectedSanityBand.formedYear && (
-                <div className="band-formed">🗓️ Formed {selectedSanityBand.formedYear}</div>
-              )}
-            </div>
-
-            {/* Genres */}
+            {/* Genres Section */}
             {selectedSanityBand.genres && selectedSanityBand.genres.length > 0 && (
-              <div className="band-genres-detail">
-                <h4>Genres</h4>
-                <div className="genre-tags">
+              <div className="info-section">
+                <h3>🎵 Genres</h3>
+                <div className="genre-tags-detail">
                   {selectedSanityBand.genres.map((genre: any) => (
                     <span 
                       key={genre.slug.current} 
-                      className="genre-tag"
+                      className="genre-tag-large"
                       style={{
                         '--genre-bg': genre.color?.hex || '#61dafb',
                         '--genre-text': genre.color?.hex ? '#ffffff' : '#1e3c72'
@@ -340,46 +360,48 @@ const BandsPage: React.FC = () => {
               </div>
             )}
 
-            {/* Bio */}
+            {/* Bio Section */}
             {selectedSanityBand.bio && (
-              <div className="band-bio-detail">
-                <h4>About</h4>
-                <p>{selectedSanityBand.bio}</p>
+              <div className="info-section">
+                <h3>📖 About</h3>
+                <div className="band-bio-full">
+                  <p>{selectedSanityBand.bio}</p>
+                </div>
               </div>
             )}
 
-            {/* Social Links */}
+            {/* Social Links Section */}
             {selectedSanityBand.socialLinks && Object.keys(selectedSanityBand.socialLinks).length > 0 && (
-              <div className="band-social-detail">
-                <h4>Social Links</h4>
-                <div className="social-links">
+              <div className="info-section">
+                <h3>🔗 Social Links</h3>
+                <div className="social-links-grid">
                   {selectedSanityBand.socialLinks.website && (
-                    <a href={selectedSanityBand.socialLinks.website} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href={selectedSanityBand.socialLinks.website} target="_blank" rel="noopener noreferrer" className="social-link-large">
                       🌐 Website
                     </a>
                   )}
                   {selectedSanityBand.socialLinks.spotify && (
-                    <a href={selectedSanityBand.socialLinks.spotify} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href={selectedSanityBand.socialLinks.spotify} target="_blank" rel="noopener noreferrer" className="social-link-large">
                       🎵 Spotify
                     </a>
                   )}
                   {selectedSanityBand.socialLinks.instagram && (
-                    <a href={selectedSanityBand.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href={selectedSanityBand.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="social-link-large">
                       📷 Instagram
                     </a>
                   )}
                   {selectedSanityBand.socialLinks.facebook && (
-                    <a href={selectedSanityBand.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href={selectedSanityBand.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="social-link-large">
                       👍 Facebook
                     </a>
                   )}
                   {selectedSanityBand.socialLinks.youtube && (
-                    <a href={selectedSanityBand.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href={selectedSanityBand.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="social-link-large">
                       📺 YouTube
                     </a>
                   )}
                   {selectedSanityBand.socialLinks.bandcamp && (
-                    <a href={selectedSanityBand.socialLinks.bandcamp} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href={selectedSanityBand.socialLinks.bandcamp} target="_blank" rel="noopener noreferrer" className="social-link-large">
                       🎶 Bandcamp
                     </a>
                   )}
@@ -533,62 +555,67 @@ const BandsPage: React.FC = () => {
 
   return (
     <div className="bands-page">
-      <div className="bands-header">
-        <h1>Discover Bands</h1>
-        <p>Find amazing artists and discover new music from venues across the region</p>
-      </div>
+      {currentView === 'list' ? (
+        <>
+          <div className="bands-header">
+            <h1>Discover Bands</h1>
+            <p>Find amazing artists and discover new music from venues across the region</p>
+          </div>
 
-      {/* Search and Filters */}
-      <div className="bands-filters">
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search bands, genres, or locations..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-        
-        <div className="filter-controls">
-          <select 
-            value={selectedGenre} 
-            onChange={(e) => setSelectedGenre(e.target.value)}
-            aria-label="Filter by genre"
-          >
-            <option value="">All Genres</option>
-            {getUniqueGenres().map(genre => (
-              <option key={genre} value={genre}>{genre}</option>
-            ))}
-          </select>
+          {/* Search and Filters */}
+          <div className="bands-filters">
+            <div className="search-bar">
+              <input
+                type="text"
+                placeholder="Search bands, genres, or locations..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            
+            <div className="filter-controls">
+              <select 
+                value={selectedGenre} 
+                onChange={(e) => setSelectedGenre(e.target.value)}
+                aria-label="Filter by genre"
+              >
+                <option value="">All Genres</option>
+                {getUniqueGenres().map(genre => (
+                  <option key={genre} value={genre}>{genre}</option>
+                ))}
+              </select>
 
-          <select 
-            value={selectedLocation} 
-            onChange={(e) => setSelectedLocation(e.target.value)}
-            aria-label="Filter by location"
-          >
-            <option value="">All Locations</option>
-            {getUniqueLocations().map(location => (
-              <option key={location} value={location}>{location}</option>
-            ))}
-          </select>
+              <select 
+                value={selectedLocation} 
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                aria-label="Filter by location"
+              >
+                <option value="">All Locations</option>
+                {getUniqueLocations().map(location => (
+                  <option key={location} value={location}>{location}</option>
+                ))}
+              </select>
 
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={showVerifiedOnly}
-              onChange={(e) => setShowVerifiedOnly(e.target.checked)}
-            />
-            Verified only
-          </label>
-        </div>
-      </div>
+              <label className="checkbox-label">
+                <input
+                  type="checkbox"
+                  checked={showVerifiedOnly}
+                  onChange={(e) => setShowVerifiedOnly(e.target.checked)}
+                />
+                Verified only
+              </label>
+            </div>
+          </div>
 
-      {/* Sanity CMS Bands */}
-      <SanityBandsGrid onBandClick={handleSanityBandClick} />
+          {/* Sanity CMS Bands */}
+          <SanityBandsGrid onBandClick={handleSanityBandClick} />
 
-      {/* Band detail modals */}
-      {renderSanityBandDetail()}
-      {renderBandDetail()}
+          {/* Legacy band detail modal for old bands */}
+          {renderBandDetail()}
+        </>
+      ) : (
+        renderSanityBandDetail()
+      )}
     </div>
   );
 };
