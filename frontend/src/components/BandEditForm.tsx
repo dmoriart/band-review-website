@@ -198,6 +198,8 @@ const BandEditForm: React.FC<BandEditFormProps> = ({
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   required
+                  title="Enter the band's name"
+                  placeholder="Band Name"
                 />
               </div>
 

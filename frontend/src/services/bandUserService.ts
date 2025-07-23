@@ -64,25 +64,50 @@ class BandUserService {
 
   // Test database connection
   async testConnection(): Promise<boolean> {
+    console.log('🔗 [bandUserService] Starting connection test...');
+    console.log('🔗 [bandUserService] Database instance:', !!db);
+    
     if (!db) {
       console.error('❌ [bandUserService] Database not initialized');
+      console.error('❌ [bandUserService] Firebase environment check:', {
+        hasApiKey: !!process.env.REACT_APP_FIREBASE_API_KEY,
+        hasAuthDomain: !!process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+        hasProjectId: !!process.env.REACT_APP_FIREBASE_PROJECT_ID,
+        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || 'not-set'
+      });
       return false;
     }
     
     try {
       console.log('🔗 [bandUserService] Testing database connection...');
-      // Try a simple query to test connection
-      const testQuery = query(collection(db, this.collectionName));
+      
+      // Try a very simple query first - just get collection reference
+      const collectionRef = collection(db, this.collectionName);
+      console.log('🔗 [bandUserService] Collection reference created:', !!collectionRef);
+      
+      // Try to create a query (this doesn't execute it yet)
+      const testQuery = query(collectionRef);
+      console.log('🔗 [bandUserService] Query created:', !!testQuery);
+      
+      // Now try to execute the query with timeout
       const testPromise = getDocs(testQuery);
       const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('Connection test timed out')), 5000);
+        setTimeout(() => reject(new Error('Connection test timed out after 5 seconds')), 5000);
       });
       
-      await Promise.race([testPromise, timeoutPromise]);
-      console.log('✅ [bandUserService] Database connection successful');
+      console.log('🔗 [bandUserService] Executing query...');
+      const result = await Promise.race([testPromise, timeoutPromise]);
+      
+      console.log('✅ [bandUserService] Database connection successful, docs found:', (result as any).size);
       return true;
-    } catch (error) {
+    } catch (error: any) {
       console.error('❌ [bandUserService] Database connection failed:', error);
+      console.error('❌ [bandUserService] Error details:', {
+        message: error.message,
+        code: error.code,
+        name: error.name,
+        stack: error.stack?.substring(0, 200)
+      });
       return false;
     }
   }

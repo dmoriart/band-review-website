@@ -59,11 +59,24 @@ const BandClaimModal: React.FC<BandClaimModalProps> = ({
         throw new Error('User email is required for band claims');
       }
 
+      // Check Firebase environment
+      console.log('🔥 Firebase environment check:', {
+        hasApiKey: !!process.env.REACT_APP_FIREBASE_API_KEY,
+        hasProjectId: !!process.env.REACT_APP_FIREBASE_PROJECT_ID,
+        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+        userUid: user.uid,
+        userEmail: user.email
+      });
+
       // Test database connection first
       console.log('🔗 Testing database connection...');
       const connectionTest = await bandUserService.testConnection();
       if (!connectionTest) {
-        throw new Error('Unable to connect to database. Please check your internet connection and try again.');
+        console.warn('⚠️ Database connection test failed, but attempting submission anyway...');
+        // Don't throw error immediately, let the actual submission attempt handle it
+        // This allows us to get more specific error information
+      } else {
+        console.log('✅ Database connection test passed');
       }
       
       const claimData: BandClaimRequest = {
