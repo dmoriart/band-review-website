@@ -49,7 +49,7 @@ const DirectAPITest: React.FC = () => {
       });
       
       console.log('🔍 Testing Sanity client...');
-      const data = await client.fetch('*[_type == "band"] [0...3] { _id, name }');
+      const data = await (client as any).fetch('*[_type == "band"] [0...3] { _id, name }');
       console.log('Sanity client data:', data);
       
       setResult(`✅ Sanity Client Success! Found ${data?.length || 0} bands: ${data?.map((b: any) => b.name).join(', ')}`);
