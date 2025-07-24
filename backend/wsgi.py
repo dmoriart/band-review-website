@@ -1,5 +1,6 @@
 """
 Production application entry point
+Updated: 2025-07-24 - Force redeploy for bands endpoint
 """
 import os
 import sys
