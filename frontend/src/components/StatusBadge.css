@@ -1,0 +1,77 @@
+/* Status Badge Styles */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid;
+  transition: all 0.3s ease;
+}
+
+.status-badge.suggested {
+  background: rgba(108, 117, 125, 0.2);
+  color: #6c757d;
+  border-color: rgba(108, 117, 125, 0.4);
+}
+
+.status-badge.in-progress {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border-color: rgba(255, 193, 7, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.status-badge.done {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border-color: rgba(40, 167, 69, 0.4);
+}
+
+.status-badge.rejected {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border-color: rgba(220, 53, 69, 0.4);
+}
+
+.status-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.status-label {
+  line-height: 1;
+}
+
+/* Hover effects */
+.status-badge:hover {
+  transform: scale(1.05);
+}
+
+.status-badge.in-progress:hover {
+  animation: none;
+  background: rgba(255, 193, 7, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .status-icon {
+    font-size: 0.8rem;
+  }
+}
