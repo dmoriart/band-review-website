@@ -116,17 +116,17 @@ body {
   display: none;
 }
 
-/* Mobile Navigation Menu - Always ready to display */
+/* Mobile Navigation Menu - Solid background for readability */
 .mobile-nav {
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 280px;
-  background: rgba(0, 0, 0, 0.95);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.98);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-left: 2px solid rgba(97, 218, 251, 0.3);
   display: flex;
   flex-direction: column;
   padding-top: 5rem;
@@ -136,21 +136,25 @@ body {
   z-index: 1000;
   /* Ensure it shows on mobile */
   visibility: visible;
+  /* Add gradient overlay for better readability */
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.98), rgba(0, 0, 0, 0.98));
 }
 
 .mobile-nav.open {
   transform: translateX(0);
 }
 
-/* Mobile Menu Overlay */
+/* Mobile Menu Overlay - Darker for better contrast */
 .mobile-nav-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 999;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 .nav-links {
@@ -161,7 +165,7 @@ body {
 .nav-link {
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 1rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -173,12 +177,18 @@ body {
   min-height: 44px;
   display: flex;
   align-items: center;
+  /* Better text contrast */
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(97, 218, 251, 0.2);
-  color: #61dafb;
+  background: rgba(97, 218, 251, 0.3);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  border-bottom-color: rgba(97, 218, 251, 0.5);
 }
 
 /* Touch feedback for mobile */
@@ -592,21 +602,23 @@ body {
 
 .admin-link {
   color: #ffc107 !important;
+  font-weight: 600 !important;
 }
 
 .admin-link:hover {
-  color: #e0a800 !important;
-  background: rgba(255, 193, 7, 0.1) !important;
+  color: #ffffff !important;
+  background: rgba(255, 193, 7, 0.3) !important;
 }
 
 .admin-active {
-  color: #dc3545 !important;
-  background: rgba(220, 53, 69, 0.1) !important;
+  color: #ff6b6b !important;
+  background: rgba(220, 53, 69, 0.2) !important;
+  font-weight: 600 !important;
 }
 
 .admin-active:hover {
-  color: #c82333 !important;
-  background: rgba(220, 53, 69, 0.2) !important;
+  color: #ffffff !important;
+  background: rgba(220, 53, 69, 0.4) !important;
 }
 
 .back-to-home {
