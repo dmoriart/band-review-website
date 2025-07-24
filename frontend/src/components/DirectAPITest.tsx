@@ -181,12 +181,12 @@ const DirectAPITest: React.FC = () => {
       )}
       
       <div className="direct-api-test-footer">
-        <p><strong>Status:</strong> ⚠️ Backend deployment issue detected - bands endpoint returning 404</p>
-        <p><strong>Issue:</strong> The /api/bands endpoint is in the code but not deployed to production</p>
+        <p><strong>Status:</strong> 🔄 Backend redeploying with bands endpoint and root route</p>
+        <p><strong>Latest Changes:</strong> Added root route (/) and bands endpoint (/api/bands)</p>
         <p><strong>Backend URL:</strong> https://band-review-website.onrender.com</p>
         <p><strong>Frontend URL:</strong> https://bandvenuereview.netlify.app</p>
-        <p><strong>Next Steps:</strong> The backend needs to be redeployed to include the bands endpoint</p>
-        <p>Check the Network tab in DevTools for detailed error information</p>
+        <p><strong>Expected:</strong> Version should update to 1.0.2 when deployment completes</p>
+        <p>Use "Run All Tests" to monitor deployment progress</p>
       </div>
     </div>
   );
