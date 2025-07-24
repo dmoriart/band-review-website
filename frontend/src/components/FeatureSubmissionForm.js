@@ -76,34 +76,41 @@ const FeatureSubmissionForm = ({ onSubmitted, onCancel }) => {
     setSubmitting(true);
 
     try {
-      const token = await user.getIdToken();
-      const response = await fetch('/api/features', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          ...formData,
-          tags: formData.tags.split(',').map(t => t.trim()).filter(Boolean)
-        })
-      });
-
-      const data = await response.json();
+      // TODO: Replace with actual API call when backend is ready
+      // For now, simulate submission with mock data
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
       
-      if (data.success) {
-        onSubmitted(data.data.feature);
-        // Reset form
-        setFormData({
-          title: '',
-          description: '',
-          type: 'feature',
-          tags: '',
-          priority: 'medium'
-        });
-      } else {
-        setErrors({ submit: data.error.message });
-      }
+      const mockSubmittedFeature = {
+        id: Date.now(), // Use timestamp as unique ID for demo
+        title: formData.title,
+        description: formData.description,
+        type: formData.type,
+        status: 'proposed',
+        priority: formData.priority,
+        tags: formData.tags.split(',').map(t => t.trim()).filter(Boolean),
+        author: {
+          id: user?.uid || 'mock-user-id',
+          name: user?.displayName || user?.email || 'Anonymous User',
+          email: user?.email || 'user@example.com'
+        },
+        upvotes_count: 1, // Creator automatically upvotes
+        comments_count: 0,
+        user_has_voted: true,
+        user_is_subscribed: true,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+
+      onSubmitted(mockSubmittedFeature);
+      
+      // Reset form
+      setFormData({
+        title: '',
+        description: '',
+        type: 'feature',
+        tags: '',
+        priority: 'medium'
+      });
     } catch (error) {
       setErrors({ submit: 'Failed to submit. Please try again.' });
     } finally {
