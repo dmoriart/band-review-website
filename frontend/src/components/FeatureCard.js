@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../AuthContext';
 import VotingButton from './VotingButton';
 import StatusBadge from './StatusBadge';
 import './FeatureCard.css';

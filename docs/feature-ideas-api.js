@@ -72,7 +72,8 @@
 {
     "success": true,
     "data": {
-      "feature": { /* full feature object */ },
+      // "feature" should contain the full feature object
+      "feature": {},
       "message": "Feature request submitted successfully"
     }
   }
@@ -98,9 +99,12 @@
 
 // POST /api/features/:id/vote - Vote on a feature
 // Requires authentication
-// Body:
+// Body example:
+/*
 {
-  "vote_type": "upvote", // or "downvote"
+  "vote_type": "upvote" // or "downvote"
+}
+*/
 
 // Response example:
 /*
@@ -117,8 +121,7 @@
         "vote_type": "upvote",
         "created_at": "2025-01-15T10:30:00Z"
     ]
-*/
-    ]
+    }
   }
 }
 
@@ -198,12 +201,13 @@
   }
 }
 */
-        "title": "Export Review Data",
-        "created_at": "2025-01-15T10:30:00Z"
-      }
-    ]
-  }
-}
+// The following lines were duplicated and caused a syntax error:
+//        "title": "Export Review Data",
+//        "created_at": "2025-01-15T10:30:00Z"
+//      }
+//    ]
+//  }
+//}
 
 // PUT /api/admin/features/:id/status - Update feature status
 // Body:

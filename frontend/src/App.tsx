@@ -8,6 +8,7 @@ import SanityVenuesGrid from './components/SanityVenuesGrid';
 import SanityTestPage from './components/SanityTestPage';
 import ApiTestComponent from './components/ApiTestComponent';
 import CookieNotice from './components/CookieNotice';
+import FeatureIdeasPage from './components/FeatureIdeasPage';
 import { useBands, useVenues } from './hooks/useSanity';
 
 // Define interfaces for type safety
@@ -85,7 +86,7 @@ function AppContent() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'admin' | 'sanity-test' | 'api-test'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'features' | 'admin' | 'sanity-test' | 'api-test'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -865,6 +866,12 @@ function AppContent() {
               Bands
             </button>
             <button 
+              className={`nav-link ${currentView === 'features' ? 'active' : ''}`}
+              onClick={() => setCurrentView('features')}
+            >
+              💡 Features
+            </button>
+            <button 
               className="nav-link"
               onClick={() => setShowAuthModal(true)}
             >
@@ -935,6 +942,15 @@ function AppContent() {
               Bands
             </button>
             <button 
+              className={`nav-link ${currentView === 'features' ? 'active' : ''}`}
+              onClick={() => {
+                setCurrentView('features');
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              💡 Features
+            </button>
+            <button 
               className="nav-link"
               onClick={() => {
                 setShowAuthModal(true);
@@ -995,6 +1011,7 @@ function AppContent() {
           {currentView === 'home' && renderHome()}
           {currentView === 'venues' && renderVenues()}
           {currentView === 'bands' && <BandsPage />}
+          {currentView === 'features' && <FeatureIdeasPage />}
           {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'admin' && renderAdminLogin()}
           {isAdmin && <AdminPanel 
