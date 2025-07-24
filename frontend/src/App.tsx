@@ -7,6 +7,7 @@ import AuthComponent from './AuthComponent';
 import SanityVenuesGrid from './components/SanityVenuesGrid';
 import SanityTestPage from './components/SanityTestPage';
 import ApiTestComponent from './components/ApiTestComponent';
+import CookieNotice from './components/CookieNotice';
 import { useBands, useVenues } from './hooks/useSanity';
 
 // Define interfaces for type safety
@@ -95,6 +96,9 @@ function AppContent() {
   const [selectedCapacity, setSelectedCapacity] = useState<string>('');
   const [selectedRating, setSelectedRating] = useState<string>('');
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+
+  // Mobile menu state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   // Admin login state - moved here to ensure all hooks are at the top
   const [adminEmail, setAdminEmail] = useState('');
@@ -839,7 +843,9 @@ function AppContent() {
           <div className="nav-brand" onClick={() => setCurrentView('home')}>
             🎵 BandVenueReview.ie
           </div>
-          <div className="nav-links">
+          
+          {/* Desktop Navigation */}
+          <div className="nav-links desktop-nav">
             <button 
               className={`nav-link ${currentView === 'home' ? 'active' : ''}`}
               onClick={() => setCurrentView('home')}
@@ -857,18 +863,6 @@ function AppContent() {
               onClick={() => setCurrentView('bands')}
             >
               Bands
-            </button>
-            <button 
-              className={`nav-link ${currentView === 'sanity-test' ? 'active' : ''}`}
-              onClick={() => setCurrentView('sanity-test')}
-            >
-              🧪 CMS Test
-            </button>
-            <button 
-              className={`nav-link ${currentView === 'api-test' ? 'active' : ''}`}
-              onClick={() => setCurrentView('api-test')}
-            >
-              🚀 API Test
             </button>
             <button 
               className="nav-link"
@@ -897,6 +891,91 @@ function AppContent() {
               </button>
             )}
           </div>
+
+          {/* Mobile Hamburger Button */}
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          
+          {/* Mobile Navigation Menu */}
+          <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+            <button 
+              className={`nav-link ${currentView === 'home' ? 'active' : ''}`}
+              onClick={() => {
+                setCurrentView('home');
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Home
+            </button>
+            <button 
+              className={`nav-link ${currentView === 'venues' ? 'active' : ''}`}
+              onClick={() => {
+                setCurrentView('venues');
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Venues
+            </button>
+            <button 
+              className={`nav-link ${currentView === 'bands' ? 'active' : ''}`}
+              onClick={() => {
+                setCurrentView('bands');
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Bands
+            </button>
+            <button 
+              className="nav-link"
+              onClick={() => {
+                setShowAuthModal(true);
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              {user ? '👤 Account' : '🔑 Sign In'}
+            </button>
+            {!isAdmin && (
+              <button 
+                className="nav-link admin-link"
+                onClick={() => {
+                  setCurrentView('admin');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                🛠️ Admin
+              </button>
+            )}
+            {isAdmin && (
+              <button 
+                className="nav-link admin-active"
+                onClick={() => {
+                  setIsAdmin(false);
+                  setAdminToken('');
+                  setCurrentView('home');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Logout Admin
+              </button>
+            )}
+          </div>
+
+          {/* Mobile Menu Overlay */}
+          {isMobileMenuOpen && (
+            <div 
+              className="mobile-nav-overlay"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          )}
         </nav>
 
         {/* API Status */}
@@ -918,8 +997,6 @@ function AppContent() {
           {currentView === 'bands' && <BandsPage />}
           {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'admin' && renderAdminLogin()}
-          {currentView === 'sanity-test' && <SanityTestPage />}
-          {currentView === 'api-test' && <ApiTestComponent />}
           {isAdmin && <AdminPanel 
             adminToken={adminToken} 
             apiBaseUrl={API_BASE_URL}
@@ -941,6 +1018,9 @@ function AppContent() {
           <p>Supporting the Irish live music scene 🇮🇪</p>
           <p>API Status: {healthStatus}</p>
         </footer>
+
+        {/* Cookie Notice */}
+        <CookieNotice />
       </header>
     </div>
   );
