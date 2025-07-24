@@ -116,17 +116,17 @@ body {
   display: none;
 }
 
-/* Mobile Navigation Menu - More opaque background for better readability */
+/* Mobile Navigation Menu - Nearly solid background for maximum readability */
 .mobile-nav {
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 280px;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.98);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border-left: 2px solid rgba(97, 218, 251, 0.3);
+  border-left: 2px solid rgba(97, 218, 251, 0.5);
   display: flex;
   flex-direction: column;
   padding-top: 5rem;
@@ -136,25 +136,27 @@ body {
   z-index: 1000;
   /* Ensure it shows on mobile */
   visibility: visible;
-  /* More opaque gradient overlay for better readability */
-  background: linear-gradient(135deg, rgba(15, 30, 60, 0.95), rgba(0, 0, 0, 0.98));
+  /* Nearly solid background for maximum readability */
+  background: linear-gradient(135deg, rgba(10, 20, 40, 0.98), rgba(0, 0, 0, 0.99));
+  /* Add a subtle inner shadow for depth */
+  box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-nav.open {
   transform: translateX(0);
 }
 
-/* Mobile Menu Overlay - Even darker for better contrast */
+/* Mobile Menu Overlay - Maximum darkness for best contrast */
 .mobile-nav-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   z-index: 999;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .nav-links {
@@ -177,18 +179,22 @@ body {
   min-height: 44px;
   display: flex;
   align-items: center;
-  /* Better text contrast */
-  font-weight: 500;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Maximum text contrast for readability */
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* Add white glow for extra contrast */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(97, 218, 251, 0.4);
+  background: rgba(97, 218, 251, 0.6);
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-  border-bottom-color: rgba(97, 218, 251, 0.6);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 1), 0 0 15px rgba(0, 0, 0, 0.9);
+  border-bottom-color: rgba(97, 218, 251, 0.8);
+  /* Enhanced glow effect on hover */
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.3), inset 0 0 20px rgba(97, 218, 251, 0.1);
 }
 
 /* Touch feedback for mobile */
