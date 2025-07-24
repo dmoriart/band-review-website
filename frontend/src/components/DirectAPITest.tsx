@@ -94,16 +94,36 @@ const DirectAPITest: React.FC = () => {
     // Test various backend endpoints
     const endpoints = [
       { name: 'Backend Root', url: 'https://band-review-website.onrender.com/' },
-      { name: 'Health Check', url: 'https://band-review-website.onrender.com/health' },
-      { name: 'API Info', url: 'https://band-review-website.onrender.com/api/info' },
-      { name: 'Bands API', url: 'https://band-review-website.onrender.com/api/bands' },
+      { name: 'Health Check', url: 'https://band-review-website.onrender.com/api/health' },
       { name: 'Venues API', url: 'https://band-review-website.onrender.com/api/venues' },
+      { name: 'Counties API', url: 'https://band-review-website.onrender.com/api/counties' },
     ];
     
     // Run backend tests
     for (const endpoint of endpoints) {
       await testBackendEndpoint(endpoint.name, endpoint.url);
       await new Promise(resolve => setTimeout(resolve, 500)); // Small delay between tests
+    }
+    
+    // Additional diagnostic test - check if it's a CORS issue by testing without custom headers
+    updateResult('CORS Test', 'loading', 'Testing CORS...');
+    const { result: corsResult, error: corsError, duration: corsDuration } = await testWithTimeout(async () => {
+      const response = await fetch('https://band-review-website.onrender.com/', {
+        method: 'GET',
+        mode: 'cors' // Explicitly test CORS
+      });
+      return { status: response.status, text: await response.text() };
+    });
+    
+    if (corsError) {
+      const errorMessage = corsError instanceof Error ? corsError.message : 'Unknown error';
+      if (errorMessage.includes('CORS') || errorMessage.includes('Access-Control')) {
+        updateResult('CORS Test', 'error', `❌ CORS Error: ${errorMessage}`, { error: errorMessage }, corsDuration);
+      } else {
+        updateResult('CORS Test', 'error', `❌ Network Error: ${errorMessage}`, { error: errorMessage }, corsDuration);
+      }
+    } else if (corsResult) {
+      updateResult('CORS Test', 'success', `✅ CORS OK (${corsDuration}ms)`, corsResult, corsDuration);
     }
     
     setIsRunning(false);
@@ -139,8 +159,7 @@ const DirectAPITest: React.FC = () => {
             <div key={result.name} className="test-result-card">
               <div className="test-result-header">
                 <span 
-                  className="status-indicator" 
-                  style={{ backgroundColor: getStatusColor(result.status) }}
+                  className={`status-indicator status-${result.status}`}
                 />
                 <strong>{result.name}</strong>
                 {result.duration && <span className="duration-badge">{result.duration}ms</span>}
