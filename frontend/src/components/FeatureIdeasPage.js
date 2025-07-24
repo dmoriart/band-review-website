@@ -6,7 +6,8 @@ import FeatureFilters from './FeatureFilters';
 import './FeatureIdeasPage.css';
 
 const FeatureIdeasPage = () => {
-  const { user, isAuthenticated } = useAuth();
+  const { user, loading } = useAuth();
+  const isAuthenticated = !!user; // Convert user to boolean
   const [features, setFeatures] = useState([]);
   const [filters, setFilters] = useState({
     type: 'all',
@@ -15,7 +16,7 @@ const FeatureIdeasPage = () => {
     tags: '',
     page: 1
   });
-  const [loading, setLoading] = useState(true);
+  const [featuresLoading, setFeaturesLoading] = useState(true);
   const [showSubmissionForm, setShowSubmissionForm] = useState(false);
   const [stats, setStats] = useState(null);
 
@@ -26,41 +27,96 @@ const FeatureIdeasPage = () => {
 
   const fetchFeatures = async () => {
     try {
-      setLoading(true);
-      const queryParams = new URLSearchParams({
-        ...filters,
-        limit: '20'
-      });
+      setFeaturesLoading(true);
       
-      const response = await fetch(`/api/features?${queryParams}`, {
-        headers: {
-          'Authorization': isAuthenticated ? `Bearer ${await user.getIdToken()}` : '',
-          'Content-Type': 'application/json'
+      // TODO: Replace with actual API call when backend is ready
+      // For now, show mock data to demonstrate the interface
+      const mockFeatures = [
+        {
+          id: 1,
+          title: "Dark Mode Theme",
+          description: "Add a dark mode toggle for better night viewing experience",
+          type: "feature",
+          status: "proposed",
+          priority: "medium",
+          tags: ["ui", "accessibility", "mobile"],
+          author: {
+            id: "mock-user-1",
+            name: "Sarah Murphy",
+            email: "sarah@example.com"
+          },
+          upvotes_count: 15,
+          comments_count: 3,
+          user_has_voted: false,
+          user_is_subscribed: false,
+          created_at: "2024-01-15T10:30:00Z",
+          updated_at: "2024-01-15T10:30:00Z"
+        },
+        {
+          id: 2,
+          title: "Venue Booking Integration",
+          description: "Allow bands to directly book venues through the platform",
+          type: "feature",
+          status: "in-progress",
+          priority: "high",
+          tags: ["booking", "integration", "venues"],
+          author: {
+            id: "mock-user-2",
+            name: "John O'Brien",
+            email: "john@example.com"
+          },
+          upvotes_count: 28,
+          comments_count: 7,
+          user_has_voted: isAuthenticated,
+          user_is_subscribed: false,
+          created_at: "2024-01-10T14:20:00Z",
+          updated_at: "2024-01-20T09:15:00Z"
+        },
+        {
+          id: 3,
+          title: "Mobile App Development",
+          description: "Create native iOS and Android apps for easier mobile access",
+          type: "feature",
+          status: "proposed",
+          priority: "high",
+          tags: ["mobile", "app", "development"],
+          author: {
+            id: "mock-user-3",
+            name: "Lisa Chen",
+            email: "lisa@example.com"
+          },
+          upvotes_count: 42,
+          comments_count: 12,
+          user_has_voted: false,
+          user_is_subscribed: false,
+          created_at: "2024-01-05T16:45:00Z",
+          updated_at: "2024-01-05T16:45:00Z"
         }
-      });
+      ];
+
+      const mockStats = {
+        available_tags: ["ui", "mobile", "performance", "bug", "enhancement", "booking", "integration", "accessibility"],
+        status_counts: {
+          proposed: 25,
+          "in-progress": 8,
+          done: 12,
+          declined: 2
+        }
+      };
+
+      setFeatures(mockFeatures);
+      setStats(mockStats);
       
-      const data = await response.json();
-      if (data.success) {
-        setFeatures(data.data.features);
-        setStats(data.data.filters);
-      }
     } catch (error) {
       console.error('Error fetching features:', error);
     } finally {
-      setLoading(false);
+      setFeaturesLoading(false);
     }
   };
 
   const fetchStats = async () => {
-    try {
-      const response = await fetch('/api/features/stats');
-      const data = await response.json();
-      if (data.success) {
-        setStats(data.data);
-      }
-    } catch (error) {
-      console.error('Error fetching stats:', error);
-    }
+    // Stats are now fetched together with features in fetchFeatures()
+    // This is kept for future API compatibility
   };
 
   const handleFilterChange = (newFilters) => {
@@ -79,6 +135,18 @@ const FeatureIdeasPage = () => {
         : feature
     ));
   };
+
+  // Show loading while auth is being checked
+  if (loading) {
+    return (
+      <div className="feature-ideas-page">
+        <div className="loading-state">
+          <div className="loading-spinner"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="feature-ideas-page">
@@ -115,8 +183,15 @@ const FeatureIdeasPage = () => {
             </button>
           ) : (
             <div className="login-prompt">
-              <p>Please log in to submit ideas or vote on features</p>
-              <button className="btn btn-secondary">Login</button>
+              <p>Log in to submit ideas and vote on features</p>
+              <button 
+                className="btn btn-secondary"
+                onClick={() => {
+                  alert('Please use the Sign In button in the main navigation to log in');
+                }}
+              >
+                Sign In Required
+              </button>
             </div>
           )}
         </div>
@@ -139,7 +214,7 @@ const FeatureIdeasPage = () => {
         </div>
 
         <div className="features-section">
-          {loading ? (
+          {featuresLoading ? (
             <div className="loading-state">
               <div className="loading-spinner"></div>
               <p>Loading features...</p>
