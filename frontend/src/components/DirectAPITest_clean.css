@@ -83,18 +83,6 @@
   flex-shrink: 0;
 }
 
-.status-loading {
-  background-color: #fbbf24;
-}
-
-.status-success {
-  background-color: #10b981;
-}
-
-.status-error {
-  background-color: #ef4444;
-}
-
 .duration-badge {
   background: rgba(156, 163, 175, 0.2);
   color: #9ca3af;
