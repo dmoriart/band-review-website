@@ -3,13 +3,13 @@ const fs = require('fs');
 // Read the venues.json file
 const venues = JSON.parse(fs.readFileSync('./venues.json', 'utf8'));
 
-// Venue type mappings
+// Venue type mappings to match schema
 const venueTypeMap = {
-  'concert-hall': 'concert-hall',
-  'pub-venue': 'pub-venue',
-  'club-venue': 'club-venue',
-  'multi-room-venue': 'multi-room-venue',
-  'theatre-venue': 'theatre-venue'
+  'concert-hall': 'concert_hall',
+  'pub-venue': 'pub', 
+  'club-venue': 'club',
+  'multi-room-venue': 'club',
+  'theatre-venue': 'theatre'
 };
 
 // Genre slug mappings to match our imported genres
@@ -46,7 +46,49 @@ const venueDocuments = venues.map((venue, index) => {
     };
   });
 
-  return {
+  // Parse address into structured format
+  const addressParts = venue.address.split(', ');
+  const addressObj = {
+    _type: 'address',
+    street: addressParts[0] || '',
+    city: addressParts[1] || '',
+    county: addressParts[2] || '',
+    country: 'Ireland'
+  };
+
+  // Clean up contact info - only include non-empty values
+  const contact = {
+    _type: 'contact'
+  };
+  
+  if (venue.contact.phone && venue.contact.phone.trim()) {
+    contact.phone = venue.contact.phone;
+  }
+  if (venue.contact.email && venue.contact.email.trim()) {
+    contact.email = venue.contact.email;
+  }
+  if (venue.contact.website && venue.contact.website.trim()) {
+    contact.website = venue.contact.website;
+  }
+
+  // Map facilities to match schema options
+  const facilityMap = {
+    'bar': 'bar',
+    'merchandise-stand': 'merch_stand',
+    'coat-check': 'security',
+    'accessibility': 'ramp_access',
+    'vip-area': 'green_room',
+    'restaurant': 'food_service',
+    'lighting-system': 'lighting',
+    'sound-system': 'sound_system',
+    'parking': 'parking'
+  };
+  
+  const mappedFacilities = venue.facilities
+    .map(facility => facilityMap[facility] || facility)
+    .filter(facility => facility); // Remove any undefined values
+
+  const venueDocument = {
     _type: 'venue',
     _id: `venue-${venue.slug}`,
     name: venue.venueName,
@@ -55,36 +97,44 @@ const venueDocuments = venues.map((venue, index) => {
       current: venue.slug
     },
     description: venue.description,
-    address: venue.address,
+    address: addressObj,
     location: {
       _type: 'geopoint',
       lat: venue.location.lat,
       lng: venue.location.lng
     },
     capacity: venue.capacity,
-    type: venueTypeMap[venue.venueType] || venue.venueType,
+    venueType: venueTypeMap[venue.venueType] || 'other',
     primaryGenres: genreReferences,
-    contactInfo: {
-      _type: 'contactInfo',
-      phone: venue.contact.phone || null,
-      email: venue.contact.email || null,
-      website: venue.contact.website || null
-    },
-    facilities: venue.facilities || [],
+    contact: contact,
+    facilities: mappedFacilities,
     verified: venue.verified || false,
+    claimed: false,
     featured: venue.featured || false,
-    profileImage: null,
-    heroImage: null,
-    gallery: [],
-    techSpecs: {
-      _type: 'techSpecs',
-      soundSystem: null,
-      lightingSystem: venue.facilities && venue.facilities.includes('lighting-system') ? 'Professional LED system' : null,
-      stageSize: null,
-      loadInInfo: null
-    },
-    claimed: false
+    gallery: []
   };
+
+  // Only add tech specs if we have meaningful data
+  const techSpecs = {
+    _type: 'techSpecs'
+  };
+  
+  if (venue.facilities && venue.facilities.includes('lighting-system')) {
+    techSpecs.lightingRig = 'Professional LED lighting system';
+  }
+  if (venue.facilities && venue.facilities.includes('sound-system')) {
+    techSpecs.soundSystem = 'Professional PA system';
+  }
+  
+  // Only add techSpecs if it has content beyond the _type
+  if (Object.keys(techSpecs).length > 1) {
+    venueDocument.techSpecs = techSpecs;
+  }
+
+  // Image fields are omitted entirely to prevent validation errors
+  // heroImage and gallery are optional and should only be added when present
+
+  return venueDocument;
 });
 
 // Write as NDJSON (newline-delimited JSON)
@@ -123,5 +173,7 @@ Object.entries(cities).forEach(([city, count]) => {
   console.log(`  • ${city}: ${count} venues`);
 });
 
-console.log('\n📤 Run: npx sanity dataset import venues-import.ndjson production --replace');
+console.log('\n📤 To import: npx sanity dataset import venues-import.ndjson production --replace');
 console.log('⚠️  Note: This will replace any existing venue documents with matching IDs');
+console.log('🧹 Image fields (heroImage) are properly omitted to prevent validation errors');
+console.log('🏗️  Address structured into separate fields, contact info cleaned, facilities mapped to schema');
