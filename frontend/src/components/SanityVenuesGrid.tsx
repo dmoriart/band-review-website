@@ -130,13 +130,13 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
             </div>
             
             <div className="venue-card-content">
-              <h3>{venue.name}</h3>
+              <h3>{venue.name || 'Unnamed Venue'}</h3>
               
-              {venue.address && (
+              {venue.address && venue.address.city && (
                 <div className="venue-location">
-                  📍 {venue.address.street && `${venue.address.street}, `}
-                  {venue.address.city}
-                  {venue.address.county && `, ${venue.address.county}`}
+                  📍 {venue.address.street ? `${venue.address.street}, ` : ''}
+                  {venue.address.city || ''}
+                  {venue.address.county ? `, ${venue.address.county}` : ''}
                 </div>
               )}
               
@@ -146,13 +146,13 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
                 </div>
               )}
               
-              {venue.venueType && (
+              {venue.venueType && typeof venue.venueType === 'string' && (
                 <div className="venue-type">
                   🏛️ {venue.venueType.replace('_', ' ').toUpperCase()}
                 </div>
               )}
               
-              {venue.description && (
+              {venue.description && typeof venue.description === 'string' && (
                 <p className="venue-description">
                   {venue.description.length > 120 
                     ? `${venue.description.substring(0, 120)}...` 
