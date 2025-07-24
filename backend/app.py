@@ -1,6 +1,7 @@
 """
 BandVenueReview.ie - Flask Backend API
 A comprehensive platform for Irish live music venue reviews by bands and artists
+Version: 1.0.1
 """
 
 import os
