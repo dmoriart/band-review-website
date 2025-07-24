@@ -78,13 +78,29 @@ SAMPLE_VENUES = [
 
 # API Routes
 
+# Root route for basic connectivity test  
+@app.route('/', methods=['GET'])
+def root():
+    """Root endpoint for basic connectivity test"""
+    return jsonify({
+        "message": "BandVenueReview.ie API", 
+        "status": "running",
+        "version": "1.0.2",
+        "endpoints": {
+            "health": "/api/health",
+            "venues": "/api/venues",
+            "bands": "/api/bands", 
+            "auth": "/api/auth/*"
+        }
+    })
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint for deployment monitoring"""
     return jsonify({
         "status": "healthy",
         "service": "BandVenueReview.ie API",
-        "version": "1.0.0"
+        "version": "1.0.2"
     })
 
 # Authentication Routes
