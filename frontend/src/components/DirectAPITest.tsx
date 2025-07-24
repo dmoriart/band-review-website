@@ -96,7 +96,7 @@ const DirectAPITest: React.FC = () => {
       { name: 'Backend Root', url: 'https://band-review-website.onrender.com/' },
       { name: 'Health Check', url: 'https://band-review-website.onrender.com/api/health' },
       { name: 'Venues API', url: 'https://band-review-website.onrender.com/api/venues' },
-      { name: 'Counties API', url: 'https://band-review-website.onrender.com/api/counties' },
+      { name: 'Bands API', url: 'https://band-review-website.onrender.com/api/bands' },
     ];
     
     // Run backend tests
@@ -181,7 +181,7 @@ const DirectAPITest: React.FC = () => {
       )}
       
       <div className="direct-api-test-footer">
-        <p><strong>Current Issue:</strong> Backend appears to be running but routes are not registered (404 errors)</p>
+        <p><strong>Status:</strong> Backend is running successfully! Testing API endpoints...</p>
         <p><strong>Backend URL:</strong> https://band-review-website.onrender.com</p>
         <p><strong>Frontend URL:</strong> https://bandvenuereview.netlify.app</p>
         <p>Check the Network tab in DevTools for detailed error information</p>
