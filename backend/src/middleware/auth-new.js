@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const { query } = require('../database/db-adapter');
+const { query } = require('../database/db');
 
 // Initialize Firebase Admin SDK
 let app;

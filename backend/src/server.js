@@ -8,6 +8,9 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const bandRoutes = require('./routes/bands');
 const adminRoutes = require('./routes/admin');
+const userRoutes = require('./routes/user');
+const claimsRoutes = require('./routes/claims');
+const venuesRoutes = require('./routes/venues');
 const { errorHandler, notFound } = require('./middleware/errorHandler');
 
 const app = express();
@@ -48,6 +51,9 @@ app.get('/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/bands', bandRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/claims', claimsRoutes);
+app.use('/api/venues', venuesRoutes);
 
 // Error handling middleware
 app.use(notFound);
