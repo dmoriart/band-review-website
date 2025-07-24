@@ -18,8 +18,8 @@ print(f"Current directory: {os.getcwd()}")
 print(f"Backend directory: {os.path.dirname(os.path.abspath(__file__))}")
 
 try:
-    print("Importing app_bands...")
-    from app_bands import create_app
+    print("Importing app...")
+    from app import create_app
     print("✅ Import successful")
     
     print("Creating app...")
