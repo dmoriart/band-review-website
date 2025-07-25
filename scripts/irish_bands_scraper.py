@@ -22,7 +22,7 @@ from dataclasses import dataclass, asdict
 
 # Add current directory to path for imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from irish_locations import get_irish_locations_list
+from irish_locations import get_all_irish_counties, get_all_irish_cities_and_towns, get_irish_locations_list
 from difflib import SequenceMatcher
 import unicodedata
 
@@ -91,6 +91,38 @@ class IrishBandScraper:
         
         # Irish location indicators - use standardized list
         self.irish_locations = get_irish_locations_list()
+        self.irish_counties = get_all_irish_counties()
+        self.irish_cities = get_all_irish_cities_and_towns()
+
+    def match_irish_location(self, location_text: str) -> tuple[Optional[str], Optional[str]]:
+        """Match location text to standardized Irish city and county"""
+        if not location_text:
+            return None, None
+        
+        location_lower = location_text.lower().strip()
+        
+        # First try to match cities exactly
+        for city in self.irish_cities:
+            if city.lower() == location_lower:
+                return city, None
+        
+        # Then try partial matches for cities
+        for city in self.irish_cities:
+            if city.lower() in location_lower or location_lower in city.lower():
+                return city, None
+        
+        # Try to match counties exactly
+        for county in self.irish_counties:
+            if county.lower() == location_lower or county.lower().replace('county ', '') == location_lower:
+                return None, county
+        
+        # Try partial matches for counties
+        for county in self.irish_counties:
+            county_clean = county.lower().replace('county ', '')
+            if county_clean in location_lower or location_lower in county_clean:
+                return None, county
+        
+        return None, None
 
     def rate_limit(self, api_name: str):
         """Implement rate limiting for different APIs"""
@@ -254,11 +286,12 @@ class IrishBandScraper:
             if area:
                 area_name = area.get('name', '')
                 if area_name:
-                    # Check if it's a city or county
-                    if any(city in area_name.lower() for city in ['dublin', 'cork', 'belfast', 'galway']):
-                        band.city = area_name
-                    else:
-                        band.county = area_name
+                    # Use standardized location matching
+                    matched_city, matched_county = self.match_irish_location(area_name)
+                    if matched_city:
+                        band.city = matched_city
+                    if matched_county:
+                        band.county = matched_county
             
             # Extract formation year
             life_span = detailed_data.get('life-span', {})
@@ -391,8 +424,8 @@ class IrishBandScraper:
             if band.country and 'ireland' in band.country.lower():
                 is_irish = True
             
-            # Check city/county for Irish locations
-            if band.city and any(loc in band.city.lower() for loc in self.irish_locations):
+            # Check city/county for Irish locations using standardized matching
+            if (band.city and band.city in self.irish_cities) or (band.county and band.county in self.irish_counties):
                 is_irish = True
             
             if band.county and any(loc in band.county.lower() for loc in self.irish_locations):

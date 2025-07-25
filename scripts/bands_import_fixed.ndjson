@@ -1,0 +1,985 @@
+{"_type": "band", "name": "U2", "slug": {"_type": "slug", "current": "u2"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dubliners", "slug": {"_type": "slug", "current": "the-dubliners"}, "city": "Dublin", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Thin Lizzy", "slug": {"_type": "slug", "current": "thin-lizzy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Cranberries", "slug": {"_type": "slug", "current": "the-cranberries"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Corrs", "slug": {"_type": "slug", "current": "the-corrs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Clannad", "slug": {"_type": "slug", "current": "clannad"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Westlife", "slug": {"_type": "slug", "current": "westlife"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Foster & Allen", "slug": {"_type": "slug", "current": "foster-allen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Chieftains", "slug": {"_type": "slug", "current": "the-chieftains"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Boyzone", "slug": {"_type": "slug", "current": "boyzone"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Woman", "slug": {"_type": "slug", "current": "celtic-woman"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Boomtown Rats", "slug": {"_type": "slug", "current": "the-boomtown-rats"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wolfe Tones", "slug": {"_type": "slug", "current": "wolfe-tones"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "My Bloody Valentine", "slug": {"_type": "slug", "current": "my-bloody-valentine"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Script", "slug": {"_type": "slug", "current": "the-script"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Horslips", "slug": {"_type": "slug", "current": "horslips"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Thunder", "slug": {"_type": "slug", "current": "celtic-thunder"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Saw Doctors", "slug": {"_type": "slug", "current": "the-saw-doctors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fureys", "slug": {"_type": "slug", "current": "the-fureys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "God Is an Astronaut", "slug": {"_type": "slug", "current": "god-is-an-astronaut"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Primordial", "slug": {"_type": "slug", "current": "primordial"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Altan", "slug": {"_type": "slug", "current": "altan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "B*Witched", "slug": {"_type": "slug", "current": "bwitched"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Frames", "slug": {"_type": "slug", "current": "the-frames"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hothouse Flowers", "slug": {"_type": "slug", "current": "hothouse-flowers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Bachelors", "slug": {"_type": "slug", "current": "the-bachelors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Virgin Prunes", "slug": {"_type": "slug", "current": "virgin-prunes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "De Dannan", "slug": {"_type": "slug", "current": "de-dannan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kodaline", "slug": {"_type": "slug", "current": "kodaline"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Taste", "slug": {"_type": "slug", "current": "taste"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Villagers", "slug": {"_type": "slug", "current": "villagers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Planxty", "slug": {"_type": "slug", "current": "planxty"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kíla", "slug": {"_type": "slug", "current": "kila"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Commitments", "slug": {"_type": "slug", "current": "the-commitments"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Frank and Walters", "slug": {"_type": "slug", "current": "the-frank-and-walters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dervish", "slug": {"_type": "slug", "current": "dervish"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "A House", "slug": {"_type": "slug", "current": "a-house"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bell X1", "slug": {"_type": "slug", "current": "bell-x1"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Barleycorn", "slug": {"_type": "slug", "current": "the-barleycorn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Thrills", "slug": {"_type": "slug", "current": "the-thrills"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "JJ72", "slug": {"_type": "slug", "current": "jj72"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fish Go Deep", "slug": {"_type": "slug", "current": "fish-go-deep"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Microdisney", "slug": {"_type": "slug", "current": "microdisney"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fontaines D.C.", "slug": {"_type": "slug", "current": "fontaines-dc"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Finbar & Eddie Furey", "slug": {"_type": "slug", "current": "finbar-eddie-furey"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lúnasa", "slug": {"_type": "slug", "current": "lunasa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cruachan", "slug": {"_type": "slug", "current": "cruachan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fatima Mansions", "slug": {"_type": "slug", "current": "the-fatima-mansions"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Irish Tenors", "slug": {"_type": "slug", "current": "the-irish-tenors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nightnoise", "slug": {"_type": "slug", "current": "nightnoise"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "So Cow", "slug": {"_type": "slug", "current": "so-cow"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gama Bomb", "slug": {"_type": "slug", "current": "gama-bomb"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shane MacGowan and the Popes", "slug": {"_type": "slug", "current": "shane-macgowan-and-the-popes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Gothard Sisters", "slug": {"_type": "slug", "current": "the-gothard-sisters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Blarney Lads", "slug": {"_type": "slug", "current": "the-blarney-lads"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pugwash", "slug": {"_type": "slug", "current": "pugwash"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Strypes", "slug": {"_type": "slug", "current": "the-strypes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Compulsion", "slug": {"_type": "slug", "current": "compulsion"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Aslan", "slug": {"_type": "slug", "current": "aslan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Sean O'Neill Band", "slug": {"_type": "slug", "current": "the-sean-oneill-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "United Bible Studies", "slug": {"_type": "slug", "current": "united-bible-studies"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stockton’s Wing", "slug": {"_type": "slug", "current": "stocktons-wing"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jedward", "slug": {"_type": "slug", "current": "jedward"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tír na nÓg", "slug": {"_type": "slug", "current": "tir-na-nog"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Eden’s Bridge", "slug": {"_type": "slug", "current": "edens-bridge"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Grand Slam", "slug": {"_type": "slug", "current": "grand-slam"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fight Like Apes", "slug": {"_type": "slug", "current": "fight-like-apes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sultans of Ping F.C.", "slug": {"_type": "slug", "current": "sultans-of-ping-fc"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Blood or Whiskey", "slug": {"_type": "slug", "current": "blood-or-whiskey"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Bothy Band", "slug": {"_type": "slug", "current": "the-bothy-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Inhaler", "slug": {"_type": "slug", "current": "inhaler"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Barnbrack", "slug": {"_type": "slug", "current": "barnbrack"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Patrick Street", "slug": {"_type": "slug", "current": "patrick-street"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Whipping Boy", "slug": {"_type": "slug", "current": "whipping-boy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Danú", "slug": {"_type": "slug", "current": "danu"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "An Emotional Fish", "slug": {"_type": "slug", "current": "an-emotional-fish"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Coronas", "slug": {"_type": "slug", "current": "the-coronas"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Empire State Human", "slug": {"_type": "slug", "current": "empire-state-human"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sweeney’s Men", "slug": {"_type": "slug", "current": "sweeneys-men"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "In Tua Nua", "slug": {"_type": "slug", "current": "in-tua-nua"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Decal", "slug": {"_type": "slug", "current": "decal"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Operating Theatre", "slug": {"_type": "slug", "current": "operating-theatre"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Whirling Hall of Knives", "slug": {"_type": "slug", "current": "whirling-hall-of-knives"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Celtic Tenors", "slug": {"_type": "slug", "current": "the-celtic-tenors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mourning Beloveth", "slug": {"_type": "slug", "current": "mourning-beloveth"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moving Hearts", "slug": {"_type": "slug", "current": "moving-hearts"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Derek Warfield and the Young Wolfe Tones", "slug": {"_type": "slug", "current": "derek-warfield-and-the-young-wolfe-tones"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Abaddon Incarnate", "slug": {"_type": "slug", "current": "abaddon-incarnate"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Picturehouse", "slug": {"_type": "slug", "current": "picturehouse"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "No Monster Club", "slug": {"_type": "slug", "current": "no-monster-club"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gilla Band", "slug": {"_type": "slug", "current": "gilla-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Radiators From Space", "slug": {"_type": "slug", "current": "the-radiators-from-space"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dagda", "slug": {"_type": "slug", "current": "dagda"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skid Row", "slug": {"_type": "slug", "current": "skid-row"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hudson Taylor", "slug": {"_type": "slug", "current": "hudson-taylor"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Something Happens", "slug": {"_type": "slug", "current": "something-happens"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Picture This", "slug": {"_type": "slug", "current": "picture-this"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Coast 2 Coast", "slug": {"_type": "slug", "current": "coast-2-coast"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kerbdog", "slug": {"_type": "slug", "current": "kerbdog"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gráda", "slug": {"_type": "slug", "current": "grada"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Johnstons", "slug": {"_type": "slug", "current": "the-johnstons"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Engine Alley", "slug": {"_type": "slug", "current": "engine-alley"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "SPRINTS", "slug": {"_type": "slug", "current": "sprints"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Four Men and a Dog", "slug": {"_type": "slug", "current": "four-men-and-a-dog"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fovea Hex", "slug": {"_type": "slug", "current": "fovea-hex"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mellow Candle", "slug": {"_type": "slug", "current": "mellow-candle"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "D-Side", "slug": {"_type": "slug", "current": "d-side"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dordán", "slug": {"_type": "slug", "current": "dordan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stormzone", "slug": {"_type": "slug", "current": "stormzone"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Devlins", "slug": {"_type": "slug", "current": "the-devlins"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Blackthorn", "slug": {"_type": "slug", "current": "blackthorn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Altar of Plagues", "slug": {"_type": "slug", "current": "altar-of-plagues"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jape", "slug": {"_type": "slug", "current": "jape"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Woven Skull", "slug": {"_type": "slug", "current": "woven-skull"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sonus Mortis", "slug": {"_type": "slug", "current": "sonus-mortis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Clancy Children", "slug": {"_type": "slug", "current": "the-clancy-children"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sack", "slug": {"_type": "slug", "current": "sack"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Waylander", "slug": {"_type": "slug", "current": "waylander"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Téada", "slug": {"_type": "slug", "current": "teada"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pat McManus Band", "slug": {"_type": "slug", "current": "pat-mcmanus-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cactus World News", "slug": {"_type": "slug", "current": "cactus-world-news"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Legacy", "slug": {"_type": "slug", "current": "celtic-legacy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bellefire", "slug": {"_type": "slug", "current": "bellefire"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Blades", "slug": {"_type": "slug", "current": "the-blades"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Republic of Loose", "slug": {"_type": "slug", "current": "republic-of-loose"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Blizzards", "slug": {"_type": "slug", "current": "the-blizzards"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Into Paradise", "slug": {"_type": "slug", "current": "into-paradise"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ham Sandwich", "slug": {"_type": "slug", "current": "ham-sandwich"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Voice Squad", "slug": {"_type": "slug", "current": "the-voice-squad"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Catchers", "slug": {"_type": "slug", "current": "catchers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Wolfhound", "slug": {"_type": "slug", "current": "the-wolfhound"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Adebisi Shank", "slug": {"_type": "slug", "current": "adebisi-shank"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "September Girls", "slug": {"_type": "slug", "current": "september-girls"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Murder Capital", "slug": {"_type": "slug", "current": "the-murder-capital"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mushroom", "slug": {"_type": "slug", "current": "mushroom"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Blink", "slug": {"_type": "slug", "current": "blink"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Stunning", "slug": {"_type": "slug", "current": "the-stunning"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "ABBA‐esque", "slug": {"_type": "slug", "current": "abbaesque"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Popes", "slug": {"_type": "slug", "current": "the-popes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Black Family", "slug": {"_type": "slug", "current": "the-black-family"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fat Lady Sings", "slug": {"_type": "slug", "current": "the-fat-lady-sings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Arcady", "slug": {"_type": "slug", "current": "arcady"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Guggenheim Grotto", "slug": {"_type": "slug", "current": "the-guggenheim-grotto"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Loudest Whisper", "slug": {"_type": "slug", "current": "loudest-whisper"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dr. Strangely Strange", "slug": {"_type": "slug", "current": "dr-strangely-strange"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Little Green Cars", "slug": {"_type": "slug", "current": "little-green-cars"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Harvest Ministers", "slug": {"_type": "slug", "current": "the-harvest-ministers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Soda Blonde", "slug": {"_type": "slug", "current": "soda-blonde"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Squarehead", "slug": {"_type": "slug", "current": "squarehead"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "HAL", "slug": {"_type": "slug", "current": "hal"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rodney Cordner & Jean‐Pierre Rudolph", "slug": {"_type": "slug", "current": "rodney-cordner-jeanpierre-rudolph"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Le Galaxie", "slug": {"_type": "slug", "current": "le-galaxie"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crow Black Chicken", "slug": {"_type": "slug", "current": "crow-black-chicken"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Academic", "slug": {"_type": "slug", "current": "the-academic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "LiR", "slug": {"_type": "slug", "current": "lir"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Toasted Heretic", "slug": {"_type": "slug", "current": "toasted-heretic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mael Mórdha", "slug": {"_type": "slug", "current": "mael-mordha"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Glyder", "slug": {"_type": "slug", "current": "glyder"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Eternal Helcaraxe", "slug": {"_type": "slug", "current": "eternal-helcaraxe"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Enemies", "slug": {"_type": "slug", "current": "enemies"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Kane Sisters", "slug": {"_type": "slug", "current": "the-kane-sisters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Words That Burn", "slug": {"_type": "slug", "current": "words-that-burn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "I Draw Slow", "slug": {"_type": "slug", "current": "i-draw-slow"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Rubberbandits", "slug": {"_type": "slug", "current": "the-rubberbandits"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Café Orchestra", "slug": {"_type": "slug", "current": "cafe-orchestra"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Galleon", "slug": {"_type": "slug", "current": "galleon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bagatelle", "slug": {"_type": "slug", "current": "bagatelle"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tara", "slug": {"_type": "slug", "current": "tara"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rua", "slug": {"_type": "slug", "current": "rua"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Stars of Heaven", "slug": {"_type": "slug", "current": "the-stars-of-heaven"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sliotar", "slug": {"_type": "slug", "current": "sliotar"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Delorentos", "slug": {"_type": "slug", "current": "delorentos"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Full Tilt", "slug": {"_type": "slug", "current": "full-tilt"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "All Tvvins", "slug": {"_type": "slug", "current": "all-tvvins"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bawl", "slug": {"_type": "slug", "current": "bawl"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Walls", "slug": {"_type": "slug", "current": "the-walls"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Redneck Manifesto", "slug": {"_type": "slug", "current": "the-redneck-manifesto"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Telefís", "slug": {"_type": "slug", "current": "telefis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dread Sovereign", "slug": {"_type": "slug", "current": "dread-sovereign"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Solar Bears", "slug": {"_type": "slug", "current": "solar-bears"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Escape Act", "slug": {"_type": "slug", "current": "escape-act"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Mary Wallopers", "slug": {"_type": "slug", "current": "the-mary-wallopers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cyclefly", "slug": {"_type": "slug", "current": "cyclefly"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Revs", "slug": {"_type": "slug", "current": "the-revs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Goitse", "slug": {"_type": "slug", "current": "goitse"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Drugzilla", "slug": {"_type": "slug", "current": "drugzilla"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Slide", "slug": {"_type": "slug", "current": "slide"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Keeley", "slug": {"_type": "slug", "current": "keeley"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Goats Don't Shave", "slug": {"_type": "slug", "current": "goats-dont-shave"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rubyhorse", "slug": {"_type": "slug", "current": "rubyhorse"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "O Emperor", "slug": {"_type": "slug", "current": "o-emperor"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Mighty Stef", "slug": {"_type": "slug", "current": "the-mighty-stef"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Chalets", "slug": {"_type": "slug", "current": "the-chalets"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kopek", "slug": {"_type": "slug", "current": "kopek"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Oisín", "slug": {"_type": "slug", "current": "oisin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Parhelia", "slug": {"_type": "slug", "current": "parhelia"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pocket Billiards", "slug": {"_type": "slug", "current": "pocket-billiards"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Arborist", "slug": {"_type": "slug", "current": "arborist"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Inertia", "slug": {"_type": "slug", "current": "inertia"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dublin Legends", "slug": {"_type": "slug", "current": "the-dublin-legends"}, "city": "Dublin", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Riptide Movement", "slug": {"_type": "slug", "current": "the-riptide-movement"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Relativity", "slug": {"_type": "slug", "current": "relativity"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mytown", "slug": {"_type": "slug", "current": "mytown"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tired Pony", "slug": {"_type": "slug", "current": "tired-pony"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Clockworks", "slug": {"_type": "slug", "current": "the-clockworks"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Trá Pháidín", "slug": {"_type": "slug", "current": "tra-phaidin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skindive", "slug": {"_type": "slug", "current": "skindive"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Coldwar", "slug": {"_type": "slug", "current": "coldwar"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "From the Bogs of Aughiska", "slug": {"_type": "slug", "current": "from-the-bogs-of-aughiska"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Providence", "slug": {"_type": "slug", "current": "providence"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Alias Empire", "slug": {"_type": "slug", "current": "alias-empire"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "M(h)aol", "slug": {"_type": "slug", "current": "mhaol"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "This Burning Effigy", "slug": {"_type": "slug", "current": "this-burning-effigy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "cane141", "slug": {"_type": "slug", "current": "cane141"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Zrazy", "slug": {"_type": "slug", "current": "zrazy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rollerskate Skinny", "slug": {"_type": "slug", "current": "rollerskate-skinny"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Frankie Kennedy & Mairéad Ní Mhaonaigh", "slug": {"_type": "slug", "current": "frankie-kennedy-mairead-ni-mhaonaigh"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Scullion", "slug": {"_type": "slug", "current": "scullion"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "We Are Aerials", "slug": {"_type": "slug", "current": "we-are-aerials"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wyvern Lingo", "slug": {"_type": "slug", "current": "wyvern-lingo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Justice", "slug": {"_type": "slug", "current": "justice"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Versatile", "slug": {"_type": "slug", "current": "versatile"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Wormholes", "slug": {"_type": "slug", "current": "the-wormholes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Halves", "slug": {"_type": "slug", "current": "halves"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Big Bag of Sticks", "slug": {"_type": "slug", "current": "big-bag-of-sticks"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Minutes", "slug": {"_type": "slug", "current": "the-minutes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dott", "slug": {"_type": "slug", "current": "dott"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Irish Weavers", "slug": {"_type": "slug", "current": "the-irish-weavers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Estel", "slug": {"_type": "slug", "current": "estel"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Just Mustard", "slug": {"_type": "slug", "current": "just-mustard"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "La Rocca", "slug": {"_type": "slug", "current": "la-rocca"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Duckworth Lewis Method", "slug": {"_type": "slug", "current": "the-duckworth-lewis-method"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "BATS", "slug": {"_type": "slug", "current": "bats"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tupelo", "slug": {"_type": "slug", "current": "tupelo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sun Mahshene", "slug": {"_type": "slug", "current": "sun-mahshene"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Blackwater Boys", "slug": {"_type": "slug", "current": "the-blackwater-boys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cry Before Dawn", "slug": {"_type": "slug", "current": "cry-before-dawn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Overhead, the Albatross", "slug": {"_type": "slug", "current": "overhead-the-albatross"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Deiseal", "slug": {"_type": "slug", "current": "deiseal"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Five Go Down to the Sea?", "slug": {"_type": "slug", "current": "five-go-down-to-the-sea"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ellis Island", "slug": {"_type": "slug", "current": "ellis-island"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bitch Falcon", "slug": {"_type": "slug", "current": "bitch-falcon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Malachy Doris Ceili Band", "slug": {"_type": "slug", "current": "the-malachy-doris-ceili-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Winter Passing", "slug": {"_type": "slug", "current": "the-winter-passing"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Turn", "slug": {"_type": "slug", "current": "turn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Altered Hours", "slug": {"_type": "slug", "current": "the-altered-hours"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "RTÉ Vanbrugh Quartet", "slug": {"_type": "slug", "current": "rte-vanbrugh-quartet"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Glenside Ceili Band", "slug": {"_type": "slug", "current": "the-glenside-ceili-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Trinití", "slug": {"_type": "slug", "current": "triniti"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sliabh Notes", "slug": {"_type": "slug", "current": "sliabh-notes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bodycall", "slug": {"_type": "slug", "current": "bodycall"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shanon", "slug": {"_type": "slug", "current": "shanon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "MrNorth", "slug": {"_type": "slug", "current": "mrnorth"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtachor", "slug": {"_type": "slug", "current": "celtachor"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Interference", "slug": {"_type": "slug", "current": "interference"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Beginish", "slug": {"_type": "slug", "current": "beginish"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Bards", "slug": {"_type": "slug", "current": "the-bards"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "I’ll Eat Your Face", "slug": {"_type": "slug", "current": "ill-eat-your-face"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pony Club", "slug": {"_type": "slug", "current": "pony-club"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dudley Corporation", "slug": {"_type": "slug", "current": "the-dudley-corporation"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jiggy", "slug": {"_type": "slug", "current": "jiggy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "YURT", "slug": {"_type": "slug", "current": "yurt"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ambulance", "slug": {"_type": "slug", "current": "ambulance"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jerry Fish & The Mudbug Club", "slug": {"_type": "slug", "current": "jerry-fish-the-mudbug-club"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "All the Luck in the World", "slug": {"_type": "slug", "current": "all-the-luck-in-the-world"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fred", "slug": {"_type": "slug", "current": "fred"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "We Cut Corners", "slug": {"_type": "slug", "current": "we-cut-corners"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Swans", "slug": {"_type": "slug", "current": "the-swans"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "North Cregg", "slug": {"_type": "slug", "current": "north-cregg"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Innocents Abroad", "slug": {"_type": "slug", "current": "innocents-abroad"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Zoë Conway & John Mc Intyre", "slug": {"_type": "slug", "current": "zoe-conway-john-mc-intyre"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Movment", "slug": {"_type": "slug", "current": "movment"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Geasa", "slug": {"_type": "slug", "current": "geasa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lluther", "slug": {"_type": "slug", "current": "lluther"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Norot", "slug": {"_type": "slug", "current": "norot"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Landless", "slug": {"_type": "slug", "current": "landless"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Space Shepherds", "slug": {"_type": "slug", "current": "space-shepherds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Frank Gilligan Ceili Band", "slug": {"_type": "slug", "current": "frank-gilligan-ceili-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Enecare", "slug": {"_type": "slug", "current": "enecare"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Burning Love Jumpsuit", "slug": {"_type": "slug", "current": "burning-love-jumpsuit"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "ZOM", "slug": {"_type": "slug", "current": "zom"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Jeremiahs", "slug": {"_type": "slug", "current": "the-jeremiahs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Kilkennys", "slug": {"_type": "slug", "current": "the-kilkennys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Future Kings of Spain", "slug": {"_type": "slug", "current": "future-kings-of-spain"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Natural Gas", "slug": {"_type": "slug", "current": "natural-gas"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Chakras", "slug": {"_type": "slug", "current": "the-chakras"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Blue in Heaven", "slug": {"_type": "slug", "current": "blue-in-heaven"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moving Cloud", "slug": {"_type": "slug", "current": "moving-cloud"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Woods Band", "slug": {"_type": "slug", "current": "the-woods-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Funeral Suits", "slug": {"_type": "slug", "current": "funeral-suits"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Eden", "slug": {"_type": "slug", "current": "eden"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "(retards)", "slug": {"_type": "slug", "current": "retards"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mixtwitch", "slug": {"_type": "slug", "current": "mixtwitch"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rest", "slug": {"_type": "slug", "current": "rest"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fuil Na Seanchoille", "slug": {"_type": "slug", "current": "fuil-na-seanchoille"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Jimmy Cake", "slug": {"_type": "slug", "current": "the-jimmy-cake"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "mono band", "slug": {"_type": "slug", "current": "mono-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Albatross", "slug": {"_type": "slug", "current": "albatross"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "No Sweat", "slug": {"_type": "slug", "current": "no-sweat"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Warpath", "slug": {"_type": "slug", "current": "warpath"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wild Rocket", "slug": {"_type": "slug", "current": "wild-rocket"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ten Ton Slug", "slug": {"_type": "slug", "current": "ten-ton-slug"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Unkindness of Ravens", "slug": {"_type": "slug", "current": "unkindness-of-ravens"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Odour of Death", "slug": {"_type": "slug", "current": "odour-of-death"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Led Farmers", "slug": {"_type": "slug", "current": "the-led-farmers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Any Old Time", "slug": {"_type": "slug", "current": "any-old-time"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Chicks", "slug": {"_type": "slug", "current": "chicks"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Analogue Mindfield", "slug": {"_type": "slug", "current": "analogue-mindfield"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Deemed Psychotic", "slug": {"_type": "slug", "current": "deemed-psychotic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Soothsayer", "slug": {"_type": "slug", "current": "soothsayer"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "THEE U.F.O", "slug": {"_type": "slug", "current": "thee-ufo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skylark", "slug": {"_type": "slug", "current": "skylark"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Granny’s Intentions", "slug": {"_type": "slug", "current": "grannys-intentions"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Spellbound", "slug": {"_type": "slug", "current": "spellbound"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Myrkr", "slug": {"_type": "slug", "current": "myrkr"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Black Velvet Band", "slug": {"_type": "slug", "current": "the-black-velvet-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crystal Swing", "slug": {"_type": "slug", "current": "crystal-swing"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rabhlaí Rabhlaí", "slug": {"_type": "slug", "current": "rabhlai-rabhlai"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Music for Dead Birds", "slug": {"_type": "slug", "current": "music-for-dead-birds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Glee Club", "slug": {"_type": "slug", "current": "the-glee-club"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Buille", "slug": {"_type": "slug", "current": "buille"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Sewing Room", "slug": {"_type": "slug", "current": "the-sewing-room"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Grehan Sisters", "slug": {"_type": "slug", "current": "the-grehan-sisters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Na Casaidigh", "slug": {"_type": "slug", "current": "na-casaidigh"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Light A Big Fire", "slug": {"_type": "slug", "current": "light-a-big-fire"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kid Karate", "slug": {"_type": "slug", "current": "kid-karate"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lazyrevs", "slug": {"_type": "slug", "current": "lazyrevs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Slave Zero", "slug": {"_type": "slug", "current": "slave-zero"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Réalta", "slug": {"_type": "slug", "current": "realta"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fountainhead", "slug": {"_type": "slug", "current": "the-fountainhead"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Coterie", "slug": {"_type": "slug", "current": "the-coterie"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dixies", "slug": {"_type": "slug", "current": "the-dixies"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mexican Pets", "slug": {"_type": "slug", "current": "mexican-pets"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stoat", "slug": {"_type": "slug", "current": "stoat"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tommy Drennan And The Monarchs", "slug": {"_type": "slug", "current": "tommy-drennan-and-the-monarchs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fifth Avenue", "slug": {"_type": "slug", "current": "fifth-avenue"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Saville", "slug": {"_type": "slug", "current": "saville"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Super Extra Bonus Party", "slug": {"_type": "slug", "current": "super-extra-bonus-party"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Butterfly Explosion", "slug": {"_type": "slug", "current": "the-butterfly-explosion"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lumiere", "slug": {"_type": "slug", "current": "lumiere"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Deans", "slug": {"_type": "slug", "current": "the-deans"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Third Island", "slug": {"_type": "slug", "current": "third-island"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Alphastates", "slug": {"_type": "slug", "current": "alphastates"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Magnapinna", "slug": {"_type": "slug", "current": "the-magnapinna"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Lark on the Strand", "slug": {"_type": "slug", "current": "the-lark-on-the-strand"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Golden Horde", "slug": {"_type": "slug", "current": "the-golden-horde"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Arcane Sun", "slug": {"_type": "slug", "current": "arcane-sun"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hands Up Who Wants to Die", "slug": {"_type": "slug", "current": "hands-up-who-wants-to-die"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kingfishr", "slug": {"_type": "slug", "current": "kingfishr"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "79Cortinaz", "slug": {"_type": "slug", "current": "band-79cortinaz"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "T with The Maggies", "slug": {"_type": "slug", "current": "t-with-the-maggies"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Legends", "slug": {"_type": "slug", "current": "celtic-legends"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Radio", "slug": {"_type": "slug", "current": "the-radio"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Codes", "slug": {"_type": "slug", "current": "codes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dark Room Notes", "slug": {"_type": "slug", "current": "dark-room-notes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Slow Moving Clouds", "slug": {"_type": "slug", "current": "slow-moving-clouds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bouts", "slug": {"_type": "slug", "current": "bouts"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Putrefaction", "slug": {"_type": "slug", "current": "putrefaction"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Nightcrawlers", "slug": {"_type": "slug", "current": "the-nightcrawlers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wild Youth", "slug": {"_type": "slug", "current": "wild-youth"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Humanzi", "slug": {"_type": "slug", "current": "humanzi"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Raum Kingdom", "slug": {"_type": "slug", "current": "raum-kingdom"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Driven", "slug": {"_type": "slug", "current": "the-driven"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gael Slí", "slug": {"_type": "slug", "current": "gael-sli"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dead Cat Bounce", "slug": {"_type": "slug", "current": "dead-cat-bounce"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sirocco", "slug": {"_type": "slug", "current": "sirocco"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Atheos", "slug": {"_type": "slug", "current": "atheos"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rollers/Sparkers", "slug": {"_type": "slug", "current": "rollerssparkers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Guidewires", "slug": {"_type": "slug", "current": "guidewires"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "John Blek & The Rats", "slug": {"_type": "slug", "current": "john-blek-the-rats"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bogside Volunteers", "slug": {"_type": "slug", "current": "bogside-volunteers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fuchsia Band", "slug": {"_type": "slug", "current": "the-fuchsia-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stereo Nasty", "slug": {"_type": "slug", "current": "stereo-nasty"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "zhOra", "slug": {"_type": "slug", "current": "zhora"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Deadlians", "slug": {"_type": "slug", "current": "the-deadlians"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Director", "slug": {"_type": "slug", "current": "director"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Primary Node", "slug": {"_type": "slug", "current": "primary-node"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Aleanna", "slug": {"_type": "slug", "current": "aleanna"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Amble", "slug": {"_type": "slug", "current": "amble"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cian", "slug": {"_type": "slug", "current": "cian"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Six", "slug": {"_type": "slug", "current": "six"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Na Filí", "slug": {"_type": "slug", "current": "na-fili"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Would Be's", "slug": {"_type": "slug", "current": "the-would-bes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Graveyard Dirt", "slug": {"_type": "slug", "current": "graveyard-dirt"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Adelante", "slug": {"_type": "slug", "current": "adelante"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Royseven", "slug": {"_type": "slug", "current": "royseven"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Boa Morte", "slug": {"_type": "slug", "current": "boa-morte"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "We Raise Bears", "slug": {"_type": "slug", "current": "we-raise-bears"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Easpa Measa", "slug": {"_type": "slug", "current": "easpa-measa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wonderland", "slug": {"_type": "slug", "current": "wonderland"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Plea", "slug": {"_type": "slug", "current": "the-plea"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nouveaunoise", "slug": {"_type": "slug", "current": "nouveaunoise"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Alan Kelly Gang", "slug": {"_type": "slug", "current": "the-alan-kelly-gang"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skara Brae", "slug": {"_type": "slug", "current": "skara-brae"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "FourWinds", "slug": {"_type": "slug", "current": "fourwinds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "New Cross Soul", "slug": {"_type": "slug", "current": "new-cross-soul"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hey Paulette", "slug": {"_type": "slug", "current": "hey-paulette"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skint", "slug": {"_type": "slug", "current": "skint"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sequel", "slug": {"_type": "slug", "current": "sequel"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Comas", "slug": {"_type": "slug", "current": "comas"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Freemen", "slug": {"_type": "slug", "current": "the-freemen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The McCarthys", "slug": {"_type": "slug", "current": "the-mccarthys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Riot Code", "slug": {"_type": "slug", "current": "riot-code"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Immediate", "slug": {"_type": "slug", "current": "the-immediate"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Crossroads", "slug": {"_type": "slug", "current": "celtic-crossroads"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pumpkinhead", "slug": {"_type": "slug", "current": "pumpkinhead"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jessie Buckley & Bernard Butler", "slug": {"_type": "slug", "current": "jessie-buckley-bernard-butler"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Rosecaps", "slug": {"_type": "slug", "current": "the-rosecaps"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Raglans", "slug": {"_type": "slug", "current": "raglans"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Urges", "slug": {"_type": "slug", "current": "the-urges"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Oddsocks Revival", "slug": {"_type": "slug", "current": "oddsocks-revival"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nan Morlith", "slug": {"_type": "slug", "current": "nan-morlith"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Zealot Cult", "slug": {"_type": "slug", "current": "zealot-cult"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Element X", "slug": {"_type": "slug", "current": "element-x"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nábac", "slug": {"_type": "slug", "current": "nabac"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Orange Machine", "slug": {"_type": "slug", "current": "the-orange-machine"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cloud Castle Lake", "slug": {"_type": "slug", "current": "cloud-castle-lake"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Steel Tormentor", "slug": {"_type": "slug", "current": "steel-tormentor"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rhythm Kings", "slug": {"_type": "slug", "current": "rhythm-kings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pat & Ricky Kelleher", "slug": {"_type": "slug", "current": "pat-ricky-kelleher"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Seo Linn", "slug": {"_type": "slug", "current": "seo-linn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Amazing Pilots", "slug": {"_type": "slug", "current": "the-amazing-pilots"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Draíocht", "slug": {"_type": "slug", "current": "draiocht"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Chasing Abbey", "slug": {"_type": "slug", "current": "chasing-abbey"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Armada", "slug": {"_type": "slug", "current": "the-armada"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "(sic)", "slug": {"_type": "slug", "current": "sic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fidelio Trio", "slug": {"_type": "slug", "current": "fidelio-trio"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Come On Live Long", "slug": {"_type": "slug", "current": "come-on-live-long"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Josephine Marsh Band", "slug": {"_type": "slug", "current": "the-josephine-marsh-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Supply, Demand and Curve", "slug": {"_type": "slug", "current": "supply-demand-and-curve"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gourd", "slug": {"_type": "slug", "current": "gourd"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dublin Guitar Quartet", "slug": {"_type": "slug", "current": "dublin-guitar-quartet"}, "city": "Dublin", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bushplant", "slug": {"_type": "slug", "current": "bushplant"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Two Tales of Woe", "slug": {"_type": "slug", "current": "two-tales-of-woe"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gravefields", "slug": {"_type": "slug", "current": "gravefields"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "St. Laurence O’Toole Pipe Band", "slug": {"_type": "slug", "current": "st-laurence-otoole-pipe-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Moonlighters", "slug": {"_type": "slug", "current": "the-moonlighters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tulua", "slug": {"_type": "slug", "current": "tulua"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Young Folk", "slug": {"_type": "slug", "current": "the-young-folk"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Harvester", "slug": {"_type": "slug", "current": "harvester"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jonathan Kelly’s Outside", "slug": {"_type": "slug", "current": "jonathan-kellys-outside"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Bonk", "slug": {"_type": "slug", "current": "the-bonk"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Victimised", "slug": {"_type": "slug", "current": "victimised"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hinterland", "slug": {"_type": "slug", "current": "hinterland"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Barbarellas", "slug": {"_type": "slug", "current": "barbarellas"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wonder Villains", "slug": {"_type": "slug", "current": "wonder-villains"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Auld Corn Brigade", "slug": {"_type": "slug", "current": "auld-corn-brigade"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Youth Mass", "slug": {"_type": "slug", "current": "youth-mass"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Grand", "slug": {"_type": "slug", "current": "grand"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Funky Junction", "slug": {"_type": "slug", "current": "funky-junction"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Zamrish", "slug": {"_type": "slug", "current": "zamrish"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Val Normal", "slug": {"_type": "slug", "current": "val-normal"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ascend the Hollow", "slug": {"_type": "slug", "current": "ascend-the-hollow"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Refuge Three", "slug": {"_type": "slug", "current": "the-refuge-three"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nautilus", "slug": {"_type": "slug", "current": "nautilus"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Coroza", "slug": {"_type": "slug", "current": "coroza"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Twinkranes", "slug": {"_type": "slug", "current": "twinkranes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Morgain", "slug": {"_type": "slug", "current": "morgain"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Buccaneers", "slug": {"_type": "slug", "current": "the-buccaneers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Warlords of Pez", "slug": {"_type": "slug", "current": "warlords-of-pez"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Juniper", "slug": {"_type": "slug", "current": "juniper"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Murdock", "slug": {"_type": "slug", "current": "murdock"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jody Has A Hitlist", "slug": {"_type": "slug", "current": "jody-has-a-hitlist"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fab!", "slug": {"_type": "slug", "current": "fab"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nihil", "slug": {"_type": "slug", "current": "nihil"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Storyman", "slug": {"_type": "slug", "current": "storyman"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Obskür", "slug": {"_type": "slug", "current": "obskur"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tr One", "slug": {"_type": "slug", "current": "tr-one"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Partholón", "slug": {"_type": "slug", "current": "partholon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Les Enfants", "slug": {"_type": "slug", "current": "les-enfants"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Alchemy", "slug": {"_type": "slug", "current": "alchemy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Alfi", "slug": {"_type": "slug", "current": "alfi"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Channel One", "slug": {"_type": "slug", "current": "channel-one"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Things", "slug": {"_type": "slug", "current": "the-things"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Tycho Brahe", "slug": {"_type": "slug", "current": "the-tycho-brahe"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dagda", "slug": {"_type": "slug", "current": "the-dagda"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Absolutist", "slug": {"_type": "slug", "current": "absolutist"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Plattermen", "slug": {"_type": "slug", "current": "the-plattermen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "MAKO", "slug": {"_type": "slug", "current": "mako"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Kellehers", "slug": {"_type": "slug", "current": "the-kellehers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bully’s Acre", "slug": {"_type": "slug", "current": "bullys-acre"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Five to Two", "slug": {"_type": "slug", "current": "five-to-two"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tebi Rex", "slug": {"_type": "slug", "current": "tebi-rex"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "To Blacken the Pages", "slug": {"_type": "slug", "current": "to-blacken-the-pages"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moral Support", "slug": {"_type": "slug", "current": "moral-support"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fallen Angels", "slug": {"_type": "slug", "current": "the-fallen-angels"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Harrington Brothers", "slug": {"_type": "slug", "current": "the-harrington-brothers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Venus Envy", "slug": {"_type": "slug", "current": "venus-envy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sermon of Flames", "slug": {"_type": "slug", "current": "sermon-of-flames"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Gorehounds", "slug": {"_type": "slug", "current": "the-gorehounds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dentistry", "slug": {"_type": "slug", "current": "dentistry"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Emperor of Ice Cream", "slug": {"_type": "slug", "current": "emperor-of-ice-cream"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Cake Sale", "slug": {"_type": "slug", "current": "the-cake-sale"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Frustration", "slug": {"_type": "slug", "current": "frustration"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Notify", "slug": {"_type": "slug", "current": "notify"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "RVE", "slug": {"_type": "slug", "current": "rve"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bipolar Empire", "slug": {"_type": "slug", "current": "bipolar-empire"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gypsy Rebel Rabble", "slug": {"_type": "slug", "current": "gypsy-rebel-rabble"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Great Western Squares", "slug": {"_type": "slug", "current": "the-great-western-squares"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Oncology", "slug": {"_type": "slug", "current": "oncology"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": ":Panic :Over", "slug": {"_type": "slug", "current": "panic-over"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ceol", "slug": {"_type": "slug", "current": "ceol"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Lahawns", "slug": {"_type": "slug", "current": "the-lahawns"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sick Love", "slug": {"_type": "slug", "current": "sick-love"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Twisted Mass", "slug": {"_type": "slug", "current": "twisted-mass"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Aces Wild", "slug": {"_type": "slug", "current": "aces-wild"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shillelagh", "slug": {"_type": "slug", "current": "shillelagh"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Damp in the Attic", "slug": {"_type": "slug", "current": "damp-in-the-attic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Aftermath", "slug": {"_type": "slug", "current": "the-aftermath"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Brilliant Things", "slug": {"_type": "slug", "current": "the-brilliant-things"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Autumn Owls", "slug": {"_type": "slug", "current": "autumn-owls"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "B-Movie Lightning", "slug": {"_type": "slug", "current": "b-movie-lightning"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kaydee", "slug": {"_type": "slug", "current": "kaydee"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Second Moon of Winter", "slug": {"_type": "slug", "current": "second-moon-of-winter"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Primal Dawn", "slug": {"_type": "slug", "current": "primal-dawn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Wee Amigos", "slug": {"_type": "slug", "current": "the-wee-amigos"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sounds of System Breakdown", "slug": {"_type": "slug", "current": "sounds-of-system-breakdown"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Death the Leveller", "slug": {"_type": "slug", "current": "death-the-leveller"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Neosupervital", "slug": {"_type": "slug", "current": "neosupervital"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Unwanted", "slug": {"_type": "slug", "current": "the-unwanted"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sacrilegia", "slug": {"_type": "slug", "current": "sacrilegia"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Usher’s Island", "slug": {"_type": "slug", "current": "ushers-island"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lynnsey & Treasa", "slug": {"_type": "slug", "current": "lynnsey-treasa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Vyder", "slug": {"_type": "slug", "current": "vyder"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ten Past Seven", "slug": {"_type": "slug", "current": "ten-past-seven"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nero", "slug": {"_type": "slug", "current": "nero"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "mvestle", "slug": {"_type": "slug", "current": "mvestle"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Emerald Sabbath", "slug": {"_type": "slug", "current": "emerald-sabbath"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Galway Street Club", "slug": {"_type": "slug", "current": "galway-street-club"}, "city": "Galway", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Billow Wood", "slug": {"_type": "slug", "current": "billow-wood"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Dawn", "slug": {"_type": "slug", "current": "celtic-dawn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Spirit Level", "slug": {"_type": "slug", "current": "spirit-level"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moneypenny", "slug": {"_type": "slug", "current": "moneypenny"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Helicon", "slug": {"_type": "slug", "current": "helicon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Audible Joes", "slug": {"_type": "slug", "current": "audible-joes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Poke", "slug": {"_type": "slug", "current": "the-poke"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dead Label", "slug": {"_type": "slug", "current": "dead-label"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tread", "slug": {"_type": "slug", "current": "tread"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Schola Gregoriana Maynooth", "slug": {"_type": "slug", "current": "schola-gregoriana-maynooth"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tieranniesaur", "slug": {"_type": "slug", "current": "tieranniesaur"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bevel Jenny", "slug": {"_type": "slug", "current": "bevel-jenny"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Swing Cats", "slug": {"_type": "slug", "current": "the-swing-cats"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Swarbriggs", "slug": {"_type": "slug", "current": "the-swarbriggs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Siona", "slug": {"_type": "slug", "current": "siona"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Emily", "slug": {"_type": "slug", "current": "emily"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stigma", "slug": {"_type": "slug", "current": "stigma"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sixteen Layers", "slug": {"_type": "slug", "current": "sixteen-layers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "One Day International", "slug": {"_type": "slug", "current": "one-day-international"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Máirtín O’Connor Band", "slug": {"_type": "slug", "current": "mairtin-oconnor-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crumb", "slug": {"_type": "slug", "current": "crumb"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tuesday Blue", "slug": {"_type": "slug", "current": "tuesday-blue"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Atrix", "slug": {"_type": "slug", "current": "the-atrix"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "D.F.F.", "slug": {"_type": "slug", "current": "dff"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rob Corcoran & the Necessary Evils", "slug": {"_type": "slug", "current": "rob-corcoran-the-necessary-evils"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sweet Jane", "slug": {"_type": "slug", "current": "sweet-jane"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Buckaroos", "slug": {"_type": "slug", "current": "the-buckaroos"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Slung From a Tree", "slug": {"_type": "slug", "current": "slung-from-a-tree"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Island Eddy", "slug": {"_type": "slug", "current": "island-eddy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Abbeyfolk", "slug": {"_type": "slug", "current": "abbeyfolk"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "ChapelFlames", "slug": {"_type": "slug", "current": "chapelflames"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Muíntír Lewis", "slug": {"_type": "slug", "current": "muintir-lewis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fisherstreet", "slug": {"_type": "slug", "current": "fisherstreet"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Adam's Curse", "slug": {"_type": "slug", "current": "adams-curse"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Baile An Salsa", "slug": {"_type": "slug", "current": "baile-an-salsa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Grianán", "slug": {"_type": "slug", "current": "grianan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pale Blue Moon", "slug": {"_type": "slug", "current": "pale-blue-moon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Brian Roebuck & His Irish Boys", "slug": {"_type": "slug", "current": "brian-roebuck-his-irish-boys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Blue Aces", "slug": {"_type": "slug", "current": "the-blue-aces"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Minor Detail", "slug": {"_type": "slug", "current": "minor-detail"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Creatures", "slug": {"_type": "slug", "current": "the-creatures"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dirty Epics", "slug": {"_type": "slug", "current": "dirty-epics"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Bucks", "slug": {"_type": "slug", "current": "the-bucks"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Royal Showband Waterford", "slug": {"_type": "slug", "current": "the-royal-showband-waterford"}, "city": "Waterford", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Legion of Two", "slug": {"_type": "slug", "current": "legion-of-two"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sons Phonetic", "slug": {"_type": "slug", "current": "sons-phonetic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Poor Creature", "slug": {"_type": "slug", "current": "poor-creature"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Boneyard Dog", "slug": {"_type": "slug", "current": "boneyard-dog"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Genepool", "slug": {"_type": "slug", "current": "genepool"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "West Ocean String Quartet", "slug": {"_type": "slug", "current": "west-ocean-string-quartet"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Belinus", "slug": {"_type": "slug", "current": "belinus"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Thy Sinister Bloom", "slug": {"_type": "slug", "current": "thy-sinister-bloom"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jessie & Layla", "slug": {"_type": "slug", "current": "jessie-layla"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hooray for Humans", "slug": {"_type": "slug", "current": "hooray-for-humans"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Peggy's Leg", "slug": {"_type": "slug", "current": "peggys-leg"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ken & Eelco", "slug": {"_type": "slug", "current": "ken-eelco"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Percolator", "slug": {"_type": "slug", "current": "percolator"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hyperborea", "slug": {"_type": "slug", "current": "hyperborea"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Deluce's Patent", "slug": {"_type": "slug", "current": "deluces-patent"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Twin Headed Wolf", "slug": {"_type": "slug", "current": "twin-headed-wolf"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Molekh", "slug": {"_type": "slug", "current": "molekh"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Jollars", "slug": {"_type": "slug", "current": "the-jollars"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hybrasil", "slug": {"_type": "slug", "current": "hybrasil"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Shanks", "slug": {"_type": "slug", "current": "the-shanks"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Movement", "slug": {"_type": "slug", "current": "the-movement"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hallowed", "slug": {"_type": "slug", "current": "hallowed"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pocket Promise", "slug": {"_type": "slug", "current": "pocket-promise"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Distributor", "slug": {"_type": "slug", "current": "distributor"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Reemo", "slug": {"_type": "slug", "current": "reemo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sick Savannah", "slug": {"_type": "slug", "current": "sick-savannah"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Random Acts of Kindness", "slug": {"_type": "slug", "current": "random-acts-of-kindness"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Flaws", "slug": {"_type": "slug", "current": "the-flaws"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fontanas", "slug": {"_type": "slug", "current": "the-fontanas"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Calico", "slug": {"_type": "slug", "current": "calico"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Arcadeans", "slug": {"_type": "slug", "current": "the-arcadeans"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Shaker Hymn", "slug": {"_type": "slug", "current": "the-shaker-hymn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Subordinate", "slug": {"_type": "slug", "current": "subordinate"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Divisions Ruin", "slug": {"_type": "slug", "current": "divisions-ruin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Little Hours", "slug": {"_type": "slug", "current": "little-hours"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Eazy Tyger", "slug": {"_type": "slug", "current": "eazy-tyger"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "First Class & Coach", "slug": {"_type": "slug", "current": "first-class-coach"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Leo Drezden", "slug": {"_type": "slug", "current": "leo-drezden"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Marshals", "slug": {"_type": "slug", "current": "the-marshals"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Carnún Rising", "slug": {"_type": "slug", "current": "carnun-rising"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Some Images of Paradise", "slug": {"_type": "slug", "current": "some-images-of-paradise"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Noel Kelehan Quintet", "slug": {"_type": "slug", "current": "noel-kelehan-quintet"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fiddle Case", "slug": {"_type": "slug", "current": "the-fiddle-case"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Between the Lines", "slug": {"_type": "slug", "current": "between-the-lines"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "GROT", "slug": {"_type": "slug", "current": "grot"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mabus 666", "slug": {"_type": "slug", "current": "mabus-666"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Trip Hazard", "slug": {"_type": "slug", "current": "trip-hazard"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fifth Dominion", "slug": {"_type": "slug", "current": "fifth-dominion"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Raglan Trail", "slug": {"_type": "slug", "current": "raglan-trail"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Jades", "slug": {"_type": "slug", "current": "the-jades"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "God Alone.", "slug": {"_type": "slug", "current": "god-alone"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Spirit of Eden", "slug": {"_type": "slug", "current": "spirit-of-eden"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Galants", "slug": {"_type": "slug", "current": "galants"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "3 on the Bund", "slug": {"_type": "slug", "current": "band-3-on-the-bund"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Senzar", "slug": {"_type": "slug", "current": "senzar"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "SSMMÜTT", "slug": {"_type": "slug", "current": "ssmmutt"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bluescreen", "slug": {"_type": "slug", "current": "bluescreen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Sullivan Brothers", "slug": {"_type": "slug", "current": "the-sullivan-brothers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Worn Out", "slug": {"_type": "slug", "current": "worn-out"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Solkatt", "slug": {"_type": "slug", "current": "solkatt"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Miracle Bell", "slug": {"_type": "slug", "current": "miracle-bell"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bohemian Strings", "slug": {"_type": "slug", "current": "bohemian-strings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Luggage", "slug": {"_type": "slug", "current": "luggage"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Preachers Son", "slug": {"_type": "slug", "current": "preachers-son"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Acrid Nebula", "slug": {"_type": "slug", "current": "acrid-nebula"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Michael Buckley Trio", "slug": {"_type": "slug", "current": "michael-buckley-trio"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tradivarious", "slug": {"_type": "slug", "current": "tradivarious"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ships", "slug": {"_type": "slug", "current": "ships"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Peelers", "slug": {"_type": "slug", "current": "the-peelers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Animator", "slug": {"_type": "slug", "current": "animator"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Diabolicus", "slug": {"_type": "slug", "current": "diabolicus"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Silences", "slug": {"_type": "slug", "current": "silences"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Original Rudeboys", "slug": {"_type": "slug", "current": "the-original-rudeboys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Witchhammer", "slug": {"_type": "slug", "current": "witchhammer"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Neifenbach", "slug": {"_type": "slug", "current": "neifenbach"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "JobSeekers", "slug": {"_type": "slug", "current": "jobseekers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ensemble Nota Velata", "slug": {"_type": "slug", "current": "ensemble-nota-velata"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Iona Death Cult", "slug": {"_type": "slug", "current": "iona-death-cult"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Indigo", "slug": {"_type": "slug", "current": "indigo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hedfuzy", "slug": {"_type": "slug", "current": "hedfuzy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crowd Control", "slug": {"_type": "slug", "current": "crowd-control"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Forge Hounds", "slug": {"_type": "slug", "current": "forge-hounds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gummidge", "slug": {"_type": "slug", "current": "gummidge"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Resistors", "slug": {"_type": "slug", "current": "the-resistors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Scylla", "slug": {"_type": "slug", "current": "scylla"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tower of Babel", "slug": {"_type": "slug", "current": "tower-of-babel"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Palomino", "slug": {"_type": "slug", "current": "palomino"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mount Soma", "slug": {"_type": "slug", "current": "mount-soma"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Imperial Demonic", "slug": {"_type": "slug", "current": "imperial-demonic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shaskeen", "slug": {"_type": "slug", "current": "shaskeen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Onoff", "slug": {"_type": "slug", "current": "onoff"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shark Bait", "slug": {"_type": "slug", "current": "shark-bait"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Floors", "slug": {"_type": "slug", "current": "the-floors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Plague Pit", "slug": {"_type": "slug", "current": "plague-pit"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Joca", "slug": {"_type": "slug", "current": "joca"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Necrokinesis", "slug": {"_type": "slug", "current": "necrokinesis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sherman M4", "slug": {"_type": "slug", "current": "sherman-m4"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Embertides", "slug": {"_type": "slug", "current": "embertides"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "In Motion", "slug": {"_type": "slug", "current": "in-motion"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "5daysandcounting", "slug": {"_type": "slug", "current": "band-5daysandcounting"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pagan Reign", "slug": {"_type": "slug", "current": "pagan-reign"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Big Tom & The Mainliners", "slug": {"_type": "slug", "current": "big-tom-the-mainliners"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tooth", "slug": {"_type": "slug", "current": "tooth"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jailbirds", "slug": {"_type": "slug", "current": "jailbirds"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sestina Music", "slug": {"_type": "slug", "current": "sestina-music"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rites", "slug": {"_type": "slug", "current": "rites"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Boss Volenti", "slug": {"_type": "slug", "current": "boss-volenti"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Meltybrains?", "slug": {"_type": "slug", "current": "meltybrains"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moxie", "slug": {"_type": "slug", "current": "moxie"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ciorras", "slug": {"_type": "slug", "current": "ciorras"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Celtic Christmas Singers", "slug": {"_type": "slug", "current": "the-celtic-christmas-singers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Soronprfbs", "slug": {"_type": "slug", "current": "the-soronprfbs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Phisqa", "slug": {"_type": "slug", "current": "phisqa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nomatrix", "slug": {"_type": "slug", "current": "nomatrix"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shammen Delly", "slug": {"_type": "slug", "current": "shammen-delly"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Cadets with Eileen Reid", "slug": {"_type": "slug", "current": "the-cadets-with-eileen-reid"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Can‐Linn", "slug": {"_type": "slug", "current": "canlinn"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cvartetul Academica", "slug": {"_type": "slug", "current": "cvartetul-academica"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Apostate Viaticum", "slug": {"_type": "slug", "current": "apostate-viaticum"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Susie", "slug": {"_type": "slug", "current": "susie"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Meitheal", "slug": {"_type": "slug", "current": "meitheal"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Chirps", "slug": {"_type": "slug", "current": "chirps"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Erin Isle Singers", "slug": {"_type": "slug", "current": "erin-isle-singers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Troupe", "slug": {"_type": "slug", "current": "the-troupe"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Layzee Gold", "slug": {"_type": "slug", "current": "layzee-gold"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Whereabouts", "slug": {"_type": "slug", "current": "the-whereabouts"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lifts", "slug": {"_type": "slug", "current": "lifts"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Circa'21", "slug": {"_type": "slug", "current": "circa21"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skruff", "slug": {"_type": "slug", "current": "skruff"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Threat", "slug": {"_type": "slug", "current": "threat"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Mitcheners", "slug": {"_type": "slug", "current": "the-mitcheners"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wound Upon Wound", "slug": {"_type": "slug", "current": "wound-upon-wound"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Censura", "slug": {"_type": "slug", "current": "censura"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Foothill Roots", "slug": {"_type": "slug", "current": "foothill-roots"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Irish Rugby World Cup Squad", "slug": {"_type": "slug", "current": "irish-rugby-world-cup-squad"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Schroeder's Cat", "slug": {"_type": "slug", "current": "schroeders-cat"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Grief Eater", "slug": {"_type": "slug", "current": "grief-eater"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Babylamb", "slug": {"_type": "slug", "current": "babylamb"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Scuba Dice", "slug": {"_type": "slug", "current": "scuba-dice"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Well Hooray For Silence", "slug": {"_type": "slug", "current": "well-hooray-for-silence"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crying Loser", "slug": {"_type": "slug", "current": "crying-loser"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Interskalactic", "slug": {"_type": "slug", "current": "interskalactic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "PostLast", "slug": {"_type": "slug", "current": "postlast"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Vipers", "slug": {"_type": "slug", "current": "the-vipers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Drainland", "slug": {"_type": "slug", "current": "drainland"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sound Crowd", "slug": {"_type": "slug", "current": "sound-crowd"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hooligan", "slug": {"_type": "slug", "current": "hooligan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Harry & Alfie", "slug": {"_type": "slug", "current": "harry-alfie"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Windings", "slug": {"_type": "slug", "current": "windings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fuck You Written in Shit", "slug": {"_type": "slug", "current": "fuck-you-written-in-shit"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Memories", "slug": {"_type": "slug", "current": "the-memories"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mainline", "slug": {"_type": "slug", "current": "mainline"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cramp", "slug": {"_type": "slug", "current": "cramp"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cotton Mill Boys", "slug": {"_type": "slug", "current": "cotton-mill-boys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dreams", "slug": {"_type": "slug", "current": "dreams"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Vietnam", "slug": {"_type": "slug", "current": "vietnam"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Peer Pleasure", "slug": {"_type": "slug", "current": "peer-pleasure"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Le Boom", "slug": {"_type": "slug", "current": "le-boom"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "BARQ", "slug": {"_type": "slug", "current": "barq"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nemesis", "slug": {"_type": "slug", "current": "nemesis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stanley Super 800", "slug": {"_type": "slug", "current": "stanley-super-800"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crackers", "slug": {"_type": "slug", "current": "crackers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Basciville", "slug": {"_type": "slug", "current": "basciville"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Judas Diary", "slug": {"_type": "slug", "current": "judas-diary"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cacodemon", "slug": {"_type": "slug", "current": "cacodemon"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Veln", "slug": {"_type": "slug", "current": "veln"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Red Herrings", "slug": {"_type": "slug", "current": "the-red-herrings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bass Odyssey", "slug": {"_type": "slug", "current": "bass-odyssey"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Minus One", "slug": {"_type": "slug", "current": "minus-one"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fingal Trio", "slug": {"_type": "slug", "current": "the-fingal-trio"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mongolia", "slug": {"_type": "slug", "current": "mongolia"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Brendan Bowyer & The Royal Showband", "slug": {"_type": "slug", "current": "brendan-bowyer-the-royal-showband"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Haud Mundus", "slug": {"_type": "slug", "current": "haud-mundus"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Chocolate Love Factory", "slug": {"_type": "slug", "current": "chocolate-love-factory"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Indians", "slug": {"_type": "slug", "current": "the-indians"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "CLU", "slug": {"_type": "slug", "current": "clu"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Band66", "slug": {"_type": "slug", "current": "band66"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Slow Riot", "slug": {"_type": "slug", "current": "slow-riot"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Deep Set", "slug": {"_type": "slug", "current": "the-deep-set"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Duggie Briggs Band", "slug": {"_type": "slug", "current": "the-duggie-briggs-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Real McCoy", "slug": {"_type": "slug", "current": "the-real-mccoy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Stuart O'Connor Dance Troupe", "slug": {"_type": "slug", "current": "the-stuart-oconnor-dance-troupe"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sheeba", "slug": {"_type": "slug", "current": "sheeba"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Solstice Ensemble", "slug": {"_type": "slug", "current": "solstice-ensemble"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Miami Showband", "slug": {"_type": "slug", "current": "the-miami-showband"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Manhattan Syndrome", "slug": {"_type": "slug", "current": "the-manhattan-syndrome"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Printer Clips", "slug": {"_type": "slug", "current": "printer-clips"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Pacifics", "slug": {"_type": "slug", "current": "the-pacifics"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Alpheidae", "slug": {"_type": "slug", "current": "alpheidae"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Drying Weather", "slug": {"_type": "slug", "current": "drying-weather"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Evolutions End", "slug": {"_type": "slug", "current": "evolutions-end"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Terrordactyl", "slug": {"_type": "slug", "current": "terrordactyl"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Burning Realm", "slug": {"_type": "slug", "current": "burning-realm"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hasturian Vigil", "slug": {"_type": "slug", "current": "hasturian-vigil"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pompeii Wellness Concept", "slug": {"_type": "slug", "current": "pompeii-wellness-concept"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sonic Trip", "slug": {"_type": "slug", "current": "sonic-trip"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Biöcide", "slug": {"_type": "slug", "current": "biocide"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Disconnect 4", "slug": {"_type": "slug", "current": "disconnect-4"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "AJAK", "slug": {"_type": "slug", "current": "ajak"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shiver", "slug": {"_type": "slug", "current": "shiver"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Scary Éire", "slug": {"_type": "slug", "current": "scary-eire"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Naddred", "slug": {"_type": "slug", "current": "naddred"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Perdition", "slug": {"_type": "slug", "current": "perdition"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Redwoods", "slug": {"_type": "slug", "current": "redwoods"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Natural Wild", "slug": {"_type": "slug", "current": "natural-wild"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Effy", "slug": {"_type": "slug", "current": "effy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mob Fandango", "slug": {"_type": "slug", "current": "mob-fandango"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "BetaN12", "slug": {"_type": "slug", "current": "betan12"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mares of Diomedes", "slug": {"_type": "slug", "current": "mares-of-diomedes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Days of Night", "slug": {"_type": "slug", "current": "days-of-night"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Don't Fear the Natives", "slug": {"_type": "slug", "current": "dont-fear-the-natives"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Quiet Music Ensemble", "slug": {"_type": "slug", "current": "quiet-music-ensemble"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bunclody Céilí Band", "slug": {"_type": "slug", "current": "bunclody-ceili-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dalton Brothers", "slug": {"_type": "slug", "current": "the-dalton-brothers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cockney Goblins", "slug": {"_type": "slug", "current": "cockney-goblins"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Krawwl", "slug": {"_type": "slug", "current": "krawwl"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kabin Crew", "slug": {"_type": "slug", "current": "kabin-crew"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lisdoonvarna Crew", "slug": {"_type": "slug", "current": "lisdoonvarna-crew"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Luvin' Kind", "slug": {"_type": "slug", "current": "the-luvin-kind"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "De Novissimis", "slug": {"_type": "slug", "current": "de-novissimis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lord John White", "slug": {"_type": "slug", "current": "lord-john-white"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Irish Memory Orchestra String Quartet", "slug": {"_type": "slug", "current": "irish-memory-orchestra-string-quartet"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "N.O.A.H.", "slug": {"_type": "slug", "current": "noah"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Temple of Opposites", "slug": {"_type": "slug", "current": "temple-of-opposites"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sekondo", "slug": {"_type": "slug", "current": "sekondo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Forsaken", "slug": {"_type": "slug", "current": "the-forsaken"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Wheel", "slug": {"_type": "slug", "current": "wheel"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Karnayna", "slug": {"_type": "slug", "current": "karnayna"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "On Pain Of Death", "slug": {"_type": "slug", "current": "on-pain-of-death"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stanton’s Grave", "slug": {"_type": "slug", "current": "stantons-grave"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Black Oak", "slug": {"_type": "slug", "current": "black-oak"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Think", "slug": {"_type": "slug", "current": "think"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Deep Burial", "slug": {"_type": "slug", "current": "deep-burial"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Limerick Rovers", "slug": {"_type": "slug", "current": "the-limerick-rovers"}, "city": "Limerick", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Talulah Does The Hula", "slug": {"_type": "slug", "current": "talulah-does-the-hula"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Pulpit", "slug": {"_type": "slug", "current": "the-pulpit"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Íweriú", "slug": {"_type": "slug", "current": "iweriu"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "StewartdotDoogan", "slug": {"_type": "slug", "current": "stewartdotdoogan"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Lonely Stranded Band", "slug": {"_type": "slug", "current": "the-lonely-stranded-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Night Christ", "slug": {"_type": "slug", "current": "night-christ"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Savoys", "slug": {"_type": "slug", "current": "the-savoys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Those Handsome Devils", "slug": {"_type": "slug", "current": "those-handsome-devils"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Kingpins", "slug": {"_type": "slug", "current": "the-kingpins"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Concorde Contemporary Music Ensemble", "slug": {"_type": "slug", "current": "concorde-contemporary-music-ensemble"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Astralnaut", "slug": {"_type": "slug", "current": "astralnaut"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kiev Connolly and The Missing Passengers", "slug": {"_type": "slug", "current": "kiev-connolly-and-the-missing-passengers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "SESSION MOTTS", "slug": {"_type": "slug", "current": "session-motts"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Diving Bells", "slug": {"_type": "slug", "current": "diving-bells"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Famous Shamus", "slug": {"_type": "slug", "current": "famous-shamus"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "HomeTown", "slug": {"_type": "slug", "current": "hometown"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bombjack", "slug": {"_type": "slug", "current": "bombjack"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crossroads Ceile", "slug": {"_type": "slug", "current": "crossroads-ceile"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Punch Face Champions", "slug": {"_type": "slug", "current": "punch-face-champions"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Yonen", "slug": {"_type": "slug", "current": "yonen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "girlfriend.", "slug": {"_type": "slug", "current": "girlfriend"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Gawley Brothers", "slug": {"_type": "slug", "current": "the-gawley-brothers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "ELKIN", "slug": {"_type": "slug", "current": "elkin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Big Mistake", "slug": {"_type": "slug", "current": "the-big-mistake"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Annihilation Hammer", "slug": {"_type": "slug", "current": "annihilation-hammer"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "LTGTR", "slug": {"_type": "slug", "current": "ltgtr"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sir Marmalade", "slug": {"_type": "slug", "current": "sir-marmalade"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Phunk’Dup", "slug": {"_type": "slug", "current": "phunkdup"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Privacy Policy", "slug": {"_type": "slug", "current": "privacy-policy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skyhighatry", "slug": {"_type": "slug", "current": "skyhighatry"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Subrosa", "slug": {"_type": "slug", "current": "subrosa"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Frame of Mind", "slug": {"_type": "slug", "current": "frame-of-mind"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Swarbriggs plus Two", "slug": {"_type": "slug", "current": "the-swarbriggs-plus-two"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Maxi, Dick & Twink", "slug": {"_type": "slug", "current": "maxi-dick-twink"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Knifed", "slug": {"_type": "slug", "current": "knifed"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ajax Disco Spanner", "slug": {"_type": "slug", "current": "ajax-disco-spanner"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Berlin", "slug": {"_type": "slug", "current": "berlin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Echoplex", "slug": {"_type": "slug", "current": "echoplex"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Some Kind of Wonderful", "slug": {"_type": "slug", "current": "some-kind-of-wonderful"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Duggans", "slug": {"_type": "slug", "current": "the-duggans"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bog the Donkey", "slug": {"_type": "slug", "current": "bog-the-donkey"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "WE 4", "slug": {"_type": "slug", "current": "we-4"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moscow Metro", "slug": {"_type": "slug", "current": "moscow-metro"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bring Your Own Hammer", "slug": {"_type": "slug", "current": "bring-your-own-hammer"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Purple Haze", "slug": {"_type": "slug", "current": "purple-haze"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Pattersons", "slug": {"_type": "slug", "current": "the-pattersons"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Black Daisy", "slug": {"_type": "slug", "current": "black-daisy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Iorras Aithneach", "slug": {"_type": "slug", "current": "iorras-aithneach"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Bandits", "slug": {"_type": "slug", "current": "the-bandits"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Kingbees", "slug": {"_type": "slug", "current": "the-kingbees"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ape Rising", "slug": {"_type": "slug", "current": "ape-rising"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jump the Gun", "slug": {"_type": "slug", "current": "jump-the-gun"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Vulpynes", "slug": {"_type": "slug", "current": "vulpynes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jackbeast", "slug": {"_type": "slug", "current": "jackbeast"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Makings", "slug": {"_type": "slug", "current": "makings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Liffeysiders", "slug": {"_type": "slug", "current": "the-liffeysiders"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "MYTH", "slug": {"_type": "slug", "current": "myth"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sugar Shack", "slug": {"_type": "slug", "current": "sugar-shack"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Joe Maxi", "slug": {"_type": "slug", "current": "joe-maxi"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Sussed", "slug": {"_type": "slug", "current": "the-sussed"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Sacre Bleu", "slug": {"_type": "slug", "current": "sacre-bleu"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stonecarver", "slug": {"_type": "slug", "current": "stonecarver"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rory & The Island", "slug": {"_type": "slug", "current": "rory-the-island"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Elenay", "slug": {"_type": "slug", "current": "elenay"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Soul Survivors", "slug": {"_type": "slug", "current": "the-soul-survivors"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Blushing Boy", "slug": {"_type": "slug", "current": "blushing-boy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Time Machine", "slug": {"_type": "slug", "current": "time-machine"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Hope is Noise", "slug": {"_type": "slug", "current": "hope-is-noise"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Chessmen", "slug": {"_type": "slug", "current": "the-chessmen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Celtic Orbis", "slug": {"_type": "slug", "current": "celtic-orbis"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Los Langeros", "slug": {"_type": "slug", "current": "los-langeros"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Befangled Night Bird", "slug": {"_type": "slug", "current": "befangled-night-bird"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "[R]evolution Of A Sun", "slug": {"_type": "slug", "current": "revolution-of-a-sun"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Early Grave Band", "slug": {"_type": "slug", "current": "early-grave-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bloody Mutants", "slug": {"_type": "slug", "current": "bloody-mutants"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Three Pruned Men", "slug": {"_type": "slug", "current": "three-pruned-men"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Nerdlinger", "slug": {"_type": "slug", "current": "nerdlinger"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "AVH", "slug": {"_type": "slug", "current": "avh"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Square Meal", "slug": {"_type": "slug", "current": "square-meal"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Skintone", "slug": {"_type": "slug", "current": "skintone"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "House of Dolls", "slug": {"_type": "slug", "current": "house-of-dolls"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Star Department", "slug": {"_type": "slug", "current": "the-star-department"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Disconnected Bliss", "slug": {"_type": "slug", "current": "the-disconnected-bliss"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dublin Drag Orchestra", "slug": {"_type": "slug", "current": "the-dublin-drag-orchestra"}, "city": "Dublin", "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "21 Demands", "slug": {"_type": "slug", "current": "band-21-demands"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Taispí", "slug": {"_type": "slug", "current": "taispi"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Association of Irish Musical Societies", "slug": {"_type": "slug", "current": "the-association-of-irish-musical-societies"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ensemble Ériu", "slug": {"_type": "slug", "current": "ensemble-eriu"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Spilly Walker", "slug": {"_type": "slug", "current": "spilly-walker"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Butler Fox Jazz Band", "slug": {"_type": "slug", "current": "butler-fox-jazz-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Dirty Dozens", "slug": {"_type": "slug", "current": "the-dirty-dozens"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Mongrels", "slug": {"_type": "slug", "current": "the-mongrels"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Excuses", "slug": {"_type": "slug", "current": "excuses"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Daft Funk", "slug": {"_type": "slug", "current": "daft-funk"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "East Coast Angels", "slug": {"_type": "slug", "current": "east-coast-angels"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Symphonic", "slug": {"_type": "slug", "current": "symphonic"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Monsieur Pompier's Travelling Freakshow", "slug": {"_type": "slug", "current": "monsieur-pompiers-travelling-freakshow"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gavin Glass & The Holy Shakers", "slug": {"_type": "slug", "current": "gavin-glass-the-holy-shakers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Brando", "slug": {"_type": "slug", "current": "brando"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Exile in the Kingdom", "slug": {"_type": "slug", "current": "exile-in-the-kingdom"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Coolfin", "slug": {"_type": "slug", "current": "coolfin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Duskeys", "slug": {"_type": "slug", "current": "the-duskeys"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Luv Bug", "slug": {"_type": "slug", "current": "luv-bug"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Mary Custy Band", "slug": {"_type": "slug", "current": "the-mary-custy-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "XDreamists", "slug": {"_type": "slug", "current": "xdreamists"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Pincher Martin", "slug": {"_type": "slug", "current": "pincher-martin"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Barney", "slug": {"_type": "slug", "current": "barney"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Zebra", "slug": {"_type": "slug", "current": "zebra"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Mattie Fox & Misty", "slug": {"_type": "slug", "current": "mattie-fox-misty"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Owenmore Ceili Band", "slug": {"_type": "slug", "current": "owenmore-ceili-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Boxing Banjo", "slug": {"_type": "slug", "current": "boxing-banjo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fat Pablo", "slug": {"_type": "slug", "current": "fat-pablo"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Cabin Collective", "slug": {"_type": "slug", "current": "the-cabin-collective"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Conway Sisters", "slug": {"_type": "slug", "current": "the-conway-sisters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Violins Is Not The Answer", "slug": {"_type": "slug", "current": "violins-is-not-the-answer"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Pirates", "slug": {"_type": "slug", "current": "the-pirates"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Logikparty", "slug": {"_type": "slug", "current": "logikparty"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Jogging", "slug": {"_type": "slug", "current": "jogging"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Maladies", "slug": {"_type": "slug", "current": "the-maladies"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "EP", "slug": {"_type": "slug", "current": "ep"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Vinny Club", "slug": {"_type": "slug", "current": "the-vinny-club"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "GoodMornings", "slug": {"_type": "slug", "current": "goodmornings"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Ghost Estates", "slug": {"_type": "slug", "current": "ghost-estates"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Arse Biscuits", "slug": {"_type": "slug", "current": "arse-biscuits"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Liz Is Evil", "slug": {"_type": "slug", "current": "liz-is-evil"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Maud in Cahoots", "slug": {"_type": "slug", "current": "maud-in-cahoots"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Gardiners' Sligo Traditional Trio", "slug": {"_type": "slug", "current": "gardiners-sligo-traditional-trio"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Reel", "slug": {"_type": "slug", "current": "reel"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Barry's Electronic Workshop", "slug": {"_type": "slug", "current": "barrys-electronic-workshop"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Fifth Kind", "slug": {"_type": "slug", "current": "the-fifth-kind"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Awake Young Soldiers", "slug": {"_type": "slug", "current": "awake-young-soldiers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Jacobites", "slug": {"_type": "slug", "current": "the-jacobites"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Footappers", "slug": {"_type": "slug", "current": "the-footappers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Philosophers", "slug": {"_type": "slug", "current": "the-philosophers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Shit", "slug": {"_type": "slug", "current": "the-shit"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Stoker’s Lodge", "slug": {"_type": "slug", "current": "stokers-lodge"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cruise's Pub Set Dancers", "slug": {"_type": "slug", "current": "cruises-pub-set-dancers"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Evil Elviss", "slug": {"_type": "slug", "current": "evil-elviss"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Moutpiece", "slug": {"_type": "slug", "current": "moutpiece"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Shorty and the Fat Bastards", "slug": {"_type": "slug", "current": "shorty-and-the-fat-bastards"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Retarded Cop", "slug": {"_type": "slug", "current": "retarded-cop"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Safe", "slug": {"_type": "slug", "current": "safe"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Tyranny", "slug": {"_type": "slug", "current": "tyranny"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Leo Rowsome's Pipes Quartet", "slug": {"_type": "slug", "current": "leo-rowsomes-pipes-quartet"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Kinsfolk Folk Group", "slug": {"_type": "slug", "current": "kinsfolk-folk-group"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Pacific Showband", "slug": {"_type": "slug", "current": "the-pacific-showband"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Drifters Showband", "slug": {"_type": "slug", "current": "the-drifters-showband"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Rising Sons", "slug": {"_type": "slug", "current": "the-rising-sons"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Arrivals", "slug": {"_type": "slug", "current": "the-arrivals"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Sanctuary Ceili Band", "slug": {"_type": "slug", "current": "the-sanctuary-ceili-band"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Irish National Opera", "slug": {"_type": "slug", "current": "irish-national-opera"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cubs", "slug": {"_type": "slug", "current": "cubs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bardoí Music", "slug": {"_type": "slug", "current": "bardoi-music"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dirty Casuals", "slug": {"_type": "slug", "current": "dirty-casuals"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Red Sun Alert", "slug": {"_type": "slug", "current": "red-sun-alert"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Slackers' Symphony", "slug": {"_type": "slug", "current": "slackers-symphony"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Black Shuck", "slug": {"_type": "slug", "current": "black-shuck"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Dunkelfestung", "slug": {"_type": "slug", "current": "dunkelfestung"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "At It Again!", "slug": {"_type": "slug", "current": "at-it-again"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Carousels", "slug": {"_type": "slug", "current": "the-carousels"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Bumblebees", "slug": {"_type": "slug", "current": "bumblebees"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Fergia", "slug": {"_type": "slug", "current": "fergia"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Alfie Joe Dinneen", "slug": {"_type": "slug", "current": "alfie-joe-dinneen"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Lockdown Tapes", "slug": {"_type": "slug", "current": "lockdown-tapes"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Neighbours", "slug": {"_type": "slug", "current": "neighbours"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Crawford Piano Trio", "slug": {"_type": "slug", "current": "crawford-piano-trio"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Maheshvara", "slug": {"_type": "slug", "current": "maheshvara"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "DeCarteret", "slug": {"_type": "slug", "current": "decarteret"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Achill Sound", "slug": {"_type": "slug", "current": "the-achill-sound"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cooks But We're Chefs", "slug": {"_type": "slug", "current": "cooks-but-were-chefs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Repeater Ensemble", "slug": {"_type": "slug", "current": "repeater-ensemble"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Double F", "slug": {"_type": "slug", "current": "double-f"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Reign of Fire", "slug": {"_type": "slug", "current": "reign-of-fire"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Rattlin Bog Sisters", "slug": {"_type": "slug", "current": "rattlin-bog-sisters"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Cornerstone", "slug": {"_type": "slug", "current": "cornerstone"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "Plagued", "slug": {"_type": "slug", "current": "plagued"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Kabinboy", "slug": {"_type": "slug", "current": "the-kabinboy"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}
+{"_type": "band", "name": "The Mad Dogs", "slug": {"_type": "slug", "current": "the-mad-dogs"}, "country": "Ireland", "isActive": true, "genres": [], "verified": false, "featured": false}

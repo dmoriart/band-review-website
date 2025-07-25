@@ -275,8 +275,7 @@ def create_venue():
             venue_type=data.get('venue_type'),
             primary_genres=data.get('primary_genres', []),
             facilities=data.get('facilities', []),
-            description=data.get('description'),
-            claimed=True
+            description=data.get('description')
         )
         
         db.session.add(venue)
@@ -290,6 +289,71 @@ def create_venue():
     except Exception as e:
         db.session.rollback()
         return jsonify({'error': 'Failed to create venue', 'message': str(e)}), 500
+
+# Band Routes
+
+@app.route('/api/bands', methods=['GET'])
+def get_bands():
+    """Get all bands with optional filtering"""
+    try:
+        # Query parameters for filtering
+        city = request.args.get('city')
+        county = request.args.get('county')
+        genre = request.args.get('genre')
+        search = request.args.get('search')
+        page = request.args.get('page', 1, type=int)
+        per_page = min(request.args.get('per_page', 20, type=int), 100)
+        
+        # Build query joining with User table for search
+        query = Band.query.join(User)
+        
+        if city:
+            query = query.filter(Band.location.ilike(f'%{city}%'))
+        if county:
+            query = query.filter(Band.location.ilike(f'%{county}%'))
+        if genre:
+            query = query.filter(Band.genre.ilike(f'%{genre}%'))
+        if search:
+            query = query.filter(
+                (User.name.ilike(f'%{search}%')) |
+                (User.bio.ilike(f'%{search}%')) |
+                (Band.location.ilike(f'%{search}%'))
+            )
+        
+        # Execute query with pagination
+        bands = query.order_by(User.name.asc()).paginate(
+            page=page, per_page=per_page, error_out=False
+        )
+        
+        return jsonify({
+            'bands': [band.to_dict() for band in bands.items],
+            'total': bands.total,
+            'pages': bands.pages,
+            'current_page': page,
+            'per_page': per_page
+        })
+        
+    except Exception as e:
+        return jsonify({'error': 'Failed to fetch bands', 'message': str(e)}), 500
+
+@app.route('/api/bands/<band_id>', methods=['GET'])
+def get_band(band_id):
+    """Get specific band with reviews"""
+    try:
+        band = Band.query.get_or_404(band_id)
+        
+        # Get recent reviews by this band
+        reviews = Review.query.filter_by(band_id=band_id)\
+                             .order_by(Review.created_at.desc())\
+                             .limit(10).all()
+        
+        band_data = band.to_dict()
+        band_data['recent_reviews'] = [review.to_dict() for review in reviews]
+        
+        return jsonify(band_data)
+        
+    except Exception as e:
+        return jsonify({'error': 'Band not found', 'message': str(e)}), 404
 
 # Review Routes
 

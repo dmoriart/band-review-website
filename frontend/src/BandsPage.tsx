@@ -9,6 +9,7 @@ import FirebaseNetworkTest from './components/FirebaseNetworkTest';
 import DirectAPITest from './components/DirectAPITest';
 import { useAuth } from './AuthContext';
 import { bandUserService } from './services/bandUserService';
+import { IRISH_COUNTIES, getAllCityNames, getAllCountyNames, getMajorCitiesForDropdown } from './utils/irishLocations';
 
 // Define interfaces for band data
 interface SocialLinks {
@@ -90,15 +91,28 @@ const BandsPage: React.FC = () => {
   
   const { user } = useAuth();
 
-  // API base URL
-  const API_BASE_URL = 'https://band-review-website.onrender.com/api';
+  // API base URL - updated to use proper backend
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
   /**
-   * Fetch bands from the API
+   * Fetch bands from the API with location parameters
    */
   const fetchBands = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/bands?per_page=50`);
+      const params = new URLSearchParams();
+      params.append('per_page', '100');
+      
+      if (selectedLocation) {
+        params.append('city', selectedLocation);
+      }
+      if (selectedGenre) {
+        params.append('genre', selectedGenre);
+      }
+      if (searchQuery) {
+        params.append('search', searchQuery);
+      }
+
+      const response = await fetch(`${API_BASE_URL}/bands?${params.toString()}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -108,7 +122,7 @@ const BandsPage: React.FC = () => {
     } catch (err) {
       console.error('Error fetching bands:', err);
       setError('Failed to fetch bands');
-      // Mock data for development
+      // Keep existing mock data for development
       const mockBands: Band[] = [
         {
           id: '1',
@@ -218,10 +232,10 @@ const BandsPage: React.FC = () => {
       );
     }
 
-    // Filter by location
+    // Filter by location using enhanced matching
     if (selectedLocation) {
       filtered = filtered.filter(band => 
-        band.location.toLowerCase().includes(selectedLocation.toLowerCase())
+        matchesLocation(band.location, selectedLocation)
       );
     }
 
@@ -242,11 +256,41 @@ const BandsPage: React.FC = () => {
   };
 
   /**
-   * Get unique locations for filter dropdown
+   * Get unique locations for filter dropdown - combining cities and counties
    */
   const getUniqueLocations = () => {
-    const locations = bands.map(band => band.location);
-    return Array.from(new Set(locations)).sort();
+    // Get locations from bands data
+    const bandLocations = bands.map(band => band.location).filter(location => location);
+    
+    // Get standardized Irish cities and counties
+    const irishCities = getAllCityNames();
+    const irishCounties = getAllCountyNames();
+    
+    // Combine and deduplicate all locations
+    const combinedLocations = [...bandLocations, ...irishCities, ...irishCounties];
+    const uniqueLocations = Array.from(new Set(combinedLocations));
+    
+    return uniqueLocations.sort();
+  };
+
+  /**
+   * Enhanced Irish location filter - check for cities and counties
+   */
+  const matchesLocation = (bandLocation: string, filterLocation: string): boolean => {
+    if (!bandLocation || !filterLocation) return false;
+    
+    const band = bandLocation.toLowerCase();
+    const filter = filterLocation.toLowerCase();
+    
+    // Direct match
+    if (band.includes(filter)) return true;
+    
+    // Check if filter is a county and band location contains cities from that county
+    const citiesInCounty = getMajorCitiesForDropdown()
+      .filter(city => city.county.toLowerCase() === filter)
+      .map(city => city.value.toLowerCase());
+    
+    return citiesInCounty.some(city => band.includes(city));
   };
 
   /**
