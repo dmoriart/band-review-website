@@ -14,6 +14,7 @@ import FeatureIdeasPage from './components/FeatureIdeasPage';
 import BuyMeACoffeeCard from './components/BuyMeACoffeeCard';
 import { useBands, useVenues } from './hooks/useSanity';
 import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyNames } from './utils/irishLocations';
+import CommunityForum from './pages/CommunityForum';
 
 // Define interfaces for type safety
 interface TechSpecs {
@@ -91,7 +92,7 @@ function AppContent() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test' | 'forum'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -326,6 +327,12 @@ function AppContent() {
             onClick={() => setCurrentView('bands')}
           >
             Discover Bands
+          </button>
+          <button 
+            className="btn btn-secondary"
+            onClick={() => setCurrentView('forum')}
+          >
+            Community Forum
           </button>
           <button 
             className="btn btn-secondary"
@@ -1233,6 +1240,11 @@ function AppContent() {
     );
   }
 
+  // Render CommunityForum page when currentView is 'forum'
+  if (currentView === 'forum') {
+    return <CommunityForum />;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -1278,6 +1290,12 @@ function AppContent() {
               onClick={() => setCurrentView('features')}
             >
               💡 Features
+            </button>
+            <button 
+              className={`nav-link ${currentView === 'forum' ? 'active' : ''}`}
+              onClick={() => setCurrentView('forum')}
+            >
+              💬 Forum
             </button>
             <button 
               className="nav-link"
@@ -1407,6 +1425,17 @@ function AppContent() {
                 >
                   <span className="nav-icon">💡</span>
                   <span>Feature Ideas</span>
+                </button>
+                
+                <button 
+                  className={`mobile-nav-link ${currentView === 'forum' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('forum');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">💬</span>
+                  <span>Forum</span>
                 </button>
                 
                 <div className="mobile-nav-divider"></div>
