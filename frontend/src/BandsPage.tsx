@@ -74,7 +74,7 @@ const BandsPage: React.FC = () => {
   const [selectedBand, setSelectedBand] = useState<Band | null>(null);
   const [selectedSanityBand, setSelectedSanityBand] = useState<any>(null);
   const [currentView, setCurrentView] = useState<'list' | 'detail' | 'diagnostics'>('list');
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   
   // Search and filter state
@@ -89,9 +89,7 @@ const BandsPage: React.FC = () => {
   const [canEditBand, setCanEditBand] = useState<boolean>(false);
   const [isBandClaimed, setIsBandClaimed] = useState<boolean>(false);
   
-  const { user } = useAuth();
-
-  // API base URL - updated to use proper backend
+  const { user } = useAuth();  // API base URL - updated to use proper backend
   const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
   /**
@@ -256,41 +254,23 @@ const BandsPage: React.FC = () => {
   };
 
   /**
-   * Get unique locations for filter dropdown - combining cities and counties
+   * Get Irish locations for filter dropdown - using standardized list
    */
-  const getUniqueLocations = () => {
-    // Get locations from bands data
-    const bandLocations = bands.map(band => band.location).filter(location => location);
-    
-    // Get standardized Irish cities and counties
+  const getIrishLocations = () => {
+    // Combine major Irish cities and counties
     const irishCities = getAllCityNames();
     const irishCounties = getAllCountyNames();
     
-    // Combine and deduplicate all locations
-    const combinedLocations = [...bandLocations, ...irishCities, ...irishCounties];
-    const uniqueLocations = Array.from(new Set(combinedLocations));
+    // Create combined list with major cities first
+    const majorCities = ['Dublin', 'Cork', 'Belfast', 'Galway', 'Limerick', 'Waterford', 'Kilkenny', 'Sligo', 'Wexford', 'Tralee'];
+    const otherCities = irishCities.filter(city => !majorCities.includes(city));
     
-    return uniqueLocations.sort();
-  };
-
-  /**
-   * Enhanced Irish location filter - check for cities and counties
-   */
-  const matchesLocation = (bandLocation: string, filterLocation: string): boolean => {
-    if (!bandLocation || !filterLocation) return false;
-    
-    const band = bandLocation.toLowerCase();
-    const filter = filterLocation.toLowerCase();
-    
-    // Direct match
-    if (band.includes(filter)) return true;
-    
-    // Check if filter is a county and band location contains cities from that county
-    const citiesInCounty = getMajorCitiesForDropdown()
-      .filter(city => city.county.toLowerCase() === filter)
-      .map(city => city.value.toLowerCase());
-    
-    return citiesInCounty.some(city => band.includes(city));
+    return [
+      ...majorCities,
+      ...otherCities.sort(),
+      '---', // Separator
+      ...irishCounties.sort()
+    ];
   };
 
   /**
@@ -751,8 +731,12 @@ const BandsPage: React.FC = () => {
                 aria-label="Filter by location"
               >
                 <option value="">All Locations</option>
-                {getUniqueLocations().map(location => (
-                  <option key={location} value={location}>{location}</option>
+                {getIrishLocations().map(location => (
+                  location === '---' ? (
+                    <option key="separator" disabled>-- Counties --</option>
+                  ) : (
+                    <option key={location} value={location}>{location}</option>
+                  )
                 ))}
               </select>
 
@@ -768,7 +752,13 @@ const BandsPage: React.FC = () => {
           </div>
 
           {/* Sanity CMS Bands */}
-          <SanityBandsGrid onBandClick={handleSanityBandClick} />
+          <SanityBandsGrid 
+            searchQuery={searchQuery}
+            selectedGenre={selectedGenre}
+            selectedLocation={selectedLocation}
+            showVerifiedOnly={showVerifiedOnly}
+            onBandClick={handleSanityBandClick} 
+          />
 
           {/* Legacy band detail modal for old bands */}
           {renderBandDetail()}

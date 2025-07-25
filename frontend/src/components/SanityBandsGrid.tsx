@@ -71,7 +71,7 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
     // Search filter
     if (searchQuery && !band.name.toLowerCase().includes(searchQuery.toLowerCase()) && 
         !band.bio?.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !band.locationText?.toLowerCase().includes(searchQuery.toLowerCase())) {
+        !(band.city || band.locationText)?.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
     }
 
@@ -80,9 +80,12 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
       return false
     }
 
-    // Location filter
-    if (selectedLocation && band.locationText !== selectedLocation) {
-      return false
+    // Location filter - check both city and locationText fields
+    if (selectedLocation) {
+      const bandLocation = band.city || band.locationText;
+      if (!bandLocation || !bandLocation.toLowerCase().includes(selectedLocation.toLowerCase())) {
+        return false
+      }
     }
 
     // Verified filter
@@ -129,9 +132,9 @@ const SanityBandsGrid: React.FC<SanityBandsGridProps> = ({
             <div className="band-card-content">
               <h3>{band.name}</h3>
               
-              {band.locationText && (
+              {(band.city || band.locationText) && (
                 <div className="band-location">
-                  📍 {band.locationText}
+                  📍 {band.city || band.locationText}
                 </div>
               )}
               

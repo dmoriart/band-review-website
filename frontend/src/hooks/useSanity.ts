@@ -95,6 +95,9 @@ export function useBands() {
     slug,
     bio,
     "genres": genres[]->{ name, slug, color },
+    city,
+    county,
+    country,
     locationText,
     formedYear,
     profileImage,
@@ -109,6 +112,9 @@ export function useBands() {
     slug: { current: string }
     bio?: string
     genres?: Array<{ name: string; slug: { current: string }; color?: any }>
+    city?: string
+    county?: string
+    country?: string
     locationText?: string
     formedYear?: number
     profileImage?: any
