@@ -511,6 +511,11 @@ function AppContent() {
   const renderVenueDetail = () => {
     if (!selectedVenue) return <div>Venue not found</div>;
 
+    // Debug log the venue structure
+    console.log('🔍 Selected venue structure:', selectedVenue);
+    console.log('🔍 Venue address type:', typeof selectedVenue.address, selectedVenue.address);
+    console.log('🔍 Venue images type:', typeof selectedVenue.images, selectedVenue.images);
+
     return (
       <div className="venue-detail">
         <button 
@@ -530,9 +535,9 @@ function AppContent() {
           </div>
           
           <div className="venue-rating-large">
-            {renderStars(selectedVenue.average_rating)}
-            {selectedVenue.review_count > 0 && (
-              <span className="review-count">({selectedVenue.review_count} reviews)</span>
+            {renderStars(selectedVenue.average_rating || 0)}
+            {(selectedVenue.review_count || 0) > 0 && (
+              <span className="review-count">({selectedVenue.review_count || 0} reviews)</span>
             )}
           </div>
         </div>
@@ -665,7 +670,10 @@ function AppContent() {
                 <div className="photo-gallery">
                   {selectedVenue.images.map((image, index) => (
                     <div key={index} className="photo-item">
-                      <img src={image} alt={`${selectedVenue.name} - View ${index + 1}`} />
+                      <img 
+                        src={typeof image === 'string' ? image : ((image as any)?.url || (image as any)?.asset?.url || '')} 
+                        alt={`${selectedVenue.name} - View ${index + 1}`} 
+                      />
                     </div>
                   ))}
                 </div>
@@ -735,9 +743,9 @@ function AppContent() {
               <div className="info-section">
                 <h3>🏢 Facilities & Amenities</h3>
                 <div className="facilities-list">
-                  {selectedVenue.facilities.map(facility => (
-                    <span key={facility} className="facility-tag">
-                      {facility.replace('_', ' ')}
+                  {selectedVenue.facilities.map((facility, index) => (
+                    <span key={facility || index} className="facility-tag">
+                      {typeof facility === 'string' ? facility.replace('_', ' ') : (facility?.name || facility?.title || 'Unknown facility')}
                     </span>
                   ))}
                 </div>
@@ -748,7 +756,12 @@ function AppContent() {
             {selectedVenue.description && (
               <div className="info-section">
                 <h3>📝 About This Venue</h3>
-                <p className="venue-description-full">{selectedVenue.description}</p>
+                <p className="venue-description-full">
+                  {typeof selectedVenue.description === 'string' 
+                    ? selectedVenue.description 
+                    : (selectedVenue.description as any)?.text || (selectedVenue.description as any)?.content || 'No description available'
+                  }
+                </p>
               </div>
             )}
           </div>
