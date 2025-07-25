@@ -127,11 +127,20 @@ export function useVenues() {
     address,
     location,
     capacity,
-    type,
+    "venueType": type,
     profileImage,
+    "heroImage": profileImage,
+    "images": gallery[].asset->url,
     contactInfo,
+    "contact": contactInfo,
     verified,
-    featured
+    featured,
+    claimed,
+    "average_rating": 0,
+    "review_count": 0,
+    "tech_specs": techSpecs,
+    "primary_genres": genres,
+    facilities
   }`
   
   return useSanityData(query)
