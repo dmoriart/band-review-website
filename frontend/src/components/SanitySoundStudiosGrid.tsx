@@ -72,13 +72,18 @@ const SanitySoundStudiosGrid: React.FC<SanitySoundStudiosGridProps> = ({
     // Search filter
     if (searchQuery && !studio.name.toLowerCase().includes(searchQuery.toLowerCase()) && 
         !studio.description?.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !studio.address?.city?.toLowerCase().includes(searchQuery.toLowerCase())) {
+        !studio.address?.city?.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !studio.address?.county?.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
     }
 
-    // City filter
-    if (selectedCity && studio.address?.city !== selectedCity) {
-      return false
+    // Location filter (city or county)
+    if (selectedCity) {
+      const matchesCity = studio.address?.city === selectedCity;
+      const matchesCounty = studio.address?.county === selectedCity;
+      if (!matchesCity && !matchesCounty) {
+        return false;
+      }
     }
 
     // Genre filter
@@ -110,7 +115,7 @@ const SanitySoundStudiosGrid: React.FC<SanitySoundStudiosGridProps> = ({
         {filteredStudios.map((studio) => (
           <div 
             key={studio._id} 
-            className={`studio-card ${onStudioClick ? 'clickable' : ''}`}
+            className={`studio-card ${onStudioClick ? 'clickable' : ''} ${studio.featured ? 'featured' : ''} ${studio.verified ? 'verified' : ''}`}
             onClick={() => onStudioClick?.(studio)}
           >
             <div className="studio-card-image">

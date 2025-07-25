@@ -232,7 +232,7 @@ export function useUpcomingGigs() {
 
 // Sound Studios hooks
 export function useSoundStudios() {
-  const query = `*[_type == "soundStudio" && !(_id in path("drafts.**"))] | order(name asc) {
+  const query = `*[_type == "soundStudio" && !(_id in path("drafts.**"))] | order(featured desc, verified desc, name asc) {
     _id,
     name,
     slug,

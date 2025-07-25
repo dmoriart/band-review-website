@@ -1,0 +1,862 @@
+[
+  {
+    "name": "The Workman's Club",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Mary's Bar & Hardware",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Temple Bar Music Centre",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Project Arts Centre",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Twenty Two Night Club",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Opium Live",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Centre Point",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Flannery's Bar",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "O'Donoghues Bar",
+    "city": "Dublin",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "The Lower Deck Pub",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Music Caf\u00e9 Dublin",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Royal Irish Academy of Music",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "New Music Dublin",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "RDS Hall 3 (Serpentine Hall)",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Hartigans Pub",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The New Theatre",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Glass Mask Theatre",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Circle Club",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Theatre Forum Ireland",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Ambassador Theatre",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Murray's Sports Bar",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Secret Cellar Temple Bar",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Rua Red, South Dublin Arts Centre",
+    "city": "Dublin",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Cyprus Avenue",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Canty's Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Oliver Plunkett",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Winthrop Avenue",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Long Valley Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Rock Community Centre",
+    "city": "Cork",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Cork City Hall",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Le Cabaret, Cork",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "An Br\u00f3g Bar + Kitchen",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "El Fenix Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Raven Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Bru Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Mauretania Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Ritual - Holistic Venue",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Wavelength Rooftop Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Angels Cork t/a The Asylum Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Counihans Bar",
+    "city": "Cork",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Local Bar",
+    "city": "Cork",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Togher Community Centre(Ionad Pobail An Tochar)",
+    "city": "Cork",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Rathpeacon Community Centre",
+    "city": "Cork",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Grand Opera House",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Robinsons Bar",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Club Lux",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Ballyhackamore Club",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Cuffs Bar & Grill",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Morton Community Centre",
+    "city": "Belfast",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Dromore Community Centre",
+    "city": "Dromore BT25 1HL",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Electronic Centre Sound & Light",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Open Arts",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Ardoyne Community Centre",
+    "city": "Belfast",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Braniel Community Centre",
+    "city": "Belfast",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Pavilion One Bar",
+    "city": "Belfast",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Zeppo Arts & Belfast Music",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Belfast Voice & Dance Academy",
+    "city": "Belfast",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "M.Fitzgerald's Bar",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Maree Community Centre",
+    "city": "Galway",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "The Mick Lally Theatre",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Kinvara Community Centre",
+    "city": "Galway",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Eglinton Snooker Hall",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Mary Mullens Bar",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Blake's Bar",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Greens Bar",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Freeney's Bar",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Bailey Allen Hall",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "An Taibhdhearc - National Irish Language Theatre",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Druid Theatre Company",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Black11 Escape Rooms \u2013 Immersive Theatre \u2022 Galway",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Galway International Arts Festival",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Westside Community Centre",
+    "city": "Galway",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Killannin Community Centre",
+    "city": "Galway",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Galway Arts Centre",
+    "city": "Galway",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Locke Bar",
+    "city": "Limerick",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Kasbah Social Club",
+    "city": "Limerick",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Level Up Arcade Bar",
+    "city": "Limerick",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Fedamore Community Center",
+    "city": "Limerick",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Market Bar",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Dr. Mary Strangman Large Room \u2022 City Hall",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Geoff's Cafe Bar",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Thomas Maher Bar",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "HEERY'S Bar & Restaurant",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Bridge Bar",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Waterford Academy of Music and Arts",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "WCQ Place - Community and Cultural Hub",
+    "city": "Waterford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Tynan's Bridge House Bar",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Dylan Whisky Bar",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Syd Harkin's Pub",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Watergate Theatre",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Paris Texas Bar and Restaurant",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Rafter's Gastro Pub & Accommodation",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Bridie's Bar & General Store",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Marble City Music Festival",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Langton's Bar and Restaurant",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Pat Carroll's Bar & Beer Garden | OFF license",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Egan's Bar & Accommodation",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "O'Donnell's Bar",
+    "city": "Kilkenny",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Louie's Caf\u00e9 & Wine Bar",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Barnstorm Theatre Company Ltd",
+    "city": "Kilkenny",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Crown Bar Wexford",
+    "city": "Wexford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "T Morris Bar Wexford",
+    "city": "Wexford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Barntown Community Centre",
+    "city": "Wexford",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Ready Steady Play & Music Wexford",
+    "city": "Wexford",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "The Wexford Club (Whites of Wexford)",
+    "city": "Wexford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Kitty\u2019s Bar",
+    "city": "Wexford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "St. Joseph\u2019s Community Centre",
+    "city": "Wexford",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Wexford Festival Opera",
+    "city": "Wexford",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Venue Bar and Restaurant",
+    "city": "Sligo",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "McLynn's Bar",
+    "city": "Sligo",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "The Snug Bar",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Jenny's Bar",
+    "city": "Sligo",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Toffs Niteclub",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "O'Neill's Bar",
+    "city": "Sligo",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Osta Cafe and Wine Bar",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Earley's Bar",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "TJ Kennedys Public House",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Moran's Bar Ballintogher",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Blue Raincoat Theatre Company",
+    "city": "Sligo",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Cairde Sligo Arts Festival",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Cocktail Club",
+    "city": "Sligo",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Lisdoo Bar & Restaurant",
+    "city": "Newry",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Kilkerley Community Centre",
+    "city": "Co. Louth",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "The Bartender",
+    "city": "Dundalk",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Kennedy's Bar",
+    "city": "Dundalk",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "McGeough's Bar & Restaurant",
+    "city": "Dundalk",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Northend Bar",
+    "city": "Dundalk",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Donnellys Bar & Restaurant",
+    "city": "Dundalk",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Social Bar and Restaurant",
+    "city": "Drogheda",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Droichead Arts Centre Stockwell Street",
+    "city": "Drogheda",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Little Duke Theatre",
+    "city": "Drogheda",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "The TLT Academy of Music",
+    "city": "Drogheda",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Betty's Bar",
+    "city": "Tralee",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Linnane's Bar",
+    "city": "Tralee",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "O\u2019Carroll\u2019s Bridge Lane - Bar",
+    "city": "Tralee",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Eamons Bar",
+    "city": "Co. Kerry",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Rahoonane Community Centre",
+    "city": "Tralee",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Gertie Brownes Bar & Bistro",
+    "city": "Athlone",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Planet Entertainment Centre Athlone",
+    "city": "Athlone",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "St Kierans Community Centre",
+    "city": "Athlone",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Seery's Bar Athlone",
+    "city": "Athlone",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Walsh's Bar & Grocery",
+    "city": "Athlone",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Athlone Little Theatre",
+    "city": "Athlone",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Venue 4 Athlone - Multipurpose Venue Space. Rent hourly or daily.",
+    "city": "Athlone",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Peig's | Bars in Portlaoise",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Dunamaise Arts Centre",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Square Bar",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Ryans Bar",
+    "city": "Portlaoise",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Bergin's Bar",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Vibe bar Portlaoise",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Grellan Delaney's Late Night Venue Portlaoise",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "The Vault Nightclub",
+    "city": "Portlaoise",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Clarke's Bar",
+    "city": "Mullingar",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Wallace's Bar",
+    "city": "Mullingar",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Cosgroves Sports Bar",
+    "city": "Mullingar",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Mullingar Regional Cultural Centre (Comhaltas)",
+    "city": "Mullingar",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Tully's Bar Carlow",
+    "city": "Carlow",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Corcoran's Bar",
+    "city": "Carlow",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Brooks Cafe Bar",
+    "city": "Carlow",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Killeshin Community Center",
+    "city": "Co. Laois",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "New Oak Community Centre",
+    "city": "Carlow",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Ciaran's Bar",
+    "city": "Ennis",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Cruises Bar & Restaurant",
+    "city": "Ennis",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Moroney's Bar",
+    "city": "Ennis",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Town Hall Bistro",
+    "city": "Ennis",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Abbey Bar and Restaurant",
+    "city": "Ennis",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Tom Steele's Bar",
+    "city": "Ennis",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Kate O\u2019Reillys Pub",
+    "city": "Co. Clare",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Mary Custy Music School",
+    "city": "Ennis",
+    "reason": "same location coordinates"
+  },
+  {
+    "name": "Planet Entertainment Centre Ennis",
+    "city": "Ennis",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "Ennis Community Centre",
+    "city": "Ennis",
+    "reason": "similar name to existing venue"
+  },
+  {
+    "name": "P Clarke's Bar",
+    "city": "Navan",
+    "reason": "similar name to existing venue"
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "_type": "soundStudio",
+    "name": "Windmill Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "windmill-lane-studios"
+    },
+    "description": "Legendary Dublin recording studio where U2, Lady Gaga, and many others recorded",
+    "address": {
+      "street": "20 Windmill Lane",
+      "city": "Dublin",
+      "county": "Dublin",
+      "country": "Ireland"
+    },
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3498,
+      "lng": -6.2603
+    },
+    "contact": {
+      "phone": "+353 1 671 3444",
+      "email": "info@windmilllane.com",
+      "website": "https://windmilllanerecording.com/",
+      "facebook": "https://facebook.com/windmilllanestudios"
+    },
+    "profileImageUrl": "https://lh3.googleusercontent.com/places/...",
+    "amenities": [
+      "ssl_console",
+      "pro_tools",
+      "neumann_microphones",
+      "vintage_neve",
+      "grand_piano",
+      "live_room",
+      "vocal_booth"
+    ],
+    "pricing": {
+      "hourlyRate": 150,
+      "currency": "EUR"
+    },
+    "genresSupported": [
+      "rock",
+      "pop",
+      "alternative",
+      "indie"
+    ],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": true,
+    "claimed": false
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Temple Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "temple-lane-studios"
+    },
+    "description": "Professional recording studio in Dublin's Temple Bar",
+    "address": {
+      "street": "Curved Street",
+      "city": "Dublin",
+      "county": "Dublin",
+      "country": "Ireland"
+    },
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3456,
+      "lng": -6.2672
+    },
+    "contact": {
+      "phone": "+353 1 670 9202",
+      "email": "info@templelane.com",
+      "website": "https://templelane.com/"
+    },
+    "amenities": [
+      "api_console",
+      "pro_tools",
+      "logic_pro",
+      "vintage_microphones"
+    ],
+    "pricing": {
+      "hourlyRate": 80,
+      "currency": "EUR"
+    },
+    "genresSupported": [
+      "rock",
+      "indie",
+      "folk"
+    ],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Grouse Lodge Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "grouse-lodge-studios"
+    },
+    "description": "Residential recording studio in the Irish countryside",
+    "address": {
+      "street": "Moate",
+      "city": "Westmeath",
+      "county": "Westmeath",
+      "country": "Ireland"
+    },
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3956,
+      "lng": -7.9219
+    },
+    "contact": {
+      "phone": "+353 90 648 1875",
+      "email": "info@grouselodge.com",
+      "website": "https://grouselodge.com/"
+    },
+    "amenities": [
+      "ssl_console",
+      "vintage_equipment",
+      "grand_piano",
+      "residential_accommodation",
+      "24_hour_access"
+    ],
+    "pricing": {
+      "fullDayRate": 1200,
+      "currency": "EUR"
+    },
+    "genresSupported": [
+      "rock",
+      "pop",
+      "alternative",
+      "electronic",
+      "classical"
+    ],
+    "bandFriendly": true,
+    "studioType": "residential",
+    "features": [
+      "residential_accommodation",
+      "vintage_equipment",
+      "mixing_mastering",
+      "music_production"
+    ],
+    "capacity": 20,
+    "verified": false,
+    "featured": true,
+    "claimed": false
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Sun Studios Dublin",
+    "slug": {
+      "_type": "slug",
+      "current": "sun-studios-dublin"
+    },
+    "description": "Multi-room recording facility in Dublin",
+    "address": {
+      "street": "19-21 Harcourt Street",
+      "city": "Dublin",
+      "county": "Dublin",
+      "country": "Ireland"
+    },
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3384,
+      "lng": -6.2612
+    },
+    "contact": {
+      "phone": "+353 1 478 7555",
+      "email": "info@sunstudios.ie",
+      "website": "https://sunstudios.ie/"
+    },
+    "amenities": [
+      "pro_tools",
+      "logic_pro",
+      "cubase",
+      "multiple_rooms",
+      "mixing_suite"
+    ],
+    "pricing": {
+      "hourlyRate": 60,
+      "currency": "EUR"
+    },
+    "genresSupported": [
+      "rock",
+      "pop",
+      "hip_hop",
+      "electronic"
+    ],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Sonic Studios Cork",
+    "slug": {
+      "_type": "slug",
+      "current": "sonic-studios-cork"
+    },
+    "description": "Cork's premier recording facility",
+    "address": {
+      "street": "Oliver Plunkett Street",
+      "city": "Cork",
+      "county": "Cork",
+      "country": "Ireland"
+    },
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8985,
+      "lng": -8.4756
+    },
+    "contact": {
+      "website": "https://sonicstudios.ie/"
+    },
+    "amenities": [
+      "pro_tools",
+      "vintage_microphones",
+      "live_room",
+      "control_room"
+    ],
+    "pricing": {
+      "hourlyRate": 70,
+      "currency": "EUR"
+    },
+    "genresSupported": [
+      "rock",
+      "folk",
+      "traditional",
+      "indie"
+    ],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  }
+]

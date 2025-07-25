@@ -1,0 +1,1367 @@
+[
+  {
+    "_id": "studio-windmill-lane-recording-studios",
+    "_type": "soundStudio",
+    "name": "Windmill Lane Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "windmill-lane-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-paradise-studio",
+    "_type": "soundStudio",
+    "name": "Paradise Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "paradise-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-camden-recording-studios",
+    "_type": "soundStudio",
+    "name": "Camden Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "camden-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-jungle-beam-studio",
+    "_type": "soundStudio",
+    "name": "Jungle Beam Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "jungle-beam-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-yellow-door-music-studios",
+    "_type": "soundStudio",
+    "name": "Yellow Door Music Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "yellow-door-music-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-darklands-audio-recording-studio",
+    "_type": "soundStudio",
+    "name": "Darklands Audio Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "darklands-audio-recording-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-hellfire-studio",
+    "_type": "soundStudio",
+    "name": "Hellfire Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "hellfire-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ap-studios",
+    "_type": "soundStudio",
+    "name": "AP Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ap-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-troubadour-rehearsal-studios",
+    "_type": "soundStudio",
+    "name": "Troubadour Rehearsal Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "troubadour-rehearsal-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-pirate-rehearsal-recording-studios",
+    "_type": "soundStudio",
+    "name": "PIRATE- Rehearsal & Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "pirate-rehearsal-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-bunker-studio-dublin",
+    "_type": "soundStudio",
+    "name": "The Bunker Studio, Dublin",
+    "slug": {
+      "_type": "slug",
+      "current": "the-bunker-studio-dublin"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-avenue-road-studios",
+    "_type": "soundStudio",
+    "name": "Avenue Road Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "avenue-road-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-dublin-studio-hub-online-in-studio-production",
+    "_type": "soundStudio",
+    "name": "Dublin Studio Hub - Online - In Studio Production",
+    "slug": {
+      "_type": "slug",
+      "current": "dublin-studio-hub-online-in-studio-production"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-avondale-studios-limited",
+    "_type": "soundStudio",
+    "name": "Avondale Studios Limited",
+    "slug": {
+      "_type": "slug",
+      "current": "avondale-studios-limited"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-podcast-studios",
+    "_type": "soundStudio",
+    "name": "The Podcast Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "the-podcast-studios"
+    },
+    "description": "Recording studio in Ennis",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-beacon-studios",
+    "_type": "soundStudio",
+    "name": "Beacon Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "beacon-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-camelot-studios",
+    "_type": "soundStudio",
+    "name": "Camelot Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "camelot-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ravensdale-lane-studios",
+    "_type": "soundStudio",
+    "name": "Ravensdale Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ravensdale-lane-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-noiseminer-voice-over-recording-studios",
+    "_type": "soundStudio",
+    "name": "NoiseMiner Voice Over Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "noiseminer-voice-over-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-displace-studios",
+    "_type": "soundStudio",
+    "name": "Displace Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "displace-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-soundcaster-studios",
+    "_type": "soundStudio",
+    "name": "Soundcaster Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "soundcaster-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-m5-sound-studio",
+    "_type": "soundStudio",
+    "name": "M5 Sound Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "m5-sound-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ve-studio",
+    "_type": "soundStudio",
+    "name": "VE Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "ve-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-french-quarter-studios",
+    "_type": "soundStudio",
+    "name": "French Quarter Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "french-quarter-studios"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-cork-podcast-studio",
+    "_type": "soundStudio",
+    "name": "Cork Podcast Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "cork-podcast-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-take-nine-studio",
+    "_type": "soundStudio",
+    "name": "Take Nine Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "take-nine-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-claycastle-recording-studio",
+    "_type": "soundStudio",
+    "name": "Claycastle Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "claycastle-recording-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-blackwater-studios",
+    "_type": "soundStudio",
+    "name": "Blackwater Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "blackwater-studios"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-rebel-recordings",
+    "_type": "soundStudio",
+    "name": "Rebel Recordings",
+    "slug": {
+      "_type": "slug",
+      "current": "rebel-recordings"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-cork-rehearsal-studios",
+    "_type": "soundStudio",
+    "name": "Cork Rehearsal Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "cork-rehearsal-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-kitten-lane-recording-studio",
+    "_type": "soundStudio",
+    "name": "Kitten Lane Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "kitten-lane-recording-studio"
+    },
+    "description": "Recording studio in Corcaigh",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-redcliff-recording-studios",
+    "_type": "soundStudio",
+    "name": "Redcliff Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "redcliff-recording-studios"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-bubble-room-rehearsal-studio",
+    "_type": "soundStudio",
+    "name": "Bubble Room Rehearsal Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "bubble-room-rehearsal-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ivy-hill-studios",
+    "_type": "soundStudio",
+    "name": "Ivy Hill Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ivy-hill-studios"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-maple-rooms-studio",
+    "_type": "soundStudio",
+    "name": "The Maple Rooms Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-maple-rooms-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-kabin-studio",
+    "_type": "soundStudio",
+    "name": "The Kabin Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-kabin-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-red-sock-productions",
+    "_type": "soundStudio",
+    "name": "Red Sock Productions",
+    "slug": {
+      "_type": "slug",
+      "current": "red-sock-productions"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-soundsound",
+    "_type": "soundStudio",
+    "name": "SoundSound",
+    "slug": {
+      "_type": "slug",
+      "current": "soundsound"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-bmg-sound-dj-entertainment",
+    "_type": "soundStudio",
+    "name": "BMG Sound | DJ & Entertainment",
+    "slug": {
+      "_type": "slug",
+      "current": "bmg-sound-dj-entertainment"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ocean-studios-ireland",
+    "_type": "soundStudio",
+    "name": "Ocean studios Ireland",
+    "slug": {
+      "_type": "slug",
+      "current": "ocean-studios-ireland"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-old-road-studio",
+    "_type": "soundStudio",
+    "name": "Old Road Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "old-road-studio"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-music-zone",
+    "_type": "soundStudio",
+    "name": "Music Zone",
+    "slug": {
+      "_type": "slug",
+      "current": "music-zone"
+    },
+    "description": "Recording studio in Cork",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-start-together-recording-studio",
+    "_type": "soundStudio",
+    "name": "Start Together Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "start-together-recording-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-redbox-recording-studios",
+    "_type": "soundStudio",
+    "name": "Redbox Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "redbox-recording-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-amps-recording-studio",
+    "_type": "soundStudio",
+    "name": "AMPS Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "amps-recording-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-attic-studios-belfast",
+    "_type": "soundStudio",
+    "name": "Attic Studios Belfast",
+    "slug": {
+      "_type": "slug",
+      "current": "attic-studios-belfast"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-strandtown-studios",
+    "_type": "soundStudio",
+    "name": "Strandtown Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "strandtown-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-half-bap-recording-studios",
+    "_type": "soundStudio",
+    "name": "Half Bap Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "half-bap-recording-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-earthmusic-recording-rehearsal",
+    "_type": "soundStudio",
+    "name": "EARTHMUSIC RECORDING & REHEARSAL",
+    "slug": {
+      "_type": "slug",
+      "current": "earthmusic-recording-rehearsal"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-black-studios",
+    "_type": "soundStudio",
+    "name": "Black Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "black-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-tribal-king-recording-studio",
+    "_type": "soundStudio",
+    "name": "Tribal King Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "tribal-king-recording-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-sound-house-ni-ltd",
+    "_type": "soundStudio",
+    "name": "The Sound House NI Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "the-sound-house-ni-ltd"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-jsr-audio",
+    "_type": "soundStudio",
+    "name": "JSR Audio",
+    "slug": {
+      "_type": "slug",
+      "current": "jsr-audio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-belfast-dj-studio",
+    "_type": "soundStudio",
+    "name": "Belfast DJ Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "belfast-dj-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-traxx-studios-belfast",
+    "_type": "soundStudio",
+    "name": "Traxx Studios Belfast",
+    "slug": {
+      "_type": "slug",
+      "current": "traxx-studios-belfast"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-stoney-road-studios",
+    "_type": "soundStudio",
+    "name": "Stoney Road Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "stoney-road-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-einstein-studios",
+    "_type": "soundStudio",
+    "name": "Einstein Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "einstein-studios"
+    },
+    "description": "Recording studio in Antrim BT41 4QA",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-shed-studio",
+    "_type": "soundStudio",
+    "name": "The Shed Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-shed-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-birchwoods-recording-studio-ltd",
+    "_type": "soundStudio",
+    "name": "Birchwoods Recording Studio Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "birchwoods-recording-studio-ltd"
+    },
+    "description": "Recording studio in Londonderry BT47 3WH",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-st-mastering",
+    "_type": "soundStudio",
+    "name": "ST Mastering",
+    "slug": {
+      "_type": "slug",
+      "current": "st-mastering"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-clc-studios",
+    "_type": "soundStudio",
+    "name": "CLC Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "clc-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-the-spinners-mill-podcast-studio",
+    "_type": "soundStudio",
+    "name": "The Spinners Mill Podcast Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-spinners-mill-podcast-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-studio-1620-audio",
+    "_type": "soundStudio",
+    "name": "1620 Audio",
+    "slug": {
+      "_type": "slug",
+      "current": "studio-1620-audio"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-baird-sound-systems",
+    "_type": "soundStudio",
+    "name": "Baird Sound Systems",
+    "slug": {
+      "_type": "slug",
+      "current": "baird-sound-systems"
+    },
+    "description": "Recording studio in Belfast",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-galway-rehearsal-studios",
+    "_type": "soundStudio",
+    "name": "Galway Rehearsal Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "galway-rehearsal-studios"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-croghery-studios",
+    "_type": "soundStudio",
+    "name": "Croghery Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "croghery-studios"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-sun-street-recording-studio",
+    "_type": "soundStudio",
+    "name": "Sun Street Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "sun-street-recording-studio"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-paddy-jordan-recording",
+    "_type": "soundStudio",
+    "name": "Paddy Jordan Recording",
+    "slug": {
+      "_type": "slug",
+      "current": "paddy-jordan-recording"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-greenfields-studios",
+    "_type": "soundStudio",
+    "name": "Greenfields Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "greenfields-studios"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-gk-media-studios",
+    "_type": "soundStudio",
+    "name": "GK Media Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "gk-media-studios"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-soundtrack-podcast",
+    "_type": "soundStudio",
+    "name": "Soundtrack & Podcast",
+    "slug": {
+      "_type": "slug",
+      "current": "soundtrack-podcast"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-dave-skelton-recording",
+    "_type": "soundStudio",
+    "name": "Dave Skelton Recording",
+    "slug": {
+      "_type": "slug",
+      "current": "dave-skelton-recording"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-hape-sound-recording-studio",
+    "_type": "soundStudio",
+    "name": "Hapé Sound Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "hape-sound-recording-studio"
+    },
+    "description": "Recording studio in Galway",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-dry-lane-studios",
+    "_type": "soundStudio",
+    "name": "Dry Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "dry-lane-studios"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-music-hub-studios-learning-hub-limerick",
+    "_type": "soundStudio",
+    "name": "Music Hub Studios, Learning Hub Limerick",
+    "slug": {
+      "_type": "slug",
+      "current": "music-hub-studios-learning-hub-limerick"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-studio-68",
+    "_type": "soundStudio",
+    "name": "Studio 68",
+    "slug": {
+      "_type": "slug",
+      "current": "studio-68"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-wanderland-recording-studios",
+    "_type": "soundStudio",
+    "name": "Wanderland Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "wanderland-recording-studios"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-stormwave-audio",
+    "_type": "soundStudio",
+    "name": "Stormwave Audio",
+    "slug": {
+      "_type": "slug",
+      "current": "stormwave-audio"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-savins-music-centre",
+    "_type": "soundStudio",
+    "name": "Savins Music Centre",
+    "slug": {
+      "_type": "slug",
+      "current": "savins-music-centre"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-murt-whelan-sound-ltd",
+    "_type": "soundStudio",
+    "name": "Murt Whelan Sound Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "murt-whelan-sound-ltd"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-steamboat-music-records-comics",
+    "_type": "soundStudio",
+    "name": "Steamboat Music, Records & Comics",
+    "slug": {
+      "_type": "slug",
+      "current": "steamboat-music-records-comics"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-future-sound-vision",
+    "_type": "soundStudio",
+    "name": "Future Sound & Vision",
+    "slug": {
+      "_type": "slug",
+      "current": "future-sound-vision"
+    },
+    "description": "Recording studio in Limerick",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ruby-studios",
+    "_type": "soundStudio",
+    "name": "Ruby Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ruby-studios"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-heresricky-production-studio",
+    "_type": "soundStudio",
+    "name": "HeresRicky Production Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "heresricky-production-studio"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-waterford-centre-of-music",
+    "_type": "soundStudio",
+    "name": "Waterford Centre of Music",
+    "slug": {
+      "_type": "slug",
+      "current": "waterford-centre-of-music"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-john-palmer-music-centre",
+    "_type": "soundStudio",
+    "name": "John Palmer Music Centre",
+    "slug": {
+      "_type": "slug",
+      "current": "john-palmer-music-centre"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-music-generation-waterford",
+    "_type": "soundStudio",
+    "name": "Music Generation Waterford",
+    "slug": {
+      "_type": "slug",
+      "current": "music-generation-waterford"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-waterford-academy-of-music-and-arts",
+    "_type": "soundStudio",
+    "name": "Waterford Academy of Music and Arts",
+    "slug": {
+      "_type": "slug",
+      "current": "waterford-academy-of-music-and-arts"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-ready-steady-play-and-music-waterford",
+    "_type": "soundStudio",
+    "name": "Ready Steady Play and Music Waterford",
+    "slug": {
+      "_type": "slug",
+      "current": "ready-steady-play-and-music-waterford"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-analog-studios",
+    "_type": "soundStudio",
+    "name": "Analog Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "analog-studios"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  },
+  {
+    "_id": "studio-frontline-audio-visual-ltd",
+    "_type": "soundStudio",
+    "name": "Frontline Audio Visual Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "frontline-audio-visual-ltd"
+    },
+    "description": "Recording studio in Waterford",
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false
+  }
+]

@@ -1,0 +1,3232 @@
+[
+  {
+    "_type": "soundStudio",
+    "name": "Windmill Lane Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "windmill-lane-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "20 Ringsend Rd",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 668 5567",
+      "email": null,
+      "website": "http://www.windmilllanerecording.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3420557,
+      "lng": -6.234676599999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Paradise Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "paradise-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Unit B2",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "089 219 7671",
+      "email": null,
+      "website": "https://www.paradisestudio.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3589885,
+      "lng": -6.255515600000001
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Camden Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "camden-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "67 Pleasants Pl",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "085 221 0529",
+      "email": null,
+      "website": "http://www.camdenrecordingstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3348129,
+      "lng": -6.2661323
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Jungle Beam Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "jungle-beam-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Unit 13a",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 175 6053",
+      "email": null,
+      "website": "http://www.junglebeamstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3151445,
+      "lng": -6.333783299999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Yellow Door Music Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "yellow-door-music-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Unit 4",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "https://yellowdoormusicstudios.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3543902,
+      "lng": -6.2401389
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Darklands Audio Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "darklands-audio-recording-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "The Chocolate Factory",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 555 2015",
+      "email": null,
+      "website": "http://www.darklandsaudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3514029,
+      "lng": -6.2675565
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Temple Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "temple-lane-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Curved St",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 670 9030",
+      "email": null,
+      "website": "http://www.templelanestudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3449713,
+      "lng": -6.264735
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Hellfire Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "hellfire-studio"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Killakee Rd",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 908 1604",
+      "email": null,
+      "website": "http://hellfire-studio.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2629819,
+      "lng": -6.313758399999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "AP Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ap-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "2 Kellystown Rd",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 443 3903",
+      "email": null,
+      "website": "http://www.apstudios.net/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2594687,
+      "lng": -6.2589296
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Troubadour Rehearsal Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "troubadour-rehearsal-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Charthouse Business Centre",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 872 1899",
+      "email": null,
+      "website": "http://www.troubadour.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3666901,
+      "lng": -6.246227900000001
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "PIRATE- Rehearsal & Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "pirate-rehearsal-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "11",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "1800 851 882",
+      "email": null,
+      "website": "https://pirate.com/en/locations/dublin/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb_listing",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3727984,
+      "lng": -6.2956614
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Bunker Studio, Dublin",
+    "slug": {
+      "_type": "slug",
+      "current": "the-bunker-studio-dublin"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "19 Talbot St",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "https://www.thebunker.ie/home",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.35077990000001,
+      "lng": -6.254769
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Avenue Road Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "avenue-road-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "30 Avenue Rd",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "083 013 4594",
+      "email": null,
+      "website": "http://www.avenueroadstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3306443,
+      "lng": -6.270741999999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Dublin Studio Hub - Online - In Studio Production",
+    "slug": {
+      "_type": "slug",
+      "current": "dublin-studio-hub-online-in-studio-production"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "30-34 Westmoreland St",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 336 1008",
+      "email": null,
+      "website": "http://www.dublinstudiohub.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3460406,
+      "lng": -6.2588753
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Avondale Studios Limited",
+    "slug": {
+      "_type": "slug",
+      "current": "avondale-studios-limited"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "65 Baggot Street Lower",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 676 7410",
+      "email": null,
+      "website": "http://www.avondalestudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3350885,
+      "lng": -6.2460483
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Podcast Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "the-podcast-studios"
+    },
+    "description": "Recording studio in Ennis",
+    "address": {
+      "street": "14a Magennis Pl",
+      "city": "Ennis",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 516 8513",
+      "email": null,
+      "website": "https://thepodcaststudios.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.34437070000001,
+      "lng": -6.2484996
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Beacon Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "beacon-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "62 Baggot Street Lower",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(01) 676 2474",
+      "email": null,
+      "website": "http://www.beaconstudios.net/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3355312,
+      "lng": -6.246735699999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Camelot Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "camelot-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Tyrrelstown House",
+      "city": "Dublin",
+      "county": "Co. Dublin",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 220 6482",
+      "email": null,
+      "website": "http://www.camelotstudios.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.4169534,
+      "lng": -6.3951452
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Ravensdale Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ravensdale-lane-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Ravensdale Ln",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "083 130 9030",
+      "email": null,
+      "website": "http://www.ravensdalelanestudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.314984,
+      "lng": -6.3005274
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "NoiseMiner Voice Over Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "noiseminer-voice-over-recording-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Woodlawn Park Dr",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 600 7772",
+      "email": null,
+      "website": "https://www.noiseminer.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2803797,
+      "lng": -6.3343456
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Displace Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "displace-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "157 -159 Richmond Road",
+      "city": "Dublin",
+      "county": "Co. Dublin",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://www.displacestudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3662548,
+      "lng": -6.2463729
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Soundcaster Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "soundcaster-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Ring Terrace",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "083 179 4471",
+      "email": null,
+      "website": "https://www.soundcasterstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3361625,
+      "lng": -6.3269534
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "M5 Sound Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "m5-sound-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "2 Nicholas Well Lane",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "089 943 7579",
+      "email": null,
+      "website": "https://www.m5-studios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.90231559999999,
+      "lng": -8.4818365
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "VE Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "ve-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Unit 4",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(021) 439 9723",
+      "email": null,
+      "website": "http://vestudiocork.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.9228793,
+      "lng": -8.4851253
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "French Quarter Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "french-quarter-studios"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "93 S Mall",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 312 8457",
+      "email": null,
+      "website": "http://frenchquarterstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8977916,
+      "lng": -8.4675583
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Cork Podcast Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "cork-podcast-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "117 St Patrick's St",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(021) 229 1176",
+      "email": null,
+      "website": "http://corkpodcaststudio.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.89977769999999,
+      "lng": -8.4712069
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Take Nine Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "take-nine-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Unit 9",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 815 6221",
+      "email": null,
+      "website": "https://www.takeninestudio.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8716157,
+      "lng": -8.488801
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Claycastle Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "claycastle-recording-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Seafield Business Centre",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(024) 90885",
+      "email": null,
+      "website": "http://www.claycastlerecording.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.9413035,
+      "lng": -7.8594227
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Blackwater Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "blackwater-studios"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Glanworth",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 052 3180",
+      "email": null,
+      "website": "http://www.blackwaterstudios.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.183424,
+      "lng": -8.376897
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Rebel Recordings",
+    "slug": {
+      "_type": "slug",
+      "current": "rebel-recordings"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Business Centre",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 902 3261",
+      "email": null,
+      "website": "http://rebelrecordings.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.94135559999999,
+      "lng": -7.8594162
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Cork Rehearsal Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "cork-rehearsal-studios"
+    },
+    "description": "Recording studio in Dublin",
+    "address": {
+      "street": "Blackpool",
+      "city": "Dublin",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 292 1417",
+      "email": null,
+      "website": "http://www.corkrehearsalstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.9217214,
+      "lng": -8.4727876
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Kitten Lane Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "kitten-lane-recording-studio"
+    },
+    "description": "Recording studio in Corcaigh",
+    "address": {
+      "street": "2B",
+      "city": "Corcaigh",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8933687,
+      "lng": -8.4775776
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Redcliff Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "redcliff-recording-studios"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Glen Ave",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "085 860 0070",
+      "email": null,
+      "website": "https://www.facebook.com/Redcliffcork",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.9113151,
+      "lng": -8.4615584
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Bubble Room Rehearsal Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "bubble-room-rehearsal-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Unit 2D",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "085 874 9199",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8851547,
+      "lng": -8.4592981
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Ivy Hill Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ivy-hill-studios"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Lissaclarrig East",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "083 473 3820",
+      "email": null,
+      "website": "https://www.ivyhillstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.56948269999999,
+      "lng": -9.3727849
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Maple Rooms Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-maple-rooms-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Kilbeg",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.7638846,
+      "lng": -8.3216386
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Kabin Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-kabin-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Harbour View Rd",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://www.thekabin.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.9051161,
+      "lng": -8.5037783
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Red Sock Productions",
+    "slug": {
+      "_type": "slug",
+      "current": "red-sock-productions"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "120 Shamrock Dr",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(021) 487 2930",
+      "email": null,
+      "website": "http://www.redsockproductions.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8873727,
+      "lng": -8.5945278
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "SoundSound",
+    "slug": {
+      "_type": "slug",
+      "current": "soundsound"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Gracelands",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(021) 489 6250",
+      "email": null,
+      "website": "http://www.soundsound.ie/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=7434440281578376283",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.893292,
+      "lng": -8.3980835
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "BMG Sound | DJ & Entertainment",
+    "slug": {
+      "_type": "slug",
+      "current": "bmg-sound-dj-entertainment"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "O’Briens Storage",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(021) 237 7505",
+      "email": null,
+      "website": "https://bmgsound.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.87216309999999,
+      "lng": -8.5212146
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Ocean studios Ireland",
+    "slug": {
+      "_type": "slug",
+      "current": "ocean-studios-ireland"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Gortnakilly",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 288 5830",
+      "email": null,
+      "website": "https://www.oceanstudiosireland.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.6110165,
+      "lng": -9.694807899999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Old Road Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "old-road-studio"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Old Road Studio",
+      "city": "Cork",
+      "county": "Co. Cork",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 228 7066",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.2008741,
+      "lng": -9.1966225
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Music Zone",
+    "slug": {
+      "_type": "slug",
+      "current": "music-zone"
+    },
+    "description": "Recording studio in Cork",
+    "address": {
+      "street": "Unit 4",
+      "city": "Cork",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(021) 496 7119",
+      "email": null,
+      "website": "http://www.musiczone.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 51.8764038,
+      "lng": -8.4946174
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Start Together Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "start-together-recording-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "The Oh Yeah Music Centre",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://www.starttogetherstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.602102,
+      "lng": -5.926439999999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Redbox Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "redbox-recording-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "173 University St",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9031 4981",
+      "email": null,
+      "website": "http://www.redboxrecording.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5862403,
+      "lng": -5.9242016
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "AMPS Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "amps-recording-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "5-7 Conway St",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9023 6984",
+      "email": null,
+      "website": "http://www.ampsstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5994609,
+      "lng": -5.95076
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Attic Studios Belfast",
+    "slug": {
+      "_type": "slug",
+      "current": "attic-studios-belfast"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "Blackstaff Complex",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07788 116542",
+      "email": null,
+      "website": "https://atticstudiosbelfas.wixsite.com/atticstudios",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5981119,
+      "lng": -5.957281699999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Strandtown Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "strandtown-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "156 Holywood Rd",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://www.strandtownstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.6006503,
+      "lng": -5.879449
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Half Bap Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "half-bap-recording-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "8 Commercial Ct",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07719 324044",
+      "email": null,
+      "website": "http://www.halfbapstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.6016869,
+      "lng": -5.928181299999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "EARTHMUSIC RECORDING & REHEARSAL",
+    "slug": {
+      "_type": "slug",
+      "current": "earthmusic-recording-rehearsal"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "Unit 39",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9023 6451",
+      "email": null,
+      "website": "http://earthmusicni.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5935055,
+      "lng": -5.9451054
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Black Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "black-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "49 Old Mill Park",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07738 147616",
+      "email": null,
+      "website": "http://www.black-studios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.592338,
+      "lng": -5.780094
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Tribal King Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "tribal-king-recording-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "13 Heath Lodge Ave",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07584 292120",
+      "email": null,
+      "website": "http://www.tribalkingstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.6060836,
+      "lng": -5.9847132
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Sound House NI Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "the-sound-house-ni-ltd"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "429 Holywood Rd",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9076 9700",
+      "email": null,
+      "website": "http://www.thesoundhouseni.tv/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.6146661,
+      "lng": -5.8612836
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "JSR Audio",
+    "slug": {
+      "_type": "slug",
+      "current": "jsr-audio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "Blackstaff Mill",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://www.jsraudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.59804459999999,
+      "lng": -5.9571787
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Belfast DJ Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "belfast-dj-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "The Blackstaff Mill",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07500 867870",
+      "email": null,
+      "website": "https://belfastdjstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5976465,
+      "lng": -5.956990200000001
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Traxx Studios Belfast",
+    "slug": {
+      "_type": "slug",
+      "current": "traxx-studios-belfast"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "228A Kingsway",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5500987,
+      "lng": -6.006556799999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Stoney Road Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "stoney-road-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "40 Stoney Rd",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07711 721049",
+      "email": null,
+      "website": "http://stoneyroadstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5991079,
+      "lng": -5.816539499999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "GNA Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "gna-recording-studio"
+    },
+    "description": "Recording studio in Craigavon BT67 9GN",
+    "address": {
+      "street": "8 Solitude Demesne",
+      "city": "Craigavon BT67 9GN",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07783 853399",
+      "email": null,
+      "website": "http://www.gnarecordingstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.4682769,
+      "lng": -6.312837999999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Einstein Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "einstein-studios"
+    },
+    "description": "Recording studio in Antrim BT41 4QA",
+    "address": {
+      "street": "133 Abbeyview",
+      "city": "Antrim BT41 4QA",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9446 2701",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.7030113,
+      "lng": -6.187975799999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Shed Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-shed-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "B16",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9590 4890",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5972461,
+      "lng": -5.7816087
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Birchwoods Recording Studio Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "birchwoods-recording-studio-ltd"
+    },
+    "description": "Recording studio in Londonderry BT47 3WH",
+    "address": {
+      "street": "County",
+      "city": "Londonderry BT47 3WH",
+      "county": "County",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07871 830733",
+      "email": null,
+      "website": "https://www.facebook.com/people/Birchwoods-Recording-Studio-LTD/100063672216028/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.96215059999999,
+      "lng": -7.261639600000001
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "ST Mastering",
+    "slug": {
+      "_type": "slug",
+      "current": "st-mastering"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "10-20 Lombard St",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9581 2466",
+      "email": null,
+      "website": "http://stmastering.co.uk/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5999382,
+      "lng": -5.929312299999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "CLC Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "clc-studios"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "143 Northumberland St",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.6012606,
+      "lng": -5.948543799999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "The Spinners Mill Podcast Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "the-spinners-mill-podcast-studio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "Banana Block",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07856 988205",
+      "email": null,
+      "website": "https://thespinnersmill.co.uk/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5991435,
+      "lng": -5.8950076
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "1620 Audio",
+    "slug": {
+      "_type": "slug",
+      "current": "1620-audio"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "Olive Tree House",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "07412 220728",
+      "email": null,
+      "website": "https://www.1620audio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.5984604,
+      "lng": -5.9318309
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Baird Sound Systems",
+    "slug": {
+      "_type": "slug",
+      "current": "baird-sound-systems"
+    },
+    "description": "Recording studio in Belfast",
+    "address": {
+      "street": "208 York St",
+      "city": "Belfast",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "028 9035 1358",
+      "email": null,
+      "website": "http://www.bairdsoundsystems.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 54.611729,
+      "lng": -5.9235941
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Galway Rehearsal Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "galway-rehearsal-studios"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Ballybane Industrial Estate",
+      "city": "Galway",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://galwayrehearsalstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2939984,
+      "lng": -9.0137479
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Croghery Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "croghery-studios"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Bougival Cottage",
+      "city": "Galway",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 037 2363",
+      "email": null,
+      "website": "https://www.instagram.com/croghery_studios/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3012291,
+      "lng": -9.07458
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Sun Street Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "sun-street-recording-studio"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Sun St",
+      "city": "Galway",
+      "county": "Co. Galway",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 314 8219",
+      "email": null,
+      "website": "http://www.sunstreetrecordingstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.5180111,
+      "lng": -8.843392
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Paddy Jordan Recording",
+    "slug": {
+      "_type": "slug",
+      "current": "paddy-jordan-recording"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Ballylara",
+      "city": "Galway",
+      "county": "Co. Galway",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 233 6367",
+      "email": null,
+      "website": "http://www.paddyjordanrecording.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.14044999999999,
+      "lng": -8.80824
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Greenfields Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "greenfields-studios"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Ower",
+      "city": "Galway",
+      "county": "Co. Galway",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(093) 35440",
+      "email": null,
+      "website": "https://greenfieldsstudios.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.461379,
+      "lng": -9.164443
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "GK Media Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "gk-media-studios"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Innovation House",
+      "city": "Galway",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(091) 564 870",
+      "email": null,
+      "website": "https://www.gkmedia.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2902528,
+      "lng": -9.0110855
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Soundtrack & Podcast",
+    "slug": {
+      "_type": "slug",
+      "current": "soundtrack-podcast"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "31 Dominick St Lower",
+      "city": "Galway",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 215 6945",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2705048,
+      "lng": -9.057525199999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Black Gate Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "black-gate-studio"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Flood Street House",
+      "city": "Galway",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://studio.blackgate.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.2710332,
+      "lng": -9.0530473
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Dave Skelton Recording",
+    "slug": {
+      "_type": "slug",
+      "current": "dave-skelton-recording"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Killaclogher",
+      "city": "Galway",
+      "county": "Co. Galway",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://www.daveskeltonrecording.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.3973002,
+      "lng": -8.685609
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Hapé Sound Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "hapé-sound-recording-studio"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Kylebrack",
+      "city": "Galway",
+      "county": "Co. Galway",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "087 950 4730",
+      "email": null,
+      "website": "https://www.hapesound.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.198956,
+      "lng": -8.566115
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "DESQ Recording Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "desq-recording-studio"
+    },
+    "description": "Recording studio in Galway",
+    "address": {
+      "street": "Oliver Walsh Business Premises",
+      "city": "Galway",
+      "county": "Co. Galway",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "085 712 4042",
+      "email": null,
+      "website": "http://www.desqstudio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 53.21035939999999,
+      "lng": -8.8684881
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Dry Lane Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "dry-lane-studios"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "Unit 5 Mungret St",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 897 0675",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.6630792,
+      "lng": -8.621354799999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Music Hub Studios, Learning Hub Limerick",
+    "slug": {
+      "_type": "slug",
+      "current": "music-hub-studios-learning-hub-limerick"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "New Rd",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 778 8572",
+      "email": null,
+      "website": "http://www.musichubstudios.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.6753614,
+      "lng": -8.6356079
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Studio 68",
+    "slug": {
+      "_type": "slug",
+      "current": "studio-68"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "Daly's Ln",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://studio68.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.6595155,
+      "lng": -8.630107299999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Wanderland Recording Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "wanderland-recording-studios"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "Unit 3 Mungret St",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "https://www.wanderlandrecording.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.663674,
+      "lng": -8.621189
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Stormwave Audio",
+    "slug": {
+      "_type": "slug",
+      "current": "stormwave-audio"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "19 Hollymount",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://stormwave-audio.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.63209740000001,
+      "lng": -8.6662881
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Savins Music Centre",
+    "slug": {
+      "_type": "slug",
+      "current": "savins-music-centre"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "111 O'Connell St",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(061) 414 095",
+      "email": null,
+      "website": "http://www.savins.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.6623045,
+      "lng": -8.628549699999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Murt Whelan Sound Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "murt-whelan-sound-ltd"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "8b",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 854 1204",
+      "email": null,
+      "website": "http://www.mws.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.6484776,
+      "lng": -8.5909736
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Steamboat Music, Records & Comics",
+    "slug": {
+      "_type": "slug",
+      "current": "steamboat-music-records-comics"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "Riverpoint",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(061) 311 696",
+      "email": null,
+      "website": "http://www.steamboat.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.6613744,
+      "lng": -8.6325139
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Future Sound & Vision",
+    "slug": {
+      "_type": "slug",
+      "current": "future-sound-vision"
+    },
+    "description": "Recording studio in Limerick",
+    "address": {
+      "street": "Newtownmahon House",
+      "city": "Limerick",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(061) 207 955",
+      "email": null,
+      "website": "http://www.fsvltd.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.66078419999999,
+      "lng": -8.620203100000001
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Ruby Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "ruby-studios"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "17 Árd Na Greine",
+      "city": "Waterford",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 205 4637",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.2565441,
+      "lng": -7.1279746
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "HeresRicky Production Studio",
+    "slug": {
+      "_type": "slug",
+      "current": "heresricky-production-studio"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "New Court",
+      "city": "Waterford",
+      "county": "Co. Waterford",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "083 151 2788",
+      "email": null,
+      "website": "http://www.heresricky.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.2443225,
+      "lng": -7.188087799999999
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Waterford Centre of Music",
+    "slug": {
+      "_type": "slug",
+      "current": "waterford-centre-of-music"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "34",
+      "city": "Waterford",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(051) 376 789",
+      "email": null,
+      "website": "http://www.wcm.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.2567365,
+      "lng": -7.1293457
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "John Palmer Music Centre",
+    "slug": {
+      "_type": "slug",
+      "current": "john-palmer-music-centre"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "7 Great George's St",
+      "city": "Waterford",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(051) 879 333",
+      "email": null,
+      "website": "https://www.johnpalmermusic.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.26162189999999,
+      "lng": -7.1132271
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Music Generation Waterford",
+    "slug": {
+      "_type": "slug",
+      "current": "music-generation-waterford"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "Dungarvan",
+      "city": "Waterford",
+      "county": "Co. Waterford",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 067 9508",
+      "email": null,
+      "website": "https://m.facebook.com/musicgenerationwaterford",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.09039989999999,
+      "lng": -7.623666500000001
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Waterford Academy of Music and Arts",
+    "slug": {
+      "_type": "slug",
+      "current": "waterford-academy-of-music-and-arts"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "Ballygunnertemple",
+      "city": "Waterford",
+      "county": "Co. Waterford",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": null,
+      "email": null,
+      "website": "http://waterfordacademy.ie/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.2330383,
+      "lng": -7.0458677
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Ready Steady Play and Music Waterford",
+    "slug": {
+      "_type": "slug",
+      "current": "ready-steady-play-and-music-waterford"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "Bohemian's F.C.",
+      "city": "Waterford",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "086 086 6248",
+      "email": null,
+      "website": "https://www.ready2play.ie/waterford-city-classes",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.25280559999999,
+      "lng": -7.1107112
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Analog Studios",
+    "slug": {
+      "_type": "slug",
+      "current": "analog-studios"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "Arundel Square",
+      "city": "Waterford",
+      "county": null,
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "085 114 2773",
+      "email": null,
+      "website": null,
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.26030910000001,
+      "lng": -7.1111017
+    }
+  },
+  {
+    "_type": "soundStudio",
+    "name": "Frontline Audio Visual Ltd",
+    "slug": {
+      "_type": "slug",
+      "current": "frontline-audio-visual-ltd"
+    },
+    "description": "Recording studio in Waterford",
+    "address": {
+      "street": "No 83",
+      "city": "Waterford",
+      "county": "Co. Waterford",
+      "country": "Ireland"
+    },
+    "contact": {
+      "phone": "(051) 879 934",
+      "email": null,
+      "website": "http://frontlineaudiovisual.com/",
+      "facebook": null,
+      "instagram": null
+    },
+    "amenities": [],
+    "genresSupported": [],
+    "bandFriendly": true,
+    "studioType": "professional",
+    "verified": false,
+    "featured": false,
+    "claimed": false,
+    "location": {
+      "_type": "geopoint",
+      "lat": 52.2486821,
+      "lng": -7.163370999999999
+    }
+  }
+]

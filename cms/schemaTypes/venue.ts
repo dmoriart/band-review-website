@@ -73,8 +73,59 @@ export default defineType({
       type: 'object',
       fields: [
         {name: 'street', type: 'string', title: 'Street Address'},
-        {name: 'city', type: 'string', title: 'City'},
-        {name: 'county', type: 'string', title: 'County'},
+        {
+          name: 'city', 
+          type: 'string', 
+          title: 'City/Town',
+          description: 'Major city or town (e.g., Dublin, Cork, Belfast, Galway)'
+        },
+        {
+          name: 'county', 
+          type: 'string', 
+          title: 'County',
+          description: 'Irish county (all 32 counties supported)',
+          options: {
+            list: [
+              // Republic of Ireland - Leinster
+              {title: 'Dublin', value: 'Dublin'},
+              {title: 'Wicklow', value: 'Wicklow'},
+              {title: 'Wexford', value: 'Wexford'},
+              {title: 'Carlow', value: 'Carlow'},
+              {title: 'Kildare', value: 'Kildare'},
+              {title: 'Meath', value: 'Meath'},
+              {title: 'Louth', value: 'Louth'},
+              {title: 'Longford', value: 'Longford'},
+              {title: 'Westmeath', value: 'Westmeath'},
+              {title: 'Offaly', value: 'Offaly'},
+              {title: 'Laois', value: 'Laois'},
+              {title: 'Kilkenny', value: 'Kilkenny'},
+              // Republic of Ireland - Munster
+              {title: 'Cork', value: 'Cork'},
+              {title: 'Kerry', value: 'Kerry'},
+              {title: 'Limerick', value: 'Limerick'},
+              {title: 'Tipperary', value: 'Tipperary'},
+              {title: 'Waterford', value: 'Waterford'},
+              {title: 'Clare', value: 'Clare'},
+              // Republic of Ireland - Connacht
+              {title: 'Galway', value: 'Galway'},
+              {title: 'Mayo', value: 'Mayo'},
+              {title: 'Roscommon', value: 'Roscommon'},
+              {title: 'Sligo', value: 'Sligo'},
+              {title: 'Leitrim', value: 'Leitrim'},
+              // Republic of Ireland - Ulster (3 counties)
+              {title: 'Donegal', value: 'Donegal'},
+              {title: 'Cavan', value: 'Cavan'},
+              {title: 'Monaghan', value: 'Monaghan'},
+              // Northern Ireland - Ulster (6 counties)
+              {title: 'Antrim', value: 'Antrim'},
+              {title: 'Armagh', value: 'Armagh'},
+              {title: 'Down', value: 'Down'},
+              {title: 'Fermanagh', value: 'Fermanagh'},
+              {title: 'Londonderry', value: 'Londonderry'},
+              {title: 'Tyrone', value: 'Tyrone'},
+            ]
+          }
+        },
         {name: 'eircode', type: 'string', title: 'Eircode'},
         {name: 'country', type: 'string', title: 'Country', initialValue: 'Ireland'}
       ]

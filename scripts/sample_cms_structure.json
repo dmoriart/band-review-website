@@ -1,0 +1,157 @@
+{
+  "sampleStudioData": [
+    {
+      "_type": "soundStudio",
+      "name": "Windmill Lane Studios",
+      "slug": {
+        "_type": "slug",
+        "current": "windmill-lane-studios"
+      },
+      "description": "Legendary Dublin recording studio where U2, Lady Gaga, and many others recorded",
+      "address": {
+        "street": "20 Windmill Lane",
+        "city": "Dublin",
+        "county": "Dublin",
+        "country": "Ireland"
+      },
+      "location": {
+        "_type": "geopoint",
+        "lat": 53.3498,
+        "lng": -6.2603
+      },
+      "contact": {
+        "phone": "+353 1 671 3444",
+        "email": "info@windmilllane.com",
+        "website": "https://windmilllanerecording.com/",
+        "facebook": "https://facebook.com/windmilllanestudios",
+        "instagram": "https://instagram.com/windmilllanestudios"
+      },
+      "profileImageUrl": "https://maps.googleapis.com/maps/api/place/photo?photoreference=...",
+      "amenities": [
+        "ssl_console",
+        "pro_tools",
+        "neumann_microphones",
+        "vintage_neve",
+        "grand_piano",
+        "live_room",
+        "vocal_booth",
+        "mastering_suite"
+      ],
+      "pricing": {
+        "hourlyRate": 150,
+        "halfDayRate": 800,
+        "fullDayRate": 1400,
+        "currency": "EUR",
+        "engineerIncluded": true
+      },
+      "genresSupported": [
+        "rock",
+        "pop",
+        "alternative",
+        "indie",
+        "electronic",
+        "jazz"
+      ],
+      "bandFriendly": true,
+      "studioType": "professional",
+      "features": [
+        "residential_accommodation",
+        "vintage_equipment",
+        "mixing_mastering",
+        "music_production",
+        "24_hour_access"
+      ],
+      "capacity": 15,
+      "verified": false,
+      "featured": true,
+      "claimed": false,
+      "openingHours": {
+        "monday": "09:00-22:00",
+        "tuesday": "09:00-22:00",
+        "wednesday": "09:00-22:00",
+        "thursday": "09:00-22:00",
+        "friday": "09:00-22:00",
+        "saturday": "10:00-20:00",
+        "sunday": "12:00-18:00"
+      }
+    },
+    {
+      "_type": "soundStudio",
+      "name": "Temple Lane Studios",
+      "slug": {
+        "_type": "slug",
+        "current": "temple-lane-studios"
+      },
+      "description": "Professional recording studio in Dublin's Temple Bar area",
+      "address": {
+        "street": "Curved Street",
+        "city": "Dublin",
+        "county": "Dublin",
+        "country": "Ireland"
+      },
+      "location": {
+        "_type": "geopoint",
+        "lat": 53.3456,
+        "lng": -6.2672
+      },
+      "contact": {
+        "phone": "+353 1 670 9202",
+        "email": "info@templelane.com",
+        "website": "https://templelane.com/"
+      },
+      "amenities": [
+        "api_console",
+        "pro_tools",
+        "logic_pro",
+        "vintage_microphones",
+        "monitoring_speakers",
+        "control_room"
+      ],
+      "pricing": {
+        "hourlyRate": 80,
+        "halfDayRate": 400,
+        "fullDayRate": 700,
+        "currency": "EUR"
+      },
+      "genresSupported": [
+        "rock",
+        "indie",
+        "folk",
+        "electronic"
+      ],
+      "bandFriendly": true,
+      "studioType": "professional",
+      "verified": false,
+      "featured": false,
+      "claimed": false
+    }
+  ],
+  "dataStructureNotes": {
+    "description": "JSON structure for Irish Music Studios CMS import",
+    "fields": {
+      "_type": "Always 'soundStudio' for Sanity CMS",
+      "name": "Studio name as it appears publicly",
+      "slug": "URL-friendly identifier",
+      "description": "Brief description of the studio",
+      "address": "Full address broken into components",
+      "location": "GPS coordinates for maps",
+      "contact": "All contact methods including social media",
+      "profileImageUrl": "Primary studio image from Google Places",
+      "amenities": "Equipment and facilities available",
+      "pricing": "Rate structure in EUR",
+      "genresSupported": "Music genres the studio specializes in",
+      "bandFriendly": "Whether studio welcomes band bookings",
+      "studioType": "professional, home, rehearsal, etc.",
+      "features": "Special features and services",
+      "capacity": "Maximum number of people",
+      "verified": "Whether studio details are verified",
+      "featured": "Whether to feature prominently",
+      "claimed": "Whether studio owner has claimed listing"
+    },
+    "sources": [
+      "Google Maps Places API",
+      "Studio websites (scraped ethically)",
+      "Manual research and verification"
+    ]
+  }
+}

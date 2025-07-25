@@ -17,6 +17,10 @@ const structure = (S: any) =>
         .icon(() => '🏛️')
         .child(S.documentTypeList('venue').title('Venues')),
       S.listItem()
+        .title('Sound Studios')
+        .icon(() => '🎚️')
+        .child(S.documentTypeList('soundStudio').title('Sound Studios')),
+      S.listItem()
         .title('Reviews')
         .icon(() => '⭐')
         .child(S.documentTypeList('review').title('Reviews')),

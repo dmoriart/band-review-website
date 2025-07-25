@@ -123,6 +123,29 @@
   transform: translateY(-4px);
 }
 
+/* Featured Studio Cards - Enhanced Styling */
+.studio-card.featured {
+  border: 2px solid #ffc107;
+  background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.2);
+  position: relative;
+}
+
+.studio-card.featured:hover {
+  box-shadow: 0 12px 35px rgba(255, 193, 7, 0.3);
+  transform: translateY(-3px);
+}
+
+.studio-card.featured.clickable:hover {
+  box-shadow: 0 16px 40px rgba(255, 193, 7, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Verified Studio Cards - Subtle Enhancement */
+.studio-card.verified {
+  border-left: 4px solid #28a745;
+}
+
 /* Studio Card Image */
 .studio-card-image {
   position: relative;
@@ -178,8 +201,13 @@
 
 .featured-badge {
   left: 0.75rem;
-  background: #ffc107;
+  background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
   color: #000;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+  border: 1px solid #ffb300;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .band-friendly-badge {

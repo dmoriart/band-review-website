@@ -71,13 +71,18 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
     // Search filter
     if (searchQuery && !venue.name.toLowerCase().includes(searchQuery.toLowerCase()) && 
         !venue.description?.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !venue.address?.city?.toLowerCase().includes(searchQuery.toLowerCase())) {
+        !venue.address?.city?.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !venue.address?.county?.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
     }
 
-    // City filter
-    if (selectedCity && venue.address?.city !== selectedCity) {
-      return false
+    // Location filter (city or county)
+    if (selectedCity) {
+      const matchesCity = venue.address?.city === selectedCity;
+      const matchesCounty = venue.address?.county === selectedCity;
+      if (!matchesCity && !matchesCounty) {
+        return false;
+      }
     }
 
     // Capacity filter

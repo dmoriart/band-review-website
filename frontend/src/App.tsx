@@ -11,6 +11,7 @@ import ApiTestComponent from './components/ApiTestComponent';
 import CookieNotice from './components/CookieNotice';
 import FeatureIdeasPage from './components/FeatureIdeasPage';
 import { useBands, useVenues } from './hooks/useSanity';
+import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyNames } from './utils/irishLocations';
 
 // Define interfaces for type safety
 interface TechSpecs {
@@ -235,11 +236,31 @@ function AppContent() {
   }
 
   /**
-   * Get unique cities for filter dropdown
+   * Get unique cities for filter dropdown from actual data
    */
   const getUniqueCities = () => {
-    const cities = venues.map(venue => venue.city);
+    // Handle both old structure (venue.city) and new structure (venue.address.city)
+    const cities = venues.map(venue => {
+      if (typeof venue.address === 'object' && venue.address && 'city' in venue.address) {
+        return (venue.address as any).city;
+      }
+      return venue.city; // fallback to old structure
+    }).filter(Boolean);
     return Array.from(new Set(cities)).sort();
+  };
+
+  /**
+   * Get comprehensive Irish locations for filtering
+   */
+  const getIrishLocationsForFilter = () => {
+    return getAllLocationsForDropdown();
+  };
+
+  /**
+   * Get major Irish cities for quick filtering
+   */
+  const getMajorIrishCities = () => {
+    return getMajorCitiesForDropdown();
   };
 
   /**
@@ -328,7 +349,7 @@ function AppContent() {
         </div>
         <div className="feature">
           <h3>�🇮🇪 All Ireland</h3>
-          <p>From Dublin to Cork, Belfast to Galway - covering the entire island</p>
+          <p>Complete coverage of all 32 counties - from Donegal to Cork, Antrim to Kerry</p>
         </div>
       </div>
 
@@ -376,12 +397,26 @@ function AppContent() {
             value={selectedCity} 
             onChange={(e) => setSelectedCity(e.target.value)}
             className="filter-select"
-            aria-label="Filter by city"
+            aria-label="Filter by location"
           >
-            <option value="">All Cities</option>
-            {getUniqueCities().map(city => (
-              <option key={city} value={city}>{city}</option>
-            ))}
+            <option value="">All Locations</option>
+            <optgroup label="Counties">
+              {getAllCountyNames().map(county => (
+                <option key={county} value={county}>{county} (County)</option>
+              ))}
+            </optgroup>
+            <optgroup label="Major Cities">
+              {getMajorIrishCities().map(city => (
+                <option key={city.value} value={city.value}>{city.label}</option>
+              ))}
+            </optgroup>
+            <optgroup label="Other Cities (From Data)">
+              {getUniqueCities().filter(city => 
+                !getMajorIrishCities().some(majorCity => majorCity.value === city)
+              ).map(city => (
+                <option key={city} value={city}>{city}</option>
+              ))}
+            </optgroup>
           </select>
 
           <select 
@@ -806,18 +841,22 @@ function AppContent() {
         
         <div className="filter-group">
           <select
-            title="Filter by city"
+            title="Filter by location"
             value={selectedCity}
             onChange={(e) => setSelectedCity(e.target.value)}
             className="filter-select"
           >
-            <option value="">All Cities</option>
-            <option value="Dublin">Dublin</option>
-            <option value="Cork">Cork</option>
-            <option value="Belfast">Belfast</option>
-            <option value="Galway">Galway</option>
-            <option value="Limerick">Limerick</option>
-            <option value="Waterford">Waterford</option>
+            <option value="">All Locations</option>
+            <optgroup label="Counties">
+              {getAllCountyNames().map(county => (
+                <option key={county} value={county}>{county} (County)</option>
+              ))}
+            </optgroup>
+            <optgroup label="Major Cities">
+              {getMajorIrishCities().map(city => (
+                <option key={city.value} value={city.value}>{city.label}</option>
+              ))}
+            </optgroup>
           </select>
 
           <select
