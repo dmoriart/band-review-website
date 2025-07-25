@@ -13,12 +13,13 @@ const BuyMeACoffeeCard: React.FC = () => {
   };
 
   return (
-    <div className="bmc-card">
+    <div className="bmc-card feature">
       <img src={coffeeImage} alt="Buy us a coffee" className="bmc-image" />
       <div className="bmc-content">
         <h2>☕ Buy Us a Coffee!</h2>
-        <p>
-          If you enjoy our music or want to support independent artists, you can buy us a coffee! Every little bit helps us keep making music and sharing it with you. Thank you for supporting the band community!
+        <p className="bmc-desc">
+          <strong>Keep the Music Playing</strong><br /><br />
+          Our ambition is to make it easier for new bands to get started and for music lovers to discover live gigs. If you believe in what we’re building, buy us a coffee and help energise the Irish music scene!
         </p>
         <button className="bmc-button" onClick={handleClick}>
           Buy Me a Coffee

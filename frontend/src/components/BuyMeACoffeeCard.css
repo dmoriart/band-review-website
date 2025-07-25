@@ -2,16 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fffbe9;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 2rem 1.5rem;
-  margin: 2rem auto;
+  margin: 0 auto;
   max-width: 400px;
-  transition: box-shadow 0.2s;
-}
-.bmc-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 .bmc-image {
   width: 100px;
@@ -23,6 +16,11 @@
 }
 .bmc-content {
   text-align: center;
+}
+.bmc-desc {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-bottom: 1.2rem;
 }
 .bmc-button {
   background: #ff813f;
