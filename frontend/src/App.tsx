@@ -545,7 +545,12 @@ function AppContent() {
               <div className="info-grid">
                 <div className="info-item">
                   <strong>Address:</strong>
-                  <p>{selectedVenue.address}, {selectedVenue.city}, {selectedVenue.county}</p>
+                  <p>
+                    {selectedVenue.address && typeof selectedVenue.address === 'object' 
+                      ? `${(selectedVenue.address as any).street || ''}, ${(selectedVenue.address as any).city || ''}, ${(selectedVenue.address as any).county || ''}`.replace(/^, |, $/, '').replace(/, ,/g, ',')
+                      : `${selectedVenue.address || ''}, ${selectedVenue.city || ''}, ${selectedVenue.county || ''}`.replace(/^, |, $/, '').replace(/, ,/g, ',')
+                    }
+                  </p>
                   {selectedVenue.eircode && <p>Eircode: {selectedVenue.eircode}</p>}
                 </div>
                 
@@ -557,7 +562,11 @@ function AppContent() {
                       width="100%"
                       height="200"
                       frameBorder="0"
-                      src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`}
+                      src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(
+                        selectedVenue.address && typeof selectedVenue.address === 'object' 
+                          ? `${(selectedVenue.address as any).street || ''}, ${(selectedVenue.address as any).city || ''}, Ireland` 
+                          : `${selectedVenue.address || ''}, ${selectedVenue.city || ''}, Ireland`
+                      )}`}
                       allowFullScreen
                     />
                   ) : (
@@ -565,7 +574,11 @@ function AppContent() {
                       <p>🗺️ Map view requires Google Maps API key configuration</p>
                     </div>
                   )}
-                  <p className="map-note">📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedVenue.address + ', ' + selectedVenue.city + ', Ireland')}`} target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+                  <p className="map-note">📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    selectedVenue.address && typeof selectedVenue.address === 'object' 
+                      ? `${(selectedVenue.address as any).street || ''}, ${(selectedVenue.address as any).city || ''}, Ireland` 
+                      : `${selectedVenue.address || ''}, ${selectedVenue.city || ''}, Ireland`
+                  )}`} target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
                 </div>
               </div>
             </div>
@@ -579,9 +592,9 @@ function AppContent() {
                     <strong>👥 Capacity:</strong> {selectedVenue.capacity}
                   </div>
                 )}
-                {selectedVenue.venue_type && (
+                {(selectedVenue.venue_type || (selectedVenue as any).venueType) && (
                   <div className="spec-item">
-                    <strong>🏛️ Type:</strong> {selectedVenue.venue_type.replace('_', ' ')}
+                    <strong>🏛️ Type:</strong> {(selectedVenue.venue_type || (selectedVenue as any).venueType).replace('_', ' ')}
                   </div>
                 )}
                 {selectedVenue.tech_specs?.stage_size && (
@@ -623,11 +636,11 @@ function AppContent() {
                       <strong>👤 Manager:</strong> {selectedVenue.contact_info.manager_name}
                     </div>
                   )}
-                  {selectedVenue.website && (
+                  {(selectedVenue.website || (selectedVenue as any).contact?.website) && (
                     <div className="contact-item">
                       <strong>🌐 Website:</strong> 
-                      <a href={selectedVenue.website} target="_blank" rel="noopener noreferrer">
-                        {selectedVenue.website}
+                      <a href={selectedVenue.website || (selectedVenue as any).contact?.website} target="_blank" rel="noopener noreferrer">
+                        {selectedVenue.website || (selectedVenue as any).contact?.website}
                       </a>
                     </div>
                   )}
