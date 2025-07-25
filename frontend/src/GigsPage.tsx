@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 import { useGigs } from './hooks/useSanity';
-import GigsCalendar from './components/GigsCalendar';
-import GigsList from './components/GigsList';
-import GigsFilters from './components/GigsFilters';
-import RSVPModal from './components/RSVPModal';
-import GigDetailModal from './components/GigDetailModal';
+import { 
+  GigsCalendar,
+  GigsList,
+  GigsFilters,
+  RSVPModal,
+  GigDetailModal
+} from './components';
 import { getMajorCitiesForDropdown } from './utils/irishLocations';
 import './GigsPage.css';
 
