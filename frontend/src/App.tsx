@@ -925,119 +925,118 @@ function AppContent() {
               <span></span>
             </span>
           </button>
-          
-          {/* Mobile Navigation Menu */}
-          {isMobileMenuOpen && (
-            <>
-              {/* Mobile Menu Overlay */}
-              <div 
-                className="mobile-nav-overlay"
-                onClick={() => setIsMobileMenuOpen(false)}
-              />
+        </nav>
+
+        {/* Mobile Navigation Menu - Outside of nav to prevent duplication */}
+        {isMobileMenuOpen && (
+          <>
+            {/* Mobile Menu Overlay */}
+            <div 
+              className="mobile-nav-overlay"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            
+            {/* Mobile Navigation Panel */}
+            <div className="mobile-nav">
+              <div className="mobile-nav-header">
+                <button 
+                  className="mobile-nav-close"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  ✕
+                </button>
+              </div>
               
-              {/* Mobile Navigation Panel */}
-              <div className="mobile-nav">
-                <div className="mobile-nav-header">
-                  <h3>BandVenueReview.ie</h3>
-                  <button 
-                    className="mobile-nav-close"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    aria-label="Close menu"
-                  >
-                    ✕
-                  </button>
-                </div>
+              <div className="mobile-nav-links">
+                <button 
+                  className={`mobile-nav-link ${currentView === 'home' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('home');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">🏠</span>
+                  <span>Home</span>
+                </button>
                 
-                <div className="mobile-nav-links">
+                <button 
+                  className={`mobile-nav-link ${currentView === 'venues' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('venues');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">🏛️</span>
+                  <span>Venues</span>
+                </button>
+                
+                <button 
+                  className={`mobile-nav-link ${currentView === 'bands' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('bands');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">🎵</span>
+                  <span>Bands</span>
+                </button>
+                
+                <button 
+                  className={`mobile-nav-link ${currentView === 'features' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('features');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">💡</span>
+                  <span>Feature Ideas</span>
+                </button>
+                
+                <div className="mobile-nav-divider"></div>
+                
+                <button 
+                  className="mobile-nav-link account-link"
+                  onClick={() => {
+                    setShowAuthModal(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">{user ? '👤' : '🔑'}</span>
+                  <span>{user ? 'My Account' : 'Sign In'}</span>
+                </button>
+                
+                {!isAdmin && (
                   <button 
-                    className={`mobile-nav-link ${currentView === 'home' ? 'active' : ''}`}
+                    className="mobile-nav-link admin-link"
                     onClick={() => {
+                      setCurrentView('admin');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="nav-icon">🛠️</span>
+                    <span>Admin Panel</span>
+                  </button>
+                )}
+                
+                {isAdmin && (
+                  <button 
+                    className="mobile-nav-link admin-active"
+                    onClick={() => {
+                      setIsAdmin(false);
+                      setAdminToken('');
                       setCurrentView('home');
                       setIsMobileMenuOpen(false);
                     }}
                   >
-                    <span className="nav-icon">🏠</span>
-                    <span>Home</span>
+                    <span className="nav-icon">👑</span>
+                    <span>Exit Admin</span>
                   </button>
-                  
-                  <button 
-                    className={`mobile-nav-link ${currentView === 'venues' ? 'active' : ''}`}
-                    onClick={() => {
-                      setCurrentView('venues');
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    <span className="nav-icon">🏛️</span>
-                    <span>Venues</span>
-                  </button>
-                  
-                  <button 
-                    className={`mobile-nav-link ${currentView === 'bands' ? 'active' : ''}`}
-                    onClick={() => {
-                      setCurrentView('bands');
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    <span className="nav-icon">🎵</span>
-                    <span>Bands</span>
-                  </button>
-                  
-                  <button 
-                    className={`mobile-nav-link ${currentView === 'features' ? 'active' : ''}`}
-                    onClick={() => {
-                      setCurrentView('features');
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    <span className="nav-icon">💡</span>
-                    <span>Feature Ideas</span>
-                  </button>
-                  
-                  <div className="mobile-nav-divider"></div>
-                  
-                  <button 
-                    className="mobile-nav-link account-link"
-                    onClick={() => {
-                      setShowAuthModal(true);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    <span className="nav-icon">{user ? '👤' : '🔑'}</span>
-                    <span>{user ? 'My Account' : 'Sign In'}</span>
-                  </button>
-                  
-                  {!isAdmin && (
-                    <button 
-                      className="mobile-nav-link admin-link"
-                      onClick={() => {
-                        setCurrentView('admin');
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      <span className="nav-icon">🛠️</span>
-                      <span>Admin Panel</span>
-                    </button>
-                  )}
-                  
-                  {isAdmin && (
-                    <button 
-                      className="mobile-nav-link admin-active"
-                      onClick={() => {
-                        setIsAdmin(false);
-                        setAdminToken('');
-                        setCurrentView('home');
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      <span className="nav-icon">👑</span>
-                      <span>Exit Admin</span>
-                    </button>
-                  )}
-                </div>
+                )}
               </div>
-            </>
-          )}
-        </nav>
+            </div>
+          </>
+        )}
 
         {/* API Status */}
         <div className="api-status">
