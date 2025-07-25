@@ -5,6 +5,7 @@ import BandsPage from './BandsPage';
 import { AuthProvider, useAuth } from './AuthContext';
 import AuthComponent from './AuthComponent';
 import SanityVenuesGrid from './components/SanityVenuesGrid';
+import SanitySoundStudiosGrid from './components/SanitySoundStudiosGrid';
 import SanityTestPage from './components/SanityTestPage';
 import ApiTestComponent from './components/ApiTestComponent';
 import CookieNotice from './components/CookieNotice';
@@ -83,10 +84,11 @@ function AppContent() {
   const [venues, setVenues] = useState<Venue[]>([]);
   const [filteredVenues, setFilteredVenues] = useState<Venue[]>([]);
   const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
+  const [selectedStudio, setSelectedStudio] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'bands' | 'features' | 'admin' | 'sanity-test' | 'api-test'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'features' | 'admin' | 'sanity-test' | 'api-test'>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -292,6 +294,12 @@ function AppContent() {
           </button>
           <button 
             className="btn btn-secondary"
+            onClick={() => setCurrentView('studios')}
+          >
+            Find Studios
+          </button>
+          <button 
+            className="btn btn-secondary"
             onClick={() => setCurrentView('bands')}
           >
             Discover Bands
@@ -315,8 +323,12 @@ function AppContent() {
           <p>Claim your profile, showcase your space, and connect with touring acts</p>
         </div>
         <div className="feature">
-          <h3>🇮🇪 All Ireland</h3>
-          <p>From Dublin to Cork, Belfast to Galway - covering venues across the island</p>
+          <h3>�️ For Studios</h3>
+          <p>Recording studios across Ireland - find the perfect space to capture your sound</p>
+        </div>
+        <div className="feature">
+          <h3>�🇮🇪 All Ireland</h3>
+          <p>From Dublin to Cork, Belfast to Galway - covering the entire island</p>
         </div>
       </div>
 
@@ -771,6 +783,305 @@ function AppContent() {
   };
 
   /**
+   * Render sound studios page
+   */
+  const renderStudios = () => (
+    <div className="studios-section">
+      <div className="section-header">
+        <h2>🎙️ Sound Studios</h2>
+        <p>Discover professional recording studios across Ireland</p>
+      </div>
+
+      {/* Search and Filter Controls */}
+      <div className="search-controls">
+        <div className="search-group">
+          <input
+            type="text"
+            placeholder="Search studios by name, location, or description..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input"
+          />
+        </div>
+        
+        <div className="filter-group">
+          <select
+            title="Filter by city"
+            value={selectedCity}
+            onChange={(e) => setSelectedCity(e.target.value)}
+            className="filter-select"
+          >
+            <option value="">All Cities</option>
+            <option value="Dublin">Dublin</option>
+            <option value="Cork">Cork</option>
+            <option value="Belfast">Belfast</option>
+            <option value="Galway">Galway</option>
+            <option value="Limerick">Limerick</option>
+            <option value="Waterford">Waterford</option>
+          </select>
+
+          <select
+            title="Filter by price range"
+            value={selectedCapacity}
+            onChange={(e) => setSelectedCapacity(e.target.value)}
+            className="filter-select"
+          >
+            <option value="">Price Range</option>
+            <option value="0-50">€0-50/hour</option>
+            <option value="51-100">€51-100/hour</option>
+            <option value="101-200">€101-200/hour</option>
+            <option value="201-500">€201-500/hour</option>
+            <option value="501">€500+/hour</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Sanity CMS Studios */}
+      <SanitySoundStudiosGrid 
+        searchQuery={searchQuery}
+        selectedCity={selectedCity}
+        selectedPriceRange={selectedCapacity}
+        onStudioClick={(studio) => {
+          setSelectedStudio(studio);
+          setCurrentView('studio-detail');
+        }}
+      />
+    </div>
+  );
+
+  /**
+   * Render studio detail page
+   */
+  const renderStudioDetail = () => {
+    if (!selectedStudio) return <div>Studio not found</div>;
+
+    // Debug log the studio structure
+    console.log('🔍 Selected studio structure:', selectedStudio);
+
+    return (
+      <div className="studio-detail">
+        <button 
+          className="back-button"
+          onClick={() => setCurrentView('studios')}
+        >
+          ← Back to Studios
+        </button>
+
+        <div className="studio-detail-header">
+          <div className="studio-title-section">
+            <h1>{selectedStudio.name}</h1>
+            <div className="studio-badges">
+              {selectedStudio.verified && <span className="badge verified">✓ Verified</span>}
+              {selectedStudio.claimed && <span className="badge claimed">Claimed by Owner</span>}
+              {selectedStudio.bandFriendly && <span className="badge band-friendly">🎸 Band Friendly</span>}
+            </div>
+          </div>
+          
+          <div className="studio-type-info">
+            {selectedStudio.studioType && (
+              <span className="studio-type-badge">
+                🏛️ {selectedStudio.studioType.replace('_', ' ').toUpperCase()}
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div className="studio-detail-content">
+          <div className="studio-main-info">
+            {/* Basic Info Section */}
+            <div className="info-section">
+              <h3>📍 Location & Contact</h3>
+              <div className="info-grid">
+                <div className="info-item">
+                  <strong>Address:</strong>
+                  <p>
+                    {selectedStudio.address && typeof selectedStudio.address === 'object' 
+                      ? `${(selectedStudio.address as any).street || ''}, ${(selectedStudio.address as any).city || ''}, ${(selectedStudio.address as any).county || ''}`.replace(/^, |, $/, '').replace(/, ,/g, ',')
+                      : `${selectedStudio.address || ''}, ${selectedStudio.city || ''}, ${selectedStudio.county || ''}`.replace(/^, |, $/, '').replace(/, ,/g, ',')
+                    }
+                  </p>
+                </div>
+                
+                {/* Google Maps Integration */}
+                <div className="map-container">
+                  {process.env.REACT_APP_GOOGLE_MAPS_API_KEY ? (
+                    <iframe
+                      title={`Map of ${selectedStudio.name}`}
+                      width="100%"
+                      height="200"
+                      frameBorder="0"
+                      src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(
+                        selectedStudio.address && typeof selectedStudio.address === 'object' 
+                          ? `${(selectedStudio.address as any).street || ''}, ${(selectedStudio.address as any).city || ''}, Ireland` 
+                          : `${selectedStudio.address || ''}, ${selectedStudio.city || ''}, Ireland`
+                      )}`}
+                      allowFullScreen
+                    />
+                  ) : (
+                    <div className="map-placeholder">
+                      <p>🗺️ Map view requires Google Maps API key configuration</p>
+                    </div>
+                  )}
+                  <p className="map-note">📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    selectedStudio.address && typeof selectedStudio.address === 'object' 
+                      ? `${(selectedStudio.address as any).street || ''}, ${(selectedStudio.address as any).city || ''}, Ireland` 
+                      : `${selectedStudio.address || ''}, ${selectedStudio.city || ''}, Ireland`
+                  )}`} target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing Information */}
+            {selectedStudio.pricing && (
+              <div className="info-section">
+                <h3>💰 Pricing</h3>
+                <div className="pricing-grid">
+                  {selectedStudio.pricing.hourlyRate && (
+                    <div className="pricing-item">
+                      <strong>⏰ Hourly Rate:</strong> €{selectedStudio.pricing.hourlyRate}
+                      {selectedStudio.pricing.engineerIncluded && ' (Engineer included)'}
+                    </div>
+                  )}
+                  {selectedStudio.pricing.halfDayRate && (
+                    <div className="pricing-item">
+                      <strong>🕐 Half Day (4 hours):</strong> €{selectedStudio.pricing.halfDayRate}
+                    </div>
+                  )}
+                  {selectedStudio.pricing.fullDayRate && (
+                    <div className="pricing-item">
+                      <strong>📅 Full Day (8 hours):</strong> €{selectedStudio.pricing.fullDayRate}
+                    </div>
+                  )}
+                  {selectedStudio.pricing.mixingRate && (
+                    <div className="pricing-item">
+                      <strong>🎛️ Mixing per Song:</strong> €{selectedStudio.pricing.mixingRate}
+                    </div>
+                  )}
+                  {selectedStudio.pricing.masteringRate && (
+                    <div className="pricing-item">
+                      <strong>🔊 Mastering per Song:</strong> €{selectedStudio.pricing.masteringRate}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Contact Info */}
+            <div className="info-section">
+              <h3>📞 Contact Information</h3>
+              <div className="contact-info">
+                {selectedStudio.contact?.email && (
+                  <div className="contact-item">
+                    <strong>📧 Email:</strong> 
+                    <a href={`mailto:${selectedStudio.contact.email}`}>
+                      {selectedStudio.contact.email}
+                    </a>
+                  </div>
+                )}
+                {selectedStudio.contact?.phone && (
+                  <div className="contact-item">
+                    <strong>📱 Phone:</strong> 
+                    <a href={`tel:${selectedStudio.contact.phone}`}>
+                      {selectedStudio.contact.phone}
+                    </a>
+                  </div>
+                )}
+                {selectedStudio.contact?.website && (
+                  <div className="contact-item">
+                    <strong>🌐 Website:</strong> 
+                    <a href={selectedStudio.contact.website} target="_blank" rel="noopener noreferrer">
+                      {selectedStudio.contact.website}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Amenities & Equipment */}
+            {selectedStudio.amenities && selectedStudio.amenities.length > 0 && (
+              <div className="info-section">
+                <h3>🎛️ Equipment & Amenities</h3>
+                <div className="amenities-grid">
+                  {selectedStudio.amenities.map((amenity: string, index: number) => (
+                    <div key={index} className="amenity-item">
+                      <span className="amenity-icon">🔧</span>
+                      <span>{amenity.replace('_', ' ')}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Supported Genres */}
+            {selectedStudio.genresSupported && selectedStudio.genresSupported.length > 0 && (
+              <div className="info-section">
+                <h3>🎵 Supported Genres</h3>
+                <div className="genres-list">
+                  {selectedStudio.genresSupported.map((genre: string, index: number) => (
+                    <span key={index} className="genre-tag">
+                      {genre.replace('_', ' ')}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Photo Gallery */}
+            <div className="info-section">
+              <h3>📸 Photo Gallery</h3>
+              {selectedStudio.images && selectedStudio.images.length > 0 ? (
+                <div className="photo-gallery">
+                  {selectedStudio.images.map((image: any, index: number) => (
+                    <div key={index} className="photo-item">
+                      <img 
+                        src={typeof image === 'string' ? image : ((image as any)?.url || (image as any)?.asset?.url || '')} 
+                        alt={`${selectedStudio.name} - View ${index + 1}`} 
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="no-photos">
+                  <p>No photos available yet.</p>
+                  <p>Be the first to share photos of this studio!</p>
+                </div>
+              )}
+            </div>
+
+            {/* Description */}
+            {selectedStudio.description && (
+              <div className="info-section">
+                <h3>📝 About This Studio</h3>
+                <p className="studio-description-full">
+                  {typeof selectedStudio.description === 'string' 
+                    ? selectedStudio.description 
+                    : (selectedStudio.description as any)?.text || (selectedStudio.description as any)?.content || 'No description available'
+                  }
+                </p>
+              </div>
+            )}
+
+            {/* Opening Hours */}
+            {selectedStudio.openingHours && (
+              <div className="info-section">
+                <h3>🕐 Opening Hours</h3>
+                <div className="opening-hours">
+                  {Object.entries(selectedStudio.openingHours).map(([day, hours]) => (
+                    <div key={day} className="hours-item">
+                      <strong>{day.charAt(0).toUpperCase() + day.slice(1)}:</strong>
+                      <span>{(hours as string) || 'Closed'}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  /**
    * Handle admin login
    */
   const handleAdminLogin = async (email: string, password: string) => {
@@ -900,6 +1211,12 @@ function AppContent() {
               Venues
             </button>
             <button 
+              className={`nav-link ${currentView === 'studios' ? 'active' : ''}`}
+              onClick={() => setCurrentView('studios')}
+            >
+              Studios
+            </button>
+            <button 
               className={`nav-link ${currentView === 'bands' ? 'active' : ''}`}
               onClick={() => setCurrentView('bands')}
             >
@@ -998,6 +1315,17 @@ function AppContent() {
                 </button>
                 
                 <button 
+                  className={`mobile-nav-link ${currentView === 'studios' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('studios');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">🎙️</span>
+                  <span>Studios</span>
+                </button>
+                
+                <button 
                   className={`mobile-nav-link ${currentView === 'bands' ? 'active' : ''}`}
                   onClick={() => {
                     setCurrentView('bands');
@@ -1080,9 +1408,11 @@ function AppContent() {
         <main className="main-content">
           {currentView === 'home' && renderHome()}
           {currentView === 'venues' && renderVenues()}
+          {currentView === 'studios' && renderStudios()}
           {currentView === 'bands' && <BandsPage />}
           {currentView === 'features' && <FeatureIdeasPage />}
           {currentView === 'venue-detail' && renderVenueDetail()}
+          {currentView === 'studio-detail' && renderStudioDetail()}
           {currentView === 'admin' && renderAdminLogin()}
           {isAdmin && <AdminPanel 
             adminToken={adminToken} 

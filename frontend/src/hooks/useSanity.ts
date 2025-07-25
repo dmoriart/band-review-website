@@ -230,6 +230,70 @@ export function useUpcomingGigs() {
   return useSanityData(query)
 }
 
+// Sound Studios hooks
+export function useSoundStudios() {
+  const query = `*[_type == "soundStudio" && !(_id in path("drafts.**"))] | order(name asc) {
+    _id,
+    name,
+    slug,
+    description,
+    address,
+    location,
+    capacity,
+    "studioType": studioType,
+    profileImage,
+    "heroImage": profileImage,
+    "images": gallery[].asset->url,
+    contact,
+    verified,
+    featured,
+    claimed,
+    bandFriendly,
+    pricing,
+    amenities,
+    genresSupported,
+    features,
+    openingHours
+  }`
+  
+  return useSanityData(query)
+}
+
+export function useSoundStudioBySlug(slug: string) {
+  const query = `*[_type == "soundStudio" && slug.current == "${slug}"][0] {
+    _id,
+    name,
+    slug,
+    description,
+    address,
+    location,
+    capacity,
+    studioType,
+    profileImage,
+    gallery,
+    contact,
+    verified,
+    featured,
+    claimed,
+    bandFriendly,
+    pricing,
+    amenities,
+    genresSupported,
+    features,
+    openingHours,
+    "reviews": *[_type == "review" && references(^._id) && published == true] | order(_createdAt desc) {
+      _id,
+      title,
+      content,
+      overallRating,
+      reviewer->{name, slug},
+      _createdAt
+    }
+  }`
+  
+  return useSanityData(query)
+}
+
 export function useFeaturedContent() {
   const query = `{
     "bands": *[_type == "band" && featured == true] | order(_createdAt desc) [0...4] {
@@ -237,6 +301,9 @@ export function useFeaturedContent() {
     },
     "venues": *[_type == "venue" && featured == true] | order(_createdAt desc) [0...4] {
       _id, name, slug, description, heroImage, address, verified, claimed
+    },
+    "soundStudios": *[_type == "soundStudio" && featured == true] | order(_createdAt desc) [0...4] {
+      _id, name, slug, description, profileImage, address, verified, claimed, bandFriendly
     },
     "reviews": *[_type == "review" && featured == true && published == true] | order(_createdAt desc) [0...4] {
       _id, title, reviewer->{name, slug}, venue->{name, slug}, overallRating, photos[0], _createdAt
