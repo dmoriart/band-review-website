@@ -32,6 +32,12 @@ export interface GigData {
   };
   ageRestriction?: string;
   featured?: boolean;
+  _sourceData?: {
+    source: string;
+    sourceId: string;
+    sourceUrl?: string;
+    importedAt: string;
+  };
 }
 
 export interface ApiGigData {
