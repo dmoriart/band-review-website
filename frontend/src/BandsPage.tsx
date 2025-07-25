@@ -9,7 +9,7 @@ import FirebaseNetworkTest from './components/FirebaseNetworkTest';
 import DirectAPITest from './components/DirectAPITest';
 import { useAuth } from './AuthContext';
 import { bandUserService } from './services/bandUserService';
-import { IRISH_COUNTIES, getAllCityNames, getAllCountyNames, getMajorCitiesForDropdown } from './utils/irishLocations';
+import { IRISH_COUNTIES, getAllCityNames, getAllCountyNames, getMajorCitiesForDropdown, matchesLocation } from './utils/irishLocations';
 
 // Define interfaces for band data
 interface SocialLinks {

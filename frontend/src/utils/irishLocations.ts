@@ -162,6 +162,59 @@ export const getAllLocationsForDropdown = (): Array<{ value: string; label: stri
   return [...counties, ...cities].sort((a, b) => a.label.localeCompare(b.label));
 };
 
+// Location matching function for filtering bands
+export const matchesLocation = (bandLocation: string | null | undefined, selectedLocation: string): boolean => {
+  if (!bandLocation || !selectedLocation) {
+    return false;
+  }
+
+  // Normalize both strings for comparison (lowercase, trim)
+  const normalizedBandLocation = bandLocation.toLowerCase().trim();
+  const normalizedSelectedLocation = selectedLocation.toLowerCase().trim();
+
+  // Direct match
+  if (normalizedBandLocation === normalizedSelectedLocation) {
+    return true;
+  }
+
+  // Check if band location contains the selected location
+  if (normalizedBandLocation.includes(normalizedSelectedLocation)) {
+    return true;
+  }
+
+  // Check if selected location is a county and band location is in that county
+  const selectedCounty = IRISH_COUNTIES.find(county => 
+    county.name.toLowerCase() === normalizedSelectedLocation
+  );
+  
+  if (selectedCounty) {
+    // Check if band location contains the county name
+    if (normalizedBandLocation.includes(selectedCounty.name.toLowerCase())) {
+      return true;
+    }
+    
+    // Check if band location is a city in this county
+    const citiesInCounty = MAJOR_IRISH_CITIES.filter(city => 
+      city.county.toLowerCase() === selectedCounty.name.toLowerCase()
+    );
+    
+    return citiesInCounty.some(city => 
+      normalizedBandLocation.includes(city.name.toLowerCase())
+    );
+  }
+
+  // Check if selected location is a city and band location contains it
+  const selectedCity = MAJOR_IRISH_CITIES.find(city => 
+    city.name.toLowerCase() === normalizedSelectedLocation
+  );
+  
+  if (selectedCity) {
+    return normalizedBandLocation.includes(selectedCity.name.toLowerCase());
+  }
+
+  return false;
+};
+
 // Province groupings for advanced filtering
 export const PROVINCES = {
   'Leinster': getCountiesByProvince('Leinster'),
@@ -181,5 +234,6 @@ export default {
   getCitiesByCounty,
   getMajorCitiesForDropdown,
   getAllLocationsForDropdown,
+  matchesLocation,
   PROVINCES
 };
