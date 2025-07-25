@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSoundStudios } from '../hooks/useSanity'
 import { urlFor } from '../sanity'
+import { matchesLocation } from '../utils/irishLocations'
 import './SanitySoundStudiosGrid.css'
 
 interface SanitySoundStudiosGridProps {
@@ -77,11 +78,11 @@ const SanitySoundStudiosGrid: React.FC<SanitySoundStudiosGridProps> = ({
       return false
     }
 
-    // Location filter (city or county)
+    // Location filter using enhanced matching
     if (selectedCity) {
-      const matchesCity = studio.address?.city === selectedCity;
-      const matchesCounty = studio.address?.county === selectedCity;
-      if (!matchesCity && !matchesCounty) {
+      // Create location string from studio address similar to how bands store location
+      const studioLocation = studio.address?.city || studio.address?.county || '';
+      if (studioLocation && !matchesLocation(studioLocation, selectedCity)) {
         return false;
       }
     }

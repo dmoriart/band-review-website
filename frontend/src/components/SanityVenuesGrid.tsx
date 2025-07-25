@@ -1,6 +1,7 @@
 import React from 'react'
 import { useVenues } from '../hooks/useSanity'
 import { urlFor } from '../sanity'
+import { matchesLocation } from '../utils/irishLocations'
 import './SanityVenuesGrid.css'
 
 interface SanityVenuesGridProps {
@@ -76,11 +77,11 @@ const SanityVenuesGrid: React.FC<SanityVenuesGridProps> = ({
       return false
     }
 
-    // Location filter (city or county)
+    // Location filter using enhanced matching
     if (selectedCity) {
-      const matchesCity = venue.address?.city === selectedCity;
-      const matchesCounty = venue.address?.county === selectedCity;
-      if (!matchesCity && !matchesCounty) {
+      // Create location string from venue address similar to how bands store location
+      const venueLocation = venue.address?.city || venue.address?.county || '';
+      if (venueLocation && !matchesLocation(venueLocation, selectedCity)) {
         return false;
       }
     }

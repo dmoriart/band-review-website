@@ -477,6 +477,7 @@ function AppContent() {
 
       {/* Sanity CMS Venues */}
       <SanityVenuesGrid 
+        selectedCity={selectedCity}
         onVenueClick={(venue) => {
           setSelectedVenue(venue);
           setCurrentView('venue-detail');

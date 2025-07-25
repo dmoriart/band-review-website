@@ -1,3 +1,5 @@
+import type { Rule } from 'sanity';
+
 export default {
   name: 'soundStudio',
   title: 'Sound Studio',
@@ -5,9 +7,8 @@ export default {
   fields: [
     {
       name: 'name',
-      title: 'Studio Name',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule: Rule) => Rule.required()
     },
     {
       name: 'slug',
@@ -17,7 +18,7 @@ export default {
         source: 'name',
         maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule: Rule) => Rule.required()
     },
     {
       name: 'description',
@@ -414,7 +415,7 @@ export default {
       media: 'profileImage',
       subtitle: 'address.city'
     },
-    prepare(selection) {
+    prepare(selection: { title: string; media?: any; subtitle?: string }) {
       const {title, media, subtitle} = selection
       return {
         title: title,
