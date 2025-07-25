@@ -18,7 +18,7 @@
 ```
 
 ### 3. **Google Places API Integration**
-- **API Key**: `AIzaSyCEjWukCdjVFH8PuUWlz9AQ7GQse87NhZA`
+- **API Key**: Securely configured via environment variables
 - **Features**: Automatic studio discovery, photos, GPS coordinates, contact validation
 - **Coverage**: Search across major Irish cities with studio-specific terms
 

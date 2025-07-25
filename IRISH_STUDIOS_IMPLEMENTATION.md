@@ -97,7 +97,7 @@ Successfully created a comprehensive Python web scraping system to collect real 
    - Professional categorization
 
 ### **Google Maps API Integration**
-- **API Key**: `AIzaSyCEjWukCdjVFH8PuUWlz9AQ7GQse87NhZA`
+- **API Key**: Securely configured via environment variables
 - **Photo Extraction**: First image from Places API
 - **Geocoding**: Address → GPS coordinates
 - **Place Details**: Comprehensive studio information

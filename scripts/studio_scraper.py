@@ -17,6 +17,10 @@ import sys
 from dataclasses import dataclass, asdict
 from bs4 import BeautifulSoup
 import urllib.robotparser
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Add current directory to path for imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -515,8 +519,13 @@ class MusicStudioScraper:
         logger.info(f"Created Sanity import file: {filename}")
 
 def main():
-    # Google Maps API key
-    GOOGLE_API_KEY = "AIzaSyCEjWukCdjVFH8PuUWlz9AQ7GQse87NhZA"
+    # Load Google Maps API key from environment
+    GOOGLE_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
+    
+    if not GOOGLE_API_KEY:
+        logger.error("GOOGLE_MAPS_API_KEY environment variable not found!")
+        logger.error("Please set your Google Maps API key in a .env file or environment variable")
+        return
     
     scraper = MusicStudioScraper(GOOGLE_API_KEY)
     

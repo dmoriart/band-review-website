@@ -14,6 +14,10 @@ from urllib.parse import urljoin, urlparse
 from typing import Dict, List, Optional, Any
 import os
 from dataclasses import dataclass, asdict
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -760,7 +764,13 @@ class IrishStudioDirectoryScraper:
 
 def main():
     """Main execution function"""
-    GOOGLE_API_KEY = "AIzaSyCEjWukCdjVFH8PuUWlz9AQ7GQse87NhZA"
+    # Load Google Maps API key from environment
+    GOOGLE_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
+    
+    if not GOOGLE_API_KEY:
+        logger.error("GOOGLE_MAPS_API_KEY environment variable not found!")
+        logger.error("Please set your Google Maps API key in a .env file or environment variable")
+        return
     
     scraper = IrishStudioDirectoryScraper(GOOGLE_API_KEY)
     

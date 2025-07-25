@@ -111,11 +111,21 @@ Each studio record includes:
 
 ## 🔧 Configuration
 
-### API Key
-The Google Maps API key is configured in the script:
-```python
-GOOGLE_API_KEY = "AIzaSyCEjWukCdjVFH8PuUWlz9AQ7GQse87NhZA"
-```
+### API Key Setup
+1. **Create environment variables file:**
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Add your Google Maps API key to `.env`:**
+   ```bash
+   GOOGLE_MAPS_API_KEY=your_actual_api_key_here
+   ```
+
+3. **Install python-dotenv if not already installed:**
+   ```bash
+   pip install python-dotenv
+   ```
 
 ### Rate Limiting
 - 2-second delays between website requests
