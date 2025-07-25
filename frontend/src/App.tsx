@@ -745,7 +745,7 @@ function AppContent() {
                 <div className="facilities-list">
                   {selectedVenue.facilities.map((facility, index) => (
                     <span key={facility || index} className="facility-tag">
-                      {typeof facility === 'string' ? facility.replace('_', ' ') : (facility?.name || facility?.title || 'Unknown facility')}
+                      {typeof facility === 'string' ? facility.replace('_', ' ') : ((facility as any)?.name || (facility as any)?.title || 'Unknown facility')}
                     </span>
                   ))}
                 </div>
