@@ -1,0 +1,465 @@
+/* GigDetailModal.css */
+.gig-detail-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 95%;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.gig-detail-modal .modal-header {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.gig-detail-modal .close-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gig-detail-modal .close-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.modal-content {
+  padding: 0;
+}
+
+/* Hero Section */
+.gig-hero {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.poster-container {
+  position: relative;
+}
+
+.gig-poster {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.poster-container .featured-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f39c12;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.poster-container .status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.gig-info h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.headliner-info {
+  margin-bottom: 20px;
+}
+
+.headliner-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  color: #ffeaa7;
+  font-weight: 600;
+}
+
+.genre-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.support-acts {
+  margin-bottom: 20px;
+}
+
+.support-acts h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.support-acts ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #ecf0f1;
+}
+
+.support-acts li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.detail-item .icon {
+  font-size: 1.3rem;
+  width: 30px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.detail-item div {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ddd;
+  line-height: 1.3;
+}
+
+/* RSVP Status in Hero */
+.rsvp-status {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.rsvp-status.attending {
+  background: #27ae60;
+  color: white;
+}
+
+.rsvp-status.interested {
+  background: #f39c12;
+  color: white;
+}
+
+.rsvp-status.not-attending {
+  background: #e74c3c;
+  color: white;
+}
+
+/* Description */
+.gig-description {
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.gig-description h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.gig-description p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.action-buttons .rsvp-btn,
+.action-buttons .calendar-btn,
+.action-buttons .tickets-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.action-buttons .rsvp-btn {
+  background: #3498db;
+  color: white;
+}
+
+.action-buttons .rsvp-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.action-buttons .calendar-btn {
+  background: #8e44ad;
+  color: white;
+}
+
+.action-buttons .calendar-btn:hover {
+  background: #7d3c98;
+  transform: translateY(-2px);
+}
+
+.action-buttons .tickets-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.action-buttons .tickets-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.action-buttons .primary {
+  background: #27ae60;
+}
+
+.action-buttons .primary:hover {
+  background: #229954;
+}
+
+/* Share Section */
+.share-section {
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.share-section h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  padding: 10px 16px;
+  border: 2px solid #3498db;
+  background: white;
+  color: #3498db;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.share-btn:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.share-btn.twitter {
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+
+.share-btn.twitter:hover {
+  background: #1da1f2;
+  color: white;
+}
+
+.share-btn.facebook {
+  border-color: #4267b2;
+  color: #4267b2;
+}
+
+.share-btn.facebook:hover {
+  background: #4267b2;
+  color: white;
+}
+
+/* Similar Events */
+.similar-events {
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+}
+
+.similar-events h4 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.similar-events p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gig-detail-modal {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+
+  .gig-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .poster-container {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .gig-poster {
+    height: 300px;
+  }
+
+  .gig-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .headliner-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .event-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .action-buttons .rsvp-btn,
+  .action-buttons .calendar-btn,
+  .action-buttons .tickets-btn {
+    flex: none;
+    min-width: auto;
+  }
+
+  .share-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .gig-hero {
+    padding: 15px;
+  }
+
+  .gig-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .headliner-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .detail-item {
+    padding: 12px;
+  }
+
+  .detail-item .icon {
+    font-size: 1.1rem;
+    width: 25px;
+  }
+
+  .gig-description,
+  .action-buttons,
+  .share-section,
+  .similar-events {
+    padding: 15px;
+  }
+
+  .action-buttons .rsvp-btn,
+  .action-buttons .calendar-btn,
+  .action-buttons .tickets-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .share-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

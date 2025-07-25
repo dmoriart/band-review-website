@@ -219,12 +219,11 @@ export default defineType({
       rating: 'overallRating',
       media: 'photos.0'
     },
-    prepare(selection) {
-      const {title, reviewer, venue, rating} = selection
+    prepare({title, reviewer, venue, rating, media}: any) {
       return {
-        title: title,
-        subtitle: `${reviewer} → ${venue} (${rating}★)`,
-        media: selection.media
+        title: title || 'Untitled Review',
+        subtitle: `${reviewer || 'Anonymous'} → ${venue || 'Unknown venue'} (${rating || 0}★)`,
+        media: media
       }
     }
   }

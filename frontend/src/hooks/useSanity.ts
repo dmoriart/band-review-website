@@ -321,3 +321,42 @@ export function useFeaturedContent() {
   
   return useSanityData(query)
 }
+
+export function useGigs() {
+  const query = `*[_type == "gig"] | order(date asc) {
+    _id,
+    title,
+    slug,
+    venue->{
+      _id,
+      name,
+      slug,
+      address
+    },
+    headliner->{
+      _id,
+      name,
+      slug,
+      genre
+    },
+    supportActs[]->{
+      _id,
+      name,
+      slug
+    },
+    date,
+    ticketPrice,
+    ticketUrl,
+    description,
+    poster,
+    status,
+    genre->{
+      name,
+      slug
+    },
+    ageRestriction,
+    featured
+  }`
+  
+  return useSanityData(query)
+}

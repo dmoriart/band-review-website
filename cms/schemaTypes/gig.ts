@@ -123,13 +123,12 @@ export default defineType({
       date: 'date',
       media: 'poster'
     },
-    prepare(selection) {
-      const {title, venue, date} = selection
+    prepare({title, venue, date, media}: any) {
       const dateStr = date ? new Date(date).toLocaleDateString() : 'No date'
       return {
-        title: title,
-        subtitle: `${venue} - ${dateStr}`,
-        media: selection.media
+        title: title || 'Untitled Gig',
+        subtitle: `${venue || 'No venue'} - ${dateStr}`,
+        media: media
       }
     }
   }

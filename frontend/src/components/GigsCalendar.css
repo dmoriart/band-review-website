@@ -1,0 +1,492 @@
+/* GigsCalendar.css */
+.gigs-calendar {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #2980b9;
+  transform: scale(1.1);
+}
+
+.current-period h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.current-period p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.today-btn {
+  padding: 10px 16px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.today-btn:hover {
+  background: #229954;
+}
+
+.view-toggle {
+  display: flex;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.view-btn {
+  padding: 10px 16px;
+  background: white;
+  color: #3498db;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #ecf0f1;
+}
+
+.view-btn.active {
+  background: #3498db;
+  color: white;
+}
+
+.calendar-grid {
+  margin-bottom: 25px;
+}
+
+.calendar-grid.month .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar-grid.week .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  margin-bottom: 10px;
+}
+
+.day-header {
+  padding: 12px;
+  background: #34495e;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.calendar-day {
+  background: white;
+  min-height: 100px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-day:hover {
+  background: #f8f9fa;
+}
+
+.calendar-day.today {
+  background: #e3f2fd;
+  font-weight: bold;
+}
+
+.calendar-day.today .day-number {
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px auto;
+}
+
+.calendar-day.other-month {
+  opacity: 0.3;
+}
+
+.calendar-day.has-gigs {
+  background: #f0f8ff;
+  border-left: 4px solid #3498db;
+}
+
+.day-number {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.day-gigs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Month view gig indicators */
+.gig-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3498db;
+  margin: 1px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gig-dot:hover {
+  transform: scale(1.3);
+}
+
+.gig-dot.featured {
+  background: #f39c12;
+}
+
+.gigs-count {
+  font-size: 0.7rem;
+  color: #666;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Week view gig previews */
+.gig-preview {
+  background: #3498db;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.gig-preview:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
+.gig-preview.featured {
+  background: #f39c12;
+}
+
+.gig-preview.featured:hover {
+  background: #e67e22;
+}
+
+.gig-preview.attending {
+  background: #27ae60;
+}
+
+.gig-preview.interested {
+  background: #f39c12;
+}
+
+.gig-preview.not_attending {
+  background: #95a5a6;
+  opacity: 0.7;
+}
+
+.gig-time {
+  font-weight: bold;
+  font-size: 0.65rem;
+}
+
+.gig-title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gig-venue {
+  font-size: 0.6rem;
+  opacity: 0.9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rsvp-indicator {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+/* Calendar Legend */
+.calendar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3498db;
+}
+
+.legend-dot.featured {
+  background: #f39c12;
+}
+
+.legend-dot.attending {
+  background: #27ae60;
+}
+
+.legend-dot.interested {
+  background: #f39c12;
+}
+
+/* Today's Gigs Summary */
+.today-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.today-summary h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.today-gigs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.today-gig {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.today-gig:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.gig-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.today-gig .gig-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.today-gig .gig-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.today-gig .gig-venue {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.today-gig .gig-time {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gigs-calendar {
+    padding: 15px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .calendar-nav {
+    order: 2;
+  }
+
+  .calendar-controls {
+    order: 1;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .current-period h3 {
+    font-size: 1.3rem;
+  }
+
+  .calendar-day {
+    min-height: 80px;
+    padding: 6px;
+  }
+
+  .calendar-grid.week .calendar-days {
+    gap: 5px;
+  }
+
+  .calendar-legend {
+    gap: 15px;
+  }
+
+  .today-gigs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-header {
+    gap: 10px;
+  }
+
+  .calendar-nav {
+    gap: 15px;
+  }
+
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .current-period h3 {
+    font-size: 1.1rem;
+  }
+
+  .calendar-day {
+    min-height: 60px;
+    padding: 4px;
+  }
+
+  .day-number {
+    font-size: 0.9rem;
+  }
+
+  .gig-preview {
+    padding: 3px 4px;
+    font-size: 0.65rem;
+  }
+
+  .calendar-legend {
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
