@@ -11,6 +11,7 @@ import SanityTestPage from './components/SanityTestPage';
 import ApiTestComponent from './components/ApiTestComponent';
 import CookieNotice from './components/CookieNotice';
 import FeatureIdeasPage from './components/FeatureIdeasPage';
+import BuyMeACoffeeCard from './components/BuyMeACoffeeCard';
 import { useBands, useVenues } from './hooks/useSanity';
 import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyNames } from './utils/irishLocations';
 
@@ -368,6 +369,9 @@ function AppContent() {
           <div className="stat-label">Counties Covered</div>
         </div>
       </div>
+
+      {/* Buy Me a Coffee Card - visually prominent but not intrusive */}
+      <BuyMeACoffeeCard />
     </div>
   );
 
