@@ -101,6 +101,20 @@ function AppContent() {
   // Mobile menu state
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [isMobileMenuOpen]);
+
   // Admin login state - moved here to ensure all hooks are at the top
   const [adminEmail, setAdminEmail] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
@@ -913,84 +927,115 @@ function AppContent() {
           </button>
           
           {/* Mobile Navigation Menu */}
-          <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-            <button 
-              className={`nav-link ${currentView === 'home' ? 'active' : ''}`}
-              onClick={() => {
-                setCurrentView('home');
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              Home
-            </button>
-            <button 
-              className={`nav-link ${currentView === 'venues' ? 'active' : ''}`}
-              onClick={() => {
-                setCurrentView('venues');
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              Venues
-            </button>
-            <button 
-              className={`nav-link ${currentView === 'bands' ? 'active' : ''}`}
-              onClick={() => {
-                setCurrentView('bands');
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              Bands
-            </button>
-            <button 
-              className={`nav-link ${currentView === 'features' ? 'active' : ''}`}
-              onClick={() => {
-                setCurrentView('features');
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              💡 Features
-            </button>
-            <button 
-              className="nav-link"
-              onClick={() => {
-                setShowAuthModal(true);
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              {user ? '👤 Account' : '🔑 Sign In'}
-            </button>
-            {!isAdmin && (
-              <button 
-                className="nav-link admin-link"
-                onClick={() => {
-                  setCurrentView('admin');
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                🛠️ Admin
-              </button>
-            )}
-            {isAdmin && (
-              <button 
-                className="nav-link admin-active"
-                onClick={() => {
-                  setIsAdmin(false);
-                  setAdminToken('');
-                  setCurrentView('home');
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                Logout Admin
-              </button>
-            )}
-          </div>
-
-          {/* Mobile Menu Overlay */}
           {isMobileMenuOpen && (
-            <div 
-              className="mobile-nav-overlay"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
+            <>
+              {/* Mobile Menu Overlay */}
+              <div 
+                className="mobile-nav-overlay"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              
+              {/* Mobile Navigation Panel */}
+              <div className="mobile-nav">
+                <div className="mobile-nav-header">
+                  <h3>BandVenueReview.ie</h3>
+                  <button 
+                    className="mobile-nav-close"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    aria-label="Close menu"
+                  >
+                    ✕
+                  </button>
+                </div>
+                
+                <div className="mobile-nav-links">
+                  <button 
+                    className={`mobile-nav-link ${currentView === 'home' ? 'active' : ''}`}
+                    onClick={() => {
+                      setCurrentView('home');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="nav-icon">🏠</span>
+                    <span>Home</span>
+                  </button>
+                  
+                  <button 
+                    className={`mobile-nav-link ${currentView === 'venues' ? 'active' : ''}`}
+                    onClick={() => {
+                      setCurrentView('venues');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="nav-icon">🏛️</span>
+                    <span>Venues</span>
+                  </button>
+                  
+                  <button 
+                    className={`mobile-nav-link ${currentView === 'bands' ? 'active' : ''}`}
+                    onClick={() => {
+                      setCurrentView('bands');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="nav-icon">🎵</span>
+                    <span>Bands</span>
+                  </button>
+                  
+                  <button 
+                    className={`mobile-nav-link ${currentView === 'features' ? 'active' : ''}`}
+                    onClick={() => {
+                      setCurrentView('features');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="nav-icon">💡</span>
+                    <span>Feature Ideas</span>
+                  </button>
+                  
+                  <div className="mobile-nav-divider"></div>
+                  
+                  <button 
+                    className="mobile-nav-link account-link"
+                    onClick={() => {
+                      setShowAuthModal(true);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="nav-icon">{user ? '👤' : '🔑'}</span>
+                    <span>{user ? 'My Account' : 'Sign In'}</span>
+                  </button>
+                  
+                  {!isAdmin && (
+                    <button 
+                      className="mobile-nav-link admin-link"
+                      onClick={() => {
+                        setCurrentView('admin');
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      <span className="nav-icon">🛠️</span>
+                      <span>Admin Panel</span>
+                    </button>
+                  )}
+                  
+                  {isAdmin && (
+                    <button 
+                      className="mobile-nav-link admin-active"
+                      onClick={() => {
+                        setIsAdmin(false);
+                        setAdminToken('');
+                        setCurrentView('home');
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      <span className="nav-icon">👑</span>
+                      <span>Exit Admin</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </>
           )}
         </nav>
 
