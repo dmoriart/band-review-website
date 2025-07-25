@@ -50,7 +50,7 @@ class VenueData:
     twitter: Optional[str] = None
     capacity: Optional[int] = None
     venueType: str = "live_music"  # live_music, pub, club, concert_hall, festival_site
-    musicGenres: List[str] = None
+    musicGenres: Optional[List[str]] = None
     hasStage: bool = True
     hasPA: bool = False
     hasLighting: bool = False

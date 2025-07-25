@@ -15,7 +15,7 @@ from typing import Dict, List, Optional, Any
 import os
 import sys
 from dataclasses import dataclass, asdict
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 import urllib.robotparser
 from dotenv import load_dotenv
 
@@ -73,13 +73,13 @@ class SoundStudio:
     location: Optional[Dict[str, float]] = None  # {"lat": float, "lng": float}
     contact: Optional[StudioContact] = None
     profileImage: Optional[str] = None
-    images: List[str] = None
-    amenities: List[str] = None
+    images: Optional[List[str]] = None
+    amenities: Optional[List[str]] = None
     pricing: Optional[StudioPricing] = None
-    genresSupported: List[str] = None
+    genresSupported: Optional[List[str]] = None
     bandFriendly: bool = True
     studioType: str = "professional"
-    features: List[str] = None
+    features: Optional[List[str]] = None
     capacity: Optional[int] = None
     verified: bool = False
     featured: bool = False
@@ -195,7 +195,7 @@ class MusicStudioScraper:
             logger.error(f"Error getting place details: {e}")
             return {}
 
-    def get_place_photo_url(self, photo_reference: str, max_width: int = 800) -> str:
+    def get_place_photo_url(self, photo_reference: str, max_width: int = 800) -> Optional[str]:
         """Get photo URL from Google Places photo reference"""
         if not photo_reference:
             return None
@@ -299,8 +299,10 @@ class MusicStudioScraper:
             
             # Extract description from meta tags or about sections
             meta_desc = soup.find('meta', attrs={'name': 'description'})
-            if meta_desc:
-                details['description'] = meta_desc.get('content', '').strip()
+            if meta_desc and isinstance(meta_desc, Tag):
+                content = meta_desc.get('content')
+                if content:
+                    details['description'] = str(content).strip()
             
             # Look for equipment/amenities keywords
             text_content = soup.get_text().lower()
@@ -413,9 +415,13 @@ class MusicStudioScraper:
                     studio.description = website_details['description']
                 
                 if website_details.get('amenities'):
+                    if studio.amenities is None:
+                        studio.amenities = []
                     studio.amenities.extend(website_details['amenities'])
                 
                 if website_details.get('genres'):
+                    if studio.genresSupported is None:
+                        studio.genresSupported = []
                     studio.genresSupported.extend(website_details['genres'])
                 
                 # Set pricing if found

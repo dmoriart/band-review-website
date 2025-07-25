@@ -40,9 +40,9 @@ class StudioData:
     website: Optional[str] = None
     facebook: Optional[str] = None
     instagram: Optional[str] = None
-    amenities: List[str] = None
+    amenities: Optional[List[str]] = None
     hourlyRate: Optional[float] = None
-    genresSupported: List[str] = None
+    genresSupported: Optional[List[str]] = None
     studioType: str = "professional"
     bandFriendly: bool = True
     latitude: Optional[float] = None
@@ -543,6 +543,8 @@ class IrishStudioDirectoryScraper:
                 
                 for keyword in equipment_keywords:
                     if keyword in text_content:
+                        if studio.amenities is None:
+                            studio.amenities = []
                         studio.amenities.append(keyword.replace(' ', '_'))
                 
                 # Look for pricing
@@ -560,6 +562,8 @@ class IrishStudioDirectoryScraper:
                 
                 for genre in genre_keywords:
                     if genre in text_content:
+                        if studio.genresSupported is None:
+                            studio.genresSupported = []
                         studio.genresSupported.append(genre)
                 
             except Exception as e:
@@ -573,9 +577,10 @@ class IrishStudioDirectoryScraper:
             studio.longitude = coords['lng']
         
         # Get photo from Google Places
-        photo_url = self.get_google_places_photo(name, city)
-        if photo_url:
-            studio.profileImage = photo_url
+        # TODO: Implement photo fetching if needed
+        # photo_url = self.get_google_places_photo(name, city)
+        # if photo_url:
+        #     studio.profileImage = photo_url
         
         return studio
 
@@ -800,7 +805,7 @@ def main():
         print(f"Website: {sample.website}")
         print(f"Phone: {sample.phone}")
         print(f"Email: {sample.email}")
-        print(f"Amenities: {', '.join(sample.amenities[:3])}...")
+        print(f"Amenities: {', '.join(sample.amenities[:3]) if sample.amenities else 'None'}...")
         print(f"Has Photo: {'Yes' if sample.profileImage else 'No'}")
     
     print(f"\n✅ Data collection complete!")
