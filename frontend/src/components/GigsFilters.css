@@ -1,11 +1,12 @@
 /* GigsFilters.css */
 .gigs-filters {
-  background: white;
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #eee;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .filters-header {
@@ -14,29 +15,32 @@
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #f8f9fa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .filters-header h3 {
   margin: 0;
-  color: #2c3e50;
+  color: #61dafb;
   font-size: 1.3rem;
 }
 
 .clear-filters-btn {
   padding: 8px 16px;
-  background: #e74c3c;
+  background: rgba(255, 107, 107, 0.9);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .clear-filters-btn:hover {
-  background: #c0392b;
+  background: rgba(231, 76, 60, 0.9);
+  transform: translateY(-1px);
 }
 
 .filters-grid {
@@ -54,44 +58,52 @@
 .filter-group label {
   font-weight: 600;
   margin-bottom: 8px;
-  color: #34495e;
+  color: #e0e0e0;
   font-size: 0.95rem;
 }
 
 .filter-input,
 .filter-select {
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: 6px;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
   font-size: 1rem;
-  background: white;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .filter-input:focus,
 .filter-select:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  border-color: #61dafb;
+  box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.1);
 }
 
 .filter-input::placeholder {
-  color: #bdc3c7;
+  color: #b0b0b0;
 }
 
 .filter-select {
   cursor: pointer;
 }
 
+.filter-select option {
+  background: #2a5298;
+  color: white;
+}
+
 /* Quick Filters */
 .quick-filters {
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 20px;
 }
 
 .quick-filters h4 {
   margin: 0 0 15px 0;
-  color: #2c3e50;
+  color: #61dafb;
   font-size: 1.1rem;
 }
 
@@ -103,28 +115,30 @@
 
 .quick-filter-btn {
   padding: 10px 16px;
-  border: 2px solid #3498db;
-  background: white;
-  color: #3498db;
+  border: 2px solid #61dafb;
+  background: rgba(255, 255, 255, 0.1);
+  color: #61dafb;
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
   white-space: nowrap;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .quick-filter-btn:hover {
-  background: #3498db;
-  color: white;
+  background: rgba(97, 218, 251, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 8px rgba(97, 218, 251, 0.3);
 }
 
 .quick-filter-btn.active {
-  background: #3498db;
+  background: linear-gradient(135deg, #61dafb, #21c8f6);
   color: white;
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+  border-color: #61dafb;
+  box-shadow: 0 4px 8px rgba(97, 218, 251, 0.3);
 }
 
 /* Responsive Design */

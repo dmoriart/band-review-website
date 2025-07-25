@@ -1,13 +1,16 @@
 /* GigDetailModal.css */
 .gig-detail-modal {
-  background: white;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
   max-width: 800px;
   width: 95%;
   max-height: 95vh;
   overflow-y: auto;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
   position: relative;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 
 .gig-detail-modal .modal-header {
@@ -21,7 +24,7 @@
 }
 
 .gig-detail-modal .close-btn {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   width: 40px;
   height: 40px;
@@ -211,14 +214,14 @@
 
 .gig-description h3 {
   margin: 0 0 15px 0;
-  color: #2c3e50;
+  color: #61dafb;
   font-size: 1.3rem;
   font-weight: bold;
 }
 
 .gig-description p {
   margin: 0;
-  color: #666;
+  color: #e0e0e0;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -252,7 +255,7 @@
 }
 
 .action-buttons .rsvp-btn {
-  background: #3498db;
+  background: #61dafb;
   color: white;
 }
 
@@ -297,7 +300,7 @@
 
 .share-section h4 {
   margin: 0 0 15px 0;
-  color: #2c3e50;
+  color: #61dafb;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -310,9 +313,9 @@
 
 .share-btn {
   padding: 10px 16px;
-  border: 2px solid #3498db;
+  border: 2px solid #61dafb;
   background: white;
-  color: #3498db;
+  color: #61dafb;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
@@ -322,7 +325,7 @@
 }
 
 .share-btn:hover {
-  background: #3498db;
+  background: #61dafb;
   color: white;
   transform: translateY(-1px);
 }
@@ -356,14 +359,14 @@
 
 .similar-events h4 {
   margin: 0 0 10px 0;
-  color: #2c3e50;
+  color: #61dafb;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .similar-events p {
   margin: 0;
-  color: #666;
+  color: #e0e0e0;
   font-size: 0.95rem;
 }
 
