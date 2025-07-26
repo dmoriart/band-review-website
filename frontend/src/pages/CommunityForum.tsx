@@ -47,10 +47,14 @@ const CommunityForum: React.FC = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type } = e.target;
+    let fieldValue: string | boolean = value;
+    if (type === 'checkbox' && e.target instanceof HTMLInputElement) {
+      fieldValue = e.target.checked;
+    }
     setForm(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: fieldValue,
     }));
   };
 
@@ -91,7 +95,15 @@ const CommunityForum: React.FC = () => {
           placeholder="Your Name or Band"
           required
         />
-        <select name="category" value={form.category} onChange={handleChange}>
+        <label htmlFor="category-select" className="forum-label">
+          Category
+        </label>
+        <select
+          id="category-select"
+          name="category"
+          value={form.category}
+          onChange={handleChange}
+        >
           {categories.map(cat => (
             <option key={cat} value={cat}>{cat}</option>
           ))}
