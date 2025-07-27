@@ -24,6 +24,11 @@ import logging
 from models import db, User, Band, Venue, Review, Genre
 from config import config
 from auth import auth_bp
+from merchandise_api import merchandise_bp, seed_merchandise_data
+from models_merchandise import (
+    ProductCategory, Product, Cart, CartItem, 
+    Order, OrderItem, ProductReview, BandProfile
+)
 
 def create_app(config_name=None):
     """Application factory pattern"""
@@ -64,6 +69,7 @@ def create_app(config_name=None):
     
     # Register blueprints
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
+    app.register_blueprint(merchandise_bp, url_prefix='/api')
     
     # Health check endpoint
     @app.route('/api/health')
@@ -84,6 +90,11 @@ def create_app(config_name=None):
             if Venue.query.count() == 0:
                 print("🌱 Seeding empty database...")
                 seed_database()
+                
+            # Seed merchandise data if empty
+            if ProductCategory.query.count() == 0:
+                print("🛍️ Seeding merchandise data...")
+                seed_merchandise_data()
                 
         except Exception as e:
             print(f"❌ Database setup error: {e}")

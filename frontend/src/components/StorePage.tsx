@@ -67,8 +67,10 @@ const StorePage: React.FC<StorePageProps> = ({ onProductClick, onCartClick, cart
   const [priceRange, setPriceRange] = useState('');
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
 
-  // API base URL - using merchandise server
-  const API_BASE_URL = 'http://localhost:5000/api';
+  // API base URL - use production URL for Netlify deployment
+  const API_BASE_URL = process.env.NODE_ENV === 'production' 
+    ? 'https://band-review-website.onrender.com/api'
+    : 'http://localhost:5000/api';
 
   /**
    * Fetch products from API
@@ -308,15 +310,35 @@ const StorePage: React.FC<StorePageProps> = ({ onProductClick, onCartClick, cart
       {/* Error Display */}
       {error && (
         <div className="error-message">
-          ⚠️ {error}
-          <div className="error-help">
-            <p>To fix this:</p>
-            <ol>
-              <li>Make sure you've set up the database using the SQL script</li>
-              <li>Start the merchandise server: <code>cd backend && node src/server-merchandise.js</code></li>
-              <li>Server should be running on <a href="http://localhost:5000" target="_blank" rel="noopener noreferrer">http://localhost:5000</a></li>
-            </ol>
-          </div>
+          {process.env.NODE_ENV === 'production' ? (
+            <>
+              <h3>🚧 Store Coming Soon!</h3>
+              <p>We're working hard to bring you an amazing merchandise store where you can buy directly from Irish bands.</p>
+              <div className="coming-soon-features">
+                <h4>What's Coming:</h4>
+                <ul>
+                  <li>🎵 Band merchandise from across Ireland</li>
+                  <li>💿 CDs, Vinyl, T-Shirts, Hoodies, and more</li>
+                  <li>🛒 Secure checkout with Stripe</li>
+                  <li>🚚 Fast Irish shipping with An Post</li>
+                  <li>💳 Support bands directly with every purchase</li>
+                </ul>
+              </div>
+              <p><strong>Want to be notified when we launch?</strong> Follow us for updates!</p>
+            </>
+          ) : (
+            <>
+              ⚠️ {error}
+              <div className="error-help">
+                <p>To fix this:</p>
+                <ol>
+                  <li>Make sure you've set up the database using the SQL script</li>
+                  <li>Start the merchandise server: <code>cd backend && node src/server-merchandise.js</code></li>
+                  <li>Server should be running on <a href="http://localhost:5000" target="_blank" rel="noopener noreferrer">http://localhost:5000</a></li>
+                </ol>
+              </div>
+            </>
+          )}
         </div>
       )}
 
