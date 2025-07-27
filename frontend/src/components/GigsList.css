@@ -421,7 +421,6 @@
     justify-content: center;
     gap: 15px;
     padding: 15px;
-    min-height: auto;
   }
 
   .gig-date .date-number {

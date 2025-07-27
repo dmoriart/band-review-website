@@ -4,8 +4,8 @@ import './CommunityForum.css';
 
 // Navigation pane (copied and adapted from App.tsx)
 const NavigationPane = ({ onNavigate, currentView }: { onNavigate: (view: string) => void, currentView: string }) => (
-  <nav className="navigation" style={{ marginBottom: '2rem' }}>
-    <div className="nav-brand" onClick={() => onNavigate('home')} style={{ cursor: 'pointer' }}>
+  <nav className="navigation navigation-margin">
+    <div className="nav-brand" onClick={() => onNavigate('home')}>
       🎵 BandVenueReview.ie
     </div>
     <div className="nav-links desktop-nav">

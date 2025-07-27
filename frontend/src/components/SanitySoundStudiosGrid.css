@@ -1,7 +1,7 @@
 /* Sound Studios Grid Styles */
 .sanity-studios-grid {
   margin: 2rem 0;
- 
+}
 
 .sanity-studios-header {
   text-align: center;
@@ -12,6 +12,7 @@
   border: 1px solid rgba(97, 218, 251, 0.3);
   color: #61dafb;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
 
 .sanity-studios-header h3 {
   margin: 0 0 0.5rem 0;
@@ -110,6 +111,7 @@
   border: 1px solid rgba(97, 218, 251, 0.3);
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   color: #e0e0e0;
+}
 
 .studio-card.clickable {
   cursor: pointer;
