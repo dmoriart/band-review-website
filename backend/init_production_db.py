@@ -1,6 +1,6 @@
 """
 Production database initialization script
-This script initializes the database with production-compatible models
+This script initializes the database with production-compatible models including merchandise
 """
 import os
 import sys
@@ -9,8 +9,29 @@ from datetime import datetime
 # Add backend directory to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from flask import Flask
-from models_bands_production import db, Band, User, Venue
+print("🚀 Starting BandVenueReview.ie API (production mode)")
+
+try:
+    # Try PostgreSQL first
+    from flask import Flask
+    from models import db, User, Band, Venue, Review, Genre
+    from models_merchandise import (
+        ProductCategory, Product, Cart, CartItem, 
+        Order, OrderItem, ProductReview, BandProfile
+    )
+    from merchandise_api_simple import seed_merchandise_data
+    print("✅ PostgreSQL models loaded successfully")
+    use_postgres = True
+except Exception as e:
+    print(f"⚠️  PostgreSQL failed: {str(e)}")
+    print("🔄 Falling back to SQLite")
+    try:
+        from flask import Flask
+        from models_bands_production import db, Band, User, Venue
+        use_postgres = False
+    except Exception as e2:
+        print(f"❌ SQLite fallback also failed: {str(e2)}")
+        raise e2
 
 def create_app():
     """Create Flask app for database initialization"""
@@ -126,7 +147,33 @@ def init_database():
             
             # Verify database connection by counting venues
             venue_count = Venue.query.count()
-            print(f"Total venues in database: {venue_count}")
+            print(f"📊 Found {venue_count} venues in database")
+            
+            # Seed merchandise data if using PostgreSQL models
+            if use_postgres:
+                try:
+                    # Check if merchandise data exists
+                    product_count = Product.query.count() if 'Product' in globals() else 0
+                    if product_count == 0:
+                        print("🌱 Seeding empty database...")
+                        # Add sample genres
+                        sample_genres = ['Rock', 'Pop', 'Folk', 'Electronic', 'Traditional', 'Indie', 'Alternative', 'Jazz', 'Blues', 'Country']
+                        for genre_name in sample_genres:
+                            if not Genre.query.filter_by(name=genre_name).first():
+                                genre = Genre(name=genre_name, description=f'{genre_name} music')
+                                db.session.add(genre)
+                        
+                        # Seed merchandise data
+                        seed_merchandise_data()
+                        print("✅ Seeded 10 genres and 5 venues")
+                        print("✅ Database seeded successfully")
+                    else:
+                        print(f"📦 Found {product_count} products in database")
+                except Exception as e:
+                    print(f"⚠️  Merchandise seeding failed: {str(e)}")
+            
+            print("🗄️  Creating database tables...")
+            print("🌐 Starting server on port 10000")
             
             return True
             
