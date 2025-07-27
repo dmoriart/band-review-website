@@ -15,6 +15,7 @@ import BuyMeACoffeeCard from './components/BuyMeACoffeeCard';
 import { useBands, useVenues } from './hooks/useSanity';
 import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyNames } from './utils/irishLocations';
 import CommunityForum from './pages/CommunityForum';
+import StorePage from './components/StorePage';
 
 // Define types for type safety
 type CurrentView = 'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test' | 'forum' | 'store' | 'product-detail' | 'cart' | 'checkout';
@@ -127,6 +128,10 @@ function AppContent() {
   // Admin login state - moved here to ensure all hooks are at the top
   const [adminEmail, setAdminEmail] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
+
+  // Store state
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   // API base URL - force correct URL to override wrong environment variable
   const API_BASE_URL = 'https://band-review-website.onrender.com/api';
@@ -1415,6 +1420,17 @@ function AppContent() {
                 </button>
                 
                 <button 
+                  className={`mobile-nav-link ${currentView === 'store' ? 'active' : ''}`}
+                  onClick={() => {
+                    setCurrentView('store');
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="nav-icon">🛍️</span>
+                  <span>Store</span>
+                </button>
+                
+                <button 
                   className={`mobile-nav-link ${currentView === 'gigs' ? 'active' : ''}`}
                   onClick={() => {
                     setCurrentView('gigs');
@@ -1510,6 +1526,16 @@ function AppContent() {
           {currentView === 'venues' && renderVenues()}
           {currentView === 'studios' && renderStudios()}
           {currentView === 'bands' && <BandsPage />}
+          {currentView === 'store' && (
+            <StorePage
+              onProductClick={(product) => {
+                setSelectedProduct(product);
+                setCurrentView('product-detail');
+              }}
+              onCartClick={() => setCurrentView('cart')}
+              cartItemCount={cartItemCount}
+            />
+          )}
           {currentView === 'gigs' && <GigsPage />}
           {currentView === 'features' && <FeatureIdeasPage />}
           {currentView === 'venue-detail' && renderVenueDetail()}
