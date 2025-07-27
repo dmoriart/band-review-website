@@ -17,7 +17,7 @@ import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyName
 import CommunityForum from './pages/CommunityForum';
 
 // Define types for type safety
-type CurrentView = 'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test' | 'forum';
+type CurrentView = 'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test' | 'forum' | 'store' | 'product-detail' | 'cart' | 'checkout';
 
 // Define interfaces for type safety
 interface TechSpecs {
@@ -1281,6 +1281,12 @@ function AppContent() {
               onClick={() => setCurrentView('bands')}
             >
               Bands
+            </button>
+            <button 
+              className={`nav-link ${currentView === 'store' ? 'active' : ''}`}
+              onClick={() => setCurrentView('store')}
+            >
+              🛍️ Store
             </button>
             <button 
               className={`nav-link ${currentView === 'gigs' ? 'active' : ''}`}
