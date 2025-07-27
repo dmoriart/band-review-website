@@ -1,17 +1,25 @@
+/* Match venues page style */
 .forum-page {
-  max-width: 700px;
+  max-width: 900px;
   margin: 2rem auto;
-  background: rgba(255,255,255,0.07);
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(97,218,251,0.08);
-  padding: 2rem 1.5rem;
+  background: rgba(30, 60, 114, 0.85);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 24px rgba(97,218,251,0.13);
+  padding: 2.5rem 2rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #e0e0e0;
 }
 
+/* Match venues header */
 .forum-desc {
   color: #61dafb;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   text-align: center;
+  background: rgba(97, 218, 251, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(97, 218, 251, 0.3);
+  padding: 1rem;
 }
 
 .forum-form {
@@ -21,6 +29,7 @@
   margin-bottom: 2.5rem;
 }
 
+/* Match venues card input style */
 .forum-form input,
 .forum-form select,
 .forum-form textarea {
@@ -28,8 +37,9 @@
   border-radius: 0.5rem;
   border: 1px solid #61dafb;
   font-size: 1rem;
-  background: rgba(255,255,255,0.15);
-  color: #1e3c72;
+  background: rgba(255,255,255,0.10);
+  color: #e0e0e0;
+  font-family: inherit;
 }
 
 .forum-form textarea {
@@ -80,12 +90,15 @@
   gap: 1.5rem;
 }
 
+/* Match venues card style */
 .forum-post {
-  background: rgba(255,255,255,0.13);
-  border-radius: 0.7rem;
-  box-shadow: 0 2px 10px rgba(97,218,251,0.07);
+  background: rgba(255,255,255,0.10);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(97,218,251,0.10);
   padding: 1.2rem 1rem;
   border-left: 5px solid #61dafb;
+  color: #e0e0e0;
+  font-family: inherit;
 }
 
 .forum-post.paid {
@@ -103,7 +116,8 @@
 .forum-post-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1e3c72;
+  color: #61dafb;
+  font-family: inherit;
 }
 
 .forum-post-category {
@@ -131,8 +145,9 @@
 }
 
 .forum-post-content {
-  color: #1e3c72;
+  color: #d0d0d0;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 @media (max-width: 600px) {
