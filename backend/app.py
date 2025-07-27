@@ -16,6 +16,11 @@ from werkzeug.exceptions import BadRequest
 from config import config
 from models import db, User, Band, Venue, Review, Genre
 from auth import token_required, band_required, venue_owner_required, get_current_user, validate_user_data, validate_review_data
+from merchandise_api import merchandise_bp, seed_merchandise_data
+from models_merchandise import (
+    ProductCategory, Product, Cart, CartItem, 
+    Order, OrderItem, ProductReview, BandProfile
+)
 
 def create_app(config_name=None):
     """Application factory pattern"""
@@ -37,6 +42,9 @@ def create_app(config_name=None):
 
 # Create Flask app
 app = create_app()
+
+# Register merchandise blueprint
+app.register_blueprint(merchandise_bp, url_prefix='/api')
 
 # Sample data for seeding (will be moved to separate file)
 SAMPLE_VENUES = [
@@ -545,6 +553,11 @@ if __name__ == '__main__':
     # Create tables if they don't exist
     with app.app_context():
         db.create_all()
+        
+        # Seed merchandise data if empty
+        if ProductCategory.query.count() == 0:
+            print("🛍️ Seeding merchandise data...")
+            seed_merchandise_data()
     
     app.run(
         host='0.0.0.0',  # Allow external connections
