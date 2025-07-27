@@ -1,24 +1,9 @@
 
 import React, { useState } from 'react';
 import './CommunityForum.css';
+import NavigationHeader from '../components/NavigationHeader';
 
-// Navigation pane (copied and adapted from App.tsx)
-const NavigationPane = ({ onNavigate, currentView }: { onNavigate: (view: string) => void, currentView: string }) => (
-  <nav className="navigation navigation-margin">
-    <div className="nav-brand" onClick={() => onNavigate('home')}>
-      🎵 BandVenueReview.ie
-    </div>
-    <div className="nav-links desktop-nav">
-      <button className={`nav-link ${currentView === 'home' ? 'active' : ''}`} onClick={() => onNavigate('home')}>Home</button>
-      <button className={`nav-link ${currentView === 'venues' ? 'active' : ''}`} onClick={() => onNavigate('venues')}>Venues</button>
-      <button className={`nav-link ${currentView === 'studios' ? 'active' : ''}`} onClick={() => onNavigate('studios')}>Studios</button>
-      <button className={`nav-link ${currentView === 'bands' ? 'active' : ''}`} onClick={() => onNavigate('bands')}>Bands</button>
-      <button className={`nav-link ${currentView === 'gigs' ? 'active' : ''}`} onClick={() => onNavigate('gigs')}>🎵 Gigs</button>
-      <button className={`nav-link ${currentView === 'features' ? 'active' : ''}`} onClick={() => onNavigate('features')}>💡 Features</button>
-      <button className={`nav-link ${currentView === 'forum' ? 'active' : ''}`} onClick={() => onNavigate('forum')}>💬 Forum</button>
-    </div>
-  </nav>
-);
+
 
 const initialPosts = [
   {
@@ -66,6 +51,10 @@ const CommunityForum: React.FC = () => {
   });
   const [showThankYou, setShowThankYou] = useState(false);
   const [currentView, setCurrentView] = useState('forum');
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [adminToken, setAdminToken] = useState('');
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -95,19 +84,21 @@ const CommunityForum: React.FC = () => {
     }
   };
 
-  // Navigation handler
-  const handleNavigate = (view: string) => {
-    // If you want to actually route, you can use react-router here
-    setCurrentView(view);
-    // Optionally, you could window.location or use a router
-    if (view !== 'forum') {
-      window.location.href = '/'; // fallback: go to home for other views
-    }
-  };
+
 
   return (
     <div className="forum-page">
-      <NavigationPane onNavigate={handleNavigate} currentView={currentView} />
+      <NavigationHeader
+        currentView={currentView}
+        setCurrentView={setCurrentView}
+        isAdmin={isAdmin}
+        setIsAdmin={setIsAdmin}
+        setShowAuthModal={setShowAuthModal}
+        adminToken={adminToken}
+        setAdminToken={setAdminToken}
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
       <h1>🎤 Community Forum & Discussion Board</h1>
       <p className="forum-desc">
         Gig swapping, gear advice, band member ads, and more. Bands can pay to post listings (e.g., "Support band needed for tour," "Sound engineer wanted," "Bassist wanted").
