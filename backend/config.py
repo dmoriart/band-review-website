@@ -6,6 +6,23 @@ Flask application configuration for different environments
 import os
 from datetime import timedelta
 
+def build_database_url():
+    """Build database URL from individual parameters if available, otherwise use DATABASE_URL"""
+    # Check if individual parameters are available
+    db_host = os.environ.get('DB_HOST')
+    db_port = os.environ.get('DB_PORT')
+    db_name = os.environ.get('DB_NAME')
+    db_user = os.environ.get('DB_USER')
+    db_password = os.environ.get('DB_PASSWORD')
+    db_sslmode = os.environ.get('DB_SSLMODE', 'require')
+    
+    # If all individual parameters are available, build the URL
+    if all([db_host, db_port, db_name, db_user, db_password]):
+        return f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}?sslmode={db_sslmode}"
+    
+    # Otherwise, fall back to DATABASE_URL
+    return os.environ.get('DATABASE_URL')
+
 class Config:
     """Base configuration class"""
     
@@ -57,8 +74,8 @@ class ProductionConfig(Config):
     """Production configuration"""
     DEBUG = False
     
-    # Use Supabase PostgreSQL in production
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    # Use Supabase PostgreSQL in production - try individual params first, then fall back to URL
+    SQLALCHEMY_DATABASE_URI = build_database_url() or 'sqlite:///bandvenuereview.db'
     
     # More restrictive CORS in production
     CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'https://bandvenuereview.netlify.app').split(',')
