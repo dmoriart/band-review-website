@@ -20,12 +20,11 @@ print(f"Backend directory: {os.path.dirname(os.path.abspath(__file__))}")
 
 try:
     print("Importing app...")
-    from app import create_app
+    from app import app
     print("✅ Import successful")
     
-    print("Creating app...")
-    app = create_app('production')
-    print("✅ App created")
+    print("App loaded directly")
+    print("✅ App ready")
     
     # Debug: Print route information
     print("=== WSGI Application Starting ===")
