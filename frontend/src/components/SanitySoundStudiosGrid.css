@@ -113,42 +113,7 @@
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.studio-card.clickable:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(97, 218, 251, 0.3);
-}
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
-}
-
-.studio-card.clickable {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-.studio-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
-  transform: scale(1.05);
-
-/* Featured Studio Cards - Enhanced Styling */
-  width: 100%;
-  height: 250px;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: #61dafb;
-.studio-card.featured:hover {
-  box-shadow: 0 12px 35px rgba(255, 193, 7, 0.3);
-  transform: translateY(-3px);
-}
+/* Fixed clickable hover and removed invalid/duplicate CSS */
 
 .studio-card.featured.clickable:hover {
   box-shadow: 0 16px 40px rgba(255, 193, 7, 0.4);
