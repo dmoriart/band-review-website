@@ -113,7 +113,11 @@
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-/* Fixed clickable hover and removed invalid/duplicate CSS */
+
+.studio-card.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(97, 218, 251, 0.2);
+}
 
 .studio-card.featured.clickable:hover {
   box-shadow: 0 16px 40px rgba(255, 193, 7, 0.4);

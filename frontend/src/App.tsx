@@ -16,6 +16,9 @@ import { useBands, useVenues } from './hooks/useSanity';
 import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyNames } from './utils/irishLocations';
 import CommunityForum from './pages/CommunityForum';
 
+// Define types for type safety
+type CurrentView = 'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test' | 'forum';
+
 // Define interfaces for type safety
 interface TechSpecs {
   pa_system?: string;
@@ -92,7 +95,7 @@ function AppContent() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const [healthStatus, setHealthStatus] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'venues' | 'venue-detail' | 'studios' | 'studio-detail' | 'bands' | 'gigs' | 'features' | 'admin' | 'sanity-test' | 'api-test' | 'forum'>('home');
+  const [currentView, setCurrentView] = useState<CurrentView>('home');
   const [adminToken, setAdminToken] = useState<string>('');
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
@@ -1292,8 +1295,8 @@ function AppContent() {
               💡 Features
             </button>
             <button 
-              className={`nav-link ${currentView === 'forum' ? 'active' : ''}`}
-              onClick={() => setCurrentView('forum')}
+              className={`nav-link ${(currentView as string) === 'forum' ? 'active' : ''}`}
+              onClick={() => setCurrentView('forum' as CurrentView)}
             >
               💬 Forum
             </button>
@@ -1428,9 +1431,9 @@ function AppContent() {
                 </button>
                 
                 <button 
-                  className={`mobile-nav-link ${currentView === 'forum' ? 'active' : ''}`}
+                  className={`mobile-nav-link ${(currentView as string) === 'forum' ? 'active' : ''}`}
                   onClick={() => {
-                    setCurrentView('forum');
+                    setCurrentView('forum' as CurrentView);
                     setIsMobileMenuOpen(false);
                   }}
                 >
