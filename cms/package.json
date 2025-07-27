@@ -19,17 +19,24 @@
     "@sanity/color-input": "^4.0.5",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^4.1.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.1.0",
+    "cross-env": "^10.0.0",
+    "package-name": "^0.1.0",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.1.1",
-    "styled-components": "^6.1.18"
+    "styled-components": "^6.1.18",
+    "web-vitals": "^5.0.3"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^5.0.2",
     "@types/react": "^19.1",
     "eslint": "^9.28",
     "prettier": "^3.5",
-    "typescript": "^5.8"
+    "typescript": "^5.8.3"
   },
   "prettier": {
     "semi": false,
