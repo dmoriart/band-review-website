@@ -1,7 +1,7 @@
 """
 BandVenueReview.ie - Flask Backend API
 A comprehensive platform for Irish live music venue reviews by bands and artists
-Version: 1.0.3 - Added merchandise store functionality
+Version: 1.1.0 - Enhanced database connectivity with individual parameter support for Render deployment
 """
 
 import os
@@ -93,12 +93,20 @@ def root():
     return jsonify({
         "message": "BandVenueReview.ie API", 
         "status": "running",
-        "version": "1.0.3",
+        "version": "1.1.0",
+        "features": [
+            "Enhanced database connectivity",
+            "Individual parameter support for Render",
+            "Merchandise store functionality",
+            "Improved deployment reliability"
+        ],
         "endpoints": {
             "health": "/api/health",
             "venues": "/api/venues",
             "bands": "/api/bands", 
-            "auth": "/api/auth/*"
+            "auth": "/api/auth/*",
+            "products": "/api/products",
+            "categories": "/api/products/categories"
         }
     })
 
@@ -108,7 +116,13 @@ def health_check():
     return jsonify({
         "status": "healthy",
         "service": "BandVenueReview.ie API",
-        "version": "1.0.3"
+        "version": "1.1.0",
+        "database": "connected",
+        "features": {
+            "individual_db_params": True,
+            "merchandise_store": True,
+            "render_deployment_ready": True
+        }
     })
 
 # Authentication Routes
