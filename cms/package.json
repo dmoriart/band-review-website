@@ -16,9 +16,9 @@
   ],
   "dependencies": {
     "@sanity/client": "^7.8.1",
-    "@sanity/color-input": "^4.0.5",
+    "@sanity/color-input": "^2.36.1",
     "@sanity/image-url": "^1.1.0",
-    "@sanity/vision": "^4.1.1",
+    "@sanity/vision": "^2.2.6",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^30.0.0",
@@ -27,7 +27,7 @@
     "package-name": "^0.1.0",
     "react": "^19.1",
     "react-dom": "^19.1",
-    "sanity": "^4.1.1",
+    "sanity": "^2.36.6",
     "styled-components": "^6.1.18",
     "web-vitals": "^5.0.3"
   },
