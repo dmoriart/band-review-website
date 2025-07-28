@@ -10,6 +10,7 @@ export const client = createClient({
   withCredentials: false, // Explicitly disable credentials to avoid CORS issues
   timeout: 30000, // 30 second timeout for slower connections
   requestTagPrefix: 'bandvenuereview-', // Add request tag prefix for debugging
+  token: process.env.REACT_APP_SANITY_TOKEN, // Add write token for asset uploads
 })
 
 // Helper for generating image URLs

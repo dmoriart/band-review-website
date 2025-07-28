@@ -45,6 +45,12 @@ const StudioPhotoUpload: React.FC<StudioPhotoUploadProps> = ({
       return;
     }
 
+    // Check if Sanity token is available
+    if (!process.env.REACT_APP_SANITY_TOKEN) {
+      setError('Photo upload is currently unavailable. Please contact the site administrator.');
+      return;
+    }
+
     setUploading(true);
     setError('');
     setSuccess('');
