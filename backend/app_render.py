@@ -226,27 +226,174 @@ def get_products():
             "title": "Band T-Shirt - Black",
             "price": 25.00,
             "category": "tshirt",
-            "in_stock": True
+            "in_stock": True,
+            "description": "High-quality cotton t-shirt with band logo",
+            "image": None,
+            "featured": True
         },
         {
             "id": "2", 
             "title": "Latest Album - CD",
             "price": 15.00,
             "category": "cd",
-            "in_stock": True
+            "in_stock": True,
+            "description": "Physical CD with liner notes and artwork",
+            "image": None,
+            "featured": False
         },
         {
             "id": "3",
             "title": "Digital Album Download",
             "price": 10.00,
             "category": "digital",
-            "in_stock": True
+            "in_stock": True,
+            "description": "High-quality MP3 download with digital booklet",
+            "image": None,
+            "featured": False
+        },
+        {
+            "id": "4",
+            "title": "Band Hoodie - Grey",
+            "price": 45.00,
+            "category": "hoodie",
+            "in_stock": True,
+            "description": "Comfortable hoodie with embroidered logo",
+            "image": None,
+            "featured": True
+        },
+        {
+            "id": "5",
+            "title": "Vinyl Record - Limited Edition",
+            "price": 35.00,
+            "category": "vinyl",
+            "in_stock": False,
+            "description": "Limited edition colored vinyl with special packaging",
+            "image": None,
+            "featured": True
         }
     ]
     
     return jsonify({
         "products": mock_products,
         "total": len(mock_products),
+        "message": "Mock data - database integration pending"
+    })
+
+# Product categories endpoint
+@app.route('/api/products/categories', methods=['GET'])
+def get_product_categories():
+    """Get product categories for store filtering"""
+    logger.info("Product categories endpoint accessed")
+    
+    categories = [
+        {"id": "tshirt", "name": "T-Shirts", "count": 1},
+        {"id": "hoodie", "name": "Hoodies", "count": 1},
+        {"id": "cd", "name": "CDs", "count": 1},
+        {"id": "vinyl", "name": "Vinyl Records", "count": 1},
+        {"id": "digital", "name": "Digital Downloads", "count": 1}
+    ]
+    
+    return jsonify({
+        "categories": categories,
+        "total": len(categories),
+        "message": "Mock data - database integration pending"
+    })
+
+# Individual product endpoint
+@app.route('/api/products/<product_id>', methods=['GET'])
+def get_product(product_id):
+    """Get individual product details"""
+    logger.info(f"Product detail endpoint accessed for ID: {product_id}")
+    
+    # Mock product data
+    mock_products = {
+        "1": {
+            "id": "1",
+            "title": "Band T-Shirt - Black",
+            "price": 25.00,
+            "category": "tshirt",
+            "in_stock": True,
+            "description": "High-quality cotton t-shirt with band logo. Available in sizes S-XXL.",
+            "image": None,
+            "featured": True,
+            "variants": [
+                {"size": "S", "price": 25.00, "in_stock": True},
+                {"size": "M", "price": 25.00, "in_stock": True},
+                {"size": "L", "price": 25.00, "in_stock": True},
+                {"size": "XL", "price": 27.00, "in_stock": True},
+                {"size": "XXL", "price": 29.00, "in_stock": False}
+            ],
+            "rating": 4.5,
+            "review_count": 23
+        },
+        "2": {
+            "id": "2",
+            "title": "Latest Album - CD",
+            "price": 15.00,
+            "category": "cd",
+            "in_stock": True,
+            "description": "Physical CD with liner notes and artwork. Includes 12 tracks of our latest material.",
+            "image": None,
+            "featured": False,
+            "variants": [],
+            "rating": 4.8,
+            "review_count": 45
+        },
+        "3": {
+            "id": "3",
+            "title": "Digital Album Download",
+            "price": 10.00,
+            "category": "digital",
+            "in_stock": True,
+            "description": "High-quality MP3 download with digital booklet. Instant download after purchase.",
+            "image": None,
+            "featured": False,
+            "variants": [],
+            "rating": 4.2,
+            "review_count": 67
+        },
+        "4": {
+            "id": "4",
+            "title": "Band Hoodie - Grey",
+            "price": 45.00,
+            "category": "hoodie",
+            "in_stock": True,
+            "description": "Comfortable hoodie with embroidered logo. Perfect for concerts and casual wear.",
+            "image": None,
+            "featured": True,
+            "variants": [
+                {"size": "S", "price": 45.00, "in_stock": True},
+                {"size": "M", "price": 45.00, "in_stock": True},
+                {"size": "L", "price": 45.00, "in_stock": False},
+                {"size": "XL", "price": 47.00, "in_stock": True}
+            ],
+            "rating": 4.6,
+            "review_count": 18
+        },
+        "5": {
+            "id": "5",
+            "title": "Vinyl Record - Limited Edition",
+            "price": 35.00,
+            "category": "vinyl",
+            "in_stock": False,
+            "description": "Limited edition colored vinyl with special packaging. Only 500 copies made.",
+            "image": None,
+            "featured": True,
+            "variants": [],
+            "rating": 4.9,
+            "review_count": 12
+        }
+    }
+    
+    product = mock_products.get(product_id)
+    if not product:
+        return jsonify({
+            "error": "Product not found",
+            "message": f"Product with ID {product_id} does not exist"
+        }), 404
+    
+    return jsonify({
+        "product": product,
         "message": "Mock data - database integration pending"
     })
 
