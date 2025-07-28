@@ -163,7 +163,7 @@ class BandUserService {
     
     if (!db) {
       console.error('❌ [bandUserService] Database not available');
-      throw new Error('Database not available - please check your internet connection');
+      throw new Error('Database not available - please check your internet connection and refresh the page');
     }
     
     try {
@@ -176,15 +176,15 @@ class BandUserService {
         where('bandId', '==', claimData.bandId)
       );
       
-      // Add timeout to the query - consistent with document creation timeout
-      const QUERY_TIMEOUT = 20000; // 20 seconds
+      // Add timeout to the query - shorter timeout for faster failure detection
+      const QUERY_TIMEOUT = 15000; // 15 seconds
       console.log(`⏱️ [bandUserService] Starting existing claim check with ${QUERY_TIMEOUT}ms timeout...`);
       
       const queryPromise = getDocs(existingQuery);
       const queryTimeoutPromise = new Promise((_, reject) => {
         setTimeout(() => {
           console.error('⏰ [bandUserService] Existing claim query timeout reached');
-          reject(new Error('Database query timed out'));
+          reject(new Error('Connection timeout - please check your internet connection'));
         }, QUERY_TIMEOUT);
       });
       
@@ -198,7 +198,8 @@ class BandUserService {
 
       console.log('📝 [bandUserService] Preparing relationship data...');
       
-      // Create new relationship record
+      // Create new relationship record with simplified timestamp handling
+      const now = new Date();
       const relationshipData: Omit<BandUserRelationship, 'id'> = {
         userId,
         userEmail,
@@ -238,8 +239,8 @@ class BandUserService {
 
       console.log('💾 [bandUserService] Saving to Firestore...', { collection: this.collectionName });
       
-      // Enhanced timeout with multiple strategies
-      const OPERATION_TIMEOUT = 25000; // 25 seconds - longer timeout for slow connections
+      // Shorter timeout with better error handling
+      const OPERATION_TIMEOUT = 20000; // 20 seconds
       
       console.log(`⏱️ [bandUserService] Starting document creation with ${OPERATION_TIMEOUT}ms timeout...`);
       const startTime = Date.now();
@@ -249,7 +250,7 @@ class BandUserService {
       const timeoutPromise = new Promise((_, reject) => {
         setTimeout(() => {
           console.error('⏰ [bandUserService] Document creation timeout reached after', OPERATION_TIMEOUT, 'ms');
-          reject(new Error('Database query timed out'));
+          reject(new Error('Connection timeout - the request is taking too long. Please try again.'));
         }, OPERATION_TIMEOUT);
       });
       
@@ -268,23 +269,36 @@ class BandUserService {
         stack: (error as any)?.stack?.substring(0, 200)
       });
       
-      // Handle specific Firebase errors with more detailed messaging
+      // Handle specific Firebase errors with more user-friendly messaging
       const errorMessage = error instanceof Error ? error.message : String(error);
+      const errorCode = (error as any)?.code;
       
-      if ((error as any)?.code === 'unavailable') {
-        throw new Error('Database is temporarily unavailable. Please try again in a few moments.');
-      } else if ((error as any)?.code === 'permission-denied') {
-        throw new Error('You do not have permission to perform this action. Please ensure you are logged in.');
-      } else if (errorMessage.includes('Database query timed out') || errorMessage.includes('timeout')) {
-        console.error('⏰ [bandUserService] Timeout error detected - network or database performance issue');
-        throw new Error('The request is taking too long to complete. This may be due to a slow internet connection or high database load. Please try again in a few moments.');
-      } else if (errorMessage.includes('network') || errorMessage.includes('fetch')) {
-        throw new Error('Network connection error. Please check your internet connection and try again.');
-      } else if ((error as any)?.message?.includes('400')) {
-        throw new Error('Network error occurred. Please refresh the page and try again.');
+      // Handle specific Firebase error codes
+      if (errorCode === 'unavailable' || errorCode === 'deadline-exceeded') {
+        throw new Error('The database is temporarily unavailable. Please try again in a few moments.');
+      } else if (errorCode === 'permission-denied') {
+        throw new Error('Permission denied. Please ensure you are logged in and try again.');
+      } else if (errorCode === 'failed-precondition') {
+        throw new Error('Database configuration error. Please refresh the page and try again.');
+      } else if (errorCode === 'cancelled') {
+        throw new Error('The request was cancelled. Please try again.');
+      } else if (errorCode === 'unauthenticated') {
+        throw new Error('Authentication required. Please sign in and try again.');
       }
       
-      throw error;
+      // Handle timeout and network errors
+      if (errorMessage.includes('timeout') || errorMessage.includes('Connection timeout')) {
+        throw new Error('Connection timeout. Please check your internet connection and try again.');
+      } else if (errorMessage.includes('network') || errorMessage.includes('fetch') || errorMessage.includes('Failed to fetch')) {
+        throw new Error('Network error. Please check your internet connection and try again.');
+      } else if (errorMessage.includes('400') || errorMessage.includes('Bad Request')) {
+        throw new Error('Request error. Please refresh the page and try again.');
+      } else if (errorMessage.includes('WebChannelConnection') || errorMessage.includes('transport errored')) {
+        throw new Error('Connection error. Please check your internet connection, refresh the page, and try again.');
+      }
+      
+      // Default error message for unknown errors
+      throw new Error('An unexpected error occurred. Please refresh the page and try again.');
     }
   }
 
