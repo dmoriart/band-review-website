@@ -164,7 +164,7 @@ FLASK_CONFIG=production
 
 1. **Check API Version**:
    ```bash
-   curl https://your-render-url.com/api/health
+      compaudit
    # Should return version: "1.1.0"
    ```
 
