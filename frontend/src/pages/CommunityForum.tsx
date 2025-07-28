@@ -1,9 +1,6 @@
 
 import React, { useState } from 'react';
 import './CommunityForum.css';
-import NavigationHeader from '../components/NavigationHeader';
-
-
 
 const initialPosts = [
   {
@@ -39,7 +36,6 @@ const categories = [
   'General',
 ];
 
-
 const CommunityForum: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [form, setForm] = useState({
@@ -50,11 +46,7 @@ const CommunityForum: React.FC = () => {
     paid: false,
   });
   const [showThankYou, setShowThankYou] = useState(false);
-  const [currentView, setCurrentView] = useState('forum');
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [adminToken, setAdminToken] = useState('');
-  const [showAuthModal, setShowAuthModal] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<'forum' | 'diagnostics'>('forum');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -84,87 +76,126 @@ const CommunityForum: React.FC = () => {
     }
   };
 
-
-
   return (
     <div className="forum-page">
-      <NavigationHeader
-        currentView={currentView}
-        setCurrentView={setCurrentView}
-        isAdmin={isAdmin}
-        setIsAdmin={setIsAdmin}
-        setShowAuthModal={setShowAuthModal}
-        adminToken={adminToken}
-        setAdminToken={setAdminToken}
-        isMobileMenuOpen={isMobileMenuOpen}
-        setIsMobileMenuOpen={setIsMobileMenuOpen}
-      />
-      <h1>🎤 Community Forum & Discussion Board</h1>
-      <p className="forum-desc">
-        Gig swapping, gear advice, band member ads, and more. Bands can pay to post listings (e.g., "Support band needed for tour," "Sound engineer wanted," "Bassist wanted").
-      </p>
-      <form className="forum-form" onSubmit={handleSubmit}>
-        <input
-          name="title"
-          value={form.title}
-          onChange={handleChange}
-          placeholder="Listing Title"
-          required
-        />
-        <input
-          name="author"
-          value={form.author}
-          onChange={handleChange}
-          placeholder="Your Name or Band"
-          required
-        />
-        <label htmlFor="category-select" className="forum-label">
-          Category
-        </label>
-        <select
-          id="category-select"
-          name="category"
-          value={form.category}
-          onChange={handleChange}
-        >
-          {categories.map(cat => (
-            <option key={cat} value={cat}>{cat}</option>
-          ))}
-        </select>
-        <textarea
-          name="content"
-          value={form.content}
-          onChange={handleChange}
-          placeholder="Describe your listing, question, or ad..."
-          required
-        />
-        <label className="paid-label">
-          <input
-            type="checkbox"
-            name="paid"
-            checked={form.paid}
-            onChange={handleChange}
-          />
-          Paid Listing (promoted)
-        </label>
-        <button type="submit" className="forum-submit">Post Listing</button>
-        {showThankYou && (
-          <div className="forum-thankyou">Thank you for supporting the community! 🙏</div>
-        )}
-      </form>
-      <div className="forum-listings">
-        {posts.map(post => (
-          <div key={post.id} className={`forum-post${post.paid ? ' paid' : ''}`}>
-            <div className="forum-post-header">
-              <span className="forum-post-title">{post.title}</span>
-              <span className="forum-post-category">{post.category}</span>
-              {post.paid && <span className="forum-paid-badge">Paid</span>}
-            </div>
-            <div className="forum-post-author">By {post.author}</div>
-            <div className="forum-post-content">{post.content}</div>
+      {currentView === 'diagnostics' ? (
+        <>
+          <div className="forum-header">
+            <h1>Connection Diagnostics</h1>
+            <p>Test backend API connectivity and system performance</p>
+            <button 
+              onClick={() => setCurrentView('forum')} 
+              className="back-button forum-back-btn"
+            >
+              ← Back to Forum
+            </button>
           </div>
-        ))}
-      </div>
+          <div className="diagnostics-placeholder">
+            <p>Diagnostic tools would be displayed here</p>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="forum-header">
+            <h1>🎤 Community Forum & Discussion Board</h1>
+            <p>Gig swapping, gear advice, band member ads, and more. Connect with the music community!</p>
+            <button 
+              onClick={() => setCurrentView('diagnostics')} 
+              className="diagnostic-button forum-diagnostic-btn"
+            >
+              🔧 Test System Connection
+            </button>
+          </div>
+
+          {/* Forum Form */}
+          <div className="forum-form-section">
+            <h2>📝 Create New Post</h2>
+            <form className="forum-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <input
+                  name="title"
+                  value={form.title}
+                  onChange={handleChange}
+                  placeholder="Post Title"
+                  required
+                />
+                <input
+                  name="author"
+                  value={form.author}
+                  onChange={handleChange}
+                  placeholder="Your Name or Band"
+                  required
+                />
+              </div>
+              
+              <div className="form-row">
+                <select
+                  name="category"
+                  value={form.category}
+                  onChange={handleChange}
+                  aria-label="Select category"
+                >
+                  {categories.map(cat => (
+                    <option key={cat} value={cat}>{cat}</option>
+                  ))}
+                </select>
+                
+                <label className="paid-checkbox">
+                  <input
+                    type="checkbox"
+                    name="paid"
+                    checked={form.paid}
+                    onChange={handleChange}
+                  />
+                  Paid Listing (promoted)
+                </label>
+              </div>
+              
+              <textarea
+                name="content"
+                value={form.content}
+                onChange={handleChange}
+                placeholder="Describe your listing, question, or ad..."
+                required
+              />
+              
+              <button type="submit" className="forum-submit">
+                📤 Post to Forum
+              </button>
+              
+              {showThankYou && (
+                <div className="forum-thankyou">
+                  Thank you for supporting the community! 🙏
+                </div>
+              )}
+            </form>
+          </div>
+
+          {/* Forum Posts */}
+          <div className="forum-listings-section">
+            <h2>💬 Recent Posts</h2>
+            <div className="forum-listings">
+              {posts.map(post => (
+                <div key={post.id} className={`forum-post${post.paid ? ' paid' : ''}`}>
+                  <div className="forum-post-header">
+                    <h3 className="forum-post-title">{post.title}</h3>
+                    <div className="forum-post-badges">
+                      <span className="forum-post-category">{post.category}</span>
+                      {post.paid && <span className="forum-paid-badge">💰 Paid</span>}
+                    </div>
+                  </div>
+                  <div className="forum-post-author">👤 By {post.author}</div>
+                  <div className="forum-post-content">{post.content}</div>
+                  <div className="forum-post-actions">
+                    <button className="reply-btn">💬 Reply</button>
+                    <button className="contact-btn">📧 Contact</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
