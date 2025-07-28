@@ -1291,38 +1291,38 @@ function AppContent() {
               className={`nav-link ${currentView === 'store' ? 'active' : ''}`}
               onClick={() => setCurrentView('store')}
             >
-              🛍️ Store
+              Store
             </button>
             <button 
               className={`nav-link ${currentView === 'gigs' ? 'active' : ''}`}
               onClick={() => setCurrentView('gigs')}
             >
-              🎵 Gigs
+              Gigs
             </button>
             <button 
               className={`nav-link ${currentView === 'features' ? 'active' : ''}`}
               onClick={() => setCurrentView('features')}
             >
-              💡 Features
+              Features
             </button>
             <button 
               className={`nav-link ${(currentView as string) === 'forum' ? 'active' : ''}`}
               onClick={() => setCurrentView('forum' as CurrentView)}
             >
-              💬 Forum
+              Forum
             </button>
             <button 
               className="nav-link"
               onClick={() => setShowAuthModal(true)}
             >
-              {user ? '👤 Account' : '🔑 Sign In'}
+              {user ? 'Account' : 'Sign In'}
             </button>
             {!isAdmin && (
               <button 
                 className="nav-link admin-link"
                 onClick={() => setCurrentView('admin')}
               >
-                🛠️ Admin
+                Admin
               </button>
             )}
             {isAdmin && (
@@ -1426,7 +1426,6 @@ function AppContent() {
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  <span className="nav-icon">🛍️</span>
                   <span>Store</span>
                 </button>
                 
@@ -1437,7 +1436,6 @@ function AppContent() {
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  <span className="nav-icon">🎤</span>
                   <span>Gigs</span>
                 </button>
                 
@@ -1448,8 +1446,7 @@ function AppContent() {
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  <span className="nav-icon">💡</span>
-                  <span>Feature Ideas</span>
+                  <span>Features</span>
                 </button>
                 
                 <button 
@@ -1459,7 +1456,6 @@ function AppContent() {
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  <span className="nav-icon">💬</span>
                   <span>Forum</span>
                 </button>
                 
@@ -1472,8 +1468,7 @@ function AppContent() {
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  <span className="nav-icon">{user ? '👤' : '🔑'}</span>
-                  <span>{user ? 'My Account' : 'Sign In'}</span>
+                  <span>{user ? 'Account' : 'Sign In'}</span>
                 </button>
                 
                 {!isAdmin && (
@@ -1484,8 +1479,7 @@ function AppContent() {
                       setIsMobileMenuOpen(false);
                     }}
                   >
-                    <span className="nav-icon">🛠️</span>
-                    <span>Admin Panel</span>
+                    <span>Admin</span>
                   </button>
                 )}
                 
