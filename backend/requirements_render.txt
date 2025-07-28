@@ -1,0 +1,18 @@
+# Render Deployment Requirements - Minimal Dependencies
+# Version: 1.1.0 - Render optimized
+
+# Core Flask
+Flask==2.3.3
+Werkzeug==2.3.7
+
+# CORS support
+Flask-CORS==4.0.0
+
+# PostgreSQL adapter
+psycopg2-binary==2.9.7
+
+# Production WSGI server
+gunicorn==21.2.0
+
+# Basic utilities
+python-dotenv==1.0.0
