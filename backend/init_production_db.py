@@ -24,11 +24,16 @@ try:
     use_postgres = True
 except Exception as e:
     print(f"⚠️  PostgreSQL failed: {str(e)}")
-    print("🔄 Falling back to SQLite")
+    print("🔄 Falling back to SQLite with merchandise functionality")
     try:
         from flask import Flask
-        from models_bands_production import db, Band, User, Venue
+        from models_merchandise_sqlite import (
+            db, User, Band, Venue, Review, Genre,
+            ProductCategory, Product, Cart, CartItem, 
+            Order, OrderItem, ProductReview, BandProfile
+        )
         use_postgres = False
+        print("✅ SQLite models with merchandise loaded successfully")
     except Exception as e2:
         print(f"❌ SQLite fallback also failed: {str(e2)}")
         raise e2
