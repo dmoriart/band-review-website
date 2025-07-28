@@ -12,6 +12,7 @@ import ApiTestComponent from './components/ApiTestComponent';
 import CookieNotice from './components/CookieNotice';
 import FeatureIdeasPage from './components/FeatureIdeasPage';
 import BuyMeACoffeeCard from './components/BuyMeACoffeeCard';
+import StudioPhotoUpload from './components/StudioPhotoUpload';
 import { useBands, useVenues } from './hooks/useSanity';
 import { getAllLocationsForDropdown, getMajorCitiesForDropdown, getAllCountyNames } from './utils/irishLocations';
 import CommunityForum from './pages/CommunityForum';
@@ -1106,6 +1107,19 @@ function AppContent() {
                   <p>Be the first to share photos of this studio!</p>
                 </div>
               )}
+              
+              {/* Photo Upload Component */}
+              <StudioPhotoUpload
+                studioId={selectedStudio._id}
+                studioName={selectedStudio.name}
+                onPhotoUploaded={(newPhoto) => {
+                  // Update the selected studio with the new photo
+                  setSelectedStudio((prev: any) => ({
+                    ...prev,
+                    images: [...(prev.images || []), newPhoto]
+                  }));
+                }}
+              />
             </div>
 
             {/* Description */}
