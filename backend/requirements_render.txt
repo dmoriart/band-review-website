@@ -8,8 +8,8 @@ Werkzeug==2.3.7
 # CORS support
 Flask-CORS==4.0.0
 
-# PostgreSQL adapter - Latest version for Python 3.13 compatibility
-psycopg2-binary==2.9.9
+# PostgreSQL adapter - Using psycopg3 for Python 3.13 compatibility
+psycopg[binary]==3.1.18
 
 # Production WSGI server
 gunicorn==21.2.0

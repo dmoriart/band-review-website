@@ -44,7 +44,7 @@ app = create_app()
 def test_database_connection():
     """Test database connection with detailed logging"""
     try:
-        import psycopg2
+        import psycopg
         
         # Get database parameters
         db_host = os.environ.get('DB_HOST')
@@ -66,29 +66,21 @@ def test_database_connection():
             logger.error(f"Missing database environment variables: {missing}")
             return False, f"Missing variables: {missing}"
         
-        # Test connection
-        conn = psycopg2.connect(
-            host=db_host,
-            port=db_port,
-            database=db_name,
-            user=db_user,
-            password=db_password,
-            sslmode=db_sslmode,
-            connect_timeout=10  # 10 second timeout
-        )
+        # Build connection string for psycopg3
+        conn_string = f"host={db_host} port={db_port} dbname={db_name} user={db_user} password={db_password} sslmode={db_sslmode} connect_timeout=10"
         
-        cur = conn.cursor()
-        cur.execute("SELECT version();")
-        db_version = cur.fetchone()
-        cur.close()
-        conn.close()
+        # Test connection
+        with psycopg.connect(conn_string) as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT version();")
+                db_version = cur.fetchone()
         
         logger.info(f"Database connection successful: {db_version[0][:50]}...")
         return True, "Connected successfully"
         
     except ImportError as e:
-        logger.error(f"psycopg2 not available: {e}")
-        return False, f"psycopg2 import error: {e}"
+        logger.error(f"psycopg not available: {e}")
+        return False, f"psycopg import error: {e}"
     except Exception as e:
         logger.error(f"Database connection failed: {e}")
         return False, str(e)
