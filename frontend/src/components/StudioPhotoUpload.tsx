@@ -77,28 +77,9 @@ const StudioPhotoUpload: React.FC<StudioPhotoUploadProps> = ({
         }
       };
 
-      // Update the studio document to add the new image
-      console.log('📝 Adding image to studio document...');
-      
-      // First, get the current studio document to check existing images
-      const currentStudio = await client.getDocument(studioId);
-      const existingImages = currentStudio?.images || [];
-      
-      // Create the updated document with the new image
-      const updatedImages = [...existingImages, imageRef];
-      
-      // Update the studio document using the createOrReplace method
-      const result = await client
-        .createOrReplace({
-          _id: studioId,
-          _type: 'soundStudio',
-          ...currentStudio,
-          images: updatedImages
-        });
+      console.log('✅ Image uploaded successfully to Sanity assets');
 
-      console.log('✅ Studio updated with new image:', result);
-
-      setSuccess('Photo uploaded successfully! It may take a moment to appear.');
+      setSuccess('Photo uploaded successfully! The studio owner can add it to the gallery.');
       
       // Call the callback to update the parent component
       onPhotoUploaded(imageRef);
