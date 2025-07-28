@@ -87,7 +87,7 @@ const CommunityForum: React.FC = () => {
               onClick={() => setCurrentView('forum')} 
               className="back-button forum-back-btn"
             >
-              ← Back to Forum
+              Back to Forum
             </button>
           </div>
           <div className="diagnostics-placeholder">
@@ -103,7 +103,7 @@ const CommunityForum: React.FC = () => {
               onClick={() => setCurrentView('diagnostics')} 
               className="diagnostic-button forum-diagnostic-btn"
             >
-              🔧 Test System Connection
+              Test System Connection
             </button>
           </div>
 
