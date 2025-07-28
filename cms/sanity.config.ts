@@ -18,7 +18,7 @@ const structure = (S: any) =>
         .child(S.documentTypeList('venue').title('Venues')),
       S.listItem()
         .title('Sound Studios')
-        .icon(() => '🎚️')
+        .icon(() => '🎙️')
         .child(S.documentTypeList('soundStudio').title('Sound Studios')),
       S.listItem()
         .title('Reviews')
