@@ -85,7 +85,33 @@ const StudioPhotoUpload: React.FC<StudioPhotoUploadProps> = ({
 
       console.log('✅ Image uploaded successfully to Sanity assets');
 
-      setSuccess('Photo uploaded successfully! The studio owner can add it to the gallery.');
+      // Now add the image to the studio's gallery
+      console.log('📝 Adding image to studio gallery...');
+      
+      try {
+        // Get current studio document
+        const currentStudio = await client.fetch(`*[_id == "${studioId}"][0]`);
+        
+        if (currentStudio) {
+          const existingGallery = currentStudio.gallery || [];
+          const updatedGallery = [...existingGallery, imageRef];
+          
+          // Update the studio document with the new image in gallery
+          await client
+            .patch(studioId)
+            .set({ gallery: updatedGallery })
+            .commit();
+          
+          console.log('✅ Image added to studio gallery');
+          setSuccess('Photo uploaded and added to gallery successfully!');
+        } else {
+          console.log('⚠️ Studio not found, image uploaded to assets only');
+          setSuccess('Photo uploaded successfully! The studio owner can add it to the gallery.');
+        }
+      } catch (galleryError) {
+        console.warn('⚠️ Could not add to gallery, but image uploaded to assets:', galleryError);
+        setSuccess('Photo uploaded successfully! The studio owner can add it to the gallery.');
+      }
       
       // Call the callback to update the parent component
       onPhotoUploaded(imageRef);
