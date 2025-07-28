@@ -42,29 +42,31 @@ app = create_app()
 
 # Test database connection function
 def test_database_connection():
-    """Test database connection with detailed logging"""
+    """Test database connection with detailed logging - tries both psycopg3 and psycopg2"""
+    # Get database parameters
+    db_host = os.environ.get('DB_HOST')
+    db_port = os.environ.get('DB_PORT', '5432')
+    db_name = os.environ.get('DB_NAME')
+    db_user = os.environ.get('DB_USER')
+    db_password = os.environ.get('DB_PASSWORD')
+    db_sslmode = os.environ.get('DB_SSLMODE', 'require')
+    
+    logger.info(f"Attempting database connection to {db_host}:{db_port}/{db_name}")
+    
+    if not all([db_host, db_name, db_user, db_password]):
+        missing = [k for k, v in {
+            'DB_HOST': db_host,
+            'DB_NAME': db_name, 
+            'DB_USER': db_user,
+            'DB_PASSWORD': db_password
+        }.items() if not v]
+        logger.error(f"Missing database environment variables: {missing}")
+        return False, f"Missing variables: {missing}"
+    
+    # Try psycopg3 first
     try:
         import psycopg
-        
-        # Get database parameters
-        db_host = os.environ.get('DB_HOST')
-        db_port = os.environ.get('DB_PORT', '5432')
-        db_name = os.environ.get('DB_NAME')
-        db_user = os.environ.get('DB_USER')
-        db_password = os.environ.get('DB_PASSWORD')
-        db_sslmode = os.environ.get('DB_SSLMODE', 'require')
-        
-        logger.info(f"Attempting database connection to {db_host}:{db_port}/{db_name}")
-        
-        if not all([db_host, db_name, db_user, db_password]):
-            missing = [k for k, v in {
-                'DB_HOST': db_host,
-                'DB_NAME': db_name, 
-                'DB_USER': db_user,
-                'DB_PASSWORD': db_password
-            }.items() if not v]
-            logger.error(f"Missing database environment variables: {missing}")
-            return False, f"Missing variables: {missing}"
+        logger.info("Using psycopg3 for database connection")
         
         # Build connection string for psycopg3
         conn_string = f"host={db_host} port={db_port} dbname={db_name} user={db_user} password={db_password} sslmode={db_sslmode} connect_timeout=10"
@@ -75,15 +77,47 @@ def test_database_connection():
                 cur.execute("SELECT version();")
                 db_version = cur.fetchone()
         
-        logger.info(f"Database connection successful: {db_version[0][:50]}...")
-        return True, "Connected successfully"
+        logger.info(f"Database connection successful with psycopg3: {db_version[0][:50]}...")
+        return True, "Connected successfully with psycopg3"
         
-    except ImportError as e:
-        logger.error(f"psycopg not available: {e}")
-        return False, f"psycopg import error: {e}"
+    except ImportError:
+        logger.info("psycopg3 not available, trying psycopg2...")
+        
+        # Fallback to psycopg2
+        try:
+            import psycopg2
+            logger.info("Using psycopg2 for database connection")
+            
+            # Test connection with psycopg2
+            conn = psycopg2.connect(
+                host=db_host,
+                port=db_port,
+                database=db_name,
+                user=db_user,
+                password=db_password,
+                sslmode=db_sslmode,
+                connect_timeout=10
+            )
+            
+            cur = conn.cursor()
+            cur.execute("SELECT version();")
+            db_version = cur.fetchone()
+            cur.close()
+            conn.close()
+            
+            logger.info(f"Database connection successful with psycopg2: {db_version[0][:50]}...")
+            return True, "Connected successfully with psycopg2"
+            
+        except ImportError as e:
+            logger.error(f"Neither psycopg3 nor psycopg2 available: {e}")
+            return False, f"No PostgreSQL driver available: {e}"
+        except Exception as e:
+            logger.error(f"Database connection failed with psycopg2: {e}")
+            return False, f"psycopg2 connection error: {e}"
+            
     except Exception as e:
-        logger.error(f"Database connection failed: {e}")
-        return False, str(e)
+        logger.error(f"Database connection failed with psycopg3: {e}")
+        return False, f"psycopg3 connection error: {e}"
 
 # API Routes
 @app.route('/', methods=['GET'])
