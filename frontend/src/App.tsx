@@ -1248,10 +1248,10 @@ function AppContent() {
     );
   }
 
-  // Render CommunityForum page when currentView is 'forum'
-  if (currentView === 'forum') {
-    return <CommunityForum />;
-  }
+  /**
+   * Render forum page
+   */
+  const renderForum = () => <CommunityForum />;
 
   return (
     <div className="App">
@@ -1538,6 +1538,7 @@ function AppContent() {
           )}
           {currentView === 'gigs' && <GigsPage />}
           {currentView === 'features' && <FeatureIdeasPage />}
+          {currentView === 'forum' && renderForum()}
           {currentView === 'venue-detail' && renderVenueDetail()}
           {currentView === 'studio-detail' && renderStudioDetail()}
           {currentView === 'admin' && renderAdminLogin()}
