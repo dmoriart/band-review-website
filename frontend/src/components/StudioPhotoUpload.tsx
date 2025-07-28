@@ -79,11 +79,22 @@ const StudioPhotoUpload: React.FC<StudioPhotoUploadProps> = ({
 
       // Update the studio document to add the new image
       console.log('📝 Adding image to studio document...');
+      
+      // First, get the current studio document to check existing images
+      const currentStudio = await client.getDocument(studioId);
+      const existingImages = currentStudio?.images || [];
+      
+      // Create the updated document with the new image
+      const updatedImages = [...existingImages, imageRef];
+      
+      // Update the studio document using the createOrReplace method
       const result = await client
-        .patch(studioId)
-        .setIfMissing({ images: [] })
-        .append('images', [imageRef])
-        .commit();
+        .createOrReplace({
+          _id: studioId,
+          _type: 'soundStudio',
+          ...currentStudio,
+          images: updatedImages
+        });
 
       console.log('✅ Studio updated with new image:', result);
 
