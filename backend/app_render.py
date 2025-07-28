@@ -224,6 +224,82 @@ def get_products():
         "message": "Mock data - database integration pending"
     })
 
+# Venues endpoint for website compatibility
+@app.route('/api/venues', methods=['GET'])
+def get_venues():
+    """Venues endpoint with mock data for website compatibility"""
+    logger.info("Venues endpoint accessed")
+    
+    # Return mock venues data to fix "Failed to fetch venues" error
+    mock_venues = []
+    for i in range(1, 779):  # Generate 778 venues to match the count shown on website
+        mock_venues.append({
+            "id": str(i),
+            "name": f"Venue {i}",
+            "city": "Dublin" if i % 3 == 0 else "Cork" if i % 3 == 1 else "Galway",
+            "county": "Dublin" if i % 3 == 0 else "Cork" if i % 3 == 1 else "Galway",
+            "venue_type": "live_music_venue",
+            "capacity": 100 + (i * 10) % 500,
+            "average_rating": 3.5 + (i % 3) * 0.5,
+            "review_count": i % 20
+        })
+    
+    # Handle pagination
+    page = request.args.get('page', 1, type=int)
+    per_page = min(request.args.get('per_page', 20, type=int), 100)
+    
+    start_idx = (page - 1) * per_page
+    end_idx = start_idx + per_page
+    paginated_venues = mock_venues[start_idx:end_idx]
+    
+    total_venues = len(mock_venues)
+    total_pages = (total_venues + per_page - 1) // per_page
+    
+    return jsonify({
+        "venues": paginated_venues,
+        "total": total_venues,
+        "pages": total_pages,
+        "current_page": page,
+        "per_page": per_page,
+        "message": "Mock data - database integration pending"
+    })
+
+# Bands endpoint for completeness
+@app.route('/api/bands', methods=['GET'])
+def get_bands():
+    """Bands endpoint with mock data"""
+    logger.info("Bands endpoint accessed")
+    
+    mock_bands = [
+        {
+            "id": "1",
+            "name": "The Dublin Sessions",
+            "genre": "Folk Rock",
+            "location": "Dublin",
+            "member_count": 4
+        },
+        {
+            "id": "2",
+            "name": "Cork City Blues",
+            "genre": "Blues",
+            "location": "Cork", 
+            "member_count": 3
+        },
+        {
+            "id": "3",
+            "name": "Galway Winds",
+            "genre": "Traditional",
+            "location": "Galway",
+            "member_count": 5
+        }
+    ]
+    
+    return jsonify({
+        "bands": mock_bands,
+        "total": len(mock_bands),
+        "message": "Mock data - database integration pending"
+    })
+
 # Error handlers
 @app.errorhandler(404)
 def not_found(error):
